@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Integrative Attachment Therapy (IAT) — Daniel J. Ahearn, LMFT',
-  description: 'What Integrative Attachment Therapy (IAT) is, how the Three Pillars framework works, and why it produces lasting change in attachment patterns. Written by an IAT-certified clinician.',
+  title: 'Integrative Attachment Therapy',
+  description: 'What Integrative Attachment Therapy (IAT) is, how the Three Pillars framework works, and why it produces lasting change in attachment patterns.',
 }
 
 export default function IntegrativeAttachmentTherapy() {
@@ -100,8 +100,12 @@ export default function IntegrativeAttachmentTherapy() {
             I am one of six IAT-certified clinicians in the United States. I trained directly with Dr. Daniel P. Brown and Dr. David Elliott and use the full Three Pillars framework in my work with adults, parents, and men navigating attachment-based patterns in their relationships and lives.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/ideal-parent-figure-protocol" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">The IPF Protocol →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/ideal-parent-figure-protocol" className="text-cream-400 hover:text-cream-200 transition-colors">The IPF Protocol →</Link>
+            <Link href="/the-way-back-home" className="text-cream-400 hover:text-cream-200 transition-colors">About the book →</Link>
           </div>
         </div>
       </section>

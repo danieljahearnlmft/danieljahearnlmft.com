@@ -22,6 +22,7 @@ export default function Footer() {
               <Link href="/mens-work" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Men's Attachment Repair Groups</Link>
               <Link href="/services" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Individual, Couples & Family</Link>
               <Link href="/the-way-back-home" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">The Way Back Home</Link>
+              <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Daily Practice (waybackhome.app)</a>
               <Link href="/parent-support-groups" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Parent Support Groups</Link>
               <Link href="/contact" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Contact</Link>
             </div>
@@ -55,6 +56,7 @@ export default function Footer() {
               Schedule a Consult
             </a>
             <div className="flex gap-4 mt-6">
+              <a href="https://substack.com/@danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">Substack</a>
               <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">Instagram</a>
               <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">LinkedIn</a>
             </div>
@@ -63,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-cream-800 mt-10 pt-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <p className="text-xs text-cream-600">© {new Date().getFullYear()} Daniel J. Ahearn, LMFT. All rights reserved.</p>
-          <p className="text-xs text-cream-600">Licensed in California · MFC #XXXXX</p>
+          <p className="text-xs text-cream-600">Licensed in California · LMFT 143021</p>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'The Ideal Parent Figure Protocol — Daniel J. Ahearn, LMFT',
-  description: 'A deep explanation of the Ideal Parent Figure (IPF) protocol — what it is, how it works, what a session looks like, and who it helps. Written by an IAT-certified clinician.',
+  description: 'What the Ideal Parent Figure (IPF) protocol is, how it works, what a session looks like, and who it helps — from an IAT-certified clinician.',
 }
 
 export default function IdealParentFigureProtocol() {
@@ -110,8 +110,12 @@ export default function IdealParentFigureProtocol() {
             I am one of six IAT-certified clinicians in the United States and trained directly with Dr. Daniel P. Brown and Dr. David Elliott. I work with adults and parents in private practice in Los Angeles.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/integrative-attachment-therapy" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">About IAT →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/integrative-attachment-therapy" className="text-cream-400 hover:text-cream-200 transition-colors">About IAT →</Link>
+            <Link href="/the-way-back-home" className="text-cream-400 hover:text-cream-200 transition-colors">About the book →</Link>
           </div>
         </div>
       </section>

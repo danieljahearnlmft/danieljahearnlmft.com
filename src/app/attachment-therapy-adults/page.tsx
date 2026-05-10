@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Attachment Therapy for Adults — Daniel J. Ahearn, LMFT',
-  description: 'Attachment patterns formed in childhood don\'t disappear in adulthood. What attachment therapy for adults looks like, who it helps, and how the IAT approach produces lasting change.',
+  description: 'What attachment therapy for adults looks like, who it helps, and how the IAT approach produces lasting change in long-standing relational patterns.',
 }
 
 export default function AttachmentTherapyAdults() {
@@ -90,8 +90,12 @@ export default function AttachmentTherapyAdults() {
             I am one of six IAT-certified clinicians in the United States, and I work with adults carrying insecure attachment patterns that have not yielded to other approaches. I practice in Los Angeles and via telehealth across California.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/integrative-attachment-therapy" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">About the IAT Framework →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/integrative-attachment-therapy" className="text-cream-400 hover:text-cream-200 transition-colors">About the IAT Framework →</Link>
+            <Link href="/the-way-back-home" className="text-cream-400 hover:text-cream-200 transition-colors">About the book →</Link>
           </div>
         </div>
       </section>

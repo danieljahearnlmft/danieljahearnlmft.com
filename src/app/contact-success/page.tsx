@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Message Sent',
+  robots: { index: false, follow: false },
 }
 
 export default function ContactSuccess() {

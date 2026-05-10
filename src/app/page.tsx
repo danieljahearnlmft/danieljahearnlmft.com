@@ -30,6 +30,14 @@ export default function Home() {
                   Learn My Approach
                 </Link>
               </div>
+              <a
+                href="https://waybackhome.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-5 text-sm text-cream-600 hover:text-cream-900 transition-colors"
+              >
+                Or try the free daily practice at waybackhome.app →
+              </a>
             </div>
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md">
               <Image
@@ -127,7 +135,7 @@ export default function Home() {
             <div className="relative max-w-xs mx-auto md:mx-0">
               <Image
                 src="/images/book-cover.jpg"
-                alt="The Way Back Home: Healing Attachment Wounds with Your Teen"
+                alt="The Way Back Home: Healing Attachment Wounds and Rebuilding Connection with Your Teen"
                 width={380}
                 height={540}
                 className="rounded shadow-md"
@@ -138,7 +146,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-4">
                 The Way Back Home
               </h2>
-              <p className="text-cream-600 text-sm italic mb-5">Healing Attachment Wounds with Your Teen</p>
+              <p className="text-cream-600 text-sm italic mb-5">Healing Attachment Wounds and Rebuilding Connection with Your Teen</p>
               <p className="text-cream-700 leading-relaxed mb-4">
                 A practical guide for parents navigating the hardest years of the parent-child relationship — grounded in the same IAT framework at the center of my clinical practice.
               </p>
@@ -160,6 +168,25 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Daily practice — waybackhome.app */}
+      <section className="section-warm">
+        <div className="container-main max-w-3xl text-center">
+          <p className="eyebrow">Free Daily Practice</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-5">A ten-minute practice for parents of teens</h2>
+          <p className="text-cream-700 leading-relaxed mb-7 max-w-xl mx-auto">
+            <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-cream-900 underline underline-offset-2 hover:text-cream-700">waybackhome.app</a> is a free daily companion that brings the five conditions of secure attachment into a short, repeatable ritual. No login, no fee — a place to start before a book or a session.
+          </p>
+          <a
+            href="https://waybackhome.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Try the Daily Practice
+          </a>
         </div>
       </section>
 

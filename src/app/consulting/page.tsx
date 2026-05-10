@@ -2,8 +2,15 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Speaking, Team Training & Organizational Consulting',
-  description: 'Daniel J. Ahearn, LMFT speaks nationally on attachment science, meditation, and team emotional regulation. Available for speaking engagements, clinical team training, and organizational consulting.',
+  title: 'Speaking, Training & Consulting',
+  description: 'Speaking, clinical team training, and organizational consulting on attachment, regulation, and culture — for treatment programs and clinical teams.',
+  openGraph: {
+    images: [{ url: '/images/consulting-hero.jpg', alt: 'Speaking, Team Training & Organizational Consulting' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/consulting-hero.jpg'],
+  },
 }
 
 export default function Consulting() {

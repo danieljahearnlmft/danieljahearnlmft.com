@@ -5,6 +5,13 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Parent Support Groups',
   description: 'National Zoom-based parent psychoeducation groups for parents of teens. Attachment-informed, practical, capped at 12 participants. $60 per session.',
+  openGraph: {
+    images: [{ url: '/images/parent-groups-hero.jpg', alt: 'Parent Support Groups' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/parent-groups-hero.jpg'],
+  },
 }
 
 export default function ParentSupportGroups() {
@@ -173,7 +180,7 @@ export default function ParentSupportGroups() {
             Daniel J. Ahearn is an LMFT and one of six IAT-certified clinicians in the United States. He's Director of Culture at Ascend Healthcare, a residential treatment program for adolescents, and has spent over a decade in clinical work with teenagers and their families.
           </p>
           <p className="text-cream-700 leading-relaxed mb-4">
-            He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / Integrative Attachment Therapy framework, and is the author of <em>The Way Back Home: Healing Attachment Wounds with Your Teen</em>.
+            He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / Integrative Attachment Therapy framework, and is the author of <em>The Way Back Home: Healing Attachment Wounds and Rebuilding Connection with Your Teen</em>.
           </p>
           <p className="text-cream-700 leading-relaxed">
             These groups distill the same framework he uses in individual and family clinical work into a format accessible to any parent — regardless of whether they're in therapy themselves.

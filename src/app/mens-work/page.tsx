@@ -4,7 +4,14 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Men's Attachment Repair Groups",
-  description: 'A 16-week attachment repair cohort for men using the Ideal Parent Figure Protocol. Structured group process for men navigating relationships, fatherhood, and emotional availability.',
+  description: 'A 16-week attachment repair cohort for men using the Ideal Parent Figure Protocol — for relationships, fatherhood, and emotional availability.',
+  openGraph: {
+    images: [{ url: '/images/mens-groups.jpg', alt: "Men's Attachment Repair Groups" }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/mens-groups.jpg'],
+  },
 }
 
 export default function MensWork() {

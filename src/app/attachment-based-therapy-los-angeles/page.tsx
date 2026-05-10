@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Attachment-Based Therapy Los Angeles — Daniel J. Ahearn, LMFT',
-  description: 'Attachment-based therapy in Los Angeles with an IAT-certified clinician. Specializing in adult attachment work, men\'s therapy, and parent-teen repair. Private practice and telehealth.',
+  title: { absolute: 'Attachment Therapy in Los Angeles · IAT-Certified Clinician' },
+  description: 'Attachment-based therapy in Los Angeles with an IAT-certified clinician. Adult work, men\'s groups, and parent-teen repair. Telehealth across CA.',
 }
 
 export default function AttachmentTherapyLosAngeles() {
@@ -92,8 +92,12 @@ export default function AttachmentTherapyLosAngeles() {
             I maintain a small private practice and see a limited number of clients. If you're in Los Angeles or California and looking for attachment-based therapy at the IAT level, I'm glad to hear from you.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/iat-certified-therapist" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">About My Training →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/iat-certified-therapist" className="text-cream-400 hover:text-cream-200 transition-colors">About My Training →</Link>
+            <Link href="/services" className="text-cream-400 hover:text-cream-200 transition-colors">All Services →</Link>
           </div>
         </div>
       </section>

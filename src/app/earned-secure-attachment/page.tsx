@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Earned Secure Attachment — Daniel J. Ahearn, LMFT',
-  description: 'What earned secure attachment is, what the research shows about developing it as an adult, and what the clinical path looks like. Written by an IAT-certified therapist.',
+  description: 'What earned secure attachment is, what the research shows about developing it as an adult, and the clinical path to get there.',
 }
 
 export default function EarnedSecureAttachment() {
@@ -80,8 +80,12 @@ export default function EarnedSecureAttachment() {
             I am one of six IAT-certified clinicians in the United States. I work with adults whose attachment patterns have not shifted through other approaches, and I bring the full Integrative Attachment Therapy framework to that work. Los Angeles and telehealth across California.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/ideal-parent-figure-protocol" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">The IPF Protocol →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/ideal-parent-figure-protocol" className="text-cream-400 hover:text-cream-200 transition-colors">The IPF Protocol →</Link>
+            <Link href="/the-way-back-home" className="text-cream-400 hover:text-cream-200 transition-colors">About the book →</Link>
           </div>
         </div>
       </section>

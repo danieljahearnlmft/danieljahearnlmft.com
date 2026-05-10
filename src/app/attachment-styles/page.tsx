@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Attachment Styles in Adults — Daniel J. Ahearn, LMFT',
-  description: 'The four adult attachment styles — secure, anxious, avoidant, and disorganized — what each means, how each shows up in adult relationships, and what the therapeutic path looks like for each.',
+  description: 'The four adult attachment styles — secure, anxious, avoidant, disorganized — how each shapes relationships, and the clinical path to repair.',
 }
 
 export default function AttachmentStyles() {
@@ -106,8 +106,12 @@ export default function AttachmentStyles() {
             I am one of six IAT-certified clinicians in the United States, trained directly in the Three Pillars framework and the Ideal Parent Figure protocol. I work with adults across the full range of insecure attachment presentations in Los Angeles and via telehealth.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-primary">Get in Touch</Link>
-            <Link href="/earned-secure-attachment" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Earned Secure Attachment →</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/earned-secure-attachment" className="text-cream-400 hover:text-cream-200 transition-colors">Earned Secure Attachment →</Link>
+            <Link href="/the-way-back-home" className="text-cream-400 hover:text-cream-200 transition-colors">About the book →</Link>
           </div>
         </div>
       </section>
