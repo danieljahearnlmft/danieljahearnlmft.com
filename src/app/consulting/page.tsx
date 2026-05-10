@@ -101,7 +101,7 @@ export default function Consulting() {
               </ul>
 
               <a
-                href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
+                href="mailto:danieljahearn@gmail.com?subject=Consult%20with%20Your%20Team"
                 className="btn-primary"
               >
                 Inquire About Speaking
@@ -157,7 +157,7 @@ export default function Consulting() {
               </ul>
 
               <a
-                href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
+                href="mailto:danieljahearn@gmail.com?subject=Consult%20with%20Your%20Team"
                 className="btn-primary"
               >
                 Inquire About Team Training
@@ -212,7 +212,7 @@ export default function Consulting() {
               </ul>
 
               <a
-                href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
+                href="mailto:danieljahearn@gmail.com?subject=Consult%20with%20Your%20Team"
                 className="btn-primary"
               >
                 Start a Conversation
@@ -261,7 +261,7 @@ export default function Consulting() {
               </ul>
 
               <a
-                href="mailto:daniel@danieljahearnlmft.com?subject=Podcast%20Booking%20Inquiry"
+                href="mailto:danieljahearn@gmail.com?subject=Podcast%20Booking%20Inquiry"
                 className="btn-primary"
               >
                 Book Daniel for Your Podcast
@@ -310,12 +310,12 @@ export default function Consulting() {
             Reach out with details about your organization, what you're building, and what you need. All inquiries are responded to directly.
           </p>
           <a
-            href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
+            href="mailto:danieljahearn@gmail.com?subject=Consult%20with%20Your%20Team"
             className="btn-primary text-base px-8 py-4"
           >
             Consult with Your Team →
           </a>
-          <p className="text-cream-500 text-xs mt-4">Email opens with subject: "Consult with Your Team"</p>
+          <p className="text-cream-500 text-xs mt-4">Email opens with subject: "Consult with Your Team" · or call 213-290-1146</p>
         </div>
       </section>
     </>
