@@ -32,6 +32,13 @@ export default function Contact() {
                 </div>
 
                 <div className="pt-2">
+                  <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Phone</p>
+                  <p className="text-cream-700 text-sm">
+                    <a href="tel:+12132901146" className="hover:text-cream-900 transition-colors">213-290-1146</a>
+                  </p>
+                </div>
+
+                <div>
                   <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Location</p>
                   <p className="text-cream-700 text-sm">Los Angeles, CA</p>
                   <p className="text-cream-600 text-sm">Telehealth throughout California</p>

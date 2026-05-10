@@ -13,6 +13,9 @@ export default function Footer() {
               Based in Los Angeles, CA<br />
               Telehealth throughout California
             </p>
+            <p className="text-sm text-cream-400 mt-4">
+              <a href="tel:+12132901146" className="hover:text-cream-100 transition-colors">213-290-1146</a>
+            </p>
           </div>
 
           <div>
