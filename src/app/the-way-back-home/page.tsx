@@ -44,6 +44,7 @@ export default function Book() {
                 >
                   Buy on Amazon
                 </a>
+                {/* TODO: replace with Kit landing page URL after Kit setup */}
                 <a
                   href="https://forms.gle/7izvTY7Yi2TcDiGp6"
                   target="_blank"
@@ -177,6 +178,7 @@ export default function Book() {
           <p className="text-cream-700 mb-7">
             A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal — drawn directly from the book.
           </p>
+          {/* TODO: replace with Kit landing page URL after Kit setup */}
           <a
             href="https://forms.gle/7izvTY7Yi2TcDiGp6"
             target="_blank"

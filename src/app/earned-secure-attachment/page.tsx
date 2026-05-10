@@ -80,7 +80,7 @@ export default function EarnedSecureAttachment() {
             I am one of six IAT-certified clinicians in the United States. I work with adults whose attachment patterns have not shifted through other approaches, and I bring the full Integrative Attachment Therapy framework to that work. Los Angeles and telehealth across California.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 30-Min Consult</a>
             <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">

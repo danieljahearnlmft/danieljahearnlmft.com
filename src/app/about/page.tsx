@@ -34,7 +34,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Free 15-Min Consult
+                Free 30-Min Consult
               </a>
             </div>
             <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-md">
@@ -154,7 +154,7 @@ export default function About() {
       <section className="bg-cream-200 py-16">
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Ready to talk?</h2>
-          <p className="text-cream-700 mb-7">A free 15-minute consult to discuss what you're navigating and whether we're a fit.</p>
+          <p className="text-cream-700 mb-7">A free 30-minute consult to discuss what you're navigating and whether we're a fit.</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Schedule a Consult

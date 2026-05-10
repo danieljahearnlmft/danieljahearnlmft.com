@@ -24,7 +24,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Free 15-Min Consult
+                  Free 30-Min Consult
                 </a>
                 <Link href="/about" className="btn-ghost">
                   Learn My Approach
@@ -216,7 +216,7 @@ export default function Home() {
       <section className="bg-cream-200 py-16">
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Not sure where to start?</h2>
-          <p className="text-cream-700 mb-7">A free 15-minute call to figure out whether we're a fit and which format makes most sense for your situation.</p>
+          <p className="text-cream-700 mb-7">A free 30-minute call to figure out whether we're a fit and which format makes most sense for your situation.</p>
           <a
             href="https://calendly.com/danieljahearn/30min"
             target="_blank"

@@ -35,7 +35,7 @@ export default function Services() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Free 15-Min Consult
+              Free 30-Min Consult
             </a>
           </div>
         </div>
@@ -79,6 +79,7 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/1x0c4OYQrKwBeJrydlyAY6FxxbuIjvUESfTkIiKWQFHc/viewform"
                 target="_blank"
@@ -142,6 +143,7 @@ export default function Services() {
                 >
                   Apply for Family Work
                 </a>
+                {/* TODO: replace with Kit landing page URL after Kit setup */}
                 <a
                   href="https://forms.gle/7izvTY7Yi2TcDiGp6"
                   target="_blank"
@@ -193,6 +195,7 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/1jSFwo4eSJsnHPgIytK2PnZdOEyRsPeaP9y6l2IwzTuk/viewform"
                 target="_blank"
@@ -309,7 +312,7 @@ export default function Services() {
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Not sure which is right?</h2>
           <p className="text-cream-700 mb-7">
-            Book a free 15-minute call. We'll discuss what you're struggling with and which format makes the most sense.
+            Book a free 30-minute call. We'll discuss what you're struggling with and which format makes the most sense.
           </p>
           <a
             href="https://calendly.com/danieljahearn/30min"

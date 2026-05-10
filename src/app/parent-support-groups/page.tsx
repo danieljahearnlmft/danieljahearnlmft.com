@@ -37,6 +37,7 @@ export default function ParentSupportGroups() {
               A national Zoom-based psychoeducation group for parents of teenagers — grounded in attachment science, practically focused, and capped at 12 participants so everyone gets heard.
             </p>
             <div className="flex flex-wrap gap-3">
+              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/12Es-CQ6HNGHJ3WvG7a5XJKt8GHGJHaZ1Weodiy20KgI/viewform"
                 target="_blank"
@@ -46,7 +47,7 @@ export default function ParentSupportGroups() {
                 Join a Group
               </a>
               <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                Free 15-Min Consult
+                Free 30-Min Consult
               </a>
             </div>
           </div>
@@ -196,6 +197,7 @@ export default function ParentSupportGroups() {
           <p className="text-cream-400 leading-relaxed mb-7">
             A free guide that introduces the Integrative Attachment Therapy framework and what drives adolescent withdrawal — drawn directly from The Way Back Home.
           </p>
+          {/* TODO: replace with Kit landing page URL after Kit setup */}
           <a
             href="https://forms.gle/7izvTY7Yi2TcDiGp6"
             target="_blank"
@@ -213,6 +215,7 @@ export default function ParentSupportGroups() {
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Ready to join a group?</h2>
           <p className="text-cream-700 mb-7">Groups are capped at 12. Reach out to learn about the next available session.</p>
           <div className="flex flex-wrap gap-3 justify-center">
+            {/* TODO: shorten to forms.gle URL — Daniel to provide */}
             <a
               href="https://docs.google.com/forms/d/12Es-CQ6HNGHJ3WvG7a5XJKt8GHGJHaZ1Weodiy20KgI/viewform"
               target="_blank"
