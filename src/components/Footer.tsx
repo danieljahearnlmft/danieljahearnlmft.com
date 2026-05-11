@@ -10,7 +10,7 @@ export default function Footer() {
             Occasional notes on attachment and parenting teens. 4–6 emails a year. No spam.
           </p>
           <form
-            action="https://app.kit.com/forms/799e767f77/subscriptions"
+            action="https://app.kit.com/forms/9427872/subscriptions"
             method="post"
             target="_blank"
             className="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto"
