@@ -37,7 +37,6 @@ export default function MensWork() {
               A structured group process for men who are competent, responsible, and exhausted by how hard it is to stay that way.
             </p>
             <div className="flex flex-wrap gap-3">
-              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
                 target="_blank"
@@ -199,7 +198,6 @@ export default function MensWork() {
           <p className="text-cream-700 text-sm leading-relaxed mb-8">
             Includes 16 guided group sessions (24 hours), guided IPF audio recordings for home practice, written materials and developmental frameworks, email support between sessions, and alumni group access after completion.
           </p>
-          {/* TODO: shorten to forms.gle URL — Daniel to provide */}
           <a
             href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
             target="_blank"
@@ -243,7 +241,6 @@ export default function MensWork() {
                 ))}
               </ul>
               <p className="text-cream-500 text-sm italic mb-6">Meets bi-weekly in Los Feliz</p>
-              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
                 target="_blank"

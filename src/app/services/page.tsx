@@ -79,7 +79,6 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/1x0c4OYQrKwBeJrydlyAY6FxxbuIjvUESfTkIiKWQFHc/viewform"
                 target="_blank"
@@ -135,7 +134,6 @@ export default function Services() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                {/* TODO: shorten to forms.gle URL — Daniel to provide */}
                 <a
                   href="https://docs.google.com/forms/d/1hTETlql6w_WiRBnB2iAmo0ifImcUpw3dfMvw5D_pw0g/viewform"
                   target="_blank"
@@ -196,7 +194,6 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              {/* TODO: shorten to forms.gle URL — Daniel to provide */}
               <a
                 href="https://docs.google.com/forms/d/1jSFwo4eSJsnHPgIytK2PnZdOEyRsPeaP9y6l2IwzTuk/viewform"
                 target="_blank"
