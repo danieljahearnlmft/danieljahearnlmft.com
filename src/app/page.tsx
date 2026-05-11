@@ -17,7 +17,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">IAT-Certified · One of Six in the U.S.</p>
               <h1 className="text-4xl md:text-5xl font-serif font-medium text-cream-900 leading-tight mb-5">
-                The relationship<br />can be repaired.
+                The teen years are your<br />most powerful window<br />for repair.
               </h1>
               <p className="text-cream-700 text-lg leading-relaxed mb-8 max-w-md">
                 Working with parents, men, fathers, and families on the attachment wounds beneath the surface — grounded in over a decade of clinical work in Los Angeles.
