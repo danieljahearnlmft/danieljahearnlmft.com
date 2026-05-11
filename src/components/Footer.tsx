@@ -82,7 +82,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream-800 mt-10 pt-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <div className="border-t border-cream-800 mt-10 pt-7">
+          <p className="text-xs uppercase tracking-widest text-cream-500 mb-3">Topics</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs leading-relaxed">
+            <Link href="/integrative-attachment-therapy" className="text-cream-500 hover:text-cream-200 transition-colors">Integrative Attachment Therapy</Link>
+            <Link href="/ideal-parent-figure-protocol" className="text-cream-500 hover:text-cream-200 transition-colors">IPF Protocol</Link>
+            <Link href="/iat-certified-therapist" className="text-cream-500 hover:text-cream-200 transition-colors">IAT-Certified Therapist</Link>
+            <Link href="/earned-secure-attachment" className="text-cream-500 hover:text-cream-200 transition-colors">Earned Secure Attachment</Link>
+            <Link href="/attachment-therapy-adults" className="text-cream-500 hover:text-cream-200 transition-colors">Attachment Therapy for Adults</Link>
+            <Link href="/healing-attachment-wounds" className="text-cream-500 hover:text-cream-200 transition-colors">Healing Attachment Wounds</Link>
+            <Link href="/attachment-styles" className="text-cream-500 hover:text-cream-200 transition-colors">Attachment Styles</Link>
+            <Link href="/attachment-based-therapy-los-angeles" className="text-cream-500 hover:text-cream-200 transition-colors">Therapy in Los Angeles</Link>
+          </div>
+        </div>
+
+        <div className="border-t border-cream-800 mt-7 pt-7 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <p className="text-xs text-cream-600">© {new Date().getFullYear()} Daniel J. Ahearn, LMFT. All rights reserved.</p>
           <p className="text-xs text-cream-600">Licensed in California · LMFT 143021</p>
         </div>
