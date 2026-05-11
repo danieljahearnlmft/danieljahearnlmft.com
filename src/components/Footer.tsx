@@ -1,20 +1,12 @@
 import Link from 'next/link'
+import KitEmbed from '@/components/KitEmbed'
 
 export default function Footer() {
   return (
     <footer className="bg-cream-900 text-cream-300">
-      {/*
-        Kit newsletter signup embed goes here.
-        Daniel will provide embed code after Kit setup.
-      */}
       <section className="border-b border-cream-800">
-        <div className="container-main py-12 max-w-2xl text-center">
-          <h3 className="font-serif text-cream-100 text-2xl mb-3">Stay in touch</h3>
-          <p className="text-sm text-cream-400 leading-relaxed mb-6">
-            Occasional updates on attachment, the book, and upcoming groups. 4–6 emails a year. No spam.
-          </p>
-          {/* KIT_EMBED_PLACEHOLDER */}
-          <p className="text-xs text-cream-600 italic">Newsletter signup coming soon.</p>
+        <div className="container-main py-12 max-w-xl text-center">
+          <KitEmbed />
         </div>
       </section>
 
