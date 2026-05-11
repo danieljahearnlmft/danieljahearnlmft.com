@@ -27,7 +27,7 @@ export default function Book() {
                 The Way Back Home
               </h1>
               <p className="font-serif italic text-cream-600 text-lg mb-6">
-                Healing Attachment Wounds and Rebuilding Connection with Your Teen
+                Healing Attachment Wounds With Your Teen
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
                 If your teenager is shutting down, pulling away, or in constant conflict — this book explains the attachment science behind it, and what you can actually do about it.

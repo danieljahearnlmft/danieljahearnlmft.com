@@ -83,7 +83,7 @@ export default function HealingAttachmentWounds() {
           <p className="eyebrow text-cream-400">The Book</p>
           <h2 className="text-2xl font-serif text-cream-100 mb-4">The Way Back Home</h2>
           <p className="text-cream-400 leading-relaxed mb-7">
-            My book <em>The Way Back Home: Healing Attachment Wounds and Rebuilding Connection with Your Teen</em> applies this framework specifically to parents navigating the adolescent years — where attachment wounds in the parent surface with particular force and particular consequence.
+            My book <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em> applies this framework specifically to parents navigating the adolescent years — where attachment wounds in the parent surface with particular force and particular consequence.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/the-way-back-home" className="btn-primary">About the Book</Link>

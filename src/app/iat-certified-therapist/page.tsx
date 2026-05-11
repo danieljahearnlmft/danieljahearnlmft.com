@@ -64,7 +64,7 @@ export default function IATCertifiedTherapist() {
             My private practice focuses on three overlapping areas: men's attachment work, father-teen repair, and adult clients with insecure attachment patterns who have not found lasting change through other therapeutic approaches. The IAT framework is the backbone of all three.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            I am also the author of <em>The Way Back Home: Healing Attachment Wounds and Rebuilding Connection with Your Teen</em>, which translates the IAT framework for parents — and the creator of <a href="https://waybackhome.app" className="text-cream-500 hover:text-cream-700 underline underline-offset-2">waybackhome.app</a>, a daily practice companion that brings the five conditions of secure attachment into a ten-minute daily ritual for parents of teenagers.
+            I am also the author of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>, which translates the IAT framework for parents — and the creator of <a href="https://waybackhome.app" className="text-cream-500 hover:text-cream-700 underline underline-offset-2">waybackhome.app</a>, a daily practice companion that brings the five conditions of secure attachment into a ten-minute daily ritual for parents of teenagers.
           </p>
           <p className="text-cream-700 leading-relaxed">
             The clinical work and the public-facing work are the same project: making the most effective attachment-based model available to as many people as possible, at whatever level of depth their situation calls for.

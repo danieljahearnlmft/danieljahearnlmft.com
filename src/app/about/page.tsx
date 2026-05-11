@@ -99,7 +99,7 @@ export default function About() {
               },
               {
                 title: 'Author',
-                body: 'Author of The Way Back Home: Healing Attachment Wounds and Rebuilding Connection with Your Teen (2026), a clinical guide for families applying IAT principles to adolescent attachment repair.',
+                body: 'Author of The Way Back Home: Healing Attachment Wounds With Your Teen (2026), a clinical guide for families applying IAT principles to adolescent attachment repair.',
               },
             ].map((item) => (
               <div key={item.title} className="border-l-2 border-cream-400 pl-5">
