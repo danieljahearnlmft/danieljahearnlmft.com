@@ -196,9 +196,8 @@ export default function ParentSupportGroups() {
           <p className="text-cream-400 leading-relaxed mb-7">
             A free guide that introduces the Integrative Attachment Therapy framework and what drives adolescent withdrawal — drawn directly from The Way Back Home.
           </p>
-          {/* TODO: replace with Kit landing page URL after Kit setup */}
           <a
-            href="https://forms.gle/7izvTY7Yi2TcDiGp6"
+            href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary !bg-cream-500 hover:!bg-cream-400"

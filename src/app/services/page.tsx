@@ -142,9 +142,8 @@ export default function Services() {
                 >
                   Apply for Family Work
                 </a>
-                {/* TODO: replace with Kit landing page URL after Kit setup */}
                 <a
-                  href="https://forms.gle/7izvTY7Yi2TcDiGp6"
+                  href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-ghost"
