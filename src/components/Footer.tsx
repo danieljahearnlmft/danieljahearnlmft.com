@@ -11,7 +11,7 @@ export default function Footer() {
       </section>
 
       <div className="container-main py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
           <div>
             <p className="font-serif text-cream-100 text-base mb-3">Daniel J. Ahearn, LMFT</p>
             <p className="text-sm text-cream-400 leading-relaxed">
@@ -29,26 +29,12 @@ export default function Footer() {
             <p className="text-xs uppercase tracking-widest text-cream-500 mb-4">Navigation</p>
             <div className="flex flex-col gap-2">
               <Link href="/about" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">About</Link>
-              <Link href="/mens-work" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Men's Attachment Repair Groups</Link>
               <Link href="/services" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Individual, Couples & Family</Link>
+              <Link href="/mens-work" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Men's Attachment Repair Groups</Link>
               <Link href="/the-way-back-home" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">The Way Back Home</Link>
               <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Daily Practice (waybackhome.app)</a>
               <Link href="/parent-support-groups" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Parent Support Groups</Link>
               <Link href="/contact" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Contact</Link>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-xs uppercase tracking-widest text-cream-500 mb-4">Clinical Approaches</p>
-            <div className="flex flex-col gap-2">
-              <Link href="/integrative-attachment-therapy" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Integrative Attachment Therapy</Link>
-              <Link href="/ideal-parent-figure-protocol" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Ideal Parent Figure Protocol</Link>
-              <Link href="/iat-certified-therapist" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">IAT-Certified Therapist</Link>
-              <Link href="/earned-secure-attachment" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Earned Secure Attachment</Link>
-              <Link href="/attachment-therapy-adults" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Attachment Therapy for Adults</Link>
-              <Link href="/healing-attachment-wounds" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Healing Attachment Wounds</Link>
-              <Link href="/attachment-styles" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Attachment Styles</Link>
-              <Link href="/attachment-based-therapy-los-angeles" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Therapy in Los Angeles</Link>
             </div>
           </div>
 
