@@ -1,12 +1,35 @@
 import Link from 'next/link'
-import KitEmbed from '@/components/KitEmbed'
 
 export default function Footer() {
   return (
     <footer className="bg-cream-900 text-cream-300">
       <section className="border-b border-cream-800">
-        <div className="container-main py-12 max-w-xl text-center">
-          <KitEmbed />
+        <div className="container-main py-10 max-w-lg text-center">
+          <p className="text-xs uppercase tracking-widest text-cream-500 mb-3">Stay in touch</p>
+          <p className="text-sm text-cream-400 leading-relaxed mb-5">
+            Occasional notes on attachment and parenting teens. 4–6 emails a year. No spam.
+          </p>
+          <form
+            action="https://app.kit.com/forms/799e767f77/subscriptions"
+            method="post"
+            target="_blank"
+            className="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto"
+          >
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Email address"
+              required
+              aria-label="Email address"
+              className="flex-1 bg-cream-800 border border-cream-700 text-cream-100 placeholder-cream-500 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-cream-500 transition-colors"
+            />
+            <button
+              type="submit"
+              className="btn-primary !bg-cream-500 hover:!bg-cream-400 whitespace-nowrap text-xs"
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
       </section>
 
