@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Daniel J. Ahearn, LMFT — Attachment Therapist in Los Angeles',
-  description: 'IAT-certified attachment therapist in Los Angeles working with men, fathers, teens, and families. One of six certified IAT clinicians in the U.S.',
+  description: 'Author of The Way Back Home — now on Audible. IAT-certified attachment therapist in Los Angeles working with men, fathers, teens, and families. One of six certified IAT clinicians in the U.S.',
 }
 
 export default function Home() {
@@ -142,7 +142,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="eyebrow">Now Available</p>
+              <p className="eyebrow">Now on Audible &middot; Paperback &middot; Kindle</p>
               <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-4">
                 The Way Back Home
               </h2>
