@@ -87,20 +87,8 @@ export default function Home() {
         <div className="container-main">
           <p className="eyebrow text-center">Ways to Work Together</p>
           <h2 className="text-3xl font-serif text-cream-900 text-center mb-12">Find the right fit</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              {
-                title: "Men's Attachment Repair Groups",
-                description: 'A 16-week cohort-based IPF process for men who are competent, reliable, and exhausted by how hard it is to stay connected. $5,500 for 16 weeks.',
-                href: '/mens-work',
-                cta: 'Learn About the Group',
-              },
-              {
-                title: 'Individual Therapy',
-                description: 'One-on-one IAT work using the Three Pillars method, tailored to your specific attachment history and relational goals. $300 per session.',
-                href: '/services',
-                cta: 'Individual & Couples',
-              },
               {
                 title: 'Family & Teen Attachment Repair',
                 description: 'For parents of adolescents navigating shutdown, conflict, or disconnection. Healing happens in the relationship — not just in the teen. $400 per session.',
@@ -112,6 +100,12 @@ export default function Home() {
                 description: 'National Zoom-based psychoeducation groups for parents of teens. Attachment-informed, practical, and capped at 12 participants. $60 per session.',
                 href: '/parent-support-groups',
                 cta: 'Join a Parent Group',
+              },
+              {
+                title: 'Individual Therapy',
+                description: 'One-on-one IAT work using the Three Pillars method, tailored to your specific attachment history and relational goals. $300 per session.',
+                href: '/services',
+                cta: 'Individual & Couples',
               },
             ].map((service) => (
               <div key={service.title} className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
@@ -125,6 +119,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="text-center mt-10 text-cream-600 text-sm">
+            <Link href="/mens-work" className="hover:text-cream-900 transition-colors">
+              Also accepting applications for the next men&rsquo;s attachment repair cohort &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 
