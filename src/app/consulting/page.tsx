@@ -102,7 +102,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+Speaking"
               >
                 Inquire About Speaking
               </a>
@@ -158,7 +158,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+TeamTraining"
               >
                 Inquire About Team Training
               </a>
@@ -213,7 +213,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+Consulting"
               >
                 Start a Conversation
               </a>
@@ -262,7 +262,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Podcast%20Booking%20Inquiry"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+Podcast"
               >
                 Book Daniel for Your Podcast
               </a>
@@ -311,7 +311,7 @@ export default function Consulting() {
           </p>
           <a
             href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
-            className="btn-primary text-base px-8 py-4"
+            className="btn-primary text-base px-8 py-4 plausible-event-name=Inquiry+General"
           >
             Consult with Your Team →
           </a>

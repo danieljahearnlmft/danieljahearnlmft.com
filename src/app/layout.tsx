@@ -21,11 +21,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/images/daniel-hero.jpg'],
   },
+  verification: {
+    google: '-xvVkJmV51eF9ynLqQR86bszu1VexnY3d5A2YxegXc8',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script defer data-domain="danieljahearnlmft.com" src="https://plausible.io/js/script.outbound-links.file-downloads.404.tagged-events.js" />
+      </head>
       <body>
         <Nav />
         <main>{children}</main>

@@ -40,15 +40,23 @@ export default function Book() {
                   href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-primary plausible-event-name=Book+Amazon"
                 >
                   Buy on Amazon
+                </a>
+                <a
+                  href="https://www.audible.com/pd/The-Way-Back-Home-Audiobook/B0H12DWQFP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost plausible-event-name=Audible+Click"
+                >
+                  Listen on Audible
                 </a>
                 <a
                   href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost"
+                  className="btn-ghost plausible-event-name=Free+Chapter"
                 >
                   Free Chapter + Guide
                 </a>
@@ -160,7 +168,7 @@ export default function Book() {
             href="https://waybackhome.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary !bg-cream-500 hover:!bg-cream-400"
+            className="btn-primary !bg-cream-500 hover:!bg-cream-400 plausible-event-name=App+Open"
           >
             Open the App
           </a>

@@ -32,7 +32,7 @@ export default function About() {
                 href="https://calendly.com/danieljahearn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Calendly+Click"
               >
                 Free 15-Min Consult
               </a>

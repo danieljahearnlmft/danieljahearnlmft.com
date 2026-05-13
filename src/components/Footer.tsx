@@ -55,7 +55,7 @@ export default function Footer() {
               <Link href="/services" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Individual, Couples & Family</Link>
               <Link href="/mens-work" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Men's Attachment Repair Groups</Link>
               <Link href="/the-way-back-home" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">The Way Back Home</Link>
-              <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Daily Practice (waybackhome.app)</a>
+              <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors plausible-event-name=App+Open">Daily Practice (waybackhome.app)</a>
               <Link href="/parent-support-groups" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Parent Support Groups</Link>
               <Link href="/writing" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Writing</Link>
               <Link href="/contact" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Contact</Link>
@@ -71,12 +71,12 @@ export default function Footer() {
               href="https://calendly.com/danieljahearn/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary !bg-cream-500 hover:!bg-cream-400 text-xs"
+              className="btn-primary !bg-cream-500 hover:!bg-cream-400 text-xs plausible-event-name=Calendly+Click"
             >
               Schedule a Consult
             </a>
             <div className="flex gap-4 mt-6">
-              <a href="https://substack.com/@danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">Substack</a>
+              <a href="https://substack.com/@danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm plausible-event-name=Substack+Click">Substack</a>
               <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">Instagram</a>
               <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">LinkedIn</a>
             </div>

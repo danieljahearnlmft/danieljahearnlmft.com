@@ -23,7 +23,7 @@ export default function Home() {
                 Working with parents, men, fathers, and families on the attachment wounds beneath the surface — grounded in over a decade of clinical work in Los Angeles.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary plausible-event-name=Calendly+Click">
                   Free 15-Min Consult
                 </a>
                 <Link href="/about" className="btn-ghost">
@@ -34,7 +34,7 @@ export default function Home() {
                 href="https://waybackhome.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-sm text-cream-600 hover:text-cream-900 transition-colors"
+                className="inline-block mt-5 text-sm text-cream-600 hover:text-cream-900 transition-colors plausible-event-name=App+Open"
               >
                 Or try the free daily practice at waybackhome.app →
               </a>
@@ -158,7 +158,7 @@ export default function Home() {
                   href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-primary plausible-event-name=Book+Amazon"
                 >
                   Buy on Amazon
                 </a>
