@@ -23,8 +23,8 @@ export default function Home() {
                 Working with parents, men, fathers, and families on the attachment wounds beneath the surface — grounded in over a decade of clinical work in Los Angeles.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Free 30-Min Consult
+                <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Free 15-Min Consult
                 </a>
                 <Link href="/about" className="btn-ghost">
                   Learn My Approach
@@ -77,7 +77,7 @@ export default function Home() {
             What looks like emotional unavailability, withdrawal, or conflict is almost always an attachment strategy that once made sense. The goal isn't to fix what's wrong with you. It's to repair the foundation underneath — so that security stops being something you perform and starts being something you feel.
           </p>
           <p className="text-cream-600 text-sm leading-relaxed">
-            I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol, a research-backed method developed by Dr. Daniel P. Brown. I trained directly with Dr. Brown and am one of six IAT-certified clinicians in the United States.
+            I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol — a research-backed method developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT. I trained directly with Drs. Brown and Elliott and am one of six IAT-certified clinicians in the United States.
           </p>
         </div>
       </section>
@@ -267,9 +267,9 @@ export default function Home() {
       <section className="bg-cream-200 py-16">
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Not sure where to start?</h2>
-          <p className="text-cream-700 mb-7">A free 30-minute call to figure out whether we're a fit and which format makes most sense for your situation.</p>
+          <p className="text-cream-700 mb-7">A free 15-minute call to figure out whether we're a fit and which format makes most sense for your situation.</p>
           <a
-            href="https://calendly.com/danieljahearn/30min"
+            href="https://calendly.com/danieljahearn/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

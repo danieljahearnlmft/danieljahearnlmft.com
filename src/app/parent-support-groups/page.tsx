@@ -45,8 +45,8 @@ export default function ParentSupportGroups() {
               >
                 Join a Group
               </a>
-              <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                Free 30-Min Consult
+              <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                Free 15-Min Consult
               </a>
             </div>
           </div>
@@ -86,16 +86,6 @@ export default function ParentSupportGroups() {
           <p className="text-cream-700 leading-relaxed">
             Groups are capped at 12 participants so that every parent has room to be heard. We meet on Zoom, which means you can join from anywhere in the country.
           </p>
-        </div>
-      </section>
-
-      {/* Endorsement */}
-      <section className="bg-cream-800 py-12">
-        <div className="container-main max-w-3xl text-center">
-          <p className="font-serif italic text-cream-200 text-xl leading-relaxed mb-5">
-            "Daniel Ahearn has done something rare — he has translated a sophisticated clinical model into language that parents can actually use."
-          </p>
-          <p className="text-cream-400 text-sm">— Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
         </div>
       </section>
 
@@ -188,25 +178,6 @@ export default function ParentSupportGroups() {
         </div>
       </section>
 
-      {/* Free guide lead magnet */}
-      <section className="bg-cream-900 py-14">
-        <div className="container-main max-w-xl text-center">
-          <p className="eyebrow text-cream-500">Free Resource</p>
-          <h2 className="text-2xl font-serif text-cream-100 mb-4">Why Your Teen Is Pushing You Away</h2>
-          <p className="text-cream-400 leading-relaxed mb-7">
-            A free guide that introduces the Integrative Attachment Therapy framework and what drives adolescent withdrawal — drawn directly from The Way Back Home.
-          </p>
-          <a
-            href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary !bg-cream-500 hover:!bg-cream-400"
-          >
-            Download Free Guide
-          </a>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-cream-200 py-14">
         <div className="container-main max-w-xl text-center">
@@ -221,7 +192,7 @@ export default function ParentSupportGroups() {
             >
               Join a Group
             </a>
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
               Free Consult First
             </a>
           </div>

@@ -16,7 +16,7 @@ export default function IntegrativeAttachmentTherapy() {
             Integrative Attachment Therapy
           </h1>
           <p className="text-cream-300 text-lg leading-relaxed">
-            A comprehensive, research-grounded framework for treating insecure and disorganized attachment in adults — developed by Dr. Daniel P. Brown and Dr. David Elliott, and taught to a small number of certified clinicians worldwide.
+            A comprehensive, research-grounded framework for treating insecure and disorganized attachment in adults — developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT by Dr. Elliott, Nigel Denning, and colleagues.
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function IntegrativeAttachmentTherapy() {
           <p className="eyebrow">The Framework</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">What IAT is</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            Integrative Attachment Therapy (IAT) is a structured clinical framework developed by Daniel P. Brown, Ph.D. — one of the world's foremost researchers and clinicians in attachment theory — and David Elliott, Ph.D. It is organized around a central insight: that most psychological suffering in adults traces back to disruptions in early attachment, and that the most effective path to lasting change is not analyzing those disruptions but systematically providing the experiences the attachment system needed and did not get.
+            Integrative Attachment Therapy (IAT) is a structured clinical framework developed by Daniel P. Brown, Ph.D. — one of the world's foremost researchers and clinicians in attachment theory — and David Elliott, Ph.D. Following Dr. Brown's death, the work is carried forward through IAT by Dr. Elliott alongside Nigel Denning and a small international community of certified clinicians. The model is organized around a central insight: that most psychological suffering in adults traces back to disruptions in early attachment, and that the most effective path to lasting change is not analyzing those disruptions but systematically providing the experiences the attachment system needed and did not get.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             IAT is not a single technique. It is an integrated model that draws on attachment research, developmental neuroscience, mindfulness-based approaches, and somatic therapy to address the full range of insecure attachment presentations — anxious, avoidant, disorganized, and complex traumatic. The model is sometimes called the Three Pillars framework, reflecting its three foundational components: establishing a secure base, applying the best-interest-of-the-child principle, and delivering the Ideal Parent Figure (IPF) protocol.
@@ -100,7 +100,7 @@ export default function IntegrativeAttachmentTherapy() {
             I am one of six IAT-certified clinicians in the United States. I trained directly with Dr. Daniel P. Brown and Dr. David Elliott and use the full Three Pillars framework in my work with adults, parents, and men navigating attachment-based patterns in their relationships and lives.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 30-Min Consult</a>
+            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
             <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">

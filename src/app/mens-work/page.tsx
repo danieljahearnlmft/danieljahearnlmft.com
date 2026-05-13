@@ -45,8 +45,8 @@ export default function MensWork() {
               >
                 Apply for Next Cohort
               </a>
-              <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                Free 30-Min Consult
+              <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                Free 15-Min Consult
               </a>
             </div>
           </div>

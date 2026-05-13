@@ -16,7 +16,7 @@ export default function IdealParentFigureProtocol() {
             The Ideal Parent Figure Protocol
           </h1>
           <p className="text-cream-300 text-lg leading-relaxed">
-            A structured, imagination-based approach to building secure attachment from the inside out — developed by Dr. Daniel P. Brown and Dr. David Elliott, and used by a small number of certified clinicians worldwide.
+            A structured, imagination-based approach to building secure attachment from the inside out — developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT by Dr. Elliott, Nigel Denning, and colleagues.
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function IdealParentFigureProtocol() {
           <p className="eyebrow">What It Is</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">Building security that was never built</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            The Ideal Parent Figure (IPF) protocol is a therapeutic approach developed within the Integrative Attachment Therapy (IAT) framework by Daniel P. Brown, Ph.D. and David Elliott, Ph.D. It works directly with the imagination to create new internal representations of secure attachment — experiences that many adults never had as children and have been carrying the absence of ever since.
+            The Ideal Parent Figure (IPF) protocol is a therapeutic approach developed within the Integrative Attachment Therapy (IAT) framework by Daniel P. Brown, Ph.D. and David Elliott, Ph.D. Following Dr. Brown's death, the work continues through IAT under the leadership of Dr. Elliott alongside Nigel Denning and a small community of certified clinicians worldwide. It works directly with the imagination to create new internal representations of secure attachment — experiences that many adults never had as children and have been carrying the absence of ever since.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             The protocol is grounded in a fundamental insight from attachment research: the brain cannot easily distinguish between an imagined experience and a lived one at the level of implicit memory. The felt sense of being held, soothed, delighted in, and supported — if experienced vividly and repeatedly in a safe therapeutic context — begins to lay down new implicit memories. Over time, these memories change the internal working model: the largely unconscious set of expectations about relationships, safety, and self-worth that was formed in early life and has been organizing adult behavior ever since.
@@ -110,7 +110,7 @@ export default function IdealParentFigureProtocol() {
             I am one of six IAT-certified clinicians in the United States and trained directly with Dr. Daniel P. Brown and Dr. David Elliott. I work with adults and parents in private practice in Los Angeles.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 30-Min Consult</a>
+            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
             <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">

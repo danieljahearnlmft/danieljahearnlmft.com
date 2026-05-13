@@ -65,10 +65,10 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-widest text-cream-500 mb-4">Get Started</p>
             <p className="text-sm text-cream-400 mb-4 leading-relaxed">
-              Free 30-minute consultation to discuss what you're looking for and whether we're a good fit.
+              Free 15-minute consultation to discuss what you're looking for and whether we're a good fit.
             </p>
             <a
-              href="https://calendly.com/danieljahearn/30min"
+              href="https://calendly.com/danieljahearn/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary !bg-cream-500 hover:!bg-cream-400 text-xs"
@@ -89,10 +89,7 @@ export default function Footer() {
             <Link href="/integrative-attachment-therapy" className="text-cream-500 hover:text-cream-200 transition-colors">Integrative Attachment Therapy</Link>
             <Link href="/ideal-parent-figure-protocol" className="text-cream-500 hover:text-cream-200 transition-colors">IPF Protocol</Link>
             <Link href="/iat-certified-therapist" className="text-cream-500 hover:text-cream-200 transition-colors">IAT-Certified Therapist</Link>
-            <Link href="/earned-secure-attachment" className="text-cream-500 hover:text-cream-200 transition-colors">Earned Secure Attachment</Link>
-            <Link href="/attachment-therapy-adults" className="text-cream-500 hover:text-cream-200 transition-colors">Attachment Therapy for Adults</Link>
             <Link href="/healing-attachment-wounds" className="text-cream-500 hover:text-cream-200 transition-colors">Healing Attachment Wounds</Link>
-            <Link href="/attachment-styles" className="text-cream-500 hover:text-cream-200 transition-colors">Attachment Styles</Link>
             <Link href="/attachment-based-therapy-los-angeles" className="text-cream-500 hover:text-cream-200 transition-colors">Therapy in Los Angeles</Link>
           </div>
         </div>

@@ -29,12 +29,12 @@ export default function About() {
                 I serve as Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, where I run attachment repair groups and lead clinical training. I also maintain a private practice specializing in men's attachment work, father-teen repair, and families navigating the hardest years.
               </p>
               <a
-                href="https://calendly.com/danieljahearn/30min"
+                href="https://calendly.com/danieljahearn/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Free 30-Min Consult
+                Free 15-Min Consult
               </a>
             </div>
             <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-md">
@@ -119,7 +119,7 @@ export default function About() {
               <p className="eyebrow">The Method</p>
               <h2 className="text-3xl font-serif text-cream-900 mb-5">Integrative Attachment Therapy</h2>
               <p className="text-cream-700 leading-relaxed mb-4">
-                IAT is a structured, research-backed approach to attachment repair developed by Dr. Daniel P. Brown at Harvard Medical School. It works by providing corrective emotional experiences — through guided visualization — that the nervous system can internalize as a new foundation for security.
+                IAT is a structured, research-backed approach to attachment repair developed by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott — and now carried forward through Integrative Attachment Therapy by Dr. Elliott, Nigel Denning, and colleagues. It works by providing corrective emotional experiences — through guided visualization — that the nervous system can internalize as a new foundation for security.
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
                 The Ideal Parent Figure Protocol is its central tool: a systematic process of moving through developmental stages and building the internalized experience of being seen, soothed, safe, and supported.
@@ -154,9 +154,9 @@ export default function About() {
       <section className="bg-cream-200 py-16">
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Ready to talk?</h2>
-          <p className="text-cream-700 mb-7">A free 30-minute consult to discuss what you're navigating and whether we're a fit.</p>
+          <p className="text-cream-700 mb-7">A free 15-minute consult to discuss what you're navigating and whether we're a fit.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Schedule a Consult
             </a>
             <Link href="/services" className="btn-ghost">See All Services</Link>

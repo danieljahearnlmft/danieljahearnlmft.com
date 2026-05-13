@@ -21,19 +21,19 @@ export default function ContactSection() {
             <p className="eyebrow">Contact</p>
             <h1 className="text-4xl font-serif text-cream-900 mb-5">Get in touch</h1>
             <p className="text-cream-700 leading-relaxed mb-8">
-              The best starting point for therapy clients is a free 30-minute phone consultation. For speaking, consulting, press, or clinician inquiries, the form to the right is the right channel.
+              The best starting point for therapy clients is a free 15-minute phone consultation. For speaking, consulting, press, or clinician inquiries, the form to the right is the right channel.
             </p>
 
             <div className="space-y-5 mb-10">
               <div>
                 <p className="text-xs uppercase tracking-widest text-cream-500 mb-1.5">Schedule a Consult</p>
                 <a
-                  href="https://calendly.com/danieljahearn/30min"
+                  href="https://calendly.com/danieljahearn/15min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
                 >
-                  Book Free 30-Min Call
+                  Book Free 15-Min Call
                 </a>
               </div>
 
@@ -80,11 +80,11 @@ export default function ContactSection() {
                 <p className="eyebrow">Message Received</p>
                 <h2 className="font-serif text-2xl text-cream-900 mb-4">Thank you for reaching out.</h2>
                 <p className="text-cream-700 leading-relaxed mb-6">
-                  I'll be in touch within 1–2 business days. If you'd like to move faster, feel free to book a free 30-minute call directly.
+                  I'll be in touch within 1–2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://calendly.com/danieljahearn/30min"
+                    href="https://calendly.com/danieljahearn/15min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"
