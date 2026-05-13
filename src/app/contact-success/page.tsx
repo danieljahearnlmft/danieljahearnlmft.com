@@ -16,7 +16,7 @@ export default function ContactSuccess() {
           I'll be in touch within 1–2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book a Consult
           </a>
           <Link href="/" className="btn-ghost">Back to Home</Link>

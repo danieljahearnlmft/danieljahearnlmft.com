@@ -28,7 +28,7 @@ export default function ContactSection() {
               <div>
                 <p className="text-xs uppercase tracking-widest text-cream-500 mb-1.5">Schedule a Consult</p>
                 <a
-                  href="https://calendly.com/danieljahearn/15min"
+                  href="https://calendly.com/danieljahearn/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
@@ -84,7 +84,7 @@ export default function ContactSection() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://calendly.com/danieljahearn/15min"
+                    href="https://calendly.com/danieljahearn/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"

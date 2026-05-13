@@ -45,7 +45,7 @@ export default function ParentSupportGroups() {
               >
                 Join a Group
               </a>
-              <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 Free 15-Min Consult
               </a>
             </div>
@@ -192,7 +192,7 @@ export default function ParentSupportGroups() {
             >
               Join a Group
             </a>
-            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-ghost">
               Free Consult First
             </a>
           </div>

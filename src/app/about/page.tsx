@@ -29,7 +29,7 @@ export default function About() {
                 I serve as Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, where I run attachment repair groups and lead clinical training. I also maintain a private practice specializing in men's attachment work, father-teen repair, and families navigating the hardest years.
               </p>
               <a
-                href="https://calendly.com/danieljahearn/15min"
+                href="https://calendly.com/danieljahearn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -150,19 +150,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-cream-200 py-16">
-        <div className="container-main max-w-xl text-center">
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">Ready to talk?</h2>
-          <p className="text-cream-700 mb-7">A free 15-minute consult to discuss what you're navigating and whether we're a fit.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">
-              Schedule a Consult
-            </a>
-            <Link href="/services" className="btn-ghost">See All Services</Link>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

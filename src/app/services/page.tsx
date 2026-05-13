@@ -30,7 +30,7 @@ export default function Services() {
               All work is grounded in Integrative Attachment Therapy and the Ideal Parent Figure Protocol — tailored to your specific attachment history, current struggles, and relational goals.
             </p>
             <a
-              href="https://calendly.com/danieljahearn/15min"
+              href="https://calendly.com/danieljahearn/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -304,23 +304,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-cream-200 py-16">
-        <div className="container-main max-w-xl text-center">
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">Not sure which is right?</h2>
-          <p className="text-cream-700 mb-7">
-            Book a free 15-minute call. We'll discuss what you're struggling with and which format makes the most sense.
-          </p>
-          <a
-            href="https://calendly.com/danieljahearn/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Schedule a Free Consult
-          </a>
-        </div>
-      </section>
     </>
   )
 }

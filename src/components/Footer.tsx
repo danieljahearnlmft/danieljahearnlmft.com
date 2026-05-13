@@ -68,7 +68,7 @@ export default function Footer() {
               Free 15-minute consultation to discuss what you're looking for and whether we're a good fit.
             </p>
             <a
-              href="https://calendly.com/danieljahearn/15min"
+              href="https://calendly.com/danieljahearn/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary !bg-cream-500 hover:!bg-cream-400 text-xs"

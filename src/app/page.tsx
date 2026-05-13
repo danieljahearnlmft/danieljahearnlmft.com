@@ -23,7 +23,7 @@ export default function Home() {
                 Working with parents, men, fathers, and families on the attachment wounds beneath the surface — grounded in over a decade of clinical work in Los Angeles.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://calendly.com/danieljahearn/15min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Free 15-Min Consult
                 </a>
                 <Link href="/about" className="btn-ghost">
@@ -222,25 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Daily practice — waybackhome.app */}
-      <section className="section-warm">
-        <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow">Free Daily Practice</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-5">A ten-minute practice for parents of teens</h2>
-          <p className="text-cream-700 leading-relaxed mb-7 max-w-xl mx-auto">
-            <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-cream-900 underline underline-offset-2 hover:text-cream-700">waybackhome.app</a> is a free daily companion that brings the five conditions of secure attachment into a short, repeatable ritual. No login, no fee — a place to start before a book or a session.
-          </p>
-          <a
-            href="https://waybackhome.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Try the Daily Practice
-          </a>
-        </div>
-      </section>
-
       {/* Endorsement */}
       <section className="bg-cream-800 py-14">
         <div className="container-main max-w-3xl text-center">
@@ -263,21 +244,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-cream-200 py-16">
-        <div className="container-main max-w-xl text-center">
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">Not sure where to start?</h2>
-          <p className="text-cream-700 mb-7">A free 15-minute call to figure out whether we're a fit and which format makes most sense for your situation.</p>
-          <a
-            href="https://calendly.com/danieljahearn/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Schedule a Free Consult
-          </a>
-        </div>
-      </section>
     </>
   )
 }
