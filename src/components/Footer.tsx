@@ -57,6 +57,7 @@ export default function Footer() {
               <Link href="/the-way-back-home" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">The Way Back Home</Link>
               <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Daily Practice (waybackhome.app)</a>
               <Link href="/parent-support-groups" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Parent Support Groups</Link>
+              <Link href="/writing" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Writing</Link>
               <Link href="/contact" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Contact</Link>
             </div>
           </div>

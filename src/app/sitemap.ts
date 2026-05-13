@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/the-way-back-home',                        priority: 0.9, changeFrequency: 'monthly' },
     { path: '/parent-support-groups',                    priority: 0.9, changeFrequency: 'monthly' },
     { path: '/consulting',                               priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/writing',                                  priority: 0.8, changeFrequency: 'monthly' },
     { path: '/contact',                                  priority: 0.8, changeFrequency: 'yearly'  },
     { path: '/integrative-attachment-therapy',           priority: 0.7, changeFrequency: 'monthly' },
     { path: '/ideal-parent-figure-protocol',             priority: 0.7, changeFrequency: 'monthly' },

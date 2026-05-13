@@ -171,6 +171,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured writing — Lion's Roar */}
+      <section className="bg-cream-100 py-16">
+        <div className="container-main max-w-4xl">
+          <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
+            <div>
+              <p className="eyebrow">Featured in <em>Lion&rsquo;s Roar</em></p>
+              <h2 className="text-2xl md:text-3xl font-serif text-cream-900">Selected essays</h2>
+            </div>
+            <Link href="/writing" className="text-sm text-cream-600 hover:text-cream-900 transition-colors">
+              All writing &rarr;
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Parenting Teens with Presence',
+                dek: 'Five ways to support and connect with your teenage children.',
+                href: 'https://www.lionsroar.com/parenting-teens-with-presence/',
+              },
+              {
+                title: 'How to Be Honest With Yourself',
+                dek: 'False positivity erodes truth and intimacy. A path toward honesty.',
+                href: 'https://www.lionsroar.com/when-resilience-becomes-repression/',
+              },
+              {
+                title: 'The Nine Breaths of Purification',
+                dek: 'A short Bön practice to clear the mind and reconnect with the body.',
+                href: 'https://www.lionsroar.com/let-the-nine-breaths-of-purification-clear-your-mind-and-open-your-heart/',
+              },
+            ].map((a) => (
+              <a
+                key={a.href}
+                href={a.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-cream-50 border border-cream-300 rounded-lg p-6 flex flex-col justify-between gap-4 hover:border-cream-500 transition-colors"
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Lion&rsquo;s Roar</p>
+                  <h3 className="font-serif text-lg text-cream-900 mb-2 leading-snug">{a.title}</h3>
+                  <p className="text-cream-700 text-sm leading-relaxed">{a.dek}</p>
+                </div>
+                <span className="text-cream-500 text-sm font-medium group-hover:text-cream-700 transition-colors">
+                  Read essay &rarr;
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Daily practice — waybackhome.app */}
       <section className="section-warm">
         <div className="container-main max-w-3xl text-center">
