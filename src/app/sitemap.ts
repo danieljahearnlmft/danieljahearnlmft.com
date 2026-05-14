@@ -26,7 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   return routes.map(({ path, priority, changeFrequency }) => ({
-    url: `${BASE}${path}`,
+    // Trailing slash matches Netlify's canonical serving (avoids 301 redirect chain that triggers
+    // GSC "Page with redirect" + "Duplicate without user-selected canonical" warnings).
+    url: path === '' ? `${BASE}/` : `${BASE}${path}/`,
     lastModified: now,
     changeFrequency,
     priority,
