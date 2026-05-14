@@ -69,7 +69,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Speaking%20%2F%20Media%20Inquiry"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+Speaking"
               >
                 Get in touch about speaking
               </a>
@@ -124,7 +124,7 @@ export default function Consulting() {
 
               <a
                 href="mailto:daniel@danieljahearnlmft.com?subject=Consult%20with%20Your%20Team"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Inquiry+TeamTraining"
               >
                 Get in touch about your team
               </a>
