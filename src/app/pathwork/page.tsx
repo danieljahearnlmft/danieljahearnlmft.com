@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Pathwork · Western Dharma Friends',
   description:
     'Recordings and inner-practice resources for those carrying the Pathwork Oracle Deck.',
-  // Unlisted: not indexed by Google, not linked from main nav.
-  // Reachable only by direct URL (the QR on the deck).
   robots: { index: false, follow: false },
 }
 
@@ -101,9 +100,21 @@ function TrackRow({ track }: { track: Track }) {
 export default function Pathwork() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream-200 py-16 md:py-24">
-        <div className="container-main max-w-3xl">
+      {/* Hero image — full-width Lubra tree */}
+      <div className="relative w-full h-[55vh] min-h-[360px] max-h-[640px] overflow-hidden">
+        <Image
+          src="/images/lubra-tree.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Title panel */}
+      <section className="bg-cream-200 py-12 md:py-16">
+        <div className="container-main max-w-3xl text-center">
           <p className="eyebrow">Western Dharma Friends</p>
           <h1 className="text-4xl md:text-5xl font-serif text-cream-900 leading-tight mb-4">
             Pathwork Oracle
@@ -114,45 +125,58 @@ export default function Pathwork() {
         </div>
       </section>
 
-      {/* Intro essay */}
+      {/* Intro essay — with portrait inset alongside */}
       <section className="py-16 md:py-20">
         <div className="container-main max-w-3xl">
-          <div className="space-y-5 text-cream-700 leading-relaxed">
-            <p>
-              The Pathwork Oracle is a deeply personal project. I created it in
-              collaboration with Ana, a gifted artist and spiritual friend, as
-              a way to share the wisdom and inner practices that have shaped my
-              own life. This 40-card deck is rooted in the heart of Dharma and
-              draws from traditions that speak to transformation, compassion,
-              and liberation.
-            </p>
-            <p>
-              Each card is an invitation — a portal to deepen self-awareness,
-              reconnect with sacred truth, and engage the healing power of
-              imagination and reflection. Whether you are a seasoned meditator
-              or new to spiritual practice, the Pathwork Oracle offers a way to
-              explore your inner world.
-            </p>
-            <p className="text-cream-700">The deck includes:</p>
-            <ul className="list-disc pl-6 space-y-2 text-cream-700">
-              <li>A 40-day meditation journey structured for daily card work</li>
-              <li>22 guided meditations to support your practice (below)</li>
-              <li>
-                Symbolic, archetypal imagery anchored in sacred themes —
-                especially the energy of Green Tara, the liberator, a figure
-                of great compassion and wisdom
-              </li>
-            </ul>
-            <p>
-              This is more than a tool. It is an offering from my practice
-              to yours. I hold deep gratitude for Ana, whose spirit and vision
-              shaped the visual language of the deck.
-            </p>
-            <p className="font-serif italic text-cream-600">
-              May your life be a celebration.
-              <br />
-              — Daniel
-            </p>
+          <div className="grid md:grid-cols-[1fr_240px] gap-10 items-start">
+            <div className="space-y-5 text-cream-700 leading-relaxed">
+              <p>
+                The Pathwork Oracle is a deeply personal project. I created it
+                in collaboration with Ana, a gifted artist and spiritual
+                friend, as a way to share the wisdom and inner practices that
+                have shaped my own life. This 40-card deck is rooted in the
+                heart of Dharma and draws from traditions that speak to
+                transformation, compassion, and liberation.
+              </p>
+              <p>
+                Each card is an invitation — a portal to deepen self-awareness,
+                reconnect with sacred truth, and engage the healing power of
+                imagination and reflection. Whether you are a seasoned
+                meditator or new to spiritual practice, the Pathwork Oracle
+                offers a way to explore your inner world.
+              </p>
+              <p className="text-cream-700">The deck includes:</p>
+              <ul className="list-disc pl-6 space-y-2 text-cream-700">
+                <li>A 40-day meditation journey structured for daily card work</li>
+                <li>22 guided meditations to support your practice (below)</li>
+                <li>
+                  Symbolic, archetypal imagery anchored in sacred themes —
+                  especially the energy of Green Tara, the liberator, a figure
+                  of great compassion and wisdom
+                </li>
+              </ul>
+              <p>
+                This is more than a tool. It is an offering from my practice
+                to yours. I hold deep gratitude for Ana, whose spirit and
+                vision shaped the visual language of the deck.
+              </p>
+              <p className="font-serif italic text-cream-600">
+                May your life be a celebration.
+                <br />
+                — Daniel
+              </p>
+            </div>
+
+            {/* Portrait inset — hidden on mobile, visible md+ */}
+            <div className="hidden md:block sticky top-24">
+              <Image
+                src="/images/daniel-cave.jpg"
+                alt="Daniel in retreat practice"
+                width={480}
+                height={640}
+                className="rounded shadow-sm w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -191,8 +215,19 @@ export default function Pathwork() {
         </div>
       </section>
 
+      {/* Atmospheric break — cave vista */}
+      <div className="relative w-full h-[42vh] min-h-[260px] max-h-[440px] overflow-hidden">
+        <Image
+          src="/images/cave-vista.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
       {/* Western Dharma Friends doorway */}
-      <section className="py-16 md:py-20 border-t border-cream-300">
+      <section className="py-16 md:py-20">
         <div className="container-main max-w-3xl">
           <p className="eyebrow">If you found your way here</p>
           <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-3">
