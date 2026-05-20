@@ -195,6 +195,17 @@ export default function Pathwork() {
             supportive practices you can return to anytime.
           </p>
 
+          {/* Light returns — sunburst */}
+          <div className="relative w-full aspect-[16/9] mb-14 overflow-hidden rounded">
+            <Image
+              src="/images/canyon-sunburst.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
+
           {sections.map((section) => (
             <div key={section.heading} className="mb-12 last:mb-0">
               <h3 className="font-serif text-2xl text-cream-900 mb-1">
@@ -216,13 +227,14 @@ export default function Pathwork() {
       </section>
 
       {/* Atmospheric break — cave vista */}
-      <div className="relative w-full h-[42vh] min-h-[260px] max-h-[440px] overflow-hidden">
+      <div className="w-full max-w-[900px] mx-auto px-6 py-4">
         <Image
-          src="/images/cave-vista.jpg"
+          src="/images/temple-ceremony.jpg"
           alt=""
-          fill
-          sizes="100vw"
-          className="object-cover"
+          width={1263}
+          height={1400}
+          sizes="(max-width: 900px) 100vw, 900px"
+          className="w-full h-auto rounded shadow-sm"
         />
       </div>
 
@@ -272,7 +284,24 @@ export default function Pathwork() {
             </a>
           </div>
 
-          <p className="text-cream-500 text-sm mt-10 italic">
+        </div>
+      </section>
+
+      {/* Closing — prayer flag tree */}
+      <div className="relative w-full max-w-[1400px] mx-auto aspect-[16/9] max-h-[560px] overflow-hidden">
+        <Image
+          src="/images/prayer-flag-tree.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Contact line */}
+      <section className="py-12 md:py-16">
+        <div className="container-main max-w-3xl">
+          <p className="text-cream-500 text-sm italic text-center">
             If you would like to reach out about practice, the deck, or
             anything dharma-adjacent —{' '}
             <Link href="/contact" className="underline hover:text-cream-700">
