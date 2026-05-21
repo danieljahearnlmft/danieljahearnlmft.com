@@ -180,7 +180,7 @@ export default function Pathwork() {
               <p>
                 Ana painted every card, and the deck is her visual language.
                 I&rsquo;m grateful to her. And I&rsquo;m grateful to the sacred
-                feminine energy of Noble Green Tara and Sherab Chamma: All Ma-
+                feminine energy of Noble Green Tara and Sherab Chamma: All Ma -
                 that moved through this project.
               </p>
               <p>
