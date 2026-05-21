@@ -5,24 +5,24 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Pathwork · Western Dharma Friends',
   description:
-    'Recordings and inner-practice resources for those carrying the Pathwork Oracle Deck.',
+    'Recordings and inner-practice resources alongside the Pathwork Oracle Deck.',
   robots: { index: false, follow: false },
   openGraph: {
     title: 'Pathwork Oracle',
-    description: 'Guided meditations for those carrying the deck.',
+    description: 'Guided meditations and inner-practice resources.',
     images: [
       {
         url: '/images/pathwork-deck-art.jpg',
         width: 1200,
         height: 1875,
-        alt: 'Pathwork Oracle — illustration by Ana',
+        alt: 'Pathwork Oracle, illustration by Ana',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pathwork Oracle',
-    description: 'Guided meditations for those carrying the deck.',
+    description: 'Guided meditations and inner-practice resources.',
     images: ['/images/pathwork-deck-art.jpg'],
   },
 }
@@ -118,7 +118,7 @@ function TrackRow({ track }: { track: Track }) {
 export default function Pathwork() {
   return (
     <>
-      {/* Hero image — full-width Lubra tree */}
+      {/* Hero image — full-width Lubra tree with inlaid title */}
       <div className="relative w-full h-[55vh] min-h-[360px] max-h-[640px] overflow-hidden">
         <Image
           src="/images/lubra-tree.jpg"
@@ -128,17 +128,36 @@ export default function Pathwork() {
           className="object-cover"
           priority
         />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(20,14,5,0.45) 0%, rgba(20,14,5,0.20) 45%, rgba(20,14,5,0) 75%)',
+          }}
+        />
+        <div className="absolute inset-0 flex items-start md:items-center justify-start">
+          <div className="pl-6 pr-6 pt-10 md:pl-16 md:pt-0 max-w-2xl">
+            <p
+              className="font-sans uppercase tracking-[0.18em] text-xs md:text-sm mb-3 md:mb-4"
+              style={{ color: '#f0ebe0' }}
+            >
+              If you found your way here
+            </p>
+            <h1
+              className="font-serif text-4xl md:text-6xl leading-tight"
+              style={{ color: '#fdfbf7' }}
+            >
+              Western Dharma Friends
+            </h1>
+          </div>
+        </div>
       </div>
 
       {/* Title panel */}
       <section className="bg-cream-200 py-12 md:py-16">
         <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow">Western Dharma Friends</p>
-          <h1 className="text-4xl md:text-5xl font-serif text-cream-900 leading-tight mb-4">
+          <p className="font-serif text-4xl md:text-5xl text-cream-900 leading-tight">
             Pathwork Oracle
-          </h1>
-          <p className="font-serif italic text-cream-600 text-lg">
-            Guided meditations for those carrying the deck.
           </p>
         </div>
       </section>
@@ -161,12 +180,12 @@ export default function Pathwork() {
                 and put it in someone&rsquo;s hands. It was fun. A little
                 magicky. A seeding of Dharma in the world.
               </p>
-              <p>Most of all, it was a gift.</p>
+              <p>Most of all, it was a gift we wanted to share.</p>
               <p>
                 Ana painted every card, and the deck is her visual language.
-                What a gift. I&rsquo;m grateful to her. And I&rsquo;m grateful
-                to the sacred feminine energy of Noble Green Tara and Sherab
-                Chamma: All Ma- that moved through this project.
+                I&rsquo;m grateful to her. And I&rsquo;m grateful to the sacred
+                feminine energy of Noble Green Tara and Sherab Chamma: All Ma-
+                that moved through this project.
               </p>
               <p>
                 The forty cards are doorways. The twenty-two recordings below
@@ -250,43 +269,61 @@ export default function Pathwork() {
         />
       </div>
 
-      {/* Western Dharma Friends doorway */}
+      {/* Friends + Oracle doorway */}
       <section className="py-16 md:py-20">
-        <div className="container-main max-w-3xl">
-          <p className="eyebrow">If you found your way here</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-3">
-            Western Dharma Friends
-          </h2>
-          <p className="text-cream-700 leading-relaxed mb-10 max-w-2xl">
-            Two small offerings, kept quietly outside the main site. If the
-            Pathwork resonates, these may resonate too.
+        <div className="container-main max-w-3xl text-center">
+          <p className="text-cream-700 leading-relaxed mb-14 max-w-xl mx-auto">
+            These may help deepen your practice.
           </p>
 
-          <div className="space-y-3 text-cream-700">
-            <p>
-              <a
-                href="https://keeppractice.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-cream-900 hover:text-cream-700 transition-colors"
-              >
-                → Keep Practice
-              </a>
-              <span className="text-cream-500"> · a companion for steady daily sitting · keeppractice.org</span>
-            </p>
-            <p>
-              <a
-                href="https://pithdrop.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-cream-900 hover:text-cream-700 transition-colors"
-              >
-                → Pith Drop
-              </a>
-              <span className="text-cream-500"> · brief instructions, distilled · pithdrop.netlify.app</span>
-            </p>
+          {/* Western Dharma Friends */}
+          <div className="mb-14">
+            <h3 className="font-serif text-2xl md:text-3xl text-cream-900 mb-6">
+              Western Dharma Friends
+            </h3>
+            <div className="space-y-3 text-cream-700">
+              <p>
+                <a
+                  href="https://keeppractice.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                >
+                  Keep Practice
+                </a>
+                <span className="text-cream-500"> · a companion for steady daily sitting</span>
+              </p>
+              <p>
+                <a
+                  href="https://pithdrop.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                >
+                  Pith Drop
+                </a>
+                <span className="text-cream-500"> · brief instructions, distilled</span>
+              </p>
+            </div>
           </div>
 
+          {/* Pathwork Oracle */}
+          <div>
+            <h3 className="font-serif text-2xl md:text-3xl text-cream-900 mb-6">
+              Pathwork Oracle
+            </h3>
+            <p className="text-cream-700">
+              <a
+                href="https://www.amazon.com/Pathwork-Oracle-Daniel-Ahearn/dp/1646712005/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+              >
+                Pathwork Oracle
+              </a>
+              <span className="text-cream-500"> · the deck on Amazon</span>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -304,19 +341,31 @@ export default function Pathwork() {
       {/* Contact line */}
       <section className="py-12 md:py-16">
         <div className="container-main max-w-3xl">
-          <p className="text-cream-500 text-sm italic text-center">
-            If you would like to reach out about practice, the deck, or
-            anything dharma-adjacent:{' '}
-            <Link href="/contact" className="underline hover:text-cream-700">
-              you can write me here
+          <p className="text-cream-700 text-base text-center">
+            To reach out about practice, the deck, or anything dharma-adjacent,{' '}
+            <Link
+              href="/contact"
+              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+            >
+              write me here
             </Link>
+            {' '}or email{' '}
+            <a
+              href="mailto:daniel@danieljahearnlmft.com"
+              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+            >
+              daniel@danieljahearnlmft.com
+            </a>
             .
           </p>
-          <p className="text-cream-500 text-xs italic text-center mt-6">
-            <Link href="/" className="hover:text-cream-700 transition-colors">
+          <p className="text-cream-600 text-sm text-center mt-8">
+            <Link
+              href="/"
+              className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+            >
               Daniel J. Ahearn, LMFT
             </Link>
-            <span className="text-cream-400"> · therapy in Los Angeles</span>
+            <span className="text-cream-500"> · therapy in Los Angeles</span>
           </p>
         </div>
       </section>
