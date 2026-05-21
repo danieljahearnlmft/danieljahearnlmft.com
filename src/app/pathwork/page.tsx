@@ -184,11 +184,16 @@ export default function Pathwork() {
                 that moved through this project.
               </p>
               <p>
-                The forty cards are doorways. The twenty-two recordings below
-                are how you walk through them. Draw a card; sit with it; press
-                play on whichever meditation meets the moment. Or come for the
-                recordings alone. Both are practice.
+                The twenty-two recordings below help you walk through them. You
+                can pull a card; sit with it; press play on whichever meditation
+                meets the moment. Or come to recordings alone and build the
+                habit of practice.
               </p>
+              <p>
+                May you be peaceful, may you be free from suffering, may you see
+                things as they are, and may your life be a celebration.
+              </p>
+              <p className="pt-2">- Daniel</p>
             </div>
 
             {/* Portrait inset — Daniel in retreat practice */}
