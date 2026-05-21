@@ -155,7 +155,7 @@ export default function Pathwork() {
                 deeply.
               </p>
               <p>
-                It began as a conversation between Anna, as artist, and me, as
+                It began as a conversation between Ana, as artist, and me, as
                 practitioner, inspired by Noble Green Tara, by Tantra, and by
                 the idea that we could build a deck that could create practice
                 and put it in someone&rsquo;s hands. It was fun. A little
@@ -163,7 +163,7 @@ export default function Pathwork() {
               </p>
               <p>Most of all, it was a gift.</p>
               <p>
-                Anna painted every card, and the deck is her visual language.
+                Ana painted every card, and the deck is her visual language.
                 What a gift. I&rsquo;m grateful to her. And I&rsquo;m grateful
                 to the sacred feminine energy of Noble Green Tara and Sherab
                 Chamma, All MA that moved through this whole project.
