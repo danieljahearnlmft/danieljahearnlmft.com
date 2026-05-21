@@ -149,18 +149,24 @@ export default function Pathwork() {
           <div className="grid md:grid-cols-[1fr_240px] gap-10 items-start">
             <div className="space-y-5 text-cream-700 leading-relaxed">
               <p>
-                The Pathwork Oracle began as a way to share dharma with people
-                who didn&rsquo;t yet have a word for what they were carrying:
-                a conversation between Ana, as artist, and me, as practitioner,
-                inspired by Noble Green Tara, by tantra, and by the old idea
-                that a deck of cards can carry practice into someone&rsquo;s
-                hands. It was fun. A little magicky. A seeding of dharma in
-                the world.
+                The Pathwork Oracle Deck began as a way to share Dharma with
+                people. Whatever that words means to you in this moment, may
+                this deck and may these practices help you discover it more
+                deeply.
               </p>
               <p>
-                Ana painted every card, and the deck is her visual language as
-                much as it is mine. I&rsquo;m grateful to her, and to the
-                sacred feminine that moved through this whole project.
+                It began as a conversation between Anna, as artist, and me, as
+                practitioner, inspired by Noble Green Tara, by Tantra, and by
+                the idea that we could build a deck that could create practice
+                and put it in someone&rsquo;s hands. It was fun. A little
+                magicky. A seeding of Dharma in the world.
+              </p>
+              <p>Most of all, it was a gift.</p>
+              <p>
+                Anna painted every card, and the deck is her visual language.
+                What a gift. I&rsquo;m grateful to her. And I&rsquo;m grateful
+                to the sacred feminine energy of Noble Green Tara and Sherab
+                Chamma, All MA that moved through this whole project.
               </p>
               <p>
                 The forty cards are doorways. The twenty-two recordings below
@@ -168,7 +174,6 @@ export default function Pathwork() {
                 play on whichever meditation meets the moment. Or come for the
                 recordings alone. Both are practice.
               </p>
-              <p className="font-serif italic text-cream-600">Enjoy.</p>
             </div>
 
             {/* Portrait inset — Daniel in retreat practice */}
