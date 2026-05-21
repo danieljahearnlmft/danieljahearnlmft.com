@@ -150,7 +150,7 @@ export default function Pathwork() {
             <div className="space-y-5 text-cream-700 leading-relaxed">
               <p>
                 The Pathwork Oracle Deck began as a way to share Dharma with
-                people. Whatever that words means to you in this moment, may
+                people. Whatever that word means to you in this moment, may
                 this deck and may these practices help you discover it more
                 deeply.
               </p>
