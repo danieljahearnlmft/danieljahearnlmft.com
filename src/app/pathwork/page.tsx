@@ -338,9 +338,9 @@ export default function Pathwork() {
           <div className="container-main max-w-3xl text-center">
             <p className="text-cream-600 text-sm italic">
               To return to my clinical work,{' '}
-              <Link href="/contact" className="underline hover:text-cream-800">
+              <a href="/contact/" className="underline hover:text-cream-800">
                 you can reach me here
-              </Link>
+             </a>
               .
             </p>
           </div>
