@@ -166,7 +166,7 @@ export default function Pathwork() {
                 Ana painted every card, and the deck is her visual language.
                 What a gift. I&rsquo;m grateful to her. And I&rsquo;m grateful
                 to the sacred feminine energy of Noble Green Tara and Sherab
-                Chamma, All MA that moved through this whole project.
+                Chamma, All Ma that moved through this whole project.
               </p>
               <p>
                 The forty cards are doorways. The twenty-two recordings below
