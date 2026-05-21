@@ -194,7 +194,7 @@ export default function Pathwork() {
               <p>
                 The twenty-two recordings below help you walk through them. You
                 can pull a card; sit with it; press play on whichever meditation
-                meets the moment. Or come to recordings alone and build the
+                meets the moment. Or come to the recordings alone and build the
                 habit of practice.
               </p>
               <p>
