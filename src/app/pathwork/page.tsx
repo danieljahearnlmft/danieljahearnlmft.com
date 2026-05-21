@@ -7,6 +7,24 @@ export const metadata: Metadata = {
   description:
     'Recordings and inner-practice resources for those carrying the Pathwork Oracle Deck.',
   robots: { index: false, follow: false },
+  openGraph: {
+    title: 'Pathwork Oracle',
+    description: 'Guided meditations for those carrying the deck.',
+    images: [
+      {
+        url: '/images/pathwork-deck-art.jpg',
+        width: 1200,
+        height: 1875,
+        alt: 'Pathwork Oracle — illustration by Ana',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pathwork Oracle',
+    description: 'Guided meditations for those carrying the deck.',
+    images: ['/images/pathwork-deck-art.jpg'],
+  },
 }
 
 type Track = { num: number; title: string; file: string }
@@ -181,11 +199,11 @@ export default function Pathwork() {
             practices you can return to anytime.
           </p>
 
-          {/* Pathwork deck art — Loving-kindness for self · illustration by Ana */}
-          <div className="relative w-full max-w-md mx-auto aspect-[3/5] mb-3 overflow-hidden rounded">
+          {/* Pathwork deck art — master tree illustration by Ana */}
+          <div className="relative w-full max-w-md mx-auto aspect-[16/25] mb-3 overflow-hidden rounded">
             <Image
               src="/images/pathwork-deck-art.jpg"
-              alt="Loving-kindness for self — Pathwork Oracle, illustration by Ana"
+              alt="Pathwork Oracle — Green Tara, the tree, and the figures of the deck, illustration by Ana"
               fill
               sizes="(max-width: 768px) 100vw, 448px"
               className="object-cover"
