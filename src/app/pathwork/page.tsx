@@ -137,17 +137,13 @@ export default function Pathwork() {
         />
         <div className="absolute inset-0 flex items-start md:items-center justify-start">
           <div className="pl-6 pr-6 pt-10 md:pl-16 md:pt-0 max-w-2xl">
-            <p
-              className="font-sans uppercase tracking-[0.18em] text-xs md:text-sm mb-3 md:mb-4"
-              style={{ color: '#f0ebe0' }}
-            >
-              If you found your way here
-            </p>
             <h1
-              className="font-serif text-4xl md:text-6xl leading-tight"
+              className="font-serif text-5xl md:text-7xl leading-[1.05]"
               style={{ color: '#fdfbf7' }}
             >
-              Western Dharma Friends
+              <span className="block">Western</span>
+              <span className="block">Dharma</span>
+              <span className="block">Friends</span>
             </h1>
           </div>
         </div>
