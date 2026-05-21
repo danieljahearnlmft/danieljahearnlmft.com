@@ -164,10 +164,18 @@ export default function Pathwork() {
           <div className="grid md:grid-cols-[1fr_240px] gap-10 items-start">
             <div className="space-y-5 text-cream-700 leading-relaxed">
               <p>
-                The Pathwork Oracle Deck began as a way to share Dharma with
-                people. Whatever that word means to you in this moment, may
-                this deck and may these practices help you discover it more
-                deeply.
+                The{' '}
+                <a
+                  href="https://www.amazon.com/Pathwork-Oracle-Daniel-Ahearn/dp/1646712005/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                >
+                  Pathwork Oracle
+                </a>
+                {' '}Deck began as a way to share Dharma with people. Whatever
+                that word means to you in this moment, may this deck and may
+                these practices help you discover it more deeply.
               </p>
               <p>
                 It began as a conversation between Ana, as artist, and me, as
@@ -270,59 +278,35 @@ export default function Pathwork() {
         />
       </div>
 
-      {/* Friends + Oracle doorway */}
+      {/* Friends doorway */}
       <section className="py-16 md:py-20">
         <div className="container-main max-w-3xl text-center">
-          <p className="text-cream-700 leading-relaxed mb-14 max-w-xl mx-auto">
+          <p className="text-cream-700 leading-relaxed mb-12 max-w-xl mx-auto">
             These may help deepen your practice.
           </p>
 
-          {/* Western Dharma Friends */}
-          <div className="mb-14">
-            <h3 className="font-serif text-2xl md:text-3xl text-cream-900 mb-6">
-              Western Dharma Friends
-            </h3>
-            <div className="space-y-3 text-cream-700">
-              <p>
-                <a
-                  href="https://keeppractice.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-                >
-                  Keep Practice
-                </a>
-                <span className="text-cream-500"> · a companion for steady daily sitting</span>
-              </p>
-              <p>
-                <a
-                  href="https://pithdrop.netlify.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-                >
-                  Pith Drop
-                </a>
-                <span className="text-cream-500"> · brief instructions, distilled</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Pathwork Oracle */}
-          <div>
-            <h3 className="font-serif text-2xl md:text-3xl text-cream-900 mb-6">
-              Pathwork Oracle
-            </h3>
-            <p className="text-cream-700">
+          <div className="space-y-3 text-cream-700">
+            <p>
               <a
-                href="https://www.amazon.com/Pathwork-Oracle-Daniel-Ahearn/dp/1646712005/"
+                href="https://keeppractice.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
               >
-                Pathwork Oracle
+                Keep Practice
               </a>
-              <span className="text-cream-500"> · the deck on Amazon</span>
+              <span className="text-cream-500"> · a companion for steady daily sitting</span>
+            </p>
+            <p>
+              <a
+                href="https://pithdrop.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+              >
+                Pith Drop
+              </a>
+              <span className="text-cream-500"> · brief instructions, distilled</span>
             </p>
           </div>
         </div>
