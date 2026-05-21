@@ -1,12 +1,16 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useRef, useEffect } from 'react'
 
 export default function Nav() {
+  const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [workOpen, setWorkOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+
+  if (pathname?.startsWith('/pathwork')) return null
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {

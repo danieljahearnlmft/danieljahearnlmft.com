@@ -131,43 +131,29 @@ export default function Pathwork() {
           <div className="grid md:grid-cols-[1fr_240px] gap-10 items-start">
             <div className="space-y-5 text-cream-700 leading-relaxed">
               <p>
-                The Pathwork Oracle is a deeply personal project. I created it
-                in collaboration with Ana, a gifted artist and spiritual
-                friend, as a way to share the wisdom and inner practices that
-                have shaped my own life. This 40-card deck is rooted in the
-                heart of Dharma and draws from traditions that speak to
-                transformation, compassion, and liberation.
+                The Pathwork Oracle began as a way to share dharma with people
+                who didn&rsquo;t yet have a word for what they were carrying:
+                a conversation between Ana, as artist, and me, as practitioner,
+                inspired by Noble Green Tara, by tantra, and by the old idea
+                that a deck of cards can carry practice into someone&rsquo;s
+                hands. It was fun. A little magicky. A seeding of dharma in
+                the world.
               </p>
               <p>
-                Each card is an invitation — a portal to deepen self-awareness,
-                reconnect with sacred truth, and engage the healing power of
-                imagination and reflection. Whether you are a seasoned
-                meditator or new to spiritual practice, the Pathwork Oracle
-                offers a way to explore your inner world.
+                Ana painted every card, and the deck is her visual language as
+                much as it is mine. I&rsquo;m grateful to her, and to the
+                sacred feminine that moved through this whole project.
               </p>
-              <p className="text-cream-700">The deck includes:</p>
-              <ul className="list-disc pl-6 space-y-2 text-cream-700">
-                <li>A 40-day meditation journey structured for daily card work</li>
-                <li>22 guided meditations to support your practice (below)</li>
-                <li>
-                  Symbolic, archetypal imagery anchored in sacred themes —
-                  especially the energy of Green Tara, the liberator, a figure
-                  of great compassion and wisdom
-                </li>
-              </ul>
               <p>
-                This is more than a tool. It is an offering from my practice
-                to yours. I hold deep gratitude for Ana, whose spirit and
-                vision shaped the visual language of the deck.
+                The forty cards are doorways. The twenty-two recordings below
+                are how you walk through them. Draw a card; sit with it; press
+                play on whichever meditation meets the moment. Or come for the
+                recordings alone. Both are practice.
               </p>
-              <p className="font-serif italic text-cream-600">
-                May your life be a celebration.
-                <br />
-                — Daniel
-              </p>
+              <p className="font-serif italic text-cream-600">Enjoy.</p>
             </div>
 
-            {/* Portrait inset — hidden on mobile, visible md+ */}
+            {/* Portrait inset — Daniel in retreat practice */}
             <div className="hidden md:block sticky top-24">
               <Image
                 src="/images/daniel-cave.jpg"
@@ -189,22 +175,25 @@ export default function Pathwork() {
             Twenty-two guided meditations
           </h2>
           <p className="text-cream-600 mb-12">
-            Begin wherever you are drawn. The Four Immeasurables — Loving
-            Kindness, Compassion, Sympathetic Joy, and Equanimity — can be
-            practiced in any order. Forgiveness, Breath, and Rest are
-            supportive practices you can return to anytime.
+            Begin wherever you are drawn. The Four Immeasurables can be
+            practiced in any order: Loving Kindness, Compassion, Sympathetic
+            Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
+            practices you can return to anytime.
           </p>
 
-          {/* Light returns — sunburst */}
-          <div className="relative w-full aspect-[16/9] mb-14 overflow-hidden rounded">
+          {/* Pathwork deck art — Loving-kindness for self · illustration by Ana */}
+          <div className="relative w-full max-w-md mx-auto aspect-[3/5] mb-3 overflow-hidden rounded">
             <Image
-              src="/images/canyon-sunburst.jpg"
-              alt=""
+              src="/images/pathwork-deck-art.jpg"
+              alt="Loving-kindness for self — Pathwork Oracle, illustration by Ana"
               fill
-              sizes="(max-width: 768px) 100vw, 768px"
+              sizes="(max-width: 768px) 100vw, 448px"
               className="object-cover"
             />
           </div>
+          <p className="text-xs text-cream-500 italic text-center mb-14">
+            Illustrations by Ana.
+          </p>
 
           {sections.map((section) => (
             <div key={section.heading} className="mb-12 last:mb-0">
@@ -250,38 +239,29 @@ export default function Pathwork() {
             Pathwork resonates, these may resonate too.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            <a
-              href="https://keeppractice.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-7 bg-cream-50 border border-cream-300 rounded-lg hover:border-cream-400 hover:shadow-sm transition-all"
-            >
-              <p className="eyebrow">Daily Practice Support</p>
-              <h3 className="font-serif text-xl text-cream-900 mb-2">
-                Keep Practice
-              </h3>
-              <p className="text-cream-600 text-sm leading-relaxed mb-4">
-                A companion for steady daily sitting.
-              </p>
-              <p className="text-cream-500 text-xs">keeppractice.org →</p>
-            </a>
-
-            <a
-              href="https://pithdrop.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-7 bg-cream-50 border border-cream-300 rounded-lg hover:border-cream-400 hover:shadow-sm transition-all"
-            >
-              <p className="eyebrow">Short Teachings</p>
-              <h3 className="font-serif text-xl text-cream-900 mb-2">
-                Pith Drop
-              </h3>
-              <p className="text-cream-600 text-sm leading-relaxed mb-4">
-                Brief instructions, distilled.
-              </p>
-              <p className="text-cream-500 text-xs">pithdrop.netlify.app →</p>
-            </a>
+          <div className="space-y-3 text-cream-700">
+            <p>
+              <a
+                href="https://keeppractice.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-cream-900 hover:text-cream-700 transition-colors"
+              >
+                → Keep Practice
+              </a>
+              <span className="text-cream-500"> · a companion for steady daily sitting · keeppractice.org</span>
+            </p>
+            <p>
+              <a
+                href="https://pithdrop.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-cream-900 hover:text-cream-700 transition-colors"
+              >
+                → Pith Drop
+              </a>
+              <span className="text-cream-500"> · brief instructions, distilled · pithdrop.netlify.app</span>
+            </p>
           </div>
 
         </div>
@@ -303,11 +283,17 @@ export default function Pathwork() {
         <div className="container-main max-w-3xl">
           <p className="text-cream-500 text-sm italic text-center">
             If you would like to reach out about practice, the deck, or
-            anything dharma-adjacent —{' '}
+            anything dharma-adjacent:{' '}
             <Link href="/contact" className="underline hover:text-cream-700">
               you can write me here
             </Link>
             .
+          </p>
+          <p className="text-cream-500 text-xs italic text-center mt-6">
+            <Link href="/" className="hover:text-cream-700 transition-colors">
+              Daniel J. Ahearn, LMFT
+            </Link>
+            <span className="text-cream-400"> · therapy in Los Angeles</span>
           </p>
         </div>
       </section>
