@@ -225,12 +225,22 @@ export default function Pathwork() {
           <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-3">
             Twenty-two guided meditations
           </h2>
-          <p className="text-cream-600 mb-12">
-            Begin wherever you are drawn. The Four Immeasurables can be
-            practiced in any order: Loving Kindness, Compassion, Sympathetic
-            Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
-            practices you can return to anytime.
-          </p>
+<p className="text-cream-600 mb-12">
+          Begin wherever you are drawn. The Four Immeasurables can be
+          practiced in any order — Loving Kindness, Compassion, Sympathetic
+          Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
+          practices you can return to anytime.
+        </p>
+        <p className="text-cream-600 mb-12">
+          The Rest card holds the Jewel Tree meditation, in the form
+          taught by Robert Thurman. It is a practice that centers on
+          taking refuge — offering a “wish-fulfilling jewel tree” of
+          interconnected awakened beings as a gentle, systematic path
+          to wake up, find compassion, and remember our original heart.
+          It is one of the great joys of my life that I have been able
+          to share this practice with hundreds of teenagers. May it
+          bring you joy and rest.
+        </p>
 
           {/* Pathwork deck art — master tree illustration by Ana */}
           <div className="relative w-full max-w-md mx-auto aspect-[16/25] mb-3 overflow-hidden rounded">
