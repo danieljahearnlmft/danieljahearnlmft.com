@@ -323,37 +323,18 @@ export default function Pathwork() {
         />
       </div>
 
-      {/* Contact line */}
-      <section className="py-12 md:py-16">
-        <div className="container-main max-w-3xl">
-          <p className="text-cream-700 text-base text-center">
-            To reach out about practice, the deck, or anything dharma-adjacent,{' '}
-            <Link
-              href="/contact"
-              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
-              write me here
-            </Link>
-            {' '}or email{' '}
-            <a
-              href="mailto:daniel@danieljahearnlmft.com"
-              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
-              daniel@danieljahearnlmft.com
-            </a>
-            .
-          </p>
-          <p className="text-cream-600 text-sm text-center mt-8">
-            <Link
-              href="/"
-              className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
-              Daniel J. Ahearn, LMFT
-            </Link>
-            <span className="text-cream-500"> · therapy in Los Angeles</span>
-          </p>
-        </div>
-      </section>
+{/* Contact line */}
+        <section className="py-12 md:py-16">
+          <div className="container-main max-w-3xl text-center">
+            <p className="text-cream-600 text-sm italic">
+              To return to my clinical work,{' '}
+              <Link href="/contact" className="underline hover:text-cream-800">
+                you can reach me here
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
     </>
   )
 }
