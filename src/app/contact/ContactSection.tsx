@@ -54,7 +54,7 @@ export default function ContactSection() {
               <div>
                 <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Social</p>
                 <div className="flex gap-4">
-                  <a href="https://substack.com/@danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">Substack</a>
+                  <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">Substack</a>
                   <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">Instagram</a>
                   <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">LinkedIn</a>
                 </div>

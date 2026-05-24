@@ -80,7 +80,7 @@ export default function Writing() {
             Occasional essays on attachment, parenting teens, and the practice of staying connected when it&rsquo;s hardest. A few emails a year. No spam.
           </p>
           <a
-            href="https://substack.com/@danieljahearnlmft"
+            href="https://danieljahearnlmft.substack.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

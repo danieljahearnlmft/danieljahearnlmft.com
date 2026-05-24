@@ -82,7 +82,7 @@ export default function Footer() {
               Schedule a Consult
             </a>
             <div className="flex gap-4 mt-6">
-              <a href="https://substack.com/@danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm plausible-event-name=Substack+Click">Substack</a>
+              <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm plausible-event-name=Substack+Click">Substack</a>
               <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">Instagram</a>
               <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-cream-500 hover:text-cream-200 transition-colors text-sm">LinkedIn</a>
             </div>
