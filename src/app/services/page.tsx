@@ -80,12 +80,12 @@ export default function Services() {
                 ))}
               </ul>
               <a
-                href="https://docs.google.com/forms/d/1x0c4OYQrKwBeJrydlyAY6FxxbuIjvUESfTkIiKWQFHc/viewform"
+                href="https://calendly.com/danieljahearn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Calendly+Click"
               >
-                Apply for Individual Therapy
+                Free 15-Min Consult
               </a>
             </div>
             <div className="bg-cream-900 rounded-lg p-7 text-cream-200 self-start">
@@ -135,20 +135,21 @@ export default function Services() {
               </ul>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://docs.google.com/forms/d/1hTETlql6w_WiRBnB2iAmo0ifImcUpw3dfMvw5D_pw0g/viewform"
+                  href="https://calendly.com/danieljahearn/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-primary plausible-event-name=Calendly+Click"
                 >
-                  Apply for Family Work
+                  Free 15-Min Consult
                 </a>
                 <a
-                  href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
+                  href="/why-your-teen-is-pushing-you-away.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost"
+                  download
+                  className="btn-ghost plausible-event-name=Guide+Download"
                 >
-                  Free Parent Guide
+                  Download the Free Guide
                 </a>
               </div>
             </div>
@@ -194,12 +195,12 @@ export default function Services() {
                 ))}
               </ul>
               <a
-                href="https://docs.google.com/forms/d/1jSFwo4eSJsnHPgIytK2PnZdOEyRsPeaP9y6l2IwzTuk/viewform"
+                href="https://calendly.com/danieljahearn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-primary plausible-event-name=Calendly+Click"
               >
-                Apply for Couples Work
+                Free 15-Min Consult
               </a>
             </div>
             <div className="bg-cream-900 rounded-lg p-7 text-cream-200 self-start">

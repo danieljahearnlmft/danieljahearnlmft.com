@@ -77,7 +77,7 @@ export default function Writing() {
           <p className="eyebrow">Newsletter</p>
           <h2 className="text-2xl md:text-3xl font-serif text-cream-900 mb-5">Notes on the work, in your inbox</h2>
           <p className="text-cream-700 leading-relaxed mb-7">
-            Occasional essays on attachment, parenting teens, and the practice of staying connected when it&rsquo;s hardest. A few emails a year. No spam.
+            I write on attachment and parenting teens. Come read.
           </p>
           <a
             href="https://danieljahearnlmft.substack.com"

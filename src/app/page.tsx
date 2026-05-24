@@ -20,24 +20,16 @@ export default function Home() {
                 The teen years are your most powerful window for repair.
               </h1>
               <p className="text-cream-700 text-lg leading-relaxed mb-8 max-w-md">
-                Working with parents, men, fathers, and families on the attachment wounds beneath the surface — grounded in over a decade of clinical work in Los Angeles.
+                I help fathers and parents repair attachment with their teenagers. The work reaches the wounds beneath the conflict; it&rsquo;s grounded in over a decade of clinical practice in Los Angeles.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary plausible-event-name=Calendly+Click">
                   Free 15-Min Consult
                 </a>
-                <Link href="/about" className="btn-ghost">
-                  Learn My Approach
-                </Link>
+                <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="btn-ghost plausible-event-name=App+Open">
+                  Try the Daily Practice
+                </a>
               </div>
-              <a
-                href="https://waybackhome.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-5 text-sm text-cream-600 hover:text-cream-900 transition-colors plausible-event-name=App+Open"
-              >
-                Or try the free daily practice at waybackhome.app →
-              </a>
             </div>
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md">
               <Image
@@ -87,41 +79,34 @@ export default function Home() {
         <div className="container-main">
           <p className="eyebrow text-center">Ways to Work Together</p>
           <h2 className="text-3xl font-serif text-cream-900 text-center mb-12">Find the right fit</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Family & Teen Attachment Repair',
-                description: 'For parents of adolescents navigating shutdown, conflict, or disconnection. Healing happens in the relationship — not just in the teen. $400 per session.',
-                href: '/services#family',
-                cta: 'Family Work',
-              },
-              {
-                title: 'Parent Support Groups',
-                description: 'National Zoom-based psychoeducation groups for parents of teens. Attachment-informed, practical, and capped at 12 participants. $60 per session.',
-                href: '/parent-support-groups',
-                cta: 'Join a Parent Group',
-              },
-              {
-                title: 'Individual Therapy',
-                description: 'One-on-one IAT work using the Three Pillars method, tailored to your specific attachment history and relational goals. $300 per session.',
-                href: '/services',
-                cta: 'Individual & Couples',
-              },
-            ].map((service) => (
-              <div key={service.title} className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
-                <div>
-                  <h3 className="font-serif text-xl text-cream-900 mb-3">{service.title}</h3>
-                  <p className="text-cream-700 text-sm leading-relaxed">{service.description}</p>
-                </div>
-                <Link href={service.href} className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors">
-                  {service.cta} →
-                </Link>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
+              <div>
+                <h3 className="font-serif text-xl text-cream-900 mb-3">Individual Therapy for Men &amp; Fathers</h3>
+                <p className="text-cream-700 text-sm leading-relaxed">
+                  One-on-one IAT work for men carrying old attachment patterns into their relationships and their parenting. The Three Pillars method, tailored to your history and what you want to change.
+                </p>
               </div>
-            ))}
+              <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors plausible-event-name=Calendly+Click">
+                Start with a free 15-min consult &rarr;
+              </a>
+            </div>
+            <div className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
+              <div>
+                <h3 className="font-serif text-xl text-cream-900 mb-3">Parent Support Groups</h3>
+                <p className="text-cream-700 text-sm leading-relaxed">
+                  National, Zoom-based groups for parents of teens. Attachment-informed, practical, capped at 12. $60 per session.
+                </p>
+              </div>
+              <Link href="/parent-support-groups" className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors">
+                Join a group &rarr;
+              </Link>
+            </div>
           </div>
-          <p className="text-center mt-10 text-cream-600 text-sm">
-            <Link href="/mens-work" className="hover:text-cream-900 transition-colors">
-              Also accepting applications for the next men&rsquo;s attachment repair cohort &rarr;
+          <p className="text-center mt-8 text-cream-600 text-sm">
+            Couples and family work also available.{' '}
+            <Link href="/services" className="underline decoration-cream-300 underline-offset-4 hover:text-cream-900 hover:decoration-cream-700 transition-colors">
+              See all services &rarr;
             </Link>
           </p>
         </div>

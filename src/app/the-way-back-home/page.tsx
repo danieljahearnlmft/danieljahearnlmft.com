@@ -53,12 +53,13 @@ export default function Book() {
                   Listen on Audible
                 </a>
                 <a
-                  href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
+                  href="/why-your-teen-is-pushing-you-away.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost plausible-event-name=Free+Chapter"
+                  download
+                  className="btn-ghost plausible-event-name=Guide+Download"
                 >
-                  Free Chapter + Guide
+                  Download the Free Guide
                 </a>
               </div>
               <p className="text-cream-500 text-xs">Available in paperback · Kindle · Audiobook</p>
@@ -186,12 +187,13 @@ export default function Book() {
             A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal — drawn directly from the book.
           </p>
           <a
-            href="https://daniel-j-ahearn-lmft.kit.com/b676813fd3"
+            href="/why-your-teen-is-pushing-you-away.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            download
+            className="btn-primary plausible-event-name=Guide+Download"
           >
-            Download Free Guide
+            Download the Free Guide
           </a>
         </div>
       </section>
