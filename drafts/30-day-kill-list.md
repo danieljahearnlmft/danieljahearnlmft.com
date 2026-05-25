@@ -83,7 +83,43 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 
 ---
 
-## 🎯 WHAT'S LEFT (priority order)
+## 📅 THIS WEEK (May 25–29)
+
+### Mon May 25 — chill day (optional 10 min)
+- [ ] Cmd+Shift+R on danieljahearnlmft.com → verify "one of six" is gone from credential bar
+- [ ] Gmail → Settings → Forwarding and POP/IMAP → add `daniel@danieljahearnlmft.com` → verify → enable forwarding
+- [ ] Substack → Profile → Edit profile → check contact email; change to daniel@ if still gmail
+
+### Tue May 26 — Substack publish day (Jewel Tree)
+- [ ] 7am PT: publish Jewel Tree (draft at `drafts/substack-02-jewel-tree-v3.md`)
+- [ ] Mid-morning: IG quote card + LinkedIn cross-post (stagger 30–60 min)
+- [ ] Anytime today: re-upload transparent-PNG logo on Substack (fixes dark-mode header weirdness)
+
+### Wed May 27 — Network email kickoff
+- [ ] AM: filter Google Contacts (remove ex-clients, vendors, utility companies, customer-service contacts)
+- [ ] AM: create 10 labels in Google Contacts (`Net 1` through `Net 10`), assign ~100 contacts to each
+- [ ] Afternoon: send BCC Batch 1 = warmest 100 (close friends/family)
+- [ ] Send from `danieljahearn@gmail.com`, subject `Hey from Daniel`, body from "Network email draft" section below
+
+### Thu May 28
+- [ ] AM: BCC Batch 2
+- [ ] Afternoon: BCC Batch 3
+
+### Fri May 29
+- [ ] AM: BCC Batch 4
+- [ ] Afternoon: BCC Batch 5
+- (Batches 6–10 next week)
+
+### Deferred (NOT this week)
+- Kit migration emails + Kit closure → mid-June
+- Google Forms ownership transfer to daniel@ → Week 3 (fiddly, fresh head only)
+- GSC sitemap for waybackhome.app → 5 min, anytime
+- App audio re-record → when studio booked
+- PT cancellation confirmation → check inbox 24 hr after initiating
+
+---
+
+## 🎯 WHAT'S LEFT (priority order, longer view)
 
 1. ✅ **Reply to the 4 spam-trapped humans** — DONE May 24.
 
