@@ -85,13 +85,59 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 
 ## 🎯 WHAT'S LEFT (priority order)
 
-1. **Reply to the 4 spam-trapped humans** — 3 contact inquiries (Antioch student especially) + rachaelleelove77@gmail.com Parent Group enrollment. Cash on the table. (Day 1, still open.)
-2. **Fix the Google Form `forms.gle/7izvTY7Yi2TcDiGp6` confirmation message/redirect** to serve the new self-hosted PDF (`/why-your-teen-is-pushing-you-away.pdf`) instead of the dead Kit CDN link. Manual in Google Forms.
+1. ✅ **Reply to the 4 spam-trapped humans** — DONE May 24.
+
+2. **(Optional, 5-min safety play)** Fix the Google Form `forms.gle/7izvTY7Yi2TcDiGp6` confirmation message/redirect to serve the new self-hosted PDF (`/why-your-teen-is-pushing-you-away.pdf`) instead of the dead Kit CDN link. All site CTAs are already repointed, so this is just catching stragglers via bookmarks / old emails / old Kit content. Manual in Google Forms.
+
 3. **Submit waybackhome.app sitemap to Google Search Console** as a separate property. (Day 5; quick SEO win.)
+
 4. **Send Kit migration emails** (Version A: PDF folks; Version B: main list); wait 1–2 weeks; close Kit. (Days 11–12 + Day 26.)
-5. **daniel@ workspace migration** — transfer Google Forms ownership; verify inbox routing; confirm one inbox to rule them all. (Week 3, Days 15–19; fiddly, fresh head.)
-6. **Personal network email** — export ~1,000 Gmail contacts; draft "I started a Substack" email; send in batches. Highest-upside item in the whole list. (Days 22–24.)
-7. **Re-record app audio** (final week before TEDx season). (Days 29–30.)
+
+5. **daniel@ workspace migration** (Week 3, Days 15–19; fiddly, fresh head). Concrete sub-tasks:
+   - [ ] **Gmail auto-forwarding to daniel@.** gmail.com → Settings (gear) → See all settings → Forwarding and POP/IMAP → "Add a forwarding address" → `daniel@danieljahearnlmft.com` → verify → enable "Forward a copy of incoming mail." Result: every reply to old danieljahearn@gmail.com lands in daniel@ inbox automatically. Reply from daniel@ to teach contacts the new address organically.
+   - [ ] **Substack account email → daniel@.** Substack → avatar → Settings → Account → change Email to `daniel@danieljahearnlmft.com`. Click verify link in confirmation email.
+   - [ ] **Substack reply-to email → daniel@.** Substack → Settings → Publication settings → set Reply-to to `daniel@danieljahearnlmft.com`. Means subscriber replies on your posts land in daniel@.
+   - [ ] **Transfer Google Forms ownership to daniel@** (5 forms: Individual Therapy, Family, Couples, Parent Guide, Parent Support Group Enrollment). Test each by sending a fake submission.
+   - [ ] **Verify inbox routing.** Send a test through every form + the contact form. Confirm all land in daniel@.
+   - [ ] **(Skip for now)** Custom from-domain on Substack — requires paid plan + DNS setup; not worth the time tonight.
+
+6. **Personal network email** (the highest-upside item; Days 22–24):
+   - [ ] Filter Google Contacts: remove former clients (clinical ethics), one-off vendors, service providers
+   - [ ] Create 10 labels in Google Contacts (`Net 1` through `Net 10`), assign ~100 contacts to each
+   - [ ] Send BCC from danieljahearn@gmail.com (the address contacts know), 2–3 batches/day spread Mon–Thu
+   - [ ] Subject `Hey from Daniel`; plain text only; plain URLs (not hyperlinked words); no images; no unsubscribe link
+   - [ ] Email body lives in this file under "Network email draft" below
+   - [ ] Replies will forward to daniel@ via the forwarding rule above; reply from daniel@ to migrate the relationship
+
+7. **Re-record app audio** (final week before TEDx season; needs studio time — Daniel will book).
+
+---
+
+## 📨 Network email draft (paste-ready)
+
+**Subject:** Hey from Daniel
+
+**Body** (plain text, no formatting, plain URLs only):
+
+```
+Hey,
+
+It's been a while. Wanted to send a quick personal note.
+
+This year I wrote a book called The Way Back Home: Healing Attachment Wounds With Your Teen. It's out now in paperback, Kindle, and on Audible. The book is the same clinical work I've been doing with families for the last decade, translated for parents.
+
+Alongside it I built a free practice app at waybackhome.app and started a Substack at danieljahearnlmft.substack.com with field notes on attachment, adolescence, and the body.
+
+If any of that sounds useful, I'd love for you to come along on the Substack. If not, no pressure at all; I just wanted to put it on your radar in case the timing's right.
+
+Either way, hope you're well.
+
+Daniel
+```
+
+**Send from:** `danieljahearn@gmail.com` (the address contacts already have)
+**To:** yourself (`daniel@danieljahearnlmft.com` or `danieljahearn@gmail.com`)
+**Bcc:** one Google Contacts label at a time (e.g., `Net 1`, then `Net 2`...)
 
 ## ❌ Items that turned out NOT needed (skip)
 - **/consulting in top nav** — already accessible under "Work With Me → Organizations & Teams." Standalone would add nav clutter; skip.
