@@ -167,7 +167,7 @@ export default function ParentSupportGroups() {
           <p className="eyebrow">About the Facilitator</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-5">Who's leading these groups</h2>
           <p className="text-cream-700 leading-relaxed mb-4">
-            Daniel J. Ahearn is an LMFT and one of six IAT-certified clinicians in the United States. He's Director of Culture at Ascend Healthcare, a residential treatment program for adolescents, and has spent over a decade in clinical work with teenagers and their families.
+            Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. He's Director of Culture at Ascend Healthcare, a residential treatment program for adolescents, and has spent over a decade in clinical work with teenagers and their families.
           </p>
           <p className="text-cream-700 leading-relaxed mb-4">
             He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / Integrative Attachment Therapy framework, and is the author of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>.

@@ -77,7 +77,7 @@ export default function EarnedSecureAttachment() {
           <p className="eyebrow text-cream-400">Work With Me</p>
           <h2 className="text-2xl font-serif text-cream-100 mb-4">Begin the work toward security</h2>
           <p className="text-cream-400 leading-relaxed mb-7">
-            I am one of six IAT-certified clinicians in the United States. I work with adults whose attachment patterns have not shifted through other approaches, and I bring the full Integrative Attachment Therapy framework to that work. Los Angeles and telehealth across California.
+            I'm an IAT-certified clinician trained directly with Dr. Daniel P. Brown and Dr. David Elliott. I work with adults whose attachment patterns have not shifted through other approaches, and I bring the full Integrative Attachment Therapy framework to that work. Los Angeles and telehealth across California.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>

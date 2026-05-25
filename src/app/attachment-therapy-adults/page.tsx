@@ -87,7 +87,7 @@ export default function AttachmentTherapyAdults() {
           <p className="eyebrow text-cream-400">Work With Me</p>
           <h2 className="text-2xl font-serif text-cream-100 mb-4">Private practice in Los Angeles</h2>
           <p className="text-cream-400 leading-relaxed mb-7">
-            I am one of six IAT-certified clinicians in the United States, and I work with adults carrying insecure attachment patterns that have not yielded to other approaches. I practice in Los Angeles and via telehealth across California.
+            I am an IAT-certified clinician trained directly with Dr. Daniel P. Brown and Dr. David Elliott. I work with adults carrying insecure attachment patterns that have not yielded to other approaches. I practice in Los Angeles and via telehealth across California.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>

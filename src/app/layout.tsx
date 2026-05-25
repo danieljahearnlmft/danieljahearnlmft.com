@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Daniel J. Ahearn, LMFT',
     template: '%s | Daniel J. Ahearn, LMFT',
   },
-  description: 'Author of The Way Back Home — now on Audible. IAT-certified attachment therapist in Los Angeles. One of six IAT-certified clinicians in the U.S.',
+  description: 'Author of The Way Back Home, now on Audible. IAT-certified attachment therapist in Los Angeles; trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
   metadataBase: new URL('https://danieljahearnlmft.com'),
   openGraph: {
     type: 'website',

@@ -97,7 +97,7 @@ export default function IntegrativeAttachmentTherapy() {
           <p className="eyebrow text-cream-400">Work With Me</p>
           <h2 className="text-2xl font-serif text-cream-100 mb-4">IAT in my practice</h2>
           <p className="text-cream-400 leading-relaxed mb-7">
-            I am one of six IAT-certified clinicians in the United States. I trained directly with Dr. Daniel P. Brown and Dr. David Elliott and use the full Three Pillars framework in my work with adults, parents, and men navigating attachment-based patterns in their relationships and lives.
+            I am an IAT-certified clinician. I trained directly with Dr. Daniel P. Brown and Dr. David Elliott and use the full Three Pillars framework in my work with adults, parents, and men navigating attachment-based patterns in their relationships and lives.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>

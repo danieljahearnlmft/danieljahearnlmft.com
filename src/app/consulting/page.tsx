@@ -150,7 +150,7 @@ export default function Consulting() {
           <div className="grid md:grid-cols-4 gap-6 text-center">
             {[
               { stat: 'LMFT', label: 'Licensed & Certified' },
-              { stat: 'IAT', label: 'One of 6 Certified in the U.S.' },
+              { stat: 'IAT', label: 'Certified Attachment Clinician' },
               { stat: '10+ Years', label: 'Adolescent Residential Treatment' },
               { stat: '4–10', label: 'Facilities as Director of Culture' },
             ].map((item) => (

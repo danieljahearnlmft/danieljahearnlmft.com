@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'IAT-Certified Therapist',
-  description: 'Daniel J. Ahearn is one of six IAT-certified clinicians in the U.S. What IAT certification means, what it requires, and why it matters for clients.',
+  description: 'What IAT certification requires, what it means for clients, and why it is harder to earn than most attachment-based credentials.',
 }
 
 export default function IATCertifiedTherapist() {
@@ -16,7 +16,7 @@ export default function IATCertifiedTherapist() {
             IAT-Certified Therapist
           </h1>
           <p className="text-cream-300 text-lg leading-relaxed">
-            There are six IAT-certified clinicians in the United States. I am one of them. What that means — in terms of training, clinical capacity, and what it offers clients — is worth explaining clearly.
+            IAT certification is not a weekend workshop credential. It requires direct training with the developers of the model over years, supervised clinical work, and demonstrated mastery of the Three Pillars framework. What that means for the work we do together is worth explaining clearly.
           </p>
         </div>
       </section>
@@ -24,12 +24,12 @@ export default function IATCertifiedTherapist() {
       <section className="section-cream">
         <div className="container-main max-w-3xl">
           <p className="eyebrow">What Certification Means</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">Why it's rare</h2>
+          <h2 className="text-3xl font-serif text-cream-900 mb-6">What certification requires</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            IAT certification — certification in the Integrative Attachment Therapy framework developed by Daniel P. Brown, Ph.D. and David Elliott, Ph.D., and now carried forward through IAT by Dr. Elliott, Nigel Denning, and colleagues — requires direct, sustained training with the developers of the model over an extended period. It is not a weekend workshop credential. It is not earned through a self-study course or an online program. It requires working cases under supervision, demonstrating clinical competence in the Three Pillars framework, and being assessed directly by the clinicians who built the model.
+            IAT certification is certification in the Integrative Attachment Therapy framework developed by Daniel P. Brown, Ph.D. and David Elliott, Ph.D., and now carried forward through IAT by Dr. Elliott, Nigel Denning, and colleagues. It requires direct, sustained training with the developers of the model over an extended period. It is not a weekend workshop credential. It is not earned through a self-study course or an online program. It requires working cases under supervision, demonstrating clinical competence in the Three Pillars framework, and being assessed directly by the clinicians who built the model.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            As of this writing, there are six IAT-certified clinicians practicing in the United States. This is not a marketing claim about exclusivity. It reflects the reality that the training is intensive, the model is demanding to learn, and the developers have been deliberate about limiting certification to clinicians who have demonstrated genuine mastery rather than familiarity.
+            Certification is granted by the developers themselves, not by an institute or an exam. The training is intensive, the model is demanding to learn, and the developers are deliberate about limiting certification to clinicians who have demonstrated genuine mastery rather than familiarity. The bar is high on purpose.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             I trained directly with Dr. Daniel P. Brown — one of the world's foremost researchers in attachment, hypnosis, and trauma — and with Dr. David Elliott over the course of several years. That training included extended immersion in the Three Pillars framework, supervised clinical work with complex attachment presentations, and direct feedback on my application of the Ideal Parent Figure protocol. Certification came at the end of a process, not at the beginning of one.

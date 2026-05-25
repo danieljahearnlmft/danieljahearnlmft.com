@@ -32,7 +32,6 @@ export default function Footer() {
             <p className="font-serif text-cream-100 text-base mb-3">Daniel J. Ahearn, LMFT</p>
             <p className="text-sm text-cream-400 leading-relaxed">
               IAT-Certified Attachment Therapist<br />
-              One of six certified practitioners in the U.S.<br />
               Based in Los Angeles, CA<br />
               Telehealth throughout California
             </p>
@@ -48,7 +47,7 @@ export default function Footer() {
               <Link href="/services" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Individual, Couples & Family</Link>
               <Link href="/mens-work" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Men's Attachment Repair Groups</Link>
               <Link href="/the-way-back-home" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">The Way Back Home</Link>
-              <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors plausible-event-name=App+Open">Daily Practice (waybackhome.app)</a>
+              <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-400 hover:text-cream-100 transition-colors plausible-event-name=App+Open">Practice (waybackhome.app)</a>
               <Link href="/parent-support-groups" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Parent Support Groups</Link>
               <Link href="/writing" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Writing</Link>
               <Link href="/contact" className="text-sm text-cream-400 hover:text-cream-100 transition-colors">Contact</Link>

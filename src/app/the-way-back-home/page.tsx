@@ -146,7 +146,7 @@ export default function Book() {
           <p className="eyebrow">About the Author</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-5">Written from clinical practice</h2>
           <p className="text-cream-700 leading-relaxed mb-4">
-            Daniel J. Ahearn is an LMFT and one of six IAT-certified clinicians in the United States. He is Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, and maintains a private practice specializing in men's attachment work, father-teen repair, and family systems.
+            Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. He is Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, and maintains a private practice specializing in men's attachment work, father-teen repair, and family systems.
           </p>
           <p className="text-cream-700 leading-relaxed mb-7">
             He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework. The Way Back Home distills over a decade of clinical work with teenagers and their parents into a framework any family can use.

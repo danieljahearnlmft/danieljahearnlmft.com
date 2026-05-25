@@ -16,7 +16,7 @@ export default function AttachmentTherapyLosAngeles() {
             Attachment-Based Therapy<br />in Los Angeles
           </h1>
           <p className="text-cream-300 text-lg leading-relaxed">
-            Private practice with one of six IAT-certified clinicians in the United States. Specializing in adult attachment work, men's relational patterns, and parent-teen repair.
+            Private practice with an IAT-certified attachment therapist trained directly with Dr. Daniel P. Brown and Dr. David Elliott. Specializing in adult attachment work, men's relational patterns, and parent-teen repair.
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function AttachmentTherapyLosAngeles() {
           <p className="eyebrow">The Practice</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">What I offer</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            I am a licensed marriage and family therapist (LMFT) in Los Angeles and one of six clinicians in the United States certified in Integrative Attachment Therapy (IAT) — the framework developed by Dr. Daniel P. Brown and Dr. David Elliott. My practice is small and focused. I work with adults and parents who are dealing with attachment-based relational patterns that haven't shifted through other approaches, and I bring the full IAT framework to that work.
+            I am a licensed marriage and family therapist (LMFT) in Los Angeles and an IAT-certified clinician, trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy (IAT). My practice is small and focused. I work with adults and parents who are dealing with attachment-based relational patterns that haven't shifted through other approaches, and I bring the full IAT framework to that work.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             Los Angeles has no shortage of therapists who describe themselves as attachment-based or attachment-informed. What is rare is clinical training at the level the IAT model requires: direct, supervised immersion in the Three Pillars framework and the Ideal Parent Figure protocol, assessed and certified by the developers themselves. That training is what I bring to the work.

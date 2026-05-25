@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Daniel J. Ahearn, LMFT — Attachment Therapist in Los Angeles',
-  description: 'Author of The Way Back Home — now on Audible. IAT-certified attachment therapist in Los Angeles working with men, fathers, teens, and families. One of six certified IAT clinicians in the U.S.',
+  description: 'IAT-certified attachment therapist in Los Angeles. Author of The Way Back Home. Working with men, fathers, teens, and families; trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
 }
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="container-main">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="eyebrow">IAT-Certified · One of Six in the U.S.</p>
+              <p className="eyebrow">IAT-Certified Attachment Therapist</p>
               <h1 className="text-4xl md:text-5xl font-serif font-medium text-cream-900 leading-tight mb-5 text-balance">
                 The teen years are your most powerful window for repair.
               </h1>
@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-center">
             {[
               'LMFT',
-              'IAT-Certified (One of 6 in the U.S.)',
+              'IAT-Certified',
               'Director of Culture, Ascend Healthcare',
               '12+ Years Clinical Experience',
             ].map((cred) => (
@@ -69,7 +69,7 @@ export default function Home() {
             What looks like emotional unavailability, withdrawal, or conflict is almost always an attachment strategy that once made sense. The goal isn't to fix what's wrong with you. It's to repair the foundation underneath — so that security stops being something you perform and starts being something you feel.
           </p>
           <p className="text-cream-600 text-sm leading-relaxed">
-            I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol — a research-backed method developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT. I trained directly with Drs. Brown and Elliott and am one of six IAT-certified clinicians in the United States.
+            I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol: a research-backed method developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT. I trained directly with Drs. Brown and Elliott and bring the full Three Pillars framework to private practice.
           </p>
         </div>
       </section>
@@ -109,6 +109,25 @@ export default function Home() {
               See all services &rarr;
             </Link>
           </p>
+        </div>
+      </section>
+
+      {/* Companion app */}
+      <section className="bg-cream-800 py-16 md:py-20">
+        <div className="container-main max-w-3xl text-center">
+          <p className="eyebrow text-cream-400">Daily Practice</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-100 mb-5">waybackhome.app</h2>
+          <p className="text-cream-300 leading-relaxed mb-7 max-w-xl mx-auto">
+            A free daily practice for parents of teens. The five conditions of secure attachment, distilled into a short morning ritual. Use it on its own or alongside the book.
+          </p>
+          <a
+            href="https://waybackhome.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary !bg-cream-500 hover:!bg-cream-400 plausible-event-name=App+Open"
+          >
+            Open the App
+          </a>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Daniel J. Ahearn is an LMFT and one of six IAT-certified clinicians in the United States. Based in Los Angeles, working with men, fathers, teens, and families.',
+  description: 'Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist in Los Angeles, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. Working with men, fathers, teens, and families.',
 }
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
                 Daniel J. Ahearn,<br />LMFT
               </h1>
               <p className="text-cream-700 leading-relaxed mb-4">
-                I'm a licensed marriage and family therapist and certified alcohol and drug counselor based in Los Angeles. I'm one of six clinicians in the United States certified in Integrative Attachment Therapy — a method I trained in directly with Dr. Daniel P. Brown and Dr. David Elliott beginning in 2018.
+                I'm a licensed marriage and family therapist and certified alcohol and drug counselor based in Los Angeles. I'm an IAT-certified clinician; I trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy beginning in 2018.
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
                 My clinical work centers on attachment repair: helping people change not just how they think about their relationships, but how their nervous systems experience safety and connection.
@@ -79,7 +79,7 @@ export default function About() {
             {[
               {
                 title: 'Integrative Attachment Therapy (IAT)',
-                body: 'Trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework. One of six certified IAT clinicians in the United States.',
+                body: 'Trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework since 2018. IAT-certified clinician.',
               },
               {
                 title: 'Licensure & Certification',

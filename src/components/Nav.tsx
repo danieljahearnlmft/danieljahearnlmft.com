@@ -61,7 +61,7 @@ export default function Nav() {
           </div>
 
           <Link href="/the-way-back-home" className="text-sm text-cream-700 hover:text-cream-900 transition-colors">The Way Back Home</Link>
-          <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-700 hover:text-cream-900 transition-colors">Daily Practice</a>
+          <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-700 hover:text-cream-900 transition-colors">Practice</a>
           <Link href="/parent-support-groups" className="text-sm text-cream-700 hover:text-cream-900 transition-colors">Parent Groups</Link>
           <Link href="/contact" className="text-sm text-cream-700 hover:text-cream-900 transition-colors">Contact</Link>
         </div>
@@ -90,7 +90,7 @@ export default function Nav() {
           <Link href="/mens-work" className="text-sm text-cream-800 pl-2" onClick={() => setMenuOpen(false)}>Men's Attachment Repair Groups</Link>
           <Link href="/consulting" className="text-sm text-cream-800 pl-2" onClick={() => setMenuOpen(false)}>Organizations & Teams</Link>
           <Link href="/the-way-back-home" className="text-sm text-cream-800" onClick={() => setMenuOpen(false)}>The Way Back Home</Link>
-          <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-800" onClick={() => setMenuOpen(false)}>Daily Practice (waybackhome.app)</a>
+          <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-cream-800" onClick={() => setMenuOpen(false)}>Practice (waybackhome.app)</a>
           <Link href="/parent-support-groups" className="text-sm text-cream-800" onClick={() => setMenuOpen(false)}>Parent Support Groups</Link>
           <Link href="/contact" className="text-sm text-cream-800" onClick={() => setMenuOpen(false)}>Contact</Link>
         </div>
