@@ -33,6 +33,73 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 
 ---
 
+## ✅ STATUS UPDATE (May 24)
+**~4 days ahead of schedule. Days 2, 3, 4, 8, 9, 10 (in part), and several Day 25 items already complete.**
+
+### Done since May 23 (beyond the original list)
+
+**Site funnel tightened (commits ca54ceb, db4fb44):**
+- Substack URL fixed sitewide: `substack.com/@danieljahearnlmft` → `danieljahearnlmft.substack.com` (Footer, Contact, Writing pages)
+- All 3 Google Form intake buttons on `/services` replaced with Calendly Free 15-Min Consult
+- Kit "Free Parent Guide" CTAs on `/services` and `/the-way-back-home` replaced with direct PDF download (no email gate; Daniel's call: "just give them the guide")
+- Footer Kit "Stay in touch" form replaced with Substack subscribe CTA
+- Hero subhead rewritten to lead with father/parent + teenagers
+- Hero secondary CTA changed from "Learn My Approach" → "Try the Daily Practice" (app button)
+- Services grid collapsed from 3 cards to 2 (Individual for Men & Fathers + Parent Support Groups)
+- Men's cohort line removed from homepage
+- Quiet "Couples and family work also available" link added to homepage services
+
+**Brand voice cleanup (commit 9e8b63b):**
+- "One of six" killed sitewide (20 instances across 14 files)
+- Replaced with provenance language: "trained directly with Dr. Daniel P. Brown and Dr. David Elliott"
+- `/iat-certified-therapist` page reframed from "I am rare" to "what IAT certification requires" — same SEO target, quieter voice
+- Hanging parenthetical fixed in homepage credential bar
+- Nav "Daily Practice" → "Practice" (cleaner, less generic)
+- App section added to homepage (between Services and Book) to surface waybackhome.app properly given 5x traffic
+
+**App (waybackhome.app repo, commit 6612dba):**
+- Substack subscribe iframe embedded directly in app, replacing the old redirect form
+- Users now subscribe to Substack inline without leaving the app
+
+**Calendly intake (manual, in browser):**
+- Fee-acknowledgment screening question added: $300 individual / $400 couples & family
+- Gates calls by fee fit; preserves Google-Form-style fee realization without the Google Form
+
+**Substack:**
+- Welcome email confirmed saved (Daniel: "did days ago")
+
+**Bios (saved to memory, ready to paste):**
+- Instagram, LinkedIn, and Substack bios standardized with shared tagline anchor
+- All "one of six" claims removed from Substack bio
+- Typos fixed in Substack bio (`certifed` → `certified`, `clincans` → `clinicians`)
+
+**Pathwork page (commits May 19–20):**
+- Hero overlay added with "Western / Dharma / Friends" stacked typography on Lubra tree photo
+- Body copy edits (benediction added, "What a gift" removed, "Sherab Chamma: All Ma -" preserved)
+- Doorway section restructured; "Pathwork Oracle" hyperlinked inline to Amazon
+- Contact links visibility boosted + direct mailto added
+
+**Psychology Today cancellation initiated** (May 24, in progress) — saves $360/year once confirmed.
+
+---
+
+## 🎯 WHAT'S LEFT (priority order)
+
+1. **Reply to the 4 spam-trapped humans** — 3 contact inquiries (Antioch student especially) + rachaelleelove77@gmail.com Parent Group enrollment. Cash on the table. (Day 1, still open.)
+2. **Fix the Google Form `forms.gle/7izvTY7Yi2TcDiGp6` confirmation message/redirect** to serve the new self-hosted PDF (`/why-your-teen-is-pushing-you-away.pdf`) instead of the dead Kit CDN link. Manual in Google Forms.
+3. **Submit waybackhome.app sitemap to Google Search Console** as a separate property. (Day 5; quick SEO win.)
+4. **Send Kit migration emails** (Version A: PDF folks; Version B: main list); wait 1–2 weeks; close Kit. (Days 11–12 + Day 26.)
+5. **daniel@ workspace migration** — transfer Google Forms ownership; verify inbox routing; confirm one inbox to rule them all. (Week 3, Days 15–19; fiddly, fresh head.)
+6. **Personal network email** — export ~1,000 Gmail contacts; draft "I started a Substack" email; send in batches. Highest-upside item in the whole list. (Days 22–24.)
+7. **Re-record app audio** (final week before TEDx season). (Days 29–30.)
+
+## ❌ Items that turned out NOT needed (skip)
+- **/consulting in top nav** — already accessible under "Work With Me → Organizations & Teams." Standalone would add nav clutter; skip.
+- **Cohort waitlist line on /mens-work** — cohort on hold per Daniel; no waitlist active.
+- **Substack-gate the free guide** — Daniel chose: give the guide away free, no email capture ("I'm nice"). Trust + generosity over bait-and-switch.
+
+---
+
 ## 💰 CASH ON THE TABLE (do first — these are literally money/clients)
 These are loose ends where revenue or relationships are sitting unclaimed:
 - [ ] **3 spam-trapped contact inquiries** — people who wanted to work with you, got silence. Reply now. (Antioch student especially — fellow clinician, network value.)
