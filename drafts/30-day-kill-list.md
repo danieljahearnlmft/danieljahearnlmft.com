@@ -111,8 +111,8 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 - (Batches 6–10 next week)
 
 ### Deferred (NOT this week)
-- Kit migration emails + Kit closure → mid-June
-- Google Forms ownership transfer to daniel@ → Week 3 (fiddly, fresh head only)
+- Kit closure (next week): one final email to the ~24 parent-guide subscribers → direct to Substack → wait 1–2 weeks → close Kit
+- Google Forms cleanup: DELETE the 3 unused intake forms (Individual, Family, Couples — site no longer points to them); KEEP Parent Support Group enrollment form (transfer ownership to daniel@ when convenient)
 - ✅ GSC sitemap for waybackhome.app → DONE May 25 (verified via HTML file; sitemap submitted)
 - App audio re-record → when studio booked
 - PT cancellation confirmation → check inbox 24 hr after initiating
