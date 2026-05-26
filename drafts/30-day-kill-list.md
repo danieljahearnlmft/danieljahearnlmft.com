@@ -113,7 +113,7 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 ### Deferred (NOT this week)
 - Kit migration emails + Kit closure → mid-June
 - Google Forms ownership transfer to daniel@ → Week 3 (fiddly, fresh head only)
-- GSC sitemap for waybackhome.app → 5 min, anytime
+- ✅ GSC sitemap for waybackhome.app → DONE May 25 (verified via HTML file; sitemap submitted)
 - App audio re-record → when studio booked
 - PT cancellation confirmation → check inbox 24 hr after initiating
 
@@ -125,7 +125,7 @@ Underneath those: small fixes to the site, the app audio re-record, and tying it
 
 2. **(Optional, 5-min safety play)** Fix the Google Form `forms.gle/7izvTY7Yi2TcDiGp6` confirmation message/redirect to serve the new self-hosted PDF (`/why-your-teen-is-pushing-you-away.pdf`) instead of the dead Kit CDN link. All site CTAs are already repointed, so this is just catching stragglers via bookmarks / old emails / old Kit content. Manual in Google Forms.
 
-3. **Submit waybackhome.app sitemap to Google Search Console** as a separate property. (Day 5; quick SEO win.)
+3. ✅ **Submit waybackhome.app sitemap to Google Search Console** — DONE May 25 (HTML-file verified; sitemap.xml submitted).
 
 4. **Send Kit migration emails** (Version A: PDF folks; Version B: main list); wait 1–2 weeks; close Kit. (Days 11–12 + Day 26.)
 
