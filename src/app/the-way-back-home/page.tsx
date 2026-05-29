@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'The Way Back Home',
-  description: 'The new book by Daniel J. Ahearn, LMFT — a practical guide for parents healing attachment wounds and rebuilding connection with their teen.',
+  description: 'The new book by Daniel J. Ahearn, LMFT: a practical guide for parents healing attachment wounds and rebuilding connection with their teen.',
   openGraph: {
     images: [{ url: '/images/book-cover.jpg', alt: 'The Way Back Home — book cover' }],
   },
@@ -30,7 +30,7 @@ export default function Book() {
                 Healing Attachment Wounds With Your Teen
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
-                If your teenager is shutting down, pulling away, or in constant conflict — this book explains the attachment science behind it, and what you can actually do about it.
+                If your teenager is shutting down, pulling away, or in constant conflict, this book explains the attachment science behind it, and what you can actually do about it.
               </p>
               <p className="text-cream-700 leading-relaxed mb-8">
                 Written for parents who are doing everything right and still feel miles away from their kid. Grounded in the same IAT framework at the center of my clinical practice.
@@ -88,9 +88,9 @@ export default function Book() {
       <section className="bg-cream-800 py-12">
         <div className="container-main max-w-3xl text-center">
           <p className="font-serif italic text-cream-200 text-xl leading-relaxed mb-5">
-            "Daniel Ahearn has done something rare — he has translated a sophisticated clinical model into language that parents can actually use."
+            "Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use."
           </p>
-          <p className="text-cream-400 text-sm">— Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
+          <p className="text-cream-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
         </div>
       </section>
 
@@ -106,12 +106,12 @@ export default function Book() {
                   `Your teenager has pulled away and you don't know why`,
                   'Every conversation turns into a conflict',
                   `You're grieving the relationship you used to have`,
-                  `You've tried therapy, boundaries, consequences — nothing sticks`,
+                  `You've tried therapy, boundaries, consequences. Nothing sticks`,
                   'You suspect your own history is part of the problem',
                   'You want to repair things before they get worse',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm leading-relaxed">
-                    <span className="text-cream-400 mt-0.5">—</span>
+                    <span className="text-cream-400 mt-0.5">·</span>
                     {item}
                   </li>
                 ))}
@@ -126,11 +126,11 @@ export default function Book() {
                   'How your own attachment history shows up in parenting',
                   'The Ideal Parent Figure framework adapted for families',
                   'Practical repair strategies for ruptures, shutdown, and distance',
-                  'How to stay present when activated — without performing calm',
+                  'How to stay present when activated, without performing calm',
                   'A framework for rebuilding earned security with your teen',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm leading-relaxed">
-                    <span className="text-cream-400 mt-0.5">—</span>
+                    <span className="text-cream-400 mt-0.5">·</span>
                     {item}
                   </li>
                 ))}
@@ -184,7 +184,7 @@ export default function Book() {
             Why Your Teen Is Pushing You Away
           </h2>
           <p className="text-cream-700 mb-7">
-            A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal — drawn directly from the book.
+            A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal, drawn directly from the book.
           </p>
           <a
             href="/why-your-teen-is-pushing-you-away.pdf"

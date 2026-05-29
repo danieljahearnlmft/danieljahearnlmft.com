@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <script defer data-domain="danieljahearnlmft.com" src="https://plausible.io/js/script.outbound-links.file-downloads.404.tagged-events.js" />
+        <script defer data-domain="danieljahearnlmft.com" src="https://plausible.io/js/script.outbound-links.file-downloads.tagged-events.js" />
       </head>
       <body>
         <Nav />

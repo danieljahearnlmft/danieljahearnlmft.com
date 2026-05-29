@@ -27,7 +27,7 @@ export default function Services() {
               Individual, Couples<br />& Family Therapy
             </h1>
             <p className="text-cream-300 text-base leading-relaxed max-w-xl mb-8">
-              All work is grounded in Integrative Attachment Therapy and the Ideal Parent Figure Protocol — tailored to your specific attachment history, current struggles, and relational goals.
+              All work is grounded in Integrative Attachment Therapy and the Ideal Parent Figure Protocol, tailored to your specific attachment history, current struggles, and relational goals.
             </p>
             <a
               href="https://calendly.com/danieljahearn/30min"
@@ -50,7 +50,7 @@ export default function Services() {
               <h2 className="text-3xl font-serif text-cream-900 mb-5">Individual IAT Therapy</h2>
               <p className="text-cream-600 italic mb-5">Deep, personalized attachment repair</p>
               <p className="text-cream-700 leading-relaxed mb-4">
-                One-on-one work using the Three Pillars method including the Ideal Parent Figure Protocol — tailored to your specific attachment history, current struggles, and relational goals.
+                One-on-one work using the Three Pillars method including the Ideal Parent Figure Protocol, tailored to your specific attachment history, current struggles, and relational goals.
               </p>
               <h3 className="font-serif text-lg text-cream-900 mt-7 mb-4">Who this is for</h3>
               <ul className="space-y-2 mb-6">
@@ -61,7 +61,7 @@ export default function Services() {
                   'Clients working through specific relational patterns or wounds',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -75,7 +75,7 @@ export default function Services() {
                   'Differentiation from family of origin patterns',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -117,7 +117,7 @@ export default function Services() {
                 I help families where adolescents are shutting down emotionally, struggling with identity, or stuck in conflict patterns. This work addresses the attachment wounds underneath behaviors like anxiety, withdrawal, or acting out.
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
-                Through my weekly attachment repair groups at Ascend Healthcare and a decade of adolescent residential treatment, I've developed a family systems approach that addresses attachment wounds in both teens and parents. Healing happens in relationship — not just in the teen.
+                Through my weekly attachment repair groups at Ascend Healthcare and a decade of adolescent residential treatment, I've developed a family systems approach that addresses attachment wounds in both teens and parents. Healing happens in relationship, not just in the teen.
               </p>
               <h3 className="font-serif text-lg text-cream-900 mt-6 mb-4">Who this is for</h3>
               <ul className="space-y-2 mb-7">
@@ -129,7 +129,7 @@ export default function Services() {
                   'Parents from Ascend Healthcare seeking continuity of care',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -179,7 +179,7 @@ export default function Services() {
               <h2 className="text-3xl font-serif text-cream-900 mb-5">Couples Attachment Repair</h2>
               <p className="text-cream-600 italic mb-5">Relational repair for couples experiencing disconnection or crisis</p>
               <p className="text-cream-700 leading-relaxed mb-4">
-                Using the same IAT methodology from individual and group work, I help couples understand how attachment patterns drive conflict, distance, and breakdown. This is clinical attachment work — not general couples counseling.
+                Using the same IAT methodology from individual and group work, I help couples understand how attachment patterns drive conflict, distance, and breakdown. This is clinical attachment work, not general couples counseling.
               </p>
               <h3 className="font-serif text-lg text-cream-900 mt-6 mb-4">Who this is for</h3>
               <ul className="space-y-2 mb-7">
@@ -190,7 +190,7 @@ export default function Services() {
                   'Partners wanting to repair before considering separation',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -245,11 +245,11 @@ export default function Services() {
             {[
               {
                 q: 'What does attachment repair actually mean?',
-                a: 'Attachment repair changes how your nervous system experiences safety and connection — not just intellectually, but at a body level. Using IAT and the IPF Protocol, we build the internalized experience of secure attachment: "I\'m safe. I\'m valued. I belong." This shifts automatic patterns in relationships, parenting, and emotional regulation.',
+                a: 'Attachment repair changes how your nervous system experiences safety and connection, not just intellectually, but at a body level. Using IAT and the IPF Protocol, we build the internalized experience of secure attachment: "I\'m safe. I\'m valued. I belong." This shifts automatic patterns in relationships, parenting, and emotional regulation.',
               },
               {
                 q: 'What if my teen doesn\'t want therapy?',
-                a: 'Teens often come in skeptical. I use tools like mentalization and visualization to build insight while engaging parents so repair happens in the family system — not just with the teen. Resistance is normal and workable.',
+                a: 'Teens often come in skeptical. I use tools like mentalization and visualization to build insight while engaging parents so repair happens in the family system, not just with the teen. Resistance is normal and workable.',
               },
               {
                 q: 'How long does therapy take?',

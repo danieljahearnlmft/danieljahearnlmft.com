@@ -26,13 +26,13 @@ export default function IATCertifiedTherapist() {
           <p className="eyebrow">What Certification Means</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">What certification requires</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            IAT certification is certification in the Integrative Attachment Therapy framework developed by Daniel P. Brown, Ph.D. and David Elliott, Ph.D., and now carried forward through IAT by Dr. Elliott, Nigel Denning, and colleagues. It requires direct, sustained training with the developers of the model over an extended period. It is not a weekend workshop credential. It is not earned through a self-study course or an online program. It requires working cases under supervision, demonstrating clinical competence in the Three Pillars framework, and being assessed directly by the clinicians who built the model.
+            IAT certification is certification in the Integrative Attachment Therapy framework developed by Daniel P. Brown, Ph.D. and David Elliott, Ph.D., and now carried forward through IAT by Dr. Elliott, Nigel Denning, and Traill Dowie. It requires direct, sustained training with the developers of the model over an extended period. It is not a weekend workshop credential. It is not earned through a self-study course or an online program. It requires working cases under supervision, demonstrating clinical competence in the Three Pillars framework, and being assessed directly by the clinicians who built the model.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             Certification is granted by the developers themselves, not by an institute or an exam. The training is intensive, the model is demanding to learn, and the developers are deliberate about limiting certification to clinicians who have demonstrated genuine mastery rather than familiarity. The bar is high on purpose.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            I trained directly with Dr. Daniel P. Brown — one of the world's foremost researchers in attachment, hypnosis, and trauma — and with Dr. David Elliott over the course of several years. That training included extended immersion in the Three Pillars framework, supervised clinical work with complex attachment presentations, and direct feedback on my application of the Ideal Parent Figure protocol. Certification came at the end of a process, not at the beginning of one.
+            I trained directly with Dr. Daniel P. Brown, one of the world's foremost researchers in attachment, hypnosis, and trauma, and with Dr. David Elliott over the course of several years. That training included extended immersion in the Three Pillars framework, supervised clinical work with complex attachment presentations, and direct feedback on my application of the Ideal Parent Figure protocol. Certification came at the end of a process, not at the beginning of one.
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function IATCertifiedTherapist() {
             The IAT framework is a structured clinical model with specific protocols, specific assessment tools, and a specific theory of change. Working it well requires not just conceptual understanding but clinical skill developed through practice: the ability to track a client's attachment system in real time, recognize the precise quality of what's needed at a given moment, and guide the Ideal Parent Figure imagery with the attunement and precision that makes the difference between a session that's pleasant and one that actually changes something.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            For clients, working with a certified practitioner means working with someone who has demonstrated that capacity — not just read about it. The protocol is designed to produce movement at the level of implicit memory, the level where attachment patterns actually live. Getting there requires clinical skill, not just knowledge. Certification exists to distinguish between the two.
+            For clients, working with a certified practitioner means working with someone who has demonstrated that capacity, not just read about it. The protocol is designed to produce movement at the level of implicit memory, the level where attachment patterns actually live. Getting there requires clinical skill, not just knowledge. Certification exists to distinguish between the two.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function IATCertifiedTherapist() {
             My private practice focuses on three overlapping areas: men's attachment work, father-teen repair, and adult clients with insecure attachment patterns who have not found lasting change through other therapeutic approaches. The IAT framework is the backbone of all three.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            I am also the author of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>, which translates the IAT framework for parents — and the creator of <a href="https://waybackhome.app" className="text-cream-500 hover:text-cream-700 underline underline-offset-2">waybackhome.app</a>, a daily practice companion that brings the five conditions of secure attachment into a ten-minute daily ritual for parents of teenagers.
+            I am also the author of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>, which translates the IAT framework for parents, and the creator of <a href="https://waybackhome.app" className="text-cream-500 hover:text-cream-700 underline underline-offset-2">waybackhome.app</a>, a daily practice companion that brings the five conditions of secure attachment into a ten-minute daily ritual for parents of teenagers.
           </p>
           <p className="text-cream-700 leading-relaxed">
             The clinical work and the public-facing work are the same project: making the most effective attachment-based model available to as many people as possible, at whatever level of depth their situation calls for.

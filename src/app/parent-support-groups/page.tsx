@@ -34,7 +34,7 @@ export default function ParentSupportGroups() {
               You don't have to figure<br />this out alone.
             </h1>
             <p className="text-cream-300 text-base leading-relaxed max-w-xl mb-8">
-              A national Zoom-based psychoeducation group for parents of teenagers — grounded in attachment science, practically focused, and capped at 12 participants so everyone gets heard.
+              A national Zoom-based psychoeducation group for parents of teenagers, grounded in attachment science, practically focused, and capped at 12 participants so everyone gets heard.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -78,7 +78,7 @@ export default function ParentSupportGroups() {
           <p className="eyebrow">What This Is</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">Psychoeducation meets peer support</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            These groups are for parents who are working hard and still feel like they're losing ground with their teenager. Every session is grounded in the attachment science behind adolescent behavior — why teens withdraw, why they push you away, what's actually driving the conflict — and focused on what you can do about it.
+            These groups are for parents who are working hard and still feel like they're losing ground with their teenager. Every session is grounded in the attachment science behind adolescent behavior, why teens withdraw, why they push you away, what's actually driving the conflict, and focused on what you can do about it.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             This isn't therapy, and it isn't a support group in the traditional sense. It's structured psychoeducation with room for real conversation. You'll leave each session with a framework that makes your teenager's behavior more intelligible, and with practical tools you can use that week.
@@ -96,17 +96,17 @@ export default function ParentSupportGroups() {
           <h2 className="text-3xl font-serif text-cream-900 mb-8">Topics include</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              'Why teenagers push their parents away — and what it signals',
+              'Why teenagers push their parents away, and what it signals',
               'The attachment science behind conflict, shutdown, and withdrawal',
               'How your own attachment history shows up in your parenting',
               'Regulation vs. co-regulation: what your teen actually needs',
               'How to stay present during ruptures without shutting down or escalating',
-              'What repair looks like — and why most parents do it wrong',
+              'What repair looks like, and why most parents do it wrong',
               'The difference between attunement and approval',
               'Setting limits without damaging the relationship',
             ].map((topic) => (
               <div key={topic} className="flex gap-3 text-cream-700 text-sm bg-cream-50 border border-cream-300 rounded-lg p-4">
-                <span className="text-cream-400 shrink-0 mt-0.5">—</span>
+                <span className="text-cream-400 shrink-0 mt-0.5">·</span>
                 {topic}
               </div>
             ))}
@@ -130,7 +130,7 @@ export default function ParentSupportGroups() {
                   'You want to be around other parents navigating similar things',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -145,7 +145,7 @@ export default function ParentSupportGroups() {
                   'You\'re looking for parenting tips and quick techniques',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -173,7 +173,7 @@ export default function ParentSupportGroups() {
             He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / Integrative Attachment Therapy framework, and is the author of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>.
           </p>
           <p className="text-cream-700 leading-relaxed">
-            These groups distill the same framework he uses in individual and family clinical work into a format accessible to any parent — regardless of whether they're in therapy themselves.
+            These groups distill the same framework he uses in individual and family clinical work into a format accessible to any parent, regardless of whether they're in therapy themselves.
           </p>
         </div>
       </section>

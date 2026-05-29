@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Daniel J. Ahearn, LMFT — Attachment Therapist in Los Angeles',
+  title: 'Daniel J. Ahearn, LMFT: Attachment Therapist in Los Angeles',
   description: 'IAT-certified attachment therapist in Los Angeles. Author of The Way Back Home. Working with men, fathers, teens, and families; trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
 }
 
@@ -64,9 +64,9 @@ export default function Home() {
       <section className="section-cream">
         <div className="container-main max-w-3xl text-center">
           <p className="eyebrow">The Work</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-6">Most people I work with aren't broken — they're adapted.</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-6">Most people I work with aren't broken. They're adapted.</h2>
           <p className="text-cream-700 text-base leading-relaxed mb-4">
-            What looks like emotional unavailability, withdrawal, or conflict is almost always an attachment strategy that once made sense. The goal isn't to fix what's wrong with you. It's to repair the foundation underneath — so that security stops being something you perform and starts being something you feel.
+            What looks like emotional unavailability, withdrawal, or conflict is almost always an attachment strategy that once made sense. The goal isn't to fix what's wrong with you. It's to repair the foundation underneath: so that security stops being something you perform and starts being something you feel.
           </p>
           <p className="text-cream-600 text-sm leading-relaxed">
             I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol: a research-backed method developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT. I trained directly with Drs. Brown and Elliott and bring the full Three Pillars framework to private practice.
@@ -151,10 +151,10 @@ export default function Home() {
               </h2>
               <p className="text-cream-600 text-sm italic mb-5">Healing Attachment Wounds With Your Teen</p>
               <p className="text-cream-700 leading-relaxed mb-4">
-                A practical guide for parents navigating the hardest years of the parent-child relationship — grounded in the same IAT framework at the center of my clinical practice.
+                A practical guide for parents navigating the hardest years of the parent-child relationship, grounded in the same IAT framework at the center of my clinical practice.
               </p>
               <p className="text-cream-700 leading-relaxed mb-7">
-                If your teenager is pulling away, shutting down, or pushing you out — this book explains why, and what to do about it.
+                If your teenager is pulling away, shutting down, or pushing you out, this book explains why, and what to do about it.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -174,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured writing — Lion's Roar */}
+      {/* Featured writing: Lion's Roar */}
       <section className="bg-cream-100 py-16">
         <div className="container-main max-w-4xl">
           <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
@@ -229,9 +229,9 @@ export default function Home() {
       <section className="bg-cream-800 py-14">
         <div className="container-main max-w-3xl text-center">
           <p className="font-serif italic text-cream-200 text-xl md:text-2xl leading-relaxed mb-6">
-            "Daniel Ahearn has done something rare — he has translated a sophisticated clinical model into language that parents can actually use."
+            "Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use."
           </p>
-          <p className="text-cream-400 text-sm">— Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
+          <p className="text-cream-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
         </div>
       </section>
 

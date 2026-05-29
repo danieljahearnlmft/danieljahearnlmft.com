@@ -45,15 +45,15 @@ export default function AttachmentTherapyLosAngeles() {
             {[
               {
                 title: "Men's Attachment Work",
-                body: "Men are rarely given language for attachment needs — let alone permission to have them. I work with men whose relational patterns trace back to early caregiving dynamics they've never been able to fully see or name: the reflexive self-sufficiency, the difficulty with intimacy, the ways disconnection has become the default. The IAT framework gives this work precision and depth.",
+                body: "Men are rarely given language for attachment needs, let alone permission to have them. I work with men whose relational patterns trace back to early caregiving dynamics they've never been able to fully see or name: the reflexive self-sufficiency, the difficulty with intimacy, the ways disconnection has become the default. The IAT framework gives this work precision and depth.",
               },
               {
                 title: "Parent-Teen Repair",
-                body: "The adolescent years surface every unresolved attachment issue a parent carries. I work with parents who want to show up differently for their teenagers — not just manage the conflict better but actually close the gap. This work often involves the parent's own attachment history as much as the parent-teen relationship itself.",
+                body: "The adolescent years surface every unresolved attachment issue a parent carries. I work with parents who want to show up differently for their teenagers, not just manage the conflict better but actually close the gap. This work often involves the parent's own attachment history as much as the parent-teen relationship itself.",
               },
               {
                 title: "Adult Attachment Patterns",
-                body: "For adults who recognize the signature of insecure attachment in their relationships — the familiar arcs, the persistent gaps between knowing and feeling, the ways relationship keeps reproducing the same dynamics — IAT offers a path to genuine reorganization, not just better coping.",
+                body: "For adults who recognize the signature of insecure attachment in their relationships, the familiar arcs, the persistent gaps between knowing and feeling, the ways relationship keeps reproducing the same dynamics, IAT offers a path to genuine reorganization, not just better coping.",
               },
             ].map((item) => (
               <div key={item.title}>
@@ -70,13 +70,13 @@ export default function AttachmentTherapyLosAngeles() {
           <p className="eyebrow">The Approach</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">What makes IAT different</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            Most therapists in Los Angeles — and most good ones — work at the level of narrative, insight, and conscious understanding. They help clients make sense of their history, identify patterns, develop new ways of thinking about themselves and their relationships. This matters. It is genuinely helpful.
+            Most therapists in Los Angeles, and most good ones, work at the level of narrative, insight, and conscious understanding. They help clients make sense of their history, identify patterns, develop new ways of thinking about themselves and their relationships. This matters. It is genuinely helpful.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            Attachment patterns, however, are not primarily stored in narrative memory. They are stored in implicit memory — the procedural, body-based, relational knowing that forms before language and operates beneath awareness. You can understand a pattern completely and still not be able to change it, because understanding and pattern live in different systems.
+            Attachment patterns, however, are not primarily stored in narrative memory. They are stored in implicit memory: the procedural, body-based, relational knowing that forms before language and operates beneath awareness. You can understand a pattern completely and still not be able to change it, because understanding and pattern live in different systems.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            IAT works at the level where the pattern actually lives. Through the Ideal Parent Figure protocol and the full Three Pillars framework, it creates conditions for new experiences in the attachment system — experiences that, consolidated over time, genuinely change the internal working model. The result is not just better insight but a different felt sense of relationship: less vigilance, more ease, a changed expectation of what's possible between people.
+            IAT works at the level where the pattern actually lives. Through the Ideal Parent Figure protocol and the full Three Pillars framework, it creates conditions for new experiences in the attachment system: experiences that, consolidated over time, genuinely change the internal working model. The result is not just better insight but a different felt sense of relationship: less vigilance, more ease, a changed expectation of what's possible between people.
           </p>
           <p className="text-cream-700 leading-relaxed">
             This is what I offer in Los Angeles, and what distinguishes IAT-certified work from attachment-informed therapy more broadly.

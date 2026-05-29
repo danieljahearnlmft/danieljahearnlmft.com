@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Writing — Daniel J. Ahearn, LMFT',
-  description: 'Essays and articles by Daniel J. Ahearn, LMFT on attachment, honesty, and parenting teens — published in Lion’s Roar and on Substack.',
+  title: 'Writing: Daniel J. Ahearn, LMFT',
+  description: 'Essays and articles by Daniel J. Ahearn, LMFT on attachment, honesty, and parenting teens, published in Lion’s Roar and on Substack.',
 }
 
 const articles = [
   {
     title: 'Parenting Teens with Presence',
     outlet: 'Lion’s Roar',
-    dek: 'Five ways to support and connect with your teenage children — written for parents navigating the years when the relationship feels most fragile.',
+    dek: 'Five ways to support and connect with your teenage children, written for parents navigating the years when the relationship feels most fragile.',
     href: 'https://www.lionsroar.com/parenting-teens-with-presence/',
   },
   {
@@ -38,7 +38,7 @@ export default function Writing() {
             Essays on attachment, honesty, and parenting teens
           </h1>
           <p className="text-cream-700 text-lg leading-relaxed max-w-xl mx-auto">
-            Published writing on the questions I keep returning to in the therapy room — and at home.
+            Published writing on the questions I keep returning to in the therapy room, and at home.
           </p>
         </div>
       </section>

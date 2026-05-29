@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Speaking, Training & Consulting',
-  description: 'Speaking, clinical team training, and organizational consulting on attachment, regulation, and culture — for treatment programs, clinical teams, and media.',
+  description: 'Speaking, clinical team training, and organizational consulting on attachment, regulation, and culture, for treatment programs, clinical teams, and media.',
   openGraph: {
     images: [{ url: '/images/consulting-hero.jpg', alt: 'Speaking, Team Training & Organizational Consulting' }],
   },
@@ -33,7 +33,7 @@ export default function Consulting() {
               Bringing attachment intelligence<br />into your organization
             </h1>
             <p className="text-cream-300 text-base leading-relaxed max-w-xl">
-              Speaking, clinical team training, and culture consulting — grounded in a decade of building mental health organizations from the inside.
+              Speaking, clinical team training, and culture consulting, grounded in a decade of building mental health organizations from the inside.
             </p>
           </div>
         </div>
@@ -55,14 +55,14 @@ export default function Consulting() {
               <h3 className="font-serif text-lg text-cream-900 mb-4">Signature topics</h3>
               <ul className="space-y-3 mb-8">
                 {[
-                  'Attachment Science for Clinicians — the neurobiology of safety and how it applies to therapeutic relationships',
-                  'The Synthesis of Meditation and Emotional Regulation — how contemplative practice builds nervous system capacity',
-                  'Building Secure Teams — applying attachment principles to staff culture, retention, and burnout',
-                  'Teen Mental Health & the Family System — what families and organizations need to understand about adolescent attachment',
-                  'Men, Fathers & Attachment — the underrepresented clinical territory at the heart of family repair',
+                  'Attachment Science for Clinicians: the neurobiology of safety and how it applies to therapeutic relationships',
+                  'The Synthesis of Meditation and Emotional Regulation: how contemplative practice builds nervous system capacity',
+                  'Building Secure Teams: applying attachment principles to staff culture, retention, and burnout',
+                  'Teen Mental Health & the Family System: what families and organizations need to understand about adolescent attachment',
+                  'Men, Fathers & Attachment: the underrepresented clinical territory at the heart of family repair',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0 mt-0.5">—</span>{item}
+                    <span className="text-cream-400 shrink-0 mt-0.5">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -100,7 +100,7 @@ export default function Consulting() {
               <p className="text-cream-600 italic text-sm mb-6">Clinical team training and culture consulting for treatment programs, clinical leadership, and HR</p>
 
               <p className="text-cream-700 leading-relaxed mb-5">
-                Burnout in mental health organizations isn&rsquo;t a time management problem — it&rsquo;s an attachment and regulation problem. As Director of Culture at Ascend Healthcare, Daniel built and oversaw clinical programming across 4–10 residential and outpatient facilities, developing the staff training and supervision infrastructure that shapes how care is delivered at scale.
+                Burnout in mental health organizations isn&rsquo;t a time management problem. It&rsquo;s an attachment and regulation problem. As Director of Culture at Ascend Healthcare, Daniel built and oversaw clinical programming across 4–10 residential and outpatient facilities, developing the staff training and supervision infrastructure that shapes how care is delivered at scale.
               </p>
               <p className="text-cream-700 leading-relaxed mb-5">
                 This work is for clinical directors, executive teams, and graduate training programs who want an outside perspective from someone who has built from the inside.
@@ -117,7 +117,7 @@ export default function Consulting() {
                   'Family systems integration into residential programming',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0 mt-0.5">—</span>{item}
+                    <span className="text-cream-400 shrink-0 mt-0.5">·</span>{item}
                   </li>
                 ))}
               </ul>

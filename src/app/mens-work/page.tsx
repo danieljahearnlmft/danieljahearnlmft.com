@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Men's Attachment Repair Groups",
-  description: 'A 16-week attachment repair cohort for men using the Ideal Parent Figure Protocol — for relationships, fatherhood, and emotional availability.',
+  description: 'A 16-week attachment repair cohort for men using the Ideal Parent Figure Protocol: for relationships, fatherhood, and emotional availability.',
   openGraph: {
     images: [{ url: '/images/mens-groups.jpg', alt: "Men's Attachment Repair Groups" }],
   },
@@ -78,7 +78,7 @@ export default function MensWork() {
                   'Can commit to 16 weeks without missing sessions',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -95,7 +95,7 @@ export default function MensWork() {
                   'Are tired of performing competence while feeling empty',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>
@@ -146,7 +146,7 @@ export default function MensWork() {
                 <ul className="md:col-span-3 space-y-1.5">
                   {phase.items.map((item) => (
                     <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                      <span className="text-cream-400 shrink-0 mt-0.5">—</span>{item}
+                      <span className="text-cream-400 shrink-0 mt-0.5">·</span>{item}
                     </li>
                   ))}
                 </ul>
@@ -164,7 +164,7 @@ export default function MensWork() {
               <p className="eyebrow">Format</p>
               <h2 className="text-3xl font-serif text-cream-900 mb-6">The structure</h2>
               <div className="space-y-4 text-cream-700 text-sm leading-relaxed">
-                <p><strong className="text-cream-900 font-medium">16 consecutive weeks</strong> — 90 minutes per session, 8–10 men per cohort, Tuesdays 7–8:30pm PST.</p>
+                <p><strong className="text-cream-900 font-medium">16 consecutive weeks.</strong> 90 minutes per session, 8–10 men per cohort, Tuesdays 7–8:30pm PST.</p>
                 <p><strong className="text-cream-900 font-medium">Each session includes:</strong> brief check-in, short teaching on attachment and development, guided Ideal Parent Figure visualization (20–30 minutes), group integration and reflection, and a practice assignment.</p>
                 <p><strong className="text-cream-900 font-medium">Between sessions:</strong> daily 10-minute IPF practice, optional peer accountability partnerships, and access to guided audio recordings.</p>
               </div>
@@ -176,7 +176,7 @@ export default function MensWork() {
                   { title: 'Not therapy-in-a-group', body: 'The group itself is the therapeutic agent. Men witnessing each other\'s vulnerability creates the safety to go deeper.' },
                   { title: 'Not a men\'s social circle', body: 'It\'s clinical attachment repair using a structured protocol. There\'s homework, commitment, and real work.' },
                   { title: 'Not performance-based', body: 'You\'re not learning to "be a secure man." You\'re repairing the nervous system patterns that prevent security from emerging naturally.' },
-                  { title: 'Research-backed', body: 'The Ideal Parent Figure Protocol has evidence supporting its effectiveness for attachment repair. This isn\'t men\'s weekend retreat mysticism — it\'s neurobiology.' },
+                  { title: 'Research-backed', body: 'The Ideal Parent Figure Protocol has evidence supporting its effectiveness for attachment repair. This isn\'t men\'s weekend retreat mysticism. It\'s neurobiology.' },
                 ].map((item) => (
                   <div key={item.title}>
                     <p className="text-cream-100 text-sm font-medium mb-1">{item.title}</p>
@@ -194,7 +194,7 @@ export default function MensWork() {
         <div className="container-main max-w-xl text-center">
           <p className="eyebrow">Investment</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-3">$5,500 for 16 weeks</h2>
-          <p className="text-cream-600 text-sm mb-6">Payment plans available — 3 monthly installments</p>
+          <p className="text-cream-600 text-sm mb-6">Payment plans available: 3 monthly installments</p>
           <p className="text-cream-700 text-sm leading-relaxed mb-8">
             Includes 16 guided group sessions (24 hours), guided IPF audio recordings for home practice, written materials and developmental frameworks, email support between sessions, and alumni group access after completion.
           </p>
@@ -225,18 +225,18 @@ export default function MensWork() {
               <p className="eyebrow">Also Available</p>
               <h2 className="text-3xl font-serif text-cream-900 mb-5">Bi-Weekly Men's Group Therapy</h2>
               <p className="text-cream-700 leading-relaxed mb-4">
-                A bi-weekly psychotherapy space where men of all ages come together in a safe, judgment-free environment to talk, feel, reflect, and connect. Process is the key word — because most of us were never taught how to name our emotions, let alone feel supported while doing so.
+                A bi-weekly psychotherapy space where men of all ages come together in a safe, judgment-free environment to talk, feel, reflect, and connect. Process is the key word, because most of us were never taught how to name our emotions, let alone feel supported while doing so.
               </p>
               <ul className="space-y-2 mb-7">
                 {[
                   'Talk honestly about whatever\'s on your mind',
                   'Receive and offer support',
                   'Explore how others experience you',
-                  'Identify patterns — both helpful and harmful',
+                  'Identify patterns, both helpful and harmful',
                   'Build more intention and meaning in how you live and relate',
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">—</span>{item}
+                    <span className="text-cream-400 shrink-0">·</span>{item}
                   </li>
                 ))}
               </ul>

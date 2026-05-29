@@ -227,14 +227,14 @@ export default function Pathwork() {
           </h2>
 <p className="text-cream-600 mb-12">
           Begin wherever you are drawn. The Four Immeasurables can be
-          practiced in any order — Loving Kindness, Compassion, Sympathetic
+          practiced in any order: Loving Kindness, Compassion, Sympathetic
           Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
           practices you can return to anytime.
         </p>
         <p className="text-cream-600 mb-12">
           The Rest card holds the Jewel Tree meditation, in the form
           taught by Robert Thurman. It is a practice that centers on
-          taking refuge — offering a “wish-fulfilling jewel tree” of
+          taking refuge: offering a “wish-fulfilling jewel tree” of
           interconnected awakened beings as a gentle, systematic path
           to wake up, find compassion, and remember our original heart.
           It is one of the great joys of my life that I have been able
