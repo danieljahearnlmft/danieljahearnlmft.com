@@ -16,7 +16,7 @@ export default function IntegrativeAttachmentTherapy() {
             Integrative Attachment Therapy
           </h1>
           <p className="text-cream-300 text-lg leading-relaxed">
-            A comprehensive, research-grounded framework for treating insecure and disorganized attachment in adults. Created by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT by Dr. Elliott, Nigel Denning, and Traill Dowie.
+            A comprehensive, research-grounded framework for treating insecure and disorganized attachment in adults. Created by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward by IAT.
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function IntegrativeAttachmentTherapy() {
           <p className="eyebrow">The Framework</p>
           <h2 className="text-3xl font-serif text-cream-900 mb-6">What IAT is</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            Integrative Attachment Therapy (IAT) is a structured clinical framework created by Daniel P. Brown, Ph.D., one of the world's foremost researchers and clinicians in attachment theory, and David Elliott, Ph.D. Following Dr. Brown's death, the work is carried forward through IAT by Dr. Elliott alongside Nigel Denning, Traill Dowie, and a small international community of certified clinicians. The model is organized around a central insight: that most psychological suffering in adults traces back to disruptions in early attachment, and that the most effective path to lasting change is not analyzing those disruptions but systematically providing the experiences the attachment system needed and did not get.
+            Integrative Attachment Therapy (IAT) is a structured clinical framework created by Daniel P. Brown, Ph.D., one of the world's foremost researchers and clinicians in attachment theory, and David Elliott, Ph.D. Following Dr. Brown's death, the work is carried forward by IAT. The model is organized around a central insight: that most psychological suffering in adults traces back to disruptions in early attachment, and that the most effective path to lasting change is not analyzing those disruptions but systematically providing the experiences the attachment system needed and did not get.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
             IAT is not a single technique. It is an integrated model that draws on attachment research, developmental neuroscience, mindfulness-based approaches, and somatic therapy to address the full range of insecure attachment presentations: anxious, avoidant, disorganized, and complex traumatic. The model is organized as the Three Pillars framework, reflecting its three foundational components: Collaboration, Metacognition, and the Ideal Parent Figure (IPF) Imagery protocol.
@@ -72,6 +72,30 @@ export default function IntegrativeAttachmentTherapy() {
                 Over the course of treatment, these imaginative experiences consolidate into genuine shifts in the internal working model: new expectations about relationship, new capacities for regulation, a fundamentally different felt sense of one's own worthiness to be loved and supported.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+        <div className="container-main max-w-3xl">
+          <p className="eyebrow">The Five Conditions</p>
+          <h2 className="text-3xl font-serif text-cream-900 mb-6">What the IPF protocol delivers</h2>
+          <p className="text-cream-700 leading-relaxed mb-10">
+            The Three Pillars describe how the work is structured. The Five Conditions describe what the work delivers: the core relational experiences that, when present, allow secure attachment to develop. Drawn from the attachment research of Dr. Daniel P. Brown and Dr. David Elliott, these are what the IPF protocol systematically provides at the level of felt sense and implicit memory.
+          </p>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-6">
+            {[
+              { name: 'Safety', body: 'The foundational sense that one will not be harmed or abandoned in the relationship.' },
+              { name: 'Attunement', body: 'Being seen accurately, without needing to perform or suppress to be understood.' },
+              { name: 'Soothing', body: 'Distress met with calm, regulated response rather than escalation or withdrawal.' },
+              { name: 'Expressed Delight', body: 'Being met with genuine pleasure in one’s existence, not just utility or compliance.' },
+              { name: 'Support for Exploration', body: 'Encouragement to venture out, return, and try again, with a steady base behind it.' },
+            ].map((c) => (
+              <div key={c.name} className="border-l-2 border-cream-400 pl-5">
+                <h3 className="font-serif text-lg text-cream-900 mb-1">{c.name}</h3>
+                <p className="text-cream-700 text-sm leading-relaxed">{c.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

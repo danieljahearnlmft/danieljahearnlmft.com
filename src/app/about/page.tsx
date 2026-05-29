@@ -119,7 +119,7 @@ export default function About() {
               <p className="eyebrow">The Method</p>
               <h2 className="text-3xl font-serif text-cream-900 mb-5">Integrative Attachment Therapy</h2>
               <p className="text-cream-700 leading-relaxed mb-4">
-                IAT is a structured, research-backed approach to attachment repair created by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott, and now carried forward through Integrative Attachment Therapy by Dr. Elliott, Nigel Denning, and Traill Dowie. It works by providing corrective emotional experiences, through guided visualization, that the nervous system can internalize as a new foundation for security.
+                IAT is a structured, research-backed approach to attachment repair created by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott, and now carried forward by IAT. It works by providing corrective emotional experiences, through guided visualization, that the nervous system can internalize as a new foundation for security.
               </p>
               <p className="text-cream-700 leading-relaxed mb-4">
                 The Ideal Parent Figure Protocol is its central tool: a systematic process of moving through developmental stages and building the internalized experience of being seen, soothed, safe, and supported.

@@ -140,6 +140,33 @@ export default function Book() {
         </div>
       </section>
 
+      {/* Five Conditions framework */}
+      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+        <div className="container-main max-w-3xl">
+          <p className="eyebrow">The Framework of the Book</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-4">
+            The Five Conditions of Secure Attachment
+          </h2>
+          <p className="text-cream-700 leading-relaxed mb-10">
+            The book is built around the Five Conditions of Secure Attachment: the core relational experiences that allow security to develop. Drawn from the work of Dr. Daniel P. Brown and Dr. David Elliott, applied here specifically to parenting teenagers.
+          </p>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-6">
+            {[
+              { name: 'Safety', body: 'Building the secure foundation.' },
+              { name: 'Attunement', body: 'Connection over correction.' },
+              { name: 'Soothing', body: 'Regulating before solving.' },
+              { name: 'Expressed Delight', body: 'The engine of self-esteem.' },
+              { name: 'Exploration', body: 'Boundaries that strengthen bonds.' },
+            ].map((c) => (
+              <div key={c.name} className="border-l-2 border-cream-400 pl-5">
+                <h3 className="font-serif text-lg text-cream-900 mb-1">{c.name}</h3>
+                <p className="text-cream-700 text-sm leading-relaxed">{c.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About the author */}
       <section className="section-warm">
         <div className="container-main max-w-3xl">
