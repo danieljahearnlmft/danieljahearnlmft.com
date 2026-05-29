@@ -100,10 +100,10 @@ export default function Consulting() {
               <p className="text-cream-600 italic text-sm mb-6">Clinical team training and culture consulting for treatment programs, clinical leadership, and HR</p>
 
               <p className="text-cream-700 leading-relaxed mb-5">
-                Burnout in mental health organizations isn&rsquo;t a time management problem. It&rsquo;s an attachment and regulation problem. As Director of Culture at Ascend Healthcare, Daniel built and oversaw clinical programming across 4–10 residential and outpatient facilities, developing the staff training and supervision infrastructure that shapes how care is delivered at scale.
+                Burnout in mental health organizations isn&rsquo;t a time management problem. It&rsquo;s an attachment and regulation problem. As Director of Culture at Ascend Healthcare, Daniel builds and oversees clinical programming across a growing network of residential and outpatient facilities, soon to exceed twelve sites. He develops the staff training and supervision infrastructure that shapes how care is delivered at scale.
               </p>
               <p className="text-cream-700 leading-relaxed mb-5">
-                This work is for clinical directors, executive teams, and graduate training programs who want an outside perspective from someone who has built from the inside.
+                This work is for clinical directors, executive teams, and graduate training programs who want an outside perspective from someone who is building from the inside.
               </p>
 
               <h3 className="font-serif text-lg text-cream-900 mb-4">Areas of focus</h3>
@@ -152,7 +152,7 @@ export default function Consulting() {
               { stat: 'LMFT', label: 'Licensed & Certified' },
               { stat: 'IAT', label: 'Certified Attachment Clinician' },
               { stat: '10+ Years', label: 'Adolescent Residential Treatment' },
-              { stat: '4–10', label: 'Facilities as Director of Culture' },
+              { stat: '10+', label: 'Facilities as Director of Culture' },
             ].map((item) => (
               <div key={item.label}>
                 <p className="font-serif text-cream-200 text-xl mb-1">{item.stat}</p>
