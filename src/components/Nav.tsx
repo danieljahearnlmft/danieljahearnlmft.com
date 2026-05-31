@@ -11,6 +11,7 @@ export default function Nav() {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   if (pathname?.startsWith('/pathwork')) return null
+  if (pathname?.startsWith('/visualization')) return null
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
