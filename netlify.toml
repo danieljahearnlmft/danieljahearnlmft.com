@@ -13,6 +13,16 @@
   status = 301
 
 [[redirects]]
+  from = "/visualizations"
+  to = "/visualization"
+  status = 301
+
+[[redirects]]
+  from = "/visualizations/"
+  to = "/visualization"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404/index.html"
   status = 404
