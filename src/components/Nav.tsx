@@ -10,9 +10,6 @@ export default function Nav() {
   const [workOpen, setWorkOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  if (pathname?.startsWith('/pathwork')) return null
-  if (pathname?.startsWith('/visualization')) return null
-
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -22,6 +19,9 @@ export default function Nav() {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
+
+  if (pathname?.startsWith('/pathwork')) return null
+  if (pathname?.startsWith('/visualization')) return null
 
   return (
     <nav className="sticky top-0 z-50 bg-cream-100/95 backdrop-blur-sm border-b border-cream-300">
