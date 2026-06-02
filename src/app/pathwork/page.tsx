@@ -343,37 +343,47 @@ export default function Pathwork() {
               </div>
             </div>
 
-            {/* Friends — right column */}
+            {/* Keep Practice — right column, balanced with Caroline */}
             <div>
-              <p className="eyebrow">Friends</p>
+              <p className="eyebrow">A Companion</p>
               <h3 className="text-2xl md:text-3xl font-serif text-cream-900 leading-tight mb-6">
-                Companion Practice
+                <a
+                  href="https://keeppractice.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                >
+                  Keep Practice
+                </a>
               </h3>
-              <div className="space-y-4 text-cream-700 leading-relaxed">
+              <div className="space-y-5 text-cream-700 leading-relaxed">
                 <p>
-                  <a
-                    href="https://keeppractice.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-                  >
-                    Keep Practice
-                  </a>
-                  <span className="text-cream-500"> · a companion for steady daily sitting</span>
+                  A quiet companion for steady daily sitting — gentle
+                  reminders, a sense of rhythm, the kind of low-friction
+                  support that lets the practice take root.
                 </p>
                 <p>
-                  <a
-                    href="https://pithdrop.netlify.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-                  >
-                    Pith Drop
-                  </a>
-                  <span className="text-cream-500"> · brief instructions, distilled</span>
+                  Less about doing more, more about remembering to return.
+                  Open it, sit, close it. The shape of a day begins to hold
+                  the shape of a path.
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Pith Drop — single centered line below the two columns */}
+          <div className="mt-16 md:mt-20 pt-10 border-t border-cream-300 text-center">
+            <p className="text-cream-700 leading-relaxed">
+              <a
+                href="https://pithdrop.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+              >
+                Pith Drop
+              </a>
+              <span className="text-cream-500"> · a monthly starter practice for those interested</span>
+            </p>
           </div>
         </div>
       </section>
