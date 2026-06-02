@@ -288,84 +288,92 @@ export default function Pathwork() {
         />
       </div>
 
-      {/* Friends doorway */}
-      <section className="py-16 md:py-20">
-        <div className="container-main max-w-3xl text-center">
-          <p className="text-cream-700 leading-relaxed mb-12 max-w-xl mx-auto">
+      {/* Friends doorway + In Her Honor — balanced two-column block */}
+      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+        <div className="container-main max-w-5xl">
+          <p className="text-cream-700 leading-relaxed text-center mb-14 max-w-xl mx-auto">
             These may help deepen your practice.
           </p>
 
-          <div className="space-y-3 text-cream-700">
-            <p>
-              <a
-                href="https://keeppractice.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Keep Practice
-              </a>
-              <span className="text-cream-500"> · a companion for steady daily sitting</span>
-            </p>
-            <p>
-              <a
-                href="https://pithdrop.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Pith Drop
-              </a>
-              <span className="text-cream-500"> · brief instructions, distilled</span>
-            </p>
-          </div>
-        </div>
-      </section>
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* In Her Honor — left column */}
+            <div>
+              <p className="eyebrow">In Her Honor</p>
+              <h3 className="text-2xl md:text-3xl font-serif text-cream-900 leading-tight mb-6">
+                Caroline
+              </h3>
+              <div className="space-y-5 text-cream-700 leading-relaxed">
+                <p>
+                  My friend Caroline was an advocate for mercy, peace, and
+                  awareness. She also loved to dance.{' '}
+                  <a
+                    href="https://carolinerainbow.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                  >
+                    Caroline Rainbow
+                  </a>{' '}
+                  is in her honor. In the Bön, we learn that sound, light, and
+                  light&rsquo;s rays are inseparable — the spontaneous play of
+                  awareness, eventually resolving into the rainbow body. This
+                  is encouragement to celebrate through music, dance,
+                  expression, and care.
+                </p>
+                <p>
+                  If you would like to explore the spirit of generosity,
+                  consider{' '}
+                  <a
+                    href="https://www.every.org/animalcharityevaluators/f/recommended-charity-c87e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                  >
+                    this
+                  </a>{' '}
+                  in her honor.
+                </p>
+                <p className="font-serif italic text-cream-600 pt-2">
+                  May all beings be free,
+                  <br />
+                  and may our celebration of life
+                  <br />
+                  contribute to that forever.
+                </p>
+              </div>
+            </div>
 
-      {/* Caroline Rainbow — dedication */}
-      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
-        <div className="container-main max-w-2xl text-center">
-          <p className="eyebrow">In Her Honor</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-8">
-            Caroline
-          </h2>
-          <div className="space-y-5 text-cream-700 leading-relaxed">
-            <p>
-              My friend Caroline was an advocate for mercy, peace, and
-              awareness. She also loved to dance.{' '}
-              <a
-                href="https://carolinerainbow.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Caroline Rainbow
-              </a>{' '}
-              is in her honor. In the Bön, we learn that sound, light, and
-              light&rsquo;s rays are inseparable — the spontaneous play of
-              awareness, eventually resolving into the rainbow body. This is
-              encouragement to celebrate through music, dance, expression,
-              and care.
-            </p>
-            <p>
-              If you would like to explore the spirit of generosity, consider{' '}
-              <a
-                href="https://www.every.org/animalcharityevaluators/f/recommended-charity-c87e"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                this
-              </a>{' '}
-              in her honor.
-            </p>
-            <p className="font-serif italic text-cream-600 pt-2">
-              May all beings be free,
-              <br />
-              and may our celebration of life
-              <br />
-              contribute to that forever.
-            </p>
+            {/* Friends — right column */}
+            <div>
+              <p className="eyebrow">Friends</p>
+              <h3 className="text-2xl md:text-3xl font-serif text-cream-900 leading-tight mb-6">
+                Companion Practice
+              </h3>
+              <div className="space-y-4 text-cream-700 leading-relaxed">
+                <p>
+                  <a
+                    href="https://keeppractice.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                  >
+                    Keep Practice
+                  </a>
+                  <span className="text-cream-500"> · a companion for steady daily sitting</span>
+                </p>
+                <p>
+                  <a
+                    href="https://pithdrop.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                  >
+                    Pith Drop
+                  </a>
+                  <span className="text-cream-500"> · brief instructions, distilled</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
