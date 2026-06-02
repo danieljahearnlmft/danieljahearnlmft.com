@@ -318,17 +318,6 @@ export default function Pathwork() {
               </a>
               <span className="text-cream-500"> · brief instructions, distilled</span>
             </p>
-            <p>
-              <a
-                href="https://carolinerainbow.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Caroline Rainbow
-              </a>
-              <span className="text-cream-500"> · voice, chant, or music — answered in light</span>
-            </p>
           </div>
         </div>
       </section>
