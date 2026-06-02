@@ -333,6 +333,52 @@ export default function Pathwork() {
         </div>
       </section>
 
+      {/* Caroline Rainbow — dedication */}
+      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+        <div className="container-main max-w-2xl text-center">
+          <p className="eyebrow">In Her Honor</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-8">
+            Caroline
+          </h2>
+          <div className="space-y-5 text-cream-700 leading-relaxed">
+            <p>
+              My friend Caroline was an advocate for mercy, peace, and
+              awareness.{' '}
+              <a
+                href="https://carolinerainbow.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+              >
+                Caroline Rainbow
+              </a>{' '}
+              is in her honor — and an encouragement to celebrate through
+              music, dance, expression, and care.
+            </p>
+            <p>
+              If you want to donate in her spirit, to engage compassion, or
+              just because you can,{' '}
+              <a
+                href="https://www.every.org/animalcharityevaluators/f/recommended-charity-c87e"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+              >
+                you can do it here
+              </a>
+              .
+            </p>
+            <p className="font-serif italic text-cream-600 pt-2">
+              May all beings be free,
+              <br />
+              and may our celebration of life
+              <br />
+              contribute to that forever.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Closing — prayer flag tree */}
       <div className="relative w-full max-w-[1400px] mx-auto aspect-[16/9] max-h-[560px] overflow-hidden">
         <Image
