@@ -343,7 +343,7 @@ export default function Pathwork() {
           <div className="space-y-5 text-cream-700 leading-relaxed">
             <p>
               My friend Caroline was an advocate for mercy, peace, and
-              awareness.{' '}
+              awareness. She also loved to dance.{' '}
               <a
                 href="https://carolinerainbow.com"
                 target="_blank"
@@ -352,21 +352,23 @@ export default function Pathwork() {
               >
                 Caroline Rainbow
               </a>{' '}
-              is in her honor — and an encouragement to celebrate through
-              music, dance, expression, and care.
+              is in her honor. In the Bön, we learn that sound, light, and
+              light&rsquo;s rays are inseparable — the spontaneous play of
+              awareness, eventually resolving into the rainbow body. This is
+              encouragement to celebrate through music, dance, expression,
+              and care.
             </p>
             <p>
-              If you want to donate in her spirit, to engage compassion, or
-              just because you can,{' '}
+              If you would like to explore the spirit of generosity, consider{' '}
               <a
                 href="https://www.every.org/animalcharityevaluators/f/recommended-charity-c87e"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
               >
-                you can do it here
-              </a>
-              .
+                this
+              </a>{' '}
+              in her honor.
             </p>
             <p className="font-serif italic text-cream-600 pt-2">
               May all beings be free,
