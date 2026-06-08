@@ -1,4 +1,7 @@
-import { Card, elements } from './cards'
+'use client'
+
+import { useState } from 'react'
+import { Card, elements, HAS_CARD_ART, cardImage } from './cards'
 import Motif from './Motif'
 
 // Visual sizes for the card face.
@@ -20,11 +23,25 @@ export function CardFace({
   className?: string
 }) {
   const e = elements[card.element]
+  const [artFailed, setArtFailed] = useState(false)
+  const showArt = HAS_CARD_ART && !artFailed
   return (
     <div
       className={`relative aspect-[3/5] rounded-xl overflow-hidden shadow-lg ring-1 ring-black/10 ${dims[size]} ${className}`}
       style={{ background: `linear-gradient(155deg, ${e.from}, ${e.to})`, color: e.ink }}
     >
+      {/* Ana's painted card — full-bleed, the complete card face. Falls back to
+          the designed face below if the file is missing. */}
+      {showArt && (
+        <img
+          src={cardImage(card.id)}
+          alt={card.title}
+          className="absolute inset-0 w-full h-full object-cover z-10"
+          loading="lazy"
+          onError={() => setArtFailed(true)}
+        />
+      )}
+
       {/* gold inner frame */}
       <div
         className="absolute inset-[5%] rounded-lg pointer-events-none"
