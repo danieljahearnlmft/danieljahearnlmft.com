@@ -155,6 +155,15 @@ export default function Pathwork() {
           <p className="font-serif text-4xl md:text-5xl text-cream-900 leading-tight">
             Pathwork Oracle
           </p>
+          <Link
+            href="/pathwork/oracle"
+            className="btn-primary mt-7"
+          >
+            Open the daily oracle →
+          </Link>
+          <p className="text-xs text-cream-500 mt-3">
+            Pull a card a day · walk the 40-day path · read the spreads
+          </p>
         </div>
       </section>
 
