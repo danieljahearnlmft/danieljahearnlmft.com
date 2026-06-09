@@ -189,8 +189,8 @@ function Detail({
             Close ✕
           </button>
         </div>
-        <div className="px-6 md:px-10 pb-10 grid md:grid-cols-[260px_1fr] gap-8 items-start">
-          <div className="mx-auto md:sticky md:top-4">
+        <div className="px-6 md:px-10 pb-10 grid md:grid-cols-[240px_1fr] gap-8 items-start">
+          <div className="w-[240px] max-w-full mx-auto md:sticky md:top-4">
             <CardFace card={card} size="lg" />
           </div>
           <div>
@@ -411,16 +411,15 @@ export default function OracleApp() {
     [store, persist]
   )
 
-  // Record a day of practice → streak bookkeeping
-  const markPracticed = useCallback(() => {
+  // Pure streak bookkeeping — returns the fields to merge, so callers persist
+  // everything in ONE write (avoids clobbering from a second stale persist).
+  const practiceFields = useCallback((s: Store): Partial<Store> => {
     const today = dateKey()
-    if (store.lastDay === today) return store.streak
-    const gap = store.lastDay ? daysBetween(store.lastDay, today) : 1
-    const streak = gap === 1 ? store.streak + 1 : 1
-    const longest = Math.max(store.longest, streak)
-    persist({ ...store, lastDay: today, streak, longest })
-    return streak
-  }, [store, persist])
+    if (s.lastDay === today) return {}
+    const gap = s.lastDay ? daysBetween(s.lastDay, today) : 1
+    const streak = gap === 1 ? s.streak + 1 : 1
+    return { lastDay: today, streak, longest: Math.max(s.longest, streak) }
+  }, [])
 
   // Today's card — deterministic from the date
   const today = mounted ? dateKey() : ''
@@ -435,8 +434,12 @@ export default function OracleApp() {
     setTodayFlipped(true)
     if (!alreadyPulledToday) {
       const history = [...store.history, { date: today, id: todayCard.id }]
-      persist({ ...store, history, totalDraws: store.totalDraws + 1 })
-      markPracticed()
+      persist({
+        ...store,
+        history,
+        totalDraws: store.totalDraws + 1,
+        ...practiceFields(store),
+      })
     }
   }
 
@@ -445,8 +448,11 @@ export default function OracleApp() {
   const nextDay = cards.find((c) => !completedSet.has(c.id)) || cards[cards.length - 1]
   const completeDay = (card: Card) => {
     if (completedSet.has(card.id)) return
-    persist({ ...store, completed: [...store.completed, card.id] })
-    markPracticed()
+    persist({
+      ...store,
+      completed: [...store.completed, card.id],
+      ...practiceFields(store),
+    })
   }
 
   if (!mounted) {
