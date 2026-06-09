@@ -114,6 +114,13 @@ export default function OraclePage() {
             May you be peaceful, may you be free from suffering, may you see things as
             they are, and may your life be a celebration. — Daniel
           </p>
+          <p className="text-cream-600 text-sm italic pt-2">
+            To learn about my clinical work,{' '}
+            <Link href="/" className="underline hover:text-cream-800">
+              you can reach me here
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>
