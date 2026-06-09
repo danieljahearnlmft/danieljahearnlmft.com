@@ -203,8 +203,8 @@ export default function Pathwork() {
               <p className="pt-2">- Daniel</p>
             </div>
 
-            {/* Portrait inset — Daniel in retreat practice */}
-            <div className="hidden md:block sticky top-24">
+            {/* Portrait inset — Daniel in retreat practice (shown on all sizes) */}
+            <div className="mx-auto md:mx-0 w-[220px] sm:w-[260px] md:w-full order-first md:order-none">
               <Image
                 src="/images/daniel-cave.jpg"
                 alt="Daniel in retreat practice"
