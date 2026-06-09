@@ -1,8 +1,20 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { KeyboardEvent as ReactKeyboardEvent } from 'react'
 import { Card, cards, elements, CATEGORIES } from './cards'
 import { CardFace, CardBack } from './OracleCard'
+
+// Keyboard activation for div-based "buttons" (Enter / Space).
+function onKeyActivate(handler?: () => void) {
+  if (!handler) return undefined
+  return (e: ReactKeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handler()
+    }
+  }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Persistence
@@ -130,7 +142,14 @@ function FlipCard({
   onClick?: () => void
 }) {
   return (
-    <div className="flip-scene" onClick={onClick} role={onClick ? 'button' : undefined}>
+    <div
+      className="flip-scene"
+      onClick={onClick}
+      onKeyDown={onKeyActivate(onClick)}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-label={onClick ? 'Reveal the card' : undefined}
+    >
       <div className={`flip-card ${flipped ? 'is-flipped' : ''} ${onClick ? 'cursor-pointer' : ''}`}>
         <div className="flip-face">
           <CardBack size={size} />
@@ -300,6 +319,10 @@ function SpreadsView({ onOpen }: { onOpen: (c: Card) => void }) {
       <div className="flex flex-col items-center gap-2">
         <div
           onClick={() => (isUp ? onOpen(card) : reveal(i))}
+          onKeyDown={onKeyActivate(() => (isUp ? onOpen(card) : reveal(i)))}
+          role="button"
+          tabIndex={0}
+          aria-label={isUp ? `Open ${card.title}` : `Reveal ${active.positions[i].label}`}
           className="cursor-pointer w-[112px] md:w-[140px]"
         >
           <FlipCard card={card} flipped={isUp} size="sm" />
@@ -421,12 +444,17 @@ export default function OracleApp() {
     return { lastDay: today, streak, longest: Math.max(s.longest, streak) }
   }, [])
 
-  // Today's card — deterministic from the date
+  // Today's card — deterministic from the date, nudged so it never repeats
+  // yesterday's pull.
   const today = mounted ? dateKey() : ''
-  const todayCard = useMemo(
-    () => (today ? cards[hashStr(today) % cards.length] : cards[0]),
-    [today]
-  )
+  const todayCard = useMemo(() => {
+    if (!today) return cards[0]
+    const ti = hashStr(today) % cards.length
+    const y = new Date(today + 'T00:00:00')
+    y.setDate(y.getDate() - 1)
+    const yi = hashStr(dateKey(y)) % cards.length
+    return cards[ti === yi ? (ti + 1) % cards.length : ti]
+  }, [today])
   const alreadyPulledToday =
     mounted && store.history.some((h) => h.date === today)
 

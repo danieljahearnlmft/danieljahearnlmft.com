@@ -57,6 +57,25 @@ h1, h2, h3, h4 {
 @keyframes oracle-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
 .oracle-float { animation: oracle-float 5s ease-in-out infinite; }
 
+/* Visible focus ring for keyboard users on card "buttons" */
+.flip-scene:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid #a07850;
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* Respect reduced-motion: keep the flipped state, drop the motion */
+@media (prefers-reduced-motion: reduce) {
+  .flip-card,
+  .flip-card.is-flipped,
+  .oracle-rise,
+  .oracle-float {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
 .hidden-field {
   position: absolute;
   left: -9999px;
