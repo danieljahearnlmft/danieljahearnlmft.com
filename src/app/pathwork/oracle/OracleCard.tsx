@@ -81,79 +81,55 @@ export function CardFace({
   )
 }
 
-// ── Card back: a field of interconnected, evolving dharma wheels in gold on
-// black. Wheels grow from the center outward; a faint gold mesh links them.
+// ── Card back: tight rows of interlocking dharma wheels (dharmachakras) in
+// gold on black — a fine repeating texture you only read up close. Each wheel
+// keeps the traditional eight ornate spokes, double rim, protruding bulb caps
+// and swirl hub; neighbors connect at the caps so the field reads as one mesh.
 const BACK_W = 300
 const BACK_H = 500
+const TILE = 48 // wheel-to-wheel spacing; smaller = denser
+const C = TILE / 2
+const DIRS = Array.from({ length: 8 }, (_, k) => (k * Math.PI) / 4)
+const GOLD = 'url(#pwGold)'
 
-type Wheel = { x: number; y: number; r: number; rot: number }
-
-const backWheels: Wheel[] = (() => {
-  const wheels: Wheel[] = []
-  const colStep = 64
-  const rowStep = 56
-  const cx = BACK_W / 2
-  const cy = BACK_H / 2
-  const maxD = Math.hypot(cx, cy)
-  // Over-generate beyond the frame; the card clips to a seamless full-bleed pattern.
-  for (let row = -1; row * rowStep - 30 < BACK_H + 40; row++) {
-    const offset = row % 2 === 0 ? 0 : colStep / 2
-    for (let col = -1; col * colStep + offset - 30 < BACK_W + 40; col++) {
-      const x = col * colStep + offset
-      const y = row * rowStep
-      const d = Math.hypot(x - cx, y - cy)
-      // Evolving: big wheels touching at the heart of the card, shrinking and
-      // opening into space toward the edges.
-      const r = 36 - 20 * (d / maxD)
-      const rot = ((x * 1.7 + y * 1.1) % 45) // deterministic, varied turn
-      wheels.push({ x, y, r, rot })
-    }
-  }
-  return wheels
-})()
-
-// Mesh links between nearby wheel hubs.
-const backLinks: [number, number][] = (() => {
-  const links: [number, number][] = []
-  for (let i = 0; i < backWheels.length; i++) {
-    for (let j = i + 1; j < backWheels.length; j++) {
-      const a = backWheels[i]
-      const b = backWheels[j]
-      if (Math.hypot(a.x - b.x, a.y - b.y) < 78) links.push([i, j])
-    }
-  }
-  return links
-})()
-
-function DharmaWheel({ x, y, r, rot }: Wheel) {
-  const hub = r * 0.16
-  const inner = r * 0.8
+function WheelTile() {
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot})`} stroke="url(#pwGold)" fill="none">
-      <circle r={r} strokeWidth={1.1} />
-      <circle r={inner} strokeWidth={0.8} opacity={0.85} />
-      <circle r={hub} strokeWidth={1} />
-      <circle r={r * 0.04 + 0.6} fill="url(#pwGold)" stroke="none" />
-      {Array.from({ length: 8 }).map((_, k) => {
-        const a = (k * Math.PI) / 4
-        return (
-          <line
-            key={k}
-            x1={hub * Math.cos(a)}
-            y1={hub * Math.sin(a)}
-            x2={inner * Math.cos(a)}
-            y2={inner * Math.sin(a)}
-            strokeWidth={0.8}
-          />
-        )
-      })}
-      {/* rim nubs where spokes meet the wheel */}
-      {Array.from({ length: 8 }).map((_, k) => {
-        const a = (k * Math.PI) / 4
-        return (
-          <circle key={`n${k}`} cx={r * Math.cos(a)} cy={r * Math.sin(a)} r={0.7} fill="url(#pwGold)" stroke="none" />
-        )
-      })}
+    <g transform={`translate(${C} ${C})`}>
+      {/* protruding bulb caps — these meet the neighbouring wheels' caps */}
+      {DIRS.map((a, k) => (
+        <circle key={`cap${k}`} cx={20.6 * Math.cos(a)} cy={20.6 * Math.sin(a)} r={3.2} fill={GOLD} />
+      ))}
+      {/* double rim */}
+      <circle r={17.2} fill="none" stroke={GOLD} strokeWidth={3.8} />
+      <circle r={13.7} fill="none" stroke={GOLD} strokeWidth={0.9} opacity={0.8} />
+      {/* eight spokes with a small vajra diamond on each */}
+      {DIRS.map((a, k) => (
+        <line
+          key={`sp${k}`}
+          x1={6 * Math.cos(a)}
+          y1={6 * Math.sin(a)}
+          x2={14.6 * Math.cos(a)}
+          y2={14.6 * Math.sin(a)}
+          stroke={GOLD}
+          strokeWidth={2.1}
+          strokeLinecap="round"
+        />
+      ))}
+      {DIRS.map((a, k) => (
+        <rect
+          key={`dm${k}`}
+          x={-1.3}
+          y={-1.3}
+          width={2.6}
+          height={2.6}
+          fill={GOLD}
+          transform={`translate(${10.4 * Math.cos(a)} ${10.4 * Math.sin(a)}) rotate(45)`}
+        />
+      ))}
+      {/* hub with swirl */}
+      <circle r={6} fill={GOLD} />
+      <circle r={3.9} fill="#0b0a07" />
+      <path d="M0 -2.4a2.4 2.4 0 0 1 0 4.8 1.2 1.2 0 0 0 0 -2.4 1.2 1.2 0 0 1 0 -2.4z" fill={GOLD} />
     </g>
   )
 }
@@ -177,42 +153,26 @@ export function CardBack({ size = 'md', className = '' }: { size?: Size; classNa
             <stop offset="0.5" stopColor="#c9a14e" />
             <stop offset="1" stopColor="#8a6a2e" />
           </linearGradient>
-          <radialGradient id="pwGlow" cx="50%" cy="46%" r="62%">
-            <stop offset="0" stopColor="#1c160c" />
-            <stop offset="0.55" stopColor="#0b0a07" />
+          <radialGradient id="pwGlow" cx="50%" cy="46%" r="65%">
+            <stop offset="0" stopColor="#16120a" />
+            <stop offset="0.55" stopColor="#0a0906" />
             <stop offset="1" stopColor="#030302" />
           </radialGradient>
+          <radialGradient id="pwVignette" cx="50%" cy="50%" r="62%">
+            <stop offset="0.55" stopColor="#000" stopOpacity="0" />
+            <stop offset="1" stopColor="#000" stopOpacity="0.78" />
+          </radialGradient>
+          <pattern id="pwWheels" width={TILE} height={TILE} patternUnits="userSpaceOnUse">
+            <WheelTile />
+          </pattern>
         </defs>
 
         {/* deep black base with a faint warm core */}
         <rect width={BACK_W} height={BACK_H} fill="url(#pwGlow)" />
-
-        {/* interconnecting mesh */}
-        <g stroke="url(#pwGold)" strokeWidth={0.5} opacity={0.28}>
-          {backLinks.map(([i, j], idx) => (
-            <line
-              key={idx}
-              x1={backWheels[i].x}
-              y1={backWheels[i].y}
-              x2={backWheels[j].x}
-              y2={backWheels[j].y}
-            />
-          ))}
-        </g>
-
-        {/* the wheels */}
-        <g opacity={0.92}>
-          {backWheels.map((w, i) => (
-            <DharmaWheel key={i} {...w} />
-          ))}
-        </g>
-
-        {/* subtle vignette to settle the edges into black */}
+        {/* the tiled wheel mesh */}
+        <rect width={BACK_W} height={BACK_H} fill="url(#pwWheels)" opacity={0.9} />
+        {/* vignette to settle the edges into black */}
         <rect width={BACK_W} height={BACK_H} fill="url(#pwVignette)" />
-        <radialGradient id="pwVignette" cx="50%" cy="50%" r="62%">
-          <stop offset="0.6" stopColor="#000" stopOpacity="0" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.7" />
-        </radialGradient>
       </svg>
 
       {/* gold inner frame */}
