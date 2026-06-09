@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CardBack } from './oracle/DharmaBack'
+import Recordings from './Recordings'
 
 export const metadata: Metadata = {
   title: 'Pathwork · Western Dharma Friends',
@@ -94,28 +95,6 @@ const sections: { heading: string; subheading?: string; tracks: Track[] }[] = [
   },
 ]
 
-function TrackRow({ track }: { track: Track }) {
-  return (
-    <div className="py-4 border-b border-cream-200 last:border-b-0">
-      <p className="font-serif text-cream-900 text-base mb-2">
-        <span className="text-cream-500 text-sm mr-3">
-          {String(track.num).padStart(2, '0')}
-        </span>
-        {track.title}
-      </p>
-      <audio
-        controls
-        preload="none"
-        src={`/audio/${track.file}`}
-        className="w-full"
-      >
-        Your browser doesn’t support audio playback.
-        <a href={`/audio/${track.file}`}>Download the file</a> instead.
-      </audio>
-    </div>
-  )
-}
-
 export default function Pathwork() {
   return (
     <>
@@ -150,31 +129,8 @@ export default function Pathwork() {
         </div>
       </div>
 
-      {/* Title panel — compact card hero */}
-      <section className="bg-cream-200 py-10 md:py-12">
-        <div className="container-main max-w-md text-center">
-          <Link
-            href="/pathwork/oracle"
-            aria-label="Open the daily oracle"
-            className="block w-[112px] md:w-[124px] mx-auto oracle-float transition-transform hover:scale-[1.03]"
-          >
-            <CardBack className="!w-full" />
-          </Link>
-          <p className="eyebrow mt-5 !mb-2">A daily companion</p>
-          <p className="font-serif text-2xl md:text-3xl text-cream-900 leading-tight">
-            Pathwork Oracle
-          </p>
-          <p className="text-sm text-cream-600 mt-2 max-w-xs mx-auto leading-relaxed">
-            Pull a card each morning, walk the forty-day path, and lay the spreads.
-          </p>
-          <Link href="/pathwork/oracle" className="btn-primary mt-5">
-            Open the daily oracle →
-          </Link>
-        </div>
-      </section>
-
       {/* Intro essay — with portrait inset alongside */}
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container-main max-w-3xl">
           <div className="grid md:grid-cols-[1fr_240px] gap-10 items-start">
             <div className="space-y-5 text-cream-700 leading-relaxed">
@@ -219,8 +175,8 @@ export default function Pathwork() {
               <p className="pt-2">- Daniel</p>
             </div>
 
-            {/* Portrait inset — Daniel in retreat practice */}
-            <div className="hidden md:block sticky top-24">
+            {/* Portrait inset — Daniel in retreat practice (shown on all sizes) */}
+            <div className="mx-auto md:mx-0 w-[220px] sm:w-[260px] md:w-full order-first md:order-none">
               <Image
                 src="/images/daniel-cave.jpg"
                 alt="Daniel in retreat practice"
@@ -234,9 +190,9 @@ export default function Pathwork() {
       </section>
 
       {/* Meditations */}
-      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+      <section className="bg-cream-100 py-12 md:py-16 border-t border-cream-300">
         <div className="container-main max-w-3xl">
-          <div className="grid md:grid-cols-[1fr_220px] gap-10 md:gap-12 items-start mb-14">
+          <div className="grid md:grid-cols-[1fr_220px] gap-10 md:gap-12 items-start mb-10">
             <div>
               <p className="eyebrow">The Recordings</p>
               <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-4">
@@ -278,23 +234,37 @@ export default function Pathwork() {
             </div>
           </div>
 
-          {sections.map((section) => (
-            <div key={section.heading} className="mb-12 last:mb-0">
-              <h3 className="font-serif text-2xl text-cream-900 mb-1">
-                {section.heading}
-              </h3>
-              {section.subheading && (
-                <p className="font-serif italic text-cream-500 text-sm mb-4">
-                  {section.subheading}
-                </p>
-              )}
-              <div>
-                {section.tracks.map((t) => (
-                  <TrackRow key={t.num} track={t} />
-                ))}
+          <Recordings
+            sections={sections}
+            tail={
+              <div className="self-end break-inside-avoid">
+                <div className="rounded-xl border border-cream-300 bg-cream-50/70 p-5 flex items-center gap-4">
+                  <Link
+                    href="/pathwork/oracle"
+                    aria-label="Open the daily oracle"
+                    className="block w-[80px] shrink-0 oracle-float transition-transform hover:scale-[1.03]"
+                  >
+                    <CardBack className="!w-full" />
+                  </Link>
+                  <div>
+                    <p className="eyebrow !mb-1">A daily companion</p>
+                    <p className="font-serif text-xl text-cream-900 leading-tight">
+                      Pathwork Oracle
+                    </p>
+                    <p className="text-xs text-cream-500 mt-1 mb-2 leading-relaxed">
+                      Pull a card, walk the path, read the spreads.
+                    </p>
+                    <Link
+                      href="/pathwork/oracle"
+                      className="text-sm font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                    >
+                      Open the daily oracle →
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            }
+          />
         </div>
       </section>
 
@@ -311,7 +281,7 @@ export default function Pathwork() {
       </div>
 
       {/* Friends doorway + In Her Honor — balanced two-column block */}
-      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+      <section className="bg-cream-100 py-12 md:py-16 border-t border-cream-300">
         <div className="container-main max-w-5xl">
           <p className="text-cream-700 leading-relaxed text-center mb-14 max-w-xl mx-auto">
             These may help deepen your practice.
