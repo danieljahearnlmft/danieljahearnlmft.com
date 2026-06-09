@@ -129,34 +129,6 @@ export default function Pathwork() {
         </div>
       </div>
 
-      {/* Oracle invite — card and copy, side by side */}
-      <section className="bg-cream-200 py-12 md:py-14">
-        <div className="container-main max-w-3xl">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-1 text-center md:text-left order-2 md:order-1">
-              <p className="eyebrow !mb-2">A daily companion</p>
-              <p className="font-serif text-3xl md:text-4xl text-cream-900 leading-tight">
-                Pathwork Oracle
-              </p>
-              <p className="text-cream-600 mt-3 max-w-md mx-auto md:mx-0 leading-relaxed">
-                Pull a card each morning, walk the forty-day path, and lay the
-                spreads. The whole deck, as a daily practice.
-              </p>
-              <Link href="/pathwork/oracle" className="btn-primary mt-5">
-                Open the daily oracle →
-              </Link>
-            </div>
-            <Link
-              href="/pathwork/oracle"
-              aria-label="Open the daily oracle"
-              className="order-1 md:order-2 block w-[124px] md:w-[148px] shrink-0 oracle-float transition-transform hover:scale-[1.03]"
-            >
-              <CardBack className="!w-full" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Intro essay — with portrait inset alongside */}
       <section className="py-12 md:py-16">
         <div className="container-main max-w-3xl">
@@ -242,14 +214,6 @@ export default function Pathwork() {
                 to share this practice with hundreds of teenagers. May it
                 bring you joy and rest.
               </p>
-              <p className="mt-5">
-                <Link
-                  href="/pathwork/oracle"
-                  className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-                >
-                  Or let a card choose for you — open the daily oracle →
-                </Link>
-              </p>
             </div>
 
             {/* Pathwork deck art — framed like a card, set to the side */}
@@ -270,7 +234,37 @@ export default function Pathwork() {
             </div>
           </div>
 
-          <Recordings sections={sections} />
+          <Recordings
+            sections={sections}
+            tail={
+              <div className="self-end break-inside-avoid">
+                <div className="rounded-xl border border-cream-300 bg-cream-50/70 p-5 flex items-center gap-4">
+                  <Link
+                    href="/pathwork/oracle"
+                    aria-label="Open the daily oracle"
+                    className="block w-[80px] shrink-0 oracle-float transition-transform hover:scale-[1.03]"
+                  >
+                    <CardBack className="!w-full" />
+                  </Link>
+                  <div>
+                    <p className="eyebrow !mb-1">A daily companion</p>
+                    <p className="font-serif text-xl text-cream-900 leading-tight">
+                      Pathwork Oracle
+                    </p>
+                    <p className="text-xs text-cream-500 mt-1 mb-2 leading-relaxed">
+                      Pull a card, walk the path, read the spreads.
+                    </p>
+                    <Link
+                      href="/pathwork/oracle"
+                      className="text-sm font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                    >
+                      Open the daily oracle →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            }
+          />
         </div>
       </section>
 

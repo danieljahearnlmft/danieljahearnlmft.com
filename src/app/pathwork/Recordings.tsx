@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import type { ReactNode } from 'react'
 
 type Track = { num: number; title: string; file: string }
 type Section = { heading: string; subheading?: string; tracks: Track[] }
@@ -10,7 +11,13 @@ const fmt = (s: number) =>
 
 // A compact, single-player playlist: one track plays at a time, with a slim
 // gold progress bar that appears under the active row.
-export default function Recordings({ sections }: { sections: Section[] }) {
+export default function Recordings({
+  sections,
+  tail,
+}: {
+  sections: Section[]
+  tail?: ReactNode
+}) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [current, setCurrent] = useState<string | null>(null)
   const [playing, setPlaying] = useState(false)
@@ -127,6 +134,7 @@ export default function Recordings({ sections }: { sections: Section[] }) {
             </ul>
           </div>
         ))}
+        {tail}
       </div>
     </div>
   )
