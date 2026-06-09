@@ -1,8 +1,20 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { KeyboardEvent as ReactKeyboardEvent } from 'react'
 import { Card, cards, elements, CATEGORIES } from './cards'
 import { CardFace, CardBack } from './OracleCard'
+
+// Keyboard activation for div-based "buttons" (Enter / Space).
+function onKeyActivate(handler?: () => void) {
+  if (!handler) return undefined
+  return (e: ReactKeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handler()
+    }
+  }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Persistence
@@ -130,7 +142,14 @@ function FlipCard({
   onClick?: () => void
 }) {
   return (
-    <div className="flip-scene" onClick={onClick} role={onClick ? 'button' : undefined}>
+    <div
+      className="flip-scene"
+      onClick={onClick}
+      onKeyDown={onKeyActivate(onClick)}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-label={onClick ? 'Reveal the card' : undefined}
+    >
       <div className={`flip-card ${flipped ? 'is-flipped' : ''} ${onClick ? 'cursor-pointer' : ''}`}>
         <div className="flip-face">
           <CardBack size={size} />
@@ -189,8 +208,8 @@ function Detail({
             Close ✕
           </button>
         </div>
-        <div className="px-6 md:px-10 pb-10 grid md:grid-cols-[260px_1fr] gap-8 items-start">
-          <div className="mx-auto md:sticky md:top-4">
+        <div className="px-6 md:px-10 pb-10 grid md:grid-cols-[240px_1fr] gap-8 items-start">
+          <div className="w-[240px] max-w-full mx-auto md:sticky md:top-4">
             <CardFace card={card} size="lg" />
           </div>
           <div>
@@ -300,6 +319,10 @@ function SpreadsView({ onOpen }: { onOpen: (c: Card) => void }) {
       <div className="flex flex-col items-center gap-2">
         <div
           onClick={() => (isUp ? onOpen(card) : reveal(i))}
+          onKeyDown={onKeyActivate(() => (isUp ? onOpen(card) : reveal(i)))}
+          role="button"
+          tabIndex={0}
+          aria-label={isUp ? `Open ${card.title}` : `Reveal ${active.positions[i].label}`}
           className="cursor-pointer w-[112px] md:w-[140px]"
         >
           <FlipCard card={card} flipped={isUp} size="sm" />
@@ -411,23 +434,27 @@ export default function OracleApp() {
     [store, persist]
   )
 
-  // Record a day of practice → streak bookkeeping
-  const markPracticed = useCallback(() => {
+  // Pure streak bookkeeping — returns the fields to merge, so callers persist
+  // everything in ONE write (avoids clobbering from a second stale persist).
+  const practiceFields = useCallback((s: Store): Partial<Store> => {
     const today = dateKey()
-    if (store.lastDay === today) return store.streak
-    const gap = store.lastDay ? daysBetween(store.lastDay, today) : 1
-    const streak = gap === 1 ? store.streak + 1 : 1
-    const longest = Math.max(store.longest, streak)
-    persist({ ...store, lastDay: today, streak, longest })
-    return streak
-  }, [store, persist])
+    if (s.lastDay === today) return {}
+    const gap = s.lastDay ? daysBetween(s.lastDay, today) : 1
+    const streak = gap === 1 ? s.streak + 1 : 1
+    return { lastDay: today, streak, longest: Math.max(s.longest, streak) }
+  }, [])
 
-  // Today's card — deterministic from the date
+  // Today's card — deterministic from the date, nudged so it never repeats
+  // yesterday's pull.
   const today = mounted ? dateKey() : ''
-  const todayCard = useMemo(
-    () => (today ? cards[hashStr(today) % cards.length] : cards[0]),
-    [today]
-  )
+  const todayCard = useMemo(() => {
+    if (!today) return cards[0]
+    const ti = hashStr(today) % cards.length
+    const y = new Date(today + 'T00:00:00')
+    y.setDate(y.getDate() - 1)
+    const yi = hashStr(dateKey(y)) % cards.length
+    return cards[ti === yi ? (ti + 1) % cards.length : ti]
+  }, [today])
   const alreadyPulledToday =
     mounted && store.history.some((h) => h.date === today)
 
@@ -435,8 +462,12 @@ export default function OracleApp() {
     setTodayFlipped(true)
     if (!alreadyPulledToday) {
       const history = [...store.history, { date: today, id: todayCard.id }]
-      persist({ ...store, history, totalDraws: store.totalDraws + 1 })
-      markPracticed()
+      persist({
+        ...store,
+        history,
+        totalDraws: store.totalDraws + 1,
+        ...practiceFields(store),
+      })
     }
   }
 
@@ -445,8 +476,11 @@ export default function OracleApp() {
   const nextDay = cards.find((c) => !completedSet.has(c.id)) || cards[cards.length - 1]
   const completeDay = (card: Card) => {
     if (completedSet.has(card.id)) return
-    persist({ ...store, completed: [...store.completed, card.id] })
-    markPracticed()
+    persist({
+      ...store,
+      completed: [...store.completed, card.id],
+      ...practiceFields(store),
+    })
   }
 
   if (!mounted) {

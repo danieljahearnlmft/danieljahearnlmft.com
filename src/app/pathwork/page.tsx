@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { CardBack } from './oracle/DharmaBack'
 
 export const metadata: Metadata = {
   title: 'Pathwork · Western Dharma Friends',
   description:
     'Recordings and inner-practice resources alongside the Pathwork Oracle Deck.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Pathwork Oracle',
     description: 'Guided meditations and inner-practice resources.',
@@ -104,7 +105,7 @@ function TrackRow({ track }: { track: Track }) {
       </p>
       <audio
         controls
-        preload="metadata"
+        preload="none"
         src={`/audio/${track.file}`}
         className="w-full"
       >
@@ -149,21 +150,26 @@ export default function Pathwork() {
         </div>
       </div>
 
-      {/* Title panel */}
-      <section className="bg-cream-200 py-12 md:py-16">
-        <div className="container-main max-w-3xl text-center">
-          <p className="font-serif text-4xl md:text-5xl text-cream-900 leading-tight">
-            Pathwork Oracle
-          </p>
+      {/* Title panel — compact card hero */}
+      <section className="bg-cream-200 py-10 md:py-12">
+        <div className="container-main max-w-md text-center">
           <Link
             href="/pathwork/oracle"
-            className="btn-primary mt-7"
+            aria-label="Open the daily oracle"
+            className="block w-[112px] md:w-[124px] mx-auto oracle-float transition-transform hover:scale-[1.03]"
           >
+            <CardBack className="!w-full" />
+          </Link>
+          <p className="eyebrow mt-5 !mb-2">A daily companion</p>
+          <p className="font-serif text-2xl md:text-3xl text-cream-900 leading-tight">
+            Pathwork Oracle
+          </p>
+          <p className="text-sm text-cream-600 mt-2 max-w-xs mx-auto leading-relaxed">
+            Pull a card each morning, walk the forty-day path, and lay the spreads.
+          </p>
+          <Link href="/pathwork/oracle" className="btn-primary mt-5">
             Open the daily oracle →
           </Link>
-          <p className="text-xs text-cream-500 mt-3">
-            Pull a card a day · walk the 40-day path · read the spreads
-          </p>
         </div>
       </section>
 
@@ -230,40 +236,47 @@ export default function Pathwork() {
       {/* Meditations */}
       <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">The Recordings</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-3">
-            Twenty-two guided meditations
-          </h2>
-<p className="text-cream-600 mb-12">
-          Begin wherever you are drawn. The Four Immeasurables can be
-          practiced in any order: Loving Kindness, Compassion, Sympathetic
-          Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
-          practices you can return to anytime.
-        </p>
-        <p className="text-cream-600 mb-12">
-          The Rest card holds the Jewel Tree meditation, in the form
-          taught by Robert Thurman. It is a practice that centers on
-          taking refuge: offering a “wish-fulfilling jewel tree” of
-          interconnected awakened beings as a gentle, systematic path
-          to wake up, find compassion, and remember our original heart.
-          It is one of the great joys of my life that I have been able
-          to share this practice with hundreds of teenagers. May it
-          bring you joy and rest.
-        </p>
+          <div className="grid md:grid-cols-[1fr_220px] gap-10 md:gap-12 items-start mb-14">
+            <div>
+              <p className="eyebrow">The Recordings</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-4">
+                Twenty-two guided meditations
+              </h2>
+              <p className="text-cream-600 mb-5 leading-relaxed">
+                Begin wherever you are drawn. The Four Immeasurables can be
+                practiced in any order: Loving Kindness, Compassion, Sympathetic
+                Joy, Equanimity. Forgiveness, Breath, and Rest are supportive
+                practices you can return to anytime.
+              </p>
+              <p className="text-cream-600 leading-relaxed">
+                The Rest card holds the Jewel Tree meditation, in the form
+                taught by Robert Thurman. It is a practice that centers on
+                taking refuge: offering a “wish-fulfilling jewel tree” of
+                interconnected awakened beings as a gentle, systematic path
+                to wake up, find compassion, and remember our original heart.
+                It is one of the great joys of my life that I have been able
+                to share this practice with hundreds of teenagers. May it
+                bring you joy and rest.
+              </p>
+            </div>
 
-          {/* Pathwork deck art — master tree illustration by Ana */}
-          <div className="relative w-full max-w-md mx-auto aspect-[16/25] mb-3 overflow-hidden rounded">
-            <Image
-              src="/images/pathwork-deck-art.jpg"
-              alt="Pathwork Oracle — Green Tara, the tree, and the figures of the deck, illustration by Ana"
-              fill
-              sizes="(max-width: 768px) 100vw, 448px"
-              className="object-cover"
-            />
+            {/* Pathwork deck art — framed like a card, set to the side */}
+            <div className="mx-auto md:mx-0 w-[180px] md:w-[220px] shrink-0 md:sticky md:top-24">
+              <div className="relative w-full aspect-[16/25] overflow-hidden rounded-xl shadow-xl ring-1 ring-cream-400/50 rotate-[1.5deg]">
+                <Image
+                  src="/images/pathwork-deck-art.jpg"
+                  alt="Pathwork Oracle — Green Tara, the tree, and the figures of the deck, illustration by Ana"
+                  fill
+                  sizes="(max-width: 768px) 60vw, 220px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-[4%] rounded-lg pointer-events-none border border-cream-50/30" />
+              </div>
+              <p className="text-xs text-cream-500 italic text-center mt-3">
+                Illustrations by Ana.
+              </p>
+            </div>
           </div>
-          <p className="text-xs text-cream-500 italic text-center mb-14">
-            Illustrations by Ana.
-          </p>
 
           {sections.map((section) => (
             <div key={section.heading} className="mb-12 last:mb-0">

@@ -7,11 +7,17 @@ export const metadata: Metadata = {
   title: 'Pathwork Oracle · Daily Companion',
   description:
     'A daily companion to the Pathwork Oracle Deck — pull a card, walk the 40-day path, read the spreads, and practice.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Pathwork Oracle · Daily Companion',
     description: 'Pull a card a day and walk the 40-day path of the Pathwork Oracle.',
     images: [{ url: '/images/pathwork-deck-art.jpg', width: 1200, height: 1875 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pathwork Oracle · Daily Companion',
+    description: 'Pull a card a day and walk the 40-day path of the Pathwork Oracle.',
+    images: ['/images/pathwork-deck-art.jpg'],
   },
 }
 
