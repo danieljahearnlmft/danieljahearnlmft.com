@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Pathwork · Western Dharma Friends',
   description:
     'Recordings and inner-practice resources alongside the Pathwork Oracle Deck.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Pathwork Oracle',
     description: 'Guided meditations and inner-practice resources.',
@@ -150,37 +150,26 @@ export default function Pathwork() {
         </div>
       </div>
 
-      {/* Title panel — an inviting card hero */}
-      <section className="bg-cream-200 py-14 md:py-20">
-        <div className="container-main max-w-4xl">
-          <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
-            <div className="text-center md:text-left order-2 md:order-1">
-              <p className="eyebrow !mb-3">A daily companion</p>
-              <p className="font-serif text-4xl md:text-5xl text-cream-900 leading-tight">
-                Pathwork Oracle
-              </p>
-              <p className="text-cream-600 mt-4 max-w-md mx-auto md:mx-0 leading-relaxed">
-                Pull a card each morning, walk the forty-day path, and lay the
-                spreads. The whole deck, as a daily practice.
-              </p>
-              <Link href="/pathwork/oracle" className="btn-primary mt-7">
-                Open the daily oracle →
-              </Link>
-              <p className="text-xs text-cream-500 mt-3">
-                Pull a card a day · walk the 40-day path · read the spreads
-              </p>
-            </div>
-
-            <div className="order-1 md:order-2 flex justify-center">
-              <Link
-                href="/pathwork/oracle"
-                aria-label="Open the daily oracle"
-                className="block w-[170px] md:w-[210px] oracle-float transition-transform hover:scale-[1.03]"
-              >
-                <CardBack className="!w-full" />
-              </Link>
-            </div>
-          </div>
+      {/* Title panel — compact card hero */}
+      <section className="bg-cream-200 py-10 md:py-12">
+        <div className="container-main max-w-md text-center">
+          <Link
+            href="/pathwork/oracle"
+            aria-label="Open the daily oracle"
+            className="block w-[112px] md:w-[124px] mx-auto oracle-float transition-transform hover:scale-[1.03]"
+          >
+            <CardBack className="!w-full" />
+          </Link>
+          <p className="eyebrow mt-5 !mb-2">A daily companion</p>
+          <p className="font-serif text-2xl md:text-3xl text-cream-900 leading-tight">
+            Pathwork Oracle
+          </p>
+          <p className="text-sm text-cream-600 mt-2 max-w-xs mx-auto leading-relaxed">
+            Pull a card each morning, walk the forty-day path, and lay the spreads.
+          </p>
+          <Link href="/pathwork/oracle" className="btn-primary mt-5">
+            Open the daily oracle →
+          </Link>
         </div>
       </section>
 
