@@ -318,7 +318,7 @@ export const cardById = (id: string) => cards.find((c) => c.id === id)
 // named `<card.id>.jpg` (see README there for the id↔title map) and flip this to
 // `true`. Every face will then render the painting full-bleed; any missing file
 // falls back to the designed face automatically. No other code changes needed.
-export const HAS_CARD_ART = false
+export const HAS_CARD_ART = true
 export const cardImage = (id: string) => `/images/pathwork-cards/${id}.jpg`
 
 // Element → palette + label for the card-design system.
