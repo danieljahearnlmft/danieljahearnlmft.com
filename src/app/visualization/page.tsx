@@ -24,7 +24,7 @@ const series: { title: string; note: string; youtubeId: string | null }[] = [
 ]
 
 const btnGold =
-  'inline-flex items-center justify-center w-full sm:w-auto rounded bg-[#c9a14e] px-6 py-3 ' +
+  'inline-flex items-center justify-center w-full rounded bg-[#c9a14e] px-6 py-3 ' +
   'text-sm font-medium text-cream-50 hover:bg-[#b88a38] transition-colors'
 
 export default function Visualization() {
@@ -52,32 +52,34 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Intro — copy left, actions right, leading down to the visualization */}
       <section className="section-cream">
-        <div className="container-main max-w-[780px]">
-          <div className="space-y-4 text-cream-700 text-lg leading-relaxed">
-            <p>
-              A series of guided visualizations rooted in attachment theory and the Five Conditions
-              of Secure Attachment. Each one corresponds to a foundational condition: Safety,
-              Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent for
-              your teen.
-            </p>
-            <p>
-              Settle into twenty-two minutes of breath-work and contemplative practice. Used in
-              clinical work and in home meditation. Begin with Safety; the rest build from there.
-            </p>
-          </div>
+        <div className="container-main max-w-[900px]">
+          <div className="grid gap-10 md:grid-cols-[1fr_12rem] md:gap-14 md:items-start">
+            <div>
+              <div className="space-y-4 text-cream-700 text-lg leading-relaxed">
+                <p>
+                  A series of guided visualizations rooted in attachment theory and the Five
+                  Conditions of Secure Attachment. Each one corresponds to a foundational condition:
+                  Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal
+                  Parent for your teen.
+                </p>
+                <p>
+                  Settle into twenty-two minutes of breath-work and contemplative practice. Used in
+                  clinical work and in home meditation. Begin with Safety; the rest build from there.
+                </p>
+              </div>
+              <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
+                <p className="font-serif text-base text-cream-900">Daniel J. Ahearn, LMFT</p>
+                <p>Attachment &amp; Family Therapy</p>
+              </div>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 mt-8">
-            <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">The Book</a>
-            <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">The App</a>
-            <a className={btnGold} href="https://danieljahearnlmft.com">Clinical Site</a>
-          </div>
-
-          <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
-            <p>Daniel J. Ahearn, LMFT</p>
-            <p>Director of Culture, Ascend Healthcare</p>
-            <p>Attachment &amp; Family Therapy</p>
+            <div className="flex flex-col gap-3 md:pt-1">
+              <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">The Book</a>
+              <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">The App</a>
+              <a className={btnGold} href="https://danieljahearnlmft.com">Clinical Site</a>
+            </div>
           </div>
         </div>
       </section>
