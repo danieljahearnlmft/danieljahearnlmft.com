@@ -2,65 +2,126 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Safety Visualization · The Way Back Home',
+  title: 'Guided Visualizations · The Way Back Home',
   description:
-    'A guided Safety Visualization from Chapter 2 of The Way Back Home. About twenty minutes. Safety is the foundation; the other practices build from here.',
-  robots: { index: false, follow: false },
+    'Six guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment: Safety, Soothing, Attunement, Expressed Delight, Exploration, and Ideal Parent. About twenty-two minutes each.',
   openGraph: {
-    title: 'Safety Visualization · The Way Back Home',
-    description: 'A guided Safety Visualization from Chapter 2 of The Way Back Home.',
+    title: 'Guided Visualizations · The Way Back Home',
+    description:
+      'Six guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment.',
   },
+}
+
+// To launch a new video: set its `youtubeId`. A null id renders a "Coming soon" card.
+const videos: { title: string; youtubeId: string | null; audio?: string }[] = [
+  { title: 'Safety', youtubeId: 'OpY73Z6opTI', audio: '/audio/safety-visualization.mp3' },
+  { title: 'Soothing', youtubeId: null },
+  { title: 'Attunement', youtubeId: null },
+  { title: 'Expressed Delight', youtubeId: null },
+  { title: 'Exploration', youtubeId: null },
+  { title: 'Ideal Parent', youtubeId: null },
+]
+
+const btnGold =
+  'inline-flex items-center justify-center w-full sm:w-auto rounded bg-[#c9a14e] px-6 py-3 ' +
+  'text-sm font-medium text-cream-50 hover:bg-[#b88a38] transition-colors'
+
+function VideoCard({ title, youtubeId, audio }: (typeof videos)[number]) {
+  return (
+    <article className="overflow-hidden rounded-lg border border-[#e5d9c9] bg-white shadow-[0_2px_8px_rgba(45,31,14,0.05)] hover:shadow-[0_4px_12px_rgba(45,31,14,0.1)] transition-shadow">
+      <div className="border-b border-[#e5d9c9] bg-[#f5f0e8] px-6 py-5">
+        <h2 className="font-serif font-bold text-[1.4rem] leading-tight text-cream-900">{title}</h2>
+      </div>
+
+      {youtubeId ? (
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute inset-0 h-full w-full border-0"
+            src={`https://www.youtube.com/embed/${youtubeId}`}
+            title={`${title} — Guided Visualization`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      ) : (
+        <div
+          className="relative w-full bg-[#f5f0e8]"
+          style={{ paddingBottom: '56.25%' }}
+        >
+          <span className="absolute inset-0 flex items-center justify-center text-sm uppercase tracking-widest text-[#8a7a6a]">
+            Coming soon
+          </span>
+        </div>
+      )}
+
+      {audio && (
+        <div className="border-t border-[#e5d9c9] px-6 py-4">
+          <a
+            href={audio}
+            download
+            className="text-sm text-cream-600 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+          >
+            Download the audio for offline listening
+          </a>
+        </div>
+      )}
+    </article>
+  )
 }
 
 export default function Visualization() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-cream-200 py-16 md:py-24">
-        <div className="container-main max-w-3xl">
-          <p className="eyebrow">From The Way Back Home · Chapter 2</p>
-          <h1 className="text-4xl md:text-5xl font-serif text-cream-900 leading-tight mb-6">
-            Safety Visualization
+      {/* Series intro */}
+      <section className="section-warm">
+        <div className="container-main max-w-[900px]">
+          <p className="eyebrow">The Five Conditions of Secure Attachment</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-cream-900 leading-tight mb-2">
+            The Way Back Home
           </h1>
-          <p className="text-cream-700 text-lg leading-relaxed">
-            A clinical, attachment-based practice for parents of teens. About twenty minutes. Best with headphones, somewhere you won&rsquo;t be interrupted.
-          </p>
+          <p className="font-serif text-xl md:text-2xl text-cream-700 mb-7">Guided Visualizations</p>
+
+          <div className="max-w-2xl space-y-4 text-cream-700 text-lg leading-relaxed">
+            <p>
+              A series of six guided visualizations rooted in attachment theory and the Five
+              Conditions of Secure Attachment. Each visualization corresponds to a foundational
+              condition: Safety, Soothing, Attunement, Expressed Delight, Exploration, and the Ideal
+              Parent.
+            </p>
+            <p>
+              Settle into twenty-two minutes of breath-work and contemplative practice. These are
+              used in clinical practice and in home meditation.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 mt-8">
+            <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">
+              The Book
+            </a>
+            <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">
+              The App
+            </a>
+            <a className={btnGold} href="https://danieljahearnlmft.com">
+              Clinical Site
+            </a>
+          </div>
+
+          <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
+            <p>Daniel J. Ahearn, LMFT</p>
+            <p>Director of Culture, Ascend Healthcare</p>
+            <p>Attachment &amp; Family Therapy</p>
+          </div>
         </div>
       </section>
 
-      {/* Audio player */}
+      {/* Video gallery */}
       <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <div className="bg-cream-50 border border-cream-300 rounded-lg p-7">
-            <p className="eyebrow mb-3">Listen</p>
-            <h2 className="font-serif text-2xl text-cream-900 mb-5">Safety Visualization</h2>
-            <audio
-              controls
-              preload="metadata"
-              src="/audio/safety-visualization.mp3"
-              className="w-full mb-4"
-            >
-              Your browser doesn&rsquo;t support audio playback.{' '}
-              <a href="/audio/safety-visualization.mp3">Download the file</a> instead.
-            </audio>
-            <p className="text-cream-600 text-sm">
-              <a
-                href="/audio/safety-visualization.mp3"
-                download
-                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Download for offline listening
-              </a>
-              <span className="text-cream-400"> &middot; </span>
-              <a
-                href="https://www.youtube.com/watch?v=JdDb2kE56dM"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-              >
-                Or watch on YouTube
-              </a>
-            </p>
+        <div className="container-main max-w-[900px]">
+          <div className="space-y-10">
+            {videos.map((v) => (
+              <VideoCard key={v.title} {...v} />
+            ))}
           </div>
         </div>
       </section>
