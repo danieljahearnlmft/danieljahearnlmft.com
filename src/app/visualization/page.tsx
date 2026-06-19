@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 // Set a youtubeId to mark a chapter live. Order = release order.
 const series: { title: string; note: string; youtubeId: string | null }[] = [
   { title: 'Safety', note: 'Enough steadiness to stay present.', youtubeId: 'OpY73Z6opTI' },
-  { title: 'Soothing', note: 'Calming an activated nervous system.', youtubeId: null },
   { title: 'Attunement', note: 'Being seen and felt accurately.', youtubeId: null },
+  { title: 'Soothing', note: 'Calming an activated nervous system.', youtubeId: null },
   { title: 'Expressed Delight', note: 'Being met with warmth and delight.', youtubeId: null },
   { title: 'Exploration', note: 'A secure base to venture from.', youtubeId: null },
   { title: 'Ideal Parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
@@ -59,7 +59,7 @@ export default function Visualization() {
             <p>
               A series of guided visualizations rooted in attachment theory and the Five Conditions
               of Secure Attachment. Each one corresponds to a foundational condition: Safety,
-              Soothing, Attunement, Expressed Delight, Exploration, and being the Ideal Parent for
+              Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent for
               your teen.
             </p>
             <p>
