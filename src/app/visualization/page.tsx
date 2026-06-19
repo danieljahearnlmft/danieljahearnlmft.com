@@ -4,107 +4,74 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Guided Visualizations · The Way Back Home',
   description:
-    'Six guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment: Safety, Soothing, Attunement, Expressed Delight, Exploration, and Ideal Parent. About twenty-two minutes each.',
+    'Guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment. Begin with Safety. About twenty-two minutes.',
   openGraph: {
     title: 'Guided Visualizations · The Way Back Home',
     description:
-      'Six guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment.',
+      'Guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment.',
+    images: ['/images/visualization-hero.jpg'],
   },
 }
 
-// To launch a new video: set its `youtubeId`. A null id renders a "Coming soon" card.
-const videos: { title: string; youtubeId: string | null; audio?: string }[] = [
-  { title: 'Safety', youtubeId: 'OpY73Z6opTI', audio: '/audio/safety-visualization.mp3' },
-  { title: 'Soothing', youtubeId: null },
-  { title: 'Attunement', youtubeId: null },
-  { title: 'Expressed Delight', youtubeId: null },
-  { title: 'Exploration', youtubeId: null },
-  { title: 'Ideal Parent', youtubeId: null },
+// Set a youtubeId to mark a chapter live. Order = release order.
+const series: { title: string; note: string; youtubeId: string | null }[] = [
+  { title: 'Safety', note: 'Enough steadiness to stay present.', youtubeId: 'OpY73Z6opTI' },
+  { title: 'Soothing', note: 'Calming an activated nervous system.', youtubeId: null },
+  { title: 'Attunement', note: 'Being seen and felt accurately.', youtubeId: null },
+  { title: 'Expressed Delight', note: 'Being met with warmth and delight.', youtubeId: null },
+  { title: 'Exploration', note: 'A secure base to venture from.', youtubeId: null },
+  { title: 'Ideal Parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
 ]
 
 const btnGold =
   'inline-flex items-center justify-center w-full sm:w-auto rounded bg-[#c9a14e] px-6 py-3 ' +
   'text-sm font-medium text-cream-50 hover:bg-[#b88a38] transition-colors'
 
-function VideoCard({ title, youtubeId, audio }: (typeof videos)[number]) {
-  return (
-    <article className="overflow-hidden rounded-lg border border-[#e5d9c9] bg-white shadow-[0_2px_8px_rgba(45,31,14,0.05)] hover:shadow-[0_4px_12px_rgba(45,31,14,0.1)] transition-shadow">
-      <div className="border-b border-[#e5d9c9] bg-[#f5f0e8] px-6 py-5">
-        <h2 className="font-serif font-bold text-[1.4rem] leading-tight text-cream-900">{title}</h2>
-      </div>
-
-      {youtubeId ? (
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-          <iframe
-            className="absolute inset-0 h-full w-full border-0"
-            src={`https://www.youtube.com/embed/${youtubeId}`}
-            title={`${title} — Guided Visualization`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-      ) : (
-        <div
-          className="relative w-full bg-[#f5f0e8]"
-          style={{ paddingBottom: '56.25%' }}
-        >
-          <span className="absolute inset-0 flex items-center justify-center text-sm uppercase tracking-widest text-[#8a7a6a]">
-            Coming soon
-          </span>
-        </div>
-      )}
-
-      {audio && (
-        <div className="border-t border-[#e5d9c9] px-6 py-4">
-          <a
-            href={audio}
-            download
-            className="text-sm text-cream-600 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-          >
-            Download the audio for offline listening
-          </a>
-        </div>
-      )}
-    </article>
-  )
-}
-
 export default function Visualization() {
+  const featured = series[0]
   return (
     <>
-      {/* Series intro */}
-      <section className="section-warm">
-        <div className="container-main max-w-[900px]">
-          <p className="eyebrow">The Five Conditions of Secure Attachment</p>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-cream-900 leading-tight mb-2">
+      {/* Hero */}
+      <section className="relative">
+        <img
+          src="/images/visualization-hero.jpg"
+          alt="A tree whose canopy and roots form a pair of breathing lungs, lit from within."
+          className="h-[58vh] min-h-[400px] w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/60" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-cream-100/85 mb-4">
+            The Five Conditions of Secure Attachment
+          </p>
+          <h1 className="font-serif font-bold text-4xl md:text-6xl text-cream-50 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
             The Way Back Home
           </h1>
-          <p className="font-serif text-xl md:text-2xl text-cream-700 mb-7">Guided Visualizations</p>
+          <p className="font-serif italic text-xl md:text-2xl text-cream-100 mt-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+            Guided Visualizations
+          </p>
+        </div>
+      </section>
 
-          <div className="max-w-2xl space-y-4 text-cream-700 text-lg leading-relaxed">
+      {/* Intro */}
+      <section className="section-cream">
+        <div className="container-main max-w-[780px]">
+          <div className="space-y-4 text-cream-700 text-lg leading-relaxed">
             <p>
-              A series of six guided visualizations rooted in attachment theory and the Five
-              Conditions of Secure Attachment. Each visualization corresponds to a foundational
-              condition: Safety, Soothing, Attunement, Expressed Delight, Exploration, and the Ideal
-              Parent.
+              A series of guided visualizations rooted in attachment theory and the Five Conditions
+              of Secure Attachment. Each one corresponds to a foundational condition: Safety,
+              Soothing, Attunement, Expressed Delight, Exploration, and being the Ideal Parent for
+              your teen.
             </p>
             <p>
-              Settle into twenty-two minutes of breath-work and contemplative practice. These are
-              used in clinical practice and in home meditation.
+              Settle into twenty-two minutes of breath-work and contemplative practice. Used in
+              clinical work and in home meditation. Begin with Safety; the rest build from there.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-8">
-            <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">
-              The Book
-            </a>
-            <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">
-              The App
-            </a>
-            <a className={btnGold} href="https://danieljahearnlmft.com">
-              Clinical Site
-            </a>
+            <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">The Book</a>
+            <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">The App</a>
+            <a className={btnGold} href="https://danieljahearnlmft.com">Clinical Site</a>
           </div>
 
           <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
@@ -115,14 +82,80 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Video gallery */}
-      <section className="section-cream">
-        <div className="container-main max-w-[900px]">
-          <div className="space-y-10">
-            {videos.map((v) => (
-              <VideoCard key={v.title} {...v} />
-            ))}
+      {/* Featured: Safety */}
+      <section id="safety" className="section-warm">
+        <div className="container-main max-w-[860px]">
+          <p className="eyebrow">Now Available · Chapter One</p>
+          <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-2">Safety</h2>
+          <p className="text-cream-700 leading-relaxed mb-7 max-w-2xl">
+            The foundation. Enough internal steadiness to remain present, without escalating,
+            withdrawing, or collapsing. Best with headphones, somewhere you won&rsquo;t be interrupted.
+          </p>
+
+          <div className="overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 h-full w-full border-0"
+                src={`https://www.youtube.com/embed/${featured.youtubeId}`}
+                title="Safety — Guided Visualization"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
+
+          <p className="mt-4 text-sm text-cream-600">
+            <a
+              href="/audio/safety-visualization.mp3"
+              download
+              className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+            >
+              Download the audio for offline listening
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* The series — slim editorial index, no empty boxes */}
+      <section className="section-cream">
+        <div className="container-main max-w-[780px]">
+          <p className="eyebrow">The Series</p>
+          <h2 className="font-serif text-3xl text-cream-900 mb-3">Six visualizations</h2>
+          <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">
+            Released in order. Safety is available now; the others arrive in the weeks ahead.
+          </p>
+
+          <ol className="border-b border-[#e5d9c9]">
+            {series.map((v, i) => (
+              <li
+                key={v.title}
+                className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5"
+              >
+                <span className="font-serif text-cream-400 text-lg w-7 shrink-0">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className="flex-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="font-serif text-xl text-cream-900">{v.title}</h3>
+                    {v.youtubeId ? (
+                      <a
+                        href="#safety"
+                        className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors"
+                      >
+                        Watch
+                      </a>
+                    ) : (
+                      <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">
+                        Coming soon
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-cream-600 text-sm mt-1">{v.note}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
