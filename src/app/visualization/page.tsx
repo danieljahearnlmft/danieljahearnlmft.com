@@ -2,35 +2,71 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Guided Visualizations · The Way Back Home',
+  title: 'Guided Visualizations for Parents of Teens · The Way Back Home',
   description:
-    'Guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment. Begin with Safety. About twenty-two minutes.',
+    'A series of guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment: Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent for your teen. About twenty minutes each.',
+  keywords: [
+    'guided visualization', 'parents of teens', 'attachment theory', 'secure attachment',
+    'safety meditation', 'attunement', 'nervous system regulation', 'Daniel Ahearn LMFT',
+    'The Way Back Home',
+  ],
+  alternates: { canonical: 'https://danieljahearnlmft.com/visualization' },
   openGraph: {
-    title: 'Guided Visualizations · The Way Back Home',
+    type: 'website',
+    url: 'https://danieljahearnlmft.com/visualization',
+    title: 'Guided Visualizations for Parents of Teens · The Way Back Home',
     description:
       'Guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment.',
     images: ['/images/visualization-hero.jpg'],
   },
 }
 
-// Set a youtubeId to mark a chapter live. Order = release order.
-const series: { title: string; note: string; youtubeId: string | null }[] = [
-  { title: 'Safety', note: 'Enough steadiness to stay present.', youtubeId: 'OpY73Z6opTI' },
-  { title: 'Attunement', note: 'Being seen and felt accurately.', youtubeId: null },
-  { title: 'Soothing', note: 'Calming an activated nervous system.', youtubeId: null },
-  { title: 'Expressed Delight', note: 'Being met with warmth and delight.', youtubeId: null },
-  { title: 'Exploration', note: 'A secure base to venture from.', youtubeId: null },
-  { title: 'Ideal Parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
+// To launch a chapter: set its youtubeId. Order = release order = chapter number.
+type Item = { title: string; slug: string; note: string; blurb?: string; youtubeId: string | null; audio?: string }
+const series: Item[] = [
+  {
+    title: 'Safety', slug: 'safety', note: 'Enough steadiness to stay present.',
+    blurb: 'The foundation. Enough internal steadiness to remain present, without escalating, withdrawing, or collapsing.',
+    youtubeId: 'GGmNdJrYr5E', audio: '/audio/safety-visualization.mp3',
+  },
+  {
+    title: 'Attunement', slug: 'attunement', note: 'Being seen and felt accurately.',
+    blurb: 'Letting another person’s inner state register in you, and letting them feel that it landed.',
+    youtubeId: null,
+  },
+  { title: 'Soothing', slug: 'soothing', note: 'Calming an activated nervous system.', youtubeId: null },
+  { title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.', youtubeId: null },
+  { title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.', youtubeId: null },
+  { title: 'Ideal Parent', slug: 'ideal-parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
 ]
+
+const NUM = ['One', 'Two', 'Three', 'Four', 'Five', 'Six']
+const live = series.filter((v) => v.youtubeId)
 
 const btnGold =
   'inline-flex items-center justify-center w-full rounded bg-[#c9a14e] px-6 py-3 ' +
   'text-sm font-medium text-cream-50 hover:bg-[#b88a38] transition-colors'
 
+// VideoObject structured data for the live chapters (helps Google index them as videos)
+const videoLd = {
+  '@context': 'https://schema.org',
+  '@graph': live.map((v) => ({
+    '@type': 'VideoObject',
+    name: `${v.title}: A Guided Visualization for Parents of Teens | The Way Back Home`,
+    description: v.blurb,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`],
+    uploadDate: '2026-06-22',
+    embedUrl: `https://www.youtube.com/embed/${v.youtubeId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${v.youtubeId}`,
+    publisher: { '@type': 'Person', name: 'Daniel J. Ahearn, LMFT' },
+  })),
+}
+
 export default function Visualization() {
-  const featured = series[0]
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }} />
+
       {/* Hero */}
       <section className="relative">
         <img
@@ -52,7 +88,7 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Intro — copy left, actions right, leading down to the visualization */}
+      {/* Intro — copy left, actions right */}
       <section className="section-cream">
         <div className="container-main max-w-[900px]">
           <div className="grid gap-10 md:grid-cols-[1fr_12rem] md:gap-14 md:items-start">
@@ -65,7 +101,7 @@ export default function Visualization() {
                   Parent for your teen.
                 </p>
                 <p>
-                  Settle into twenty-two minutes of breath-work and contemplative practice. Used in
+                  Settle into about twenty minutes of breath-work and contemplative practice. Used in
                   clinical work and in home meditation. Begin with Safety; the rest build from there.
                 </p>
               </div>
@@ -84,56 +120,59 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Featured: Safety */}
-      <section id="safety" className="section-warm">
-        <div className="container-main max-w-[860px]">
-          <p className="eyebrow">Now Available · Chapter One</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-2">Safety</h2>
-          <p className="text-cream-700 leading-relaxed mb-7 max-w-2xl">
-            The foundation. Enough internal steadiness to remain present, without escalating,
-            withdrawing, or collapsing. Best with headphones, somewhere you won&rsquo;t be interrupted.
-          </p>
-
-          <div className="overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute inset-0 h-full w-full border-0"
-                src={`https://www.youtube.com/embed/${featured.youtubeId}`}
-                title="Safety — Guided Visualization"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+      {/* Now available — one player per live chapter */}
+      {live.map((v) => {
+        const chapter = NUM[series.indexOf(v)]
+        return (
+          <section key={v.slug} id={v.slug} className="section-warm">
+            <div className="container-main max-w-[860px]">
+              <p className="eyebrow">Now Available · Chapter {chapter}</p>
+              <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-2">{v.title}</h2>
+              {v.blurb && (
+                <p className="text-cream-700 leading-relaxed mb-7 max-w-2xl">
+                  {v.blurb} Best with headphones, somewhere you won&rsquo;t be interrupted.
+                </p>
+              )}
+              <div className="overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black">
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute inset-0 h-full w-full border-0"
+                    src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                    title={`${v.title} — Guided Visualization | The Way Back Home`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              {v.audio && (
+                <p className="mt-4 text-sm text-cream-600">
+                  <a
+                    href={v.audio}
+                    download
+                    className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                  >
+                    Download the audio for offline listening
+                  </a>
+                </p>
+              )}
             </div>
-          </div>
+          </section>
+        )
+      })}
 
-          <p className="mt-4 text-sm text-cream-600">
-            <a
-              href="/audio/safety-visualization.mp3"
-              download
-              className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
-              Download the audio for offline listening
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* The series — slim editorial index, no empty boxes */}
+      {/* The series — slim editorial index */}
       <section className="section-cream">
         <div className="container-main max-w-[780px]">
           <p className="eyebrow">The Series</p>
           <h2 className="font-serif text-3xl text-cream-900 mb-3">Six visualizations</h2>
           <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">
-            Released in order. Safety is available now; the others arrive in the weeks ahead.
+            Released in order. New chapters arrive in the weeks ahead.
           </p>
 
           <ol className="border-b border-[#e5d9c9]">
             {series.map((v, i) => (
-              <li
-                key={v.title}
-                className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5"
-              >
+              <li key={v.slug} className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5">
                 <span className="font-serif text-cream-400 text-lg w-7 shrink-0">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -141,16 +180,11 @@ export default function Visualization() {
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="font-serif text-xl text-cream-900">{v.title}</h3>
                     {v.youtubeId ? (
-                      <a
-                        href="#safety"
-                        className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors"
-                      >
+                      <a href={`#${v.slug}`} className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors">
                         Watch
                       </a>
                     ) : (
-                      <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">
-                        Coming soon
-                      </span>
+                      <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">Coming soon</span>
                     )}
                   </div>
                   <p className="text-cream-600 text-sm mt-1">{v.note}</p>
@@ -219,26 +253,17 @@ export default function Visualization() {
         <div className="container-main max-w-3xl">
           <p className="text-cream-700 text-base text-center">
             For questions about the practice or to reach out about clinical work,{' '}
-            <Link
-              href="/contact"
-              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
+            <Link href="/contact" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
               write me here
             </Link>
             {' '}or email{' '}
-            <a
-              href="mailto:daniel@danieljahearnlmft.com"
-              className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
+            <a href="mailto:daniel@danieljahearnlmft.com" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
               daniel@danieljahearnlmft.com
             </a>
             .
           </p>
           <p className="text-cream-600 text-sm text-center mt-8">
-            <Link
-              href="/"
-              className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
-            >
+            <Link href="/" className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
               Daniel J. Ahearn, LMFT
             </Link>
             <span className="text-cream-500"> &middot; therapy in Los Angeles</span>
