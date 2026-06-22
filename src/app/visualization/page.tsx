@@ -32,7 +32,7 @@ const series: Item[] = [
   {
     title: 'Attunement', slug: 'attunement', note: 'Being seen and felt accurately.',
     blurb: 'Letting another person’s inner state register in you, and letting them feel that it landed.',
-    youtubeId: null,
+    youtubeId: 'hu401h0m9fE',
   },
   { title: 'Soothing', slug: 'soothing', note: 'Calming an activated nervous system.', youtubeId: null },
   { title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.', youtubeId: null },
