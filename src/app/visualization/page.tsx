@@ -34,7 +34,11 @@ const series: Item[] = [
     blurb: 'Letting another person’s inner state register in you, and letting them feel that it landed.',
     youtubeId: 'hu401h0m9fE',
   },
-  { title: 'Soothing', slug: 'soothing', note: 'Calming an activated nervous system.', youtubeId: null },
+  {
+    title: 'Soothing', slug: 'soothing', note: 'Calming an activated nervous system.',
+    blurb: 'A steady, regulated nervous system settling a distressed one, without fixing, rushing, or explaining.',
+    youtubeId: 'lDwGqByPRSY',
+  },
   { title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.', youtubeId: null },
   { title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.', youtubeId: null },
   { title: 'Ideal Parent', slug: 'ideal-parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
