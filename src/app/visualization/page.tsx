@@ -21,8 +21,11 @@ export const metadata: Metadata = {
   },
 }
 
-// To launch a chapter: set its youtubeId. Order = release order = chapter number.
-type Item = { title: string; slug: string; note: string; blurb?: string; youtubeId: string | null; audio?: string }
+// To launch a chapter: set its youtubeId (and uploadDate). Order = release order = chapter number.
+type Item = {
+  title: string; slug: string; note: string; blurb?: string
+  youtubeId: string | null; uploadDate?: string; audio?: string
+}
 const series: Item[] = [
   {
     title: 'Safety', slug: 'safety', note: 'Enough steadiness to stay present.',
@@ -39,7 +42,12 @@ const series: Item[] = [
     blurb: 'A steady, regulated nervous system settling a distressed one, without fixing, rushing, or explaining.',
     youtubeId: 'lDwGqByPRSY',
   },
-  { title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.', youtubeId: null },
+  {
+    title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.',
+    blurb: 'Not praise for what your teen achieves, but the felt sense that their existence is welcomed. The condition most often underestimated, and the one that decides whether a self forms around performance or around essence.',
+    // To launch: paste the YouTube ID here and set uploadDate to the publish date.
+    youtubeId: null,
+  },
   { title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.', youtubeId: null },
   { title: 'Ideal Parent', slug: 'ideal-parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
 ]
@@ -59,7 +67,7 @@ const videoLd = {
     name: `${v.title}: A Guided Visualization for Parents of Teens | The Way Back Home`,
     description: v.blurb,
     thumbnailUrl: [`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`],
-    uploadDate: '2026-06-22',
+    uploadDate: v.uploadDate ?? '2026-06-22',
     embedUrl: `https://www.youtube.com/embed/${v.youtubeId}`,
     contentUrl: `https://www.youtube.com/watch?v=${v.youtubeId}`,
     publisher: { '@type': 'Person', name: 'Daniel J. Ahearn, LMFT' },
@@ -203,15 +211,27 @@ export default function Visualization() {
       <section className="section-warm">
         <div className="container-main max-w-3xl">
           <p className="eyebrow">What This Practice Is</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">Safety as foundation</h2>
+          <h2 className="text-3xl font-serif text-cream-900 mb-6">The five conditions</h2>
           <p className="text-cream-700 leading-relaxed mb-5">
-            Safety does not mean comfort. It does not mean agreement. It does not mean preventing distress. Safety means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing.
+            These visualizations follow the five conditions of secure attachment as set out in the Integrative Attachment Therapy model developed by Daniel P. Brown and David Elliott. The conditions are not techniques. They describe what a person needs to have received, reliably and often enough, for a secure self to form. Most of us received some of them unevenly, from people doing their best with what they had. The practice is to give the nervous system repeated experiences of them now, in a context safe enough to receive.
           </p>
           <p className="text-cream-700 leading-relaxed mb-5">
-            This visualization is built around that felt sense. Not the idea of safety, but the body&rsquo;s recognition that, in this moment, nothing needs to be guarded against. For many of us, this felt sense was unreliable in early life. The practice is to give the nervous system repeated experiences of it now, in a context safe enough to receive.
+            <strong className="font-serif font-normal text-cream-900">Safety</strong> does not mean comfort. It does not mean agreement. It does not mean preventing distress. It means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing. Not the idea of safety, but the body&rsquo;s recognition that, in this moment, nothing needs to be guarded against.
+          </p>
+          <p className="text-cream-700 leading-relaxed mb-5">
+            <strong className="font-serif font-normal text-cream-900">Attunement</strong> is letting your teen&rsquo;s inner state actually register in you, and letting them feel that it landed. <strong className="font-serif font-normal text-cream-900">Soothing</strong> is a regulated nervous system settling an activated one, without fixing, rushing, or explaining it away. Both ask something of your own state before they ask anything of your teen.
+          </p>
+          <p className="text-cream-700 leading-relaxed mb-5">
+            <strong className="font-serif font-normal text-cream-900">Expressed delight</strong> is being genuinely glad that someone exists. Not for what they achieve, not for how they perform. When it is missing, a self tends to form around performance instead of essence, which is why so many capable teens check every box and still feel see-through.
+          </p>
+          <p className="text-cream-700 leading-relaxed mb-5">
+            <strong className="font-serif font-normal text-cream-900">Exploration</strong> is the half people forget. Security is not closeness alone. A teen who feels held is a teen who can leave the room, take the risk, and come back. The secure base exists so that it can be ventured from.
+          </p>
+          <p className="text-cream-700 leading-relaxed mb-5">
+            The sixth visualization, the <strong className="font-serif font-normal text-cream-900">ideal parent</strong>, gathers the five into a single practice. Not the parent you were told to be, but the steady presence your own nervous system recognizes: the secure base your teen comes home to.
           </p>
           <p className="text-cream-700 leading-relaxed">
-            This is the foundation. The other practices that follow in the book, attunement, soothing, expressed delight, exploration, and the ideal parent, build from here. If any of those ever feels activating or overwhelming, return to this one. Safety is always the foundation.
+            Begin with Safety and work in order; each one builds on the ones before it. If any of them ever feels activating or overwhelming, return to Safety. Safety is always the foundation.
           </p>
         </div>
       </section>
