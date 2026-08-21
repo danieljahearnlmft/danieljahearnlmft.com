@@ -21,32 +21,33 @@ export const metadata: Metadata = {
   },
 }
 
-// To launch a chapter: set its youtubeId (and uploadDate). Order = release order = chapter number.
+// To launch a chapter: set its youtubeId, uploadDate, and minutes.
+// Order = release order = chapter number.
 type Item = {
   title: string; slug: string; note: string; blurb?: string
-  youtubeId: string | null; uploadDate?: string; audio?: string
+  youtubeId: string | null; uploadDate?: string; minutes?: number; audio?: string
 }
 const series: Item[] = [
   {
     title: 'Safety', slug: 'safety', note: 'Enough steadiness to stay present.',
     blurb: 'The foundation. Enough internal steadiness to remain present, without escalating, withdrawing, or collapsing.',
-    youtubeId: 'GGmNdJrYr5E', audio: '/audio/safety-visualization.mp3',
+    youtubeId: 'GGmNdJrYr5E', uploadDate: '2026-06-22', minutes: 22,
+    audio: '/audio/safety-visualization.mp3',
   },
   {
     title: 'Attunement', slug: 'attunement', note: 'Being seen and felt accurately.',
     blurb: 'Letting another person’s inner state register in you, and letting them feel that it landed.',
-    youtubeId: 'hu401h0m9fE',
+    youtubeId: 'hu401h0m9fE', uploadDate: '2026-06-22', minutes: 18,
   },
   {
     title: 'Soothing', slug: 'soothing', note: 'Calming an activated nervous system.',
     blurb: 'A steady, regulated nervous system settling a distressed one, without fixing, rushing, or explaining.',
-    youtubeId: 'lDwGqByPRSY',
+    youtubeId: 'lDwGqByPRSY', uploadDate: '2026-06-25', minutes: 22,
   },
   {
     title: 'Expressed Delight', slug: 'expressed-delight', note: 'Being met with warmth and delight.',
     blurb: 'Not praise for what your teen achieves, but the felt sense that their existence is welcomed. The condition most often underestimated, and the one that decides whether a self forms around performance or around essence.',
-    // To launch: paste the YouTube ID here and set uploadDate to the publish date.
-    youtubeId: null,
+    youtubeId: '9YD4R-fpRR8', uploadDate: '2026-08-21', minutes: 20,
   },
   { title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.', youtubeId: null },
   { title: 'Ideal Parent', slug: 'ideal-parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
@@ -64,10 +65,12 @@ const videoLd = {
   '@context': 'https://schema.org',
   '@graph': live.map((v) => ({
     '@type': 'VideoObject',
-    name: `${v.title}: A Guided Visualization for Parents of Teens | The Way Back Home`,
+    // Mirrors the actual YouTube titles so the structured data matches what is indexed.
+    name: `Guided ${v.title} Visualization for Parents of Teens (${v.minutes} min) | The Way Back Home`,
     description: v.blurb,
     thumbnailUrl: [`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`],
-    uploadDate: v.uploadDate ?? '2026-06-22',
+    uploadDate: v.uploadDate,
+    duration: `PT${v.minutes}M`,
     embedUrl: `https://www.youtube.com/embed/${v.youtubeId}`,
     contentUrl: `https://www.youtube.com/watch?v=${v.youtubeId}`,
     publisher: { '@type': 'Person', name: 'Daniel J. Ahearn, LMFT' },
