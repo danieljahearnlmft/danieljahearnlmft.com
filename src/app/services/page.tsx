@@ -97,8 +97,8 @@ export default function Services() {
                 <p>Telehealth throughout California</p>
               </div>
               <div className="border-t border-cream-700 mt-6 pt-5">
-                <p className="text-cream-100 font-medium text-base">$300 / session</p>
-                <p className="text-cream-500 text-xs mt-1">Out-of-network · Superbills available</p>
+                <p className="text-cream-100 font-medium text-base">$250&ndash;$350 / session</p>
+                <p className="text-cream-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
               </div>
             </div>
           </div>
@@ -162,8 +162,8 @@ export default function Services() {
                 <p>Walk-and-talk available in LA</p>
               </div>
               <div className="border-t border-cream-700 mt-6 pt-5">
-                <p className="text-cream-100 font-medium text-base">$400 / session</p>
-                <p className="text-cream-500 text-xs mt-1">Out-of-network · Superbills available</p>
+                <p className="text-cream-100 font-medium text-base">$350&ndash;$450 / session</p>
+                <p className="text-cream-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
               </div>
             </div>
           </div>
@@ -211,8 +211,8 @@ export default function Services() {
                 <p>Telehealth throughout California</p>
               </div>
               <div className="border-t border-cream-700 mt-6 pt-5">
-                <p className="text-cream-100 font-medium text-base">$400 / session</p>
-                <p className="text-cream-500 text-xs mt-1">Out-of-network · Superbills available</p>
+                <p className="text-cream-100 font-medium text-base">$350&ndash;$450 / session</p>
+                <p className="text-cream-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
               </div>
             </div>
           </div>
