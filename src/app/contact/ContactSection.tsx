@@ -64,12 +64,11 @@ export default function ContactSection() {
             <div className="border-t border-cream-300 pt-7">
               <p className="text-xs uppercase tracking-widest text-cream-500 mb-3">Rates</p>
               <div className="space-y-1.5 text-sm text-cream-700">
-                <p>Individual therapy: $300 per session</p>
-                <p>Family / couples: $400 per session</p>
-                <p>Men's group cohort: $5,500 for 16 weeks</p>
+                <p>Individual therapy: $250&ndash;$350 per session</p>
+                <p>Family / couples: $350&ndash;$450 per session</p>
                 <p>Parent support groups: $60 per session</p>
               </div>
-              <p className="text-cream-500 text-xs mt-3">Out-of-network provider. Superbills available for reimbursement.</p>
+              <p className="text-cream-500 text-xs mt-3">Fee is set together in our consult. Out-of-network provider. Superbills available for reimbursement.</p>
             </div>
           </div>
 
