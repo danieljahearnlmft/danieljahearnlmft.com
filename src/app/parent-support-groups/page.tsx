@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Parent Support Groups',
-  description: 'National Zoom-based parent psychoeducation groups for parents of teens. Attachment-informed, practical, capped at 12 participants. $60 per session.',
+  description: 'National Zoom-based parent psychoeducation groups for parents of teens. Attachment-informed, practical, capped at 12 participants. Ongoing, Mondays at 5pm PST. $60 per session.',
   openGraph: {
     images: [{ url: '/images/parent-groups-hero.jpg', alt: 'Parent Support Groups' }],
   },
@@ -37,7 +37,7 @@ export default function ParentSupportGroups() {
               A national Zoom-based psychoeducation group for parents of teenagers, grounded in attachment science, practically focused, and capped at 12 participants so everyone gets heard.
             </p>
             <p className="text-cream-200 text-sm font-medium mb-5">
-              New groups form regularly · Reach out for the next start date
+              Ongoing groups · Mondays, 5pm PST · Join any time
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -62,6 +62,7 @@ export default function ParentSupportGroups() {
           <div className="flex flex-wrap justify-center gap-6 md:gap-14">
             {[
               { label: 'Format', value: 'Zoom · National' },
+              { label: 'When', value: 'Mondays · 5pm PST' },
               { label: 'Group Size', value: 'Capped at 12' },
               { label: 'Investment', value: '$60 per session' },
               { label: 'Who It\'s For', value: 'Parents of teens' },
@@ -185,7 +186,7 @@ export default function ParentSupportGroups() {
       <section className="bg-cream-200 py-14">
         <div className="container-main max-w-xl text-center">
           <h2 className="text-2xl font-serif text-cream-900 mb-4">Ready to join a group?</h2>
-          <p className="text-cream-700 mb-7">Groups are capped at 12. Reach out to learn about the next available session.</p>
+          <p className="text-cream-700 mb-7">Groups are ongoing and capped at 12. You can join any time, and there's no cohort to wait for.</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
               href="https://docs.google.com/forms/d/12Es-CQ6HNGHJ3WvG7a5XJKt8GHGJHaZ1Weodiy20KgI/viewform"
