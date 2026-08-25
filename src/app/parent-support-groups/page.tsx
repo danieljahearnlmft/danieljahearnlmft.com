@@ -37,7 +37,7 @@ export default function ParentSupportGroups() {
               A national Zoom-based psychoeducation group for parents of teenagers, grounded in attachment science, practically focused, and capped at 12 participants so everyone gets heard.
             </p>
             <p className="text-cream-200 text-sm font-medium mb-5">
-              Next group: July 27 · Monday, 5pm PST
+              New groups form regularly · Reach out for the next start date
             </p>
             <div className="flex flex-wrap gap-3">
               <a
