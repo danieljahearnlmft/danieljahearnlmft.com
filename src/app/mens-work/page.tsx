@@ -192,9 +192,9 @@ export default function MensWork() {
       {/* Investment */}
       <section className="section-warm">
         <div className="container-main max-w-xl text-center">
-          <p className="eyebrow">Investment</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-3">$5,500 for 16 weeks</h2>
-          <p className="text-cream-600 text-sm mb-6">Payment plans available: 3 monthly installments</p>
+          <p className="eyebrow">The Program</p>
+          <h2 className="text-3xl font-serif text-cream-900 mb-3">What&rsquo;s included</h2>
+          <p className="text-cream-600 text-sm mb-6">Fee and payment options are discussed during the application process.</p>
           <p className="text-cream-700 text-sm leading-relaxed mb-8">
             Includes 16 guided group sessions (24 hours), guided IPF audio recordings for home practice, written materials and developmental frameworks, email support between sessions, and alumni group access after completion.
           </p>
