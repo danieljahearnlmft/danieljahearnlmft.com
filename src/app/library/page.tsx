@@ -28,8 +28,8 @@ const clinicianVideos: Video[] = [
 const visualizations: Video[] = [
   { title: 'Safety',           slug: 'safety',           youtubeId: 'GGmNdJrYr5E', note: 'Enough steadiness to stay present.' },
   { title: 'Attunement',       slug: 'attunement',       youtubeId: 'hu401h0m9fE', note: 'Being seen and felt accurately.' },
-  { title: 'Soothing',         slug: 'soothing',         youtubeId: null,           note: 'Calming an activated nervous system.' },
-  { title: 'Expressed Delight',slug: 'expressed-delight',youtubeId: null,           note: 'Being met with warmth and delight.' },
+  { title: 'Soothing',         slug: 'soothing',         youtubeId: 'lDwGqByPRSY', note: 'Calming an activated nervous system.' },
+  { title: 'Expressed Delight',slug: 'expressed-delight',youtubeId: '9YD4R-fpRR8', note: 'Being met with warmth and delight.' },
   { title: 'Exploration',      slug: 'exploration',      youtubeId: null,           note: 'A secure base to venture from.' },
   { title: 'Ideal Parent',     slug: 'ideal-parent',     youtubeId: null,           note: 'Becoming the secure base your teen comes home to.' },
 ]
