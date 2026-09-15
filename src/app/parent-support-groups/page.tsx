@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import RealMethod from '@/components/RealMethod'
 
 export const metadata: Metadata = {
   title: 'Parent Support Groups',
@@ -105,7 +106,7 @@ export default function ParentSupportGroups() {
               'How your own attachment history shows up in your parenting',
               'Regulation vs. co-regulation: what your teen actually needs',
               'How to stay present during ruptures without shutting down or escalating',
-              'What repair looks like, and why most parents do it wrong',
+              'What repair looks like, using the R.E.A.L. Method',
               'The difference between attunement and approval',
               'Setting limits without damaging the relationship',
             ].map((topic) => (
@@ -117,6 +118,8 @@ export default function ParentSupportGroups() {
           </div>
         </div>
       </section>
+
+      <RealMethod />
 
       {/* Is this right for you */}
       <section className="section-cream">
