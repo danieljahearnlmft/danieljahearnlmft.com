@@ -1,48 +1,83 @@
-const steps = [
+type Props = {
+  eyebrow?: string
+  intro?: string[]
+  lines?: [string, string, string, string]
+  closing?: string
+  anchorId?: string
+}
+
+const DEFAULT_LINES: [string, string, string, string] = [
+  "Pause first. Your teen's nervous system is watching yours.",
+  "“Help me understand what just happened for you.”",
+  "“It sounds like you felt dismissed when I said that.”",
+  "“I'm sorry I raised my voice. I'm still here.”",
+]
+
+const STEP_META = [
   {
-    letter: "R",
-    name: "Regulate the Breath",
+    letter: 'R',
+    name: 'Regulate the Breath',
     body: "Repair can't start from a flooded nervous system. Pause. Three to five slow breaths, feet on the ground, shoulders down. You don't need to be calm, only more regulated than you were thirty seconds ago.",
-    line: "Pause first. Your teen's nervous system is watching yours.",
   },
   {
-    letter: "E",
-    name: "Explore the Moment",
+    letter: 'E',
+    name: 'Explore the Moment',
     body: "Once you're steadier, get curious about what happened for your teen. Not interrogation, not problem-solving, not explaining why they're wrong.",
-    line: "“Help me understand what just happened for you.”",
   },
   {
-    letter: "A",
-    name: "Attune with Empathy",
-    body: "Reflect back what you hear so your teen feels seen. Empathy is not agreement. You can attune to their experience and still hold the limit.",
-    line: "“It sounds like you felt dismissed when I said that.”",
+    letter: 'A',
+    name: 'Attune with Empathy',
+    body: 'Reflect back what you hear so your teen feels seen. Empathy is not agreement. You can attune to their experience and still hold the limit.',
   },
   {
-    letter: "L",
-    name: "Lean Back In",
+    letter: 'L',
+    name: 'Lean Back In',
     body: "The gesture of return. Own your part and signal that the relationship is still here. Sometimes it's words; sometimes it's sitting down next to them and staying in the room.",
-    line: "“I'm sorry I raised my voice. I'm still here.”",
   },
 ]
 
-export default function RealMethod() {
+export default function RealMethod({
+  eyebrow = 'A Framework for Rupture and Repair',
+  intro,
+  lines = DEFAULT_LINES,
+  closing = 'In group, we practice R.E.A.L. with the ruptures parents are actually living through that week. The free daily practice app walks through the same four steps.',
+  anchorId = 'real-method',
+}: Props = {}) {
+  const steps = STEP_META.map((s, i) => ({ ...s, line: lines[i] }))
+  const headingId = `${anchorId}-heading`
+
   return (
-    <section id="real-method" className="section-warm" aria-labelledby="real-method-heading">
+    <section id={anchorId} className="section-warm" aria-labelledby={headingId}>
       <div className="container-main max-w-4xl">
-        <p className="eyebrow">A Framework for Rupture and Repair</p>
-        <h2 id="real-method-heading" className="text-3xl md:text-4xl font-serif text-cream-900 mb-5">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 id={headingId} className="text-3xl md:text-4xl font-serif text-cream-900 mb-5">
           The R.E.A.L. Method
         </h2>
-        <p className="text-cream-700 leading-relaxed mb-4 max-w-2xl">
-          Ruptures with your teenager are inevitable. What builds secure attachment is what happens
-          next. R.E.A.L. is the four-step repair method at the center of these groups, first
-          published in Chapter 7 of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>{' '}
-          (April 1, 2026).
-        </p>
-        <p className="text-cream-700 leading-relaxed mb-10 max-w-2xl">
-          It isn't a script. It's a pattern you can return to when things go sideways, and it still
-          counts when your teen isn't ready to respond.
-        </p>
+        {intro ? (
+          intro.map((p, i) => (
+            <p
+              key={i}
+              className={`text-cream-700 leading-relaxed max-w-2xl ${
+                i === intro.length - 1 ? 'mb-10' : 'mb-4'
+              }`}
+            >
+              {p}
+            </p>
+          ))
+        ) : (
+          <>
+            <p className="text-cream-700 leading-relaxed mb-4 max-w-2xl">
+              Ruptures with your teenager are inevitable. What builds secure attachment is what happens
+              next. R.E.A.L. is the four-step repair method at the center of these groups, first
+              published in Chapter 7 of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>{' '}
+              (April 1, 2026).
+            </p>
+            <p className="text-cream-700 leading-relaxed mb-10 max-w-2xl">
+              It isn't a script. It's a pattern you can return to when things go sideways, and it still
+              counts when your teen isn't ready to respond.
+            </p>
+          </>
+        )}
         <ol className="grid md:grid-cols-2 gap-6 mb-10">
           {steps.map((s) => (
             <li key={s.letter} className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex gap-5">
@@ -57,10 +92,7 @@ export default function RealMethod() {
             </li>
           ))}
         </ol>
-        <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">
-          In group, we practice R.E.A.L. with the ruptures parents are actually living through that
-          week. The free daily practice app walks through the same four steps.
-        </p>
+        <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">{closing}</p>
         <div className="flex flex-wrap gap-3 mb-8">
           <a
             href="https://waybackhome.app"

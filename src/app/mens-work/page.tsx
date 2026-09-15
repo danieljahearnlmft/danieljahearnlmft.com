@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import RealMethod from '@/components/RealMethod'
 
 export const metadata: Metadata = {
   title: "Men's Attachment Repair Groups",
-  description: 'A 16-week attachment repair cohort for men using the Ideal Parent Figure Protocol: for relationships, fatherhood, and emotional availability.',
+  description: '16-week attachment repair cohort for men using the Ideal Parent Figure Protocol and the R.E.A.L. Method for relationships, fatherhood, and emotional availability.',
   openGraph: {
     images: [{ url: '/images/mens-groups.jpg', alt: "Men's Attachment Repair Groups" }],
   },
@@ -155,6 +156,22 @@ export default function MensWork() {
           </div>
         </div>
       </section>
+
+      <RealMethod
+        anchorId="real-for-men"
+        eyebrow="Repair in Real Time"
+        intro={[
+          'Most men I work with are good at fixing things and worn out by how often their relationships break down anyway. The pattern is familiar: something goes wrong at home, you shut down or push harder, and the distance grows.',
+          'R.E.A.L. is the four-step repair method from my book, The Way Back Home (April 1, 2026). It was written for parents of teens, and it works the same way with a partner, a child, or another man in the room.',
+        ]}
+        lines={[
+          "Before you answer, three slow breaths. You're not trying to win the next thirty seconds.",
+          '“Tell me what that was like for you.”',
+          '“It sounds like you felt like I wasn’t really there.”',
+          '“I shut down on you. That’s on me. I’m here now.”',
+        ]}
+        closing="In group, we practice R.E.A.L. on the ruptures you're actually living with: at home, with your kids, and in the room with other men."
+      />
 
       {/* Format */}
       <section className="section-cream">

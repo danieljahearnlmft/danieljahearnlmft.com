@@ -81,6 +81,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs leading-relaxed">
             <Link href="/integrative-attachment-therapy" className="text-cream-500 hover:text-cream-200 transition-colors">Integrative Attachment Therapy</Link>
             <Link href="/parent-support-groups/#real-method" className="text-cream-500 hover:text-cream-200 transition-colors">R.E.A.L. Method</Link>
+            <Link href="/mens-work/#real-for-men" className="text-cream-500 hover:text-cream-200 transition-colors">R.E.A.L. for Men</Link>
             <Link href="/ideal-parent-figure-protocol" className="text-cream-500 hover:text-cream-200 transition-colors">IPF Protocol</Link>
             <Link href="/iat-certified-therapist" className="text-cream-500 hover:text-cream-200 transition-colors">IAT-Certified Therapist</Link>
             <Link href="/healing-attachment-wounds" className="text-cream-500 hover:text-cream-200 transition-colors">Healing Attachment Wounds</Link>

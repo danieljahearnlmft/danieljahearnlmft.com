@@ -104,6 +104,13 @@ export default function Home() {
             </div>
           </div>
           <p className="text-center mt-8 text-cream-600 text-sm">
+            Every group is built on{' '}
+            <Link href="/parent-support-groups/#real-method" className="underline decoration-cream-300 underline-offset-4 hover:text-cream-900 hover:decoration-cream-700 transition-colors">
+              R.E.A.L.
+            </Link>
+            , the repair method from The Way Back Home.
+          </p>
+          <p className="text-center mt-3 text-cream-600 text-sm">
             Couples and family work also available.{' '}
             <Link href="/services" className="underline decoration-cream-300 underline-offset-4 hover:text-cream-900 hover:decoration-cream-700 transition-colors">
               See all services &rarr;

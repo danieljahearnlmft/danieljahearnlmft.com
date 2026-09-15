@@ -167,6 +167,35 @@ export default function Book() {
         </div>
       </section>
 
+      {/* R.E.A.L. Method inside the book */}
+      <section className="section-warm border-t border-cream-300">
+        <div className="container-main max-w-3xl">
+          <p className="eyebrow">The Repair Method</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-5">
+            Inside the book: the R.E.A.L. Method
+          </h2>
+          <p className="text-cream-700 leading-relaxed mb-7">
+            Chapter 7 introduces R.E.A.L., a four-step framework for rupture and repair: Regulate the Breath, Explore the Moment, Attune with Empathy, Lean Back In. Parents practice it in the support groups and in the free daily app; men practice it in the Men&rsquo;s Attachment Repair Groups.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/parent-support-groups/#real-method" className="btn-primary">
+              R.E.A.L. for Parents
+            </Link>
+            <Link href="/mens-work/#real-for-men" className="btn-ghost">
+              R.E.A.L. for Men
+            </Link>
+            <a
+              href="https://waybackhome.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost plausible-event-name=App+Open"
+            >
+              Practice in the App
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About the author */}
       <section className="section-warm">
         <div className="container-main max-w-3xl">

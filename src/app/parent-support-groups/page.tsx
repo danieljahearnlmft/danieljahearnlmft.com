@@ -5,7 +5,7 @@ import RealMethod from '@/components/RealMethod'
 
 export const metadata: Metadata = {
   title: 'Parent Support Groups',
-  description: 'National Zoom-based parent psychoeducation groups for parents of teens. Attachment-informed, practical, capped at 12 participants. Ongoing, Mondays at 5pm PST. $60 per session.',
+  description: 'National Zoom groups for parents of teens. Practice the R.E.A.L. Method for rupture and repair. Capped at 12. Ongoing, Mondays 5pm PST. $60 per session.',
   openGraph: {
     images: [{ url: '/images/parent-groups-hero.jpg', alt: 'Parent Support Groups' }],
   },
