@@ -15,13 +15,20 @@ export const metadata: Metadata = {
   },
 }
 
-type Video = { title: string; slug: string; youtubeId: string | null; note?: string }
+type Video = { title: string; slug: string; youtubeId: string | null; note?: string; aspect?: '16/9' | '9/16' }
 
 const clinicianVideos: Video[] = [
   {
     title: 'Your Teenager Comes Home at 1:15 AM. What Do You Do?',
     slug: 'teen-comes-home-115am',
     youtubeId: 'aSk3KdEKhCQ',
+  },
+  {
+    title: 'The Nine Breaths of Purification',
+    slug: 'nine-breaths',
+    youtubeId: 'W_HtN9BgwaI',
+    aspect: '9/16',
+    note: 'A Bön practice for releasing anger, attachment, and the certainty we mistake for knowing.',
   },
 ]
 
@@ -34,10 +41,12 @@ const visualizations: Video[] = [
   { title: 'Ideal Parent',     slug: 'ideal-parent',     youtubeId: null,           note: 'Becoming the secure base your teen comes home to.' },
 ]
 
-function VideoEmbed({ id, title }: { id: string; title: string }) {
+function VideoEmbed({ id, title, aspect = '16/9' }: { id: string; title: string; aspect?: '16/9' | '9/16' }) {
+  const paddingBottom = aspect === '9/16' ? '177.78%' : '56.25%'
+  const wrapperClass = aspect === '9/16' ? 'mx-auto max-w-[400px]' : 'w-full'
   return (
-    <div className="overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black">
-      <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+    <div className={`overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black ${wrapperClass}`}>
+      <div className="relative w-full" style={{ paddingBottom }}>
         <iframe
           className="absolute inset-0 h-full w-full border-0"
           src={`https://www.youtube.com/embed/${id}`}
@@ -103,8 +112,9 @@ export default function Library() {
           <div className="space-y-14">
             {clinicianVideos.map((v) => (
               <div key={v.slug} id={v.slug}>
-                <h3 className="font-serif text-xl md:text-2xl text-cream-900 mb-4">{v.title}</h3>
-                {v.youtubeId && <VideoEmbed id={v.youtubeId} title={v.title} />}
+                <h3 className="font-serif text-xl md:text-2xl text-cream-900 mb-1">{v.title}</h3>
+                {v.note && <p className="text-cream-600 text-sm mb-4">{v.note}</p>}
+                {v.youtubeId && <VideoEmbed id={v.youtubeId} title={v.title} aspect={v.aspect} />}
               </div>
             ))}
           </div>
