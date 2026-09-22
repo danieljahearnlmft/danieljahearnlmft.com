@@ -39,7 +39,7 @@ export default function MensWork() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
+                href="https://docs.google.com/forms/d/1qRud6L6w43N5BFNXVdgrWk5GrUFeUEnZl9cny9FjL4I/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -216,58 +216,13 @@ export default function MensWork() {
             Includes 16 guided group sessions (24 hours), guided IPF audio recordings for home practice, written materials and developmental frameworks, email support between sessions, and alumni group access after completion.
           </p>
           <a
-            href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
+            href="https://docs.google.com/forms/d/1qRud6L6w43N5BFNXVdgrWk5GrUFeUEnZl9cny9FjL4I/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
           >
             Start Application
           </a>
-        </div>
-      </section>
-
-      {/* Bi-weekly group */}
-      <section className="section-cream">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md order-2 md:order-1">
-              <Image
-                src="/images/mens-groups-2.jpg"
-                alt="Bi-weekly Men's Group Therapy"
-                fill
-                className="object-cover object-center"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <p className="eyebrow">Also Available</p>
-              <h2 className="text-3xl font-serif text-cream-900 mb-5">Bi-Weekly Men's Group Therapy</h2>
-              <p className="text-cream-700 leading-relaxed mb-4">
-                A bi-weekly psychotherapy space where men of all ages come together in a safe, judgment-free environment to talk, feel, reflect, and connect. Process is the key word, because most of us were never taught how to name our emotions, let alone feel supported while doing so.
-              </p>
-              <ul className="space-y-2 mb-7">
-                {[
-                  'Talk honestly about whatever\'s on your mind',
-                  'Receive and offer support',
-                  'Explore how others experience you',
-                  'Identify patterns, both helpful and harmful',
-                  'Build more intention and meaning in how you live and relate',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-cream-700 text-sm">
-                    <span className="text-cream-400 shrink-0">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-cream-500 text-sm italic mb-6">Meets bi-weekly in Los Feliz</p>
-              <a
-                href="https://docs.google.com/forms/d/10i5L7LvcQn2Fp84d5AX2xysYE8y-ZJmB7TgBxkWcN_8/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Join Men's Group
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
