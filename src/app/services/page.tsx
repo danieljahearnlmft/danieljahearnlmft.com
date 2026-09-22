@@ -261,7 +261,7 @@ export default function Services() {
               },
               {
                 q: 'Where are you located? Do you offer telehealth?',
-                a: 'I\'m based in Los Angeles and see clients via HIPAA-compliant telehealth throughout California. Walk-and-talk sessions available in LA. Men\'s groups meet in person in Los Feliz.',
+                a: 'I\'m based in Los Angeles and see clients via HIPAA-compliant telehealth throughout California. Walk-and-talk sessions available in LA.',
               },
               {
                 q: 'What\'s the cancellation policy?',
