@@ -58,7 +58,7 @@ const live = series.filter((v) => v.youtubeId)
 
 const btnGold =
   'inline-flex items-center justify-center w-full rounded bg-[#c9a14e] px-6 py-3 ' +
-  'text-sm font-medium text-cream-50 hover:bg-[#b88a38] transition-colors'
+  'text-sm font-medium text-parch-50 hover:bg-[#b88a38] transition-colors'
 
 // VideoObject structured data for the live chapters (helps Google index them as videos)
 const videoLd = {
@@ -91,24 +91,24 @@ export default function Visualization() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-cream-100/85 mb-4">
+          <p className="text-xs uppercase tracking-[0.25em] text-parch-100/85 mb-4">
             The Five Conditions of Secure Attachment
           </p>
-          <h1 className="font-serif font-bold text-4xl md:text-6xl text-cream-50 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
+          <h1 className="font-display font-bold text-4xl md:text-6xl text-parch-50 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
             The Way Back Home
           </h1>
-          <p className="font-serif italic text-xl md:text-2xl text-cream-100 mt-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+          <p className="font-display italic text-xl md:text-2xl text-parch-100 mt-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
             Guided Visualizations
           </p>
         </div>
       </section>
 
-      {/* Intro — copy left, actions right */}
+      {/* Intro: copy left, actions right */}
       <section className="section-cream">
         <div className="container-main max-w-[900px]">
           <div className="grid gap-10 md:grid-cols-[1fr_12rem] md:gap-14 md:items-start">
             <div>
-              <div className="space-y-4 text-cream-700 text-lg leading-relaxed">
+              <div className="space-y-4 text-parch-700 text-lg leading-relaxed">
                 <p>
                   A series of guided visualizations rooted in attachment theory and the Five
                   Conditions of Secure Attachment. Each one corresponds to a foundational condition:
@@ -121,7 +121,7 @@ export default function Visualization() {
                 </p>
               </div>
               <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
-                <p className="font-serif text-base text-cream-900">Daniel J. Ahearn, LMFT</p>
+                <p className="font-display text-base text-parch-900">Daniel J. Ahearn, LMFT</p>
                 <p>Attachment &amp; Family Therapy</p>
               </div>
             </div>
@@ -135,16 +135,16 @@ export default function Visualization() {
         </div>
       </section>
 
-      {/* Now available — one player per live chapter */}
+      {/* Now available: one player per live chapter */}
       {live.map((v) => {
         const chapter = NUM[series.indexOf(v)]
         return (
           <section key={v.slug} id={v.slug} className="section-warm">
             <div className="container-main max-w-[860px]">
-              <p className="eyebrow">Now Available · Chapter {chapter}</p>
-              <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-2">{v.title}</h2>
+              <p className="s-eyebrow">Now Available · Chapter {chapter}</p>
+              <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-2">{v.title}</h2>
               {v.blurb && (
-                <p className="text-cream-700 leading-relaxed mb-7 max-w-2xl">
+                <p className="text-parch-700 leading-relaxed mb-7 max-w-2xl">
                   {v.blurb} Best with headphones, somewhere you won&rsquo;t be interrupted.
                 </p>
               )}
@@ -153,7 +153,7 @@ export default function Visualization() {
                   <iframe
                     className="absolute inset-0 h-full w-full border-0"
                     src={`https://www.youtube.com/embed/${v.youtubeId}`}
-                    title={`${v.title} — Guided Visualization | The Way Back Home`}
+                    title={`${v.title}: Guided Visualization | The Way Back Home`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
@@ -161,11 +161,11 @@ export default function Visualization() {
                 </div>
               </div>
               {v.audio && (
-                <p className="mt-4 text-sm text-cream-600">
+                <p className="mt-4 text-sm text-parch-600">
                   <a
                     href={v.audio}
                     download
-                    className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors"
+                    className="underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors"
                   >
                     Download the audio for offline listening
                   </a>
@@ -176,24 +176,24 @@ export default function Visualization() {
         )
       })}
 
-      {/* The series — slim editorial index */}
+      {/* The series: slim editorial index */}
       <section className="section-cream">
         <div className="container-main max-w-[780px]">
-          <p className="eyebrow">The Series</p>
-          <h2 className="font-serif text-3xl text-cream-900 mb-3">Six visualizations</h2>
-          <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">
+          <p className="s-eyebrow">The Series</p>
+          <h2 className="font-display text-3xl text-parch-900 mb-3">Six visualizations</h2>
+          <p className="text-parch-700 leading-relaxed mb-8 max-w-2xl">
             Released in order. New chapters arrive in the weeks ahead.
           </p>
 
           <ol className="border-b border-[#e5d9c9]">
             {series.map((v, i) => (
               <li key={v.slug} className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5">
-                <span className="font-serif text-cream-400 text-lg w-7 shrink-0">
+                <span className="font-display text-parch-400 text-lg w-7 shrink-0">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="flex-1">
                   <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="font-serif text-xl text-cream-900">{v.title}</h3>
+                    <h3 className="font-display text-xl text-parch-900">{v.title}</h3>
                     {v.youtubeId ? (
                       <a href={`#${v.slug}`} className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors">
                         Watch
@@ -202,7 +202,7 @@ export default function Visualization() {
                       <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">Coming soon</span>
                     )}
                   </div>
-                  <p className="text-cream-600 text-sm mt-1">{v.note}</p>
+                  <p className="text-parch-600 text-sm mt-1">{v.note}</p>
                 </div>
               </li>
             ))}
@@ -213,27 +213,27 @@ export default function Visualization() {
       {/* What this practice is */}
       <section className="section-warm">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">What This Practice Is</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">The five conditions</h2>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="s-eyebrow">What This Practice Is</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-6">The five conditions</h2>
+          <p className="text-parch-700 leading-relaxed mb-5">
             These visualizations follow the five conditions of secure attachment as set out in the Integrative Attachment Therapy model developed by Daniel P. Brown and David Elliott. The conditions are not techniques. They describe what a person needs to have received, reliably and often enough, for a secure self to form. Most of us received some of them unevenly, from people doing their best with what they had. The practice is to give the nervous system repeated experiences of them now, in a context safe enough to receive.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
-            <strong className="font-serif font-normal text-cream-900">Safety</strong> does not mean comfort. It does not mean agreement. It does not mean preventing distress. It means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing. Not the idea of safety, but the body&rsquo;s recognition that, in this moment, nothing needs to be guarded against.
+          <p className="text-parch-700 leading-relaxed mb-5">
+            <strong className="font-display font-normal text-parch-900">Safety</strong> does not mean comfort. It does not mean agreement. It does not mean preventing distress. It means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing. Not the idea of safety, but the body&rsquo;s recognition that, in this moment, nothing needs to be guarded against.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
-            <strong className="font-serif font-normal text-cream-900">Attunement</strong> is letting your teen&rsquo;s inner state actually register in you, and letting them feel that it landed. <strong className="font-serif font-normal text-cream-900">Soothing</strong> is a regulated nervous system settling an activated one, without fixing, rushing, or explaining it away. Both ask something of your own state before they ask anything of your teen.
+          <p className="text-parch-700 leading-relaxed mb-5">
+            <strong className="font-display font-normal text-parch-900">Attunement</strong> is letting your teen&rsquo;s inner state actually register in you, and letting them feel that it landed. <strong className="font-display font-normal text-parch-900">Soothing</strong> is a regulated nervous system settling an activated one, without fixing, rushing, or explaining it away. Both ask something of your own state before they ask anything of your teen.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
-            <strong className="font-serif font-normal text-cream-900">Expressed delight</strong> is being genuinely glad that someone exists. Not for what they achieve, not for how they perform. When it is missing, a self tends to form around performance instead of essence, which is why so many capable teens check every box and still feel see-through.
+          <p className="text-parch-700 leading-relaxed mb-5">
+            <strong className="font-display font-normal text-parch-900">Expressed delight</strong> is being genuinely glad that someone exists. Not for what they achieve, not for how they perform. When it is missing, a self tends to form around performance instead of essence, which is why so many capable teens check every box and still feel see-through.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
-            <strong className="font-serif font-normal text-cream-900">Exploration</strong> is the half people forget. Security is not closeness alone. A teen who feels held is a teen who can leave the room, take the risk, and come back. The secure base exists so that it can be ventured from.
+          <p className="text-parch-700 leading-relaxed mb-5">
+            <strong className="font-display font-normal text-parch-900">Exploration</strong> is the half people forget. Security is not closeness alone. A teen who feels held is a teen who can leave the room, take the risk, and come back. The secure base exists so that it can be ventured from.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
-            The sixth visualization, the <strong className="font-serif font-normal text-cream-900">ideal parent</strong>, gathers the five into a single practice. Not the parent you were told to be, but the steady presence your own nervous system recognizes: the secure base your teen comes home to.
+          <p className="text-parch-700 leading-relaxed mb-5">
+            The sixth visualization, the <strong className="font-display font-normal text-parch-900">ideal parent</strong>, gathers the five into a single practice. Not the parent you were told to be, but the steady presence your own nervous system recognizes: the secure base your teen comes home to.
           </p>
-          <p className="text-cream-700 leading-relaxed">
+          <p className="text-parch-700 leading-relaxed">
             Begin with Safety and work in order; each one builds on the ones before it. If any of them ever feels activating or overwhelming, return to Safety. Safety is always the foundation.
           </p>
         </div>
@@ -242,15 +242,15 @@ export default function Visualization() {
       {/* How to practice */}
       <section className="section-cream">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">How to Practice</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">A few notes</h2>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="s-eyebrow">How to Practice</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-6">A few notes</h2>
+          <p className="text-parch-700 leading-relaxed mb-5">
             You don&rsquo;t have to do it perfectly. Notice what happens, including resistance. Resistance is not a sign you&rsquo;re doing it wrong; it&rsquo;s information about the structure of the pattern you&rsquo;re working with. The work is what arises, whatever it is.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="text-parch-700 leading-relaxed mb-5">
             Returning to the practice regularly is more useful than any single sitting. Daily for two weeks is a good place to start. Notice what shifts in your body and in your relationships. Real change begins there.
           </p>
-          <p className="text-cream-700 leading-relaxed">
+          <p className="text-parch-700 leading-relaxed">
             This is offered as a gentle practice, not a performance. If at any point it feels activating, confusing, or overwhelming, pause. Come back when you&rsquo;re ready.
           </p>
         </div>
@@ -259,9 +259,9 @@ export default function Visualization() {
       {/* Substack subscribe */}
       <section className="section-warm">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">Stay In Touch</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-3">Read me on Substack</h2>
-          <p className="text-cream-700 leading-relaxed mb-7 max-w-xl">
+          <p className="s-eyebrow">Stay In Touch</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-3">Read me on Substack</h2>
+          <p className="text-parch-700 leading-relaxed mb-7 max-w-xl">
             Field notes on attachment, adolescence, and the body. The same work that runs through the book and through this practice, kept short.
           </p>
           <iframe
@@ -278,22 +278,22 @@ export default function Visualization() {
       {/* Contact line */}
       <section className="py-12 md:py-16">
         <div className="container-main max-w-3xl">
-          <p className="text-cream-700 text-base text-center">
+          <p className="text-parch-700 text-base text-center">
             For questions about the practice or to reach out about clinical work,{' '}
-            <Link href="/contact" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <Link href="/contact" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               write me here
             </Link>
             {' '}or email{' '}
-            <a href="mailto:daniel@danieljahearnlmft.com" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <a href="mailto:daniel@danieljahearnlmft.com" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               daniel@danieljahearnlmft.com
             </a>
             .
           </p>
-          <p className="text-cream-600 text-sm text-center mt-8">
-            <Link href="/" className="underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+          <p className="text-parch-600 text-sm text-center mt-8">
+            <Link href="/" className="underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               Daniel J. Ahearn, LMFT
             </Link>
-            <span className="text-cream-500"> &middot; therapy in Los Angeles</span>
+            <span className="text-parch-500"> &middot; therapy in Los Angeles</span>
           </p>
         </div>
       </section>

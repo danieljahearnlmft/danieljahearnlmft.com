@@ -49,15 +49,15 @@ export default function RealMethod({
   return (
     <section id={anchorId} className="section-warm" aria-labelledby={headingId}>
       <div className="container-main max-w-4xl">
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 id={headingId} className="text-3xl md:text-4xl font-serif text-cream-900 mb-5">
+        <p className="s-eyebrow">{eyebrow}</p>
+        <h2 id={headingId} className="text-3xl md:text-4xl font-display text-parch-900 mb-5">
           The R.E.A.L. Method
         </h2>
         {intro ? (
           intro.map((p, i) => (
             <p
               key={i}
-              className={`text-cream-700 leading-relaxed max-w-2xl ${
+              className={`text-parch-700 leading-relaxed max-w-2xl ${
                 i === intro.length - 1 ? 'mb-10' : 'mb-4'
               }`}
             >
@@ -66,13 +66,13 @@ export default function RealMethod({
           ))
         ) : (
           <>
-            <p className="text-cream-700 leading-relaxed mb-4 max-w-2xl">
+            <p className="text-parch-700 leading-relaxed mb-4 max-w-2xl">
               Ruptures with your teenager are inevitable. What builds secure attachment is what happens
               next. R.E.A.L. is the four-step repair method at the center of these groups, first
               published in Chapter 7 of <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em>{' '}
               (April 1, 2026).
             </p>
-            <p className="text-cream-700 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-parch-700 leading-relaxed mb-10 max-w-2xl">
               It isn't a script. It's a pattern you can return to when things go sideways, and it still
               counts when your teen isn't ready to respond.
             </p>
@@ -80,25 +80,25 @@ export default function RealMethod({
         )}
         <ol className="grid md:grid-cols-2 gap-6 mb-10">
           {steps.map((s) => (
-            <li key={s.letter} className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex gap-5">
-              <span aria-hidden="true" className="font-serif text-4xl leading-none text-cream-500 shrink-0 w-8">
+            <li key={s.letter} className="bg-parch-50 border border-parch-300 rounded-lg p-7 flex gap-5">
+              <span aria-hidden="true" className="font-display text-4xl leading-none text-parch-500 shrink-0 w-8">
                 {s.letter}
               </span>
               <div>
-                <h3 className="font-serif text-xl text-cream-900 mb-2">{s.name}</h3>
-                <p className="text-cream-700 text-sm leading-relaxed mb-3">{s.body}</p>
-                <p className="font-serif italic text-cream-600 text-sm leading-relaxed">{s.line}</p>
+                <h3 className="font-display text-xl text-parch-900 mb-2">{s.name}</h3>
+                <p className="text-parch-700 text-sm leading-relaxed mb-3">{s.body}</p>
+                <p className="font-display italic text-parch-600 text-sm leading-relaxed">{s.line}</p>
               </div>
             </li>
           ))}
         </ol>
-        <p className="text-cream-700 leading-relaxed mb-8 max-w-2xl">{closing}</p>
+        <p className="text-parch-700 leading-relaxed mb-8 max-w-2xl">{closing}</p>
         <div className="flex flex-wrap gap-3 mb-8">
           <a
             href="https://waybackhome.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary plausible-event-name=App+Open"
+            className="s-btn-primary plausible-event-name=App+Open"
           >
             Practice R.E.A.L. in the App
           </a>
@@ -106,12 +106,12 @@ export default function RealMethod({
             href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost plausible-event-name=Book+Amazon"
+            className="s-btn-ghost plausible-event-name=Book+Amazon"
           >
             Read Chapter 7 in the Book
           </a>
         </div>
-        <p className="text-cream-600 text-xs leading-relaxed border-t border-cream-300 pt-4">
+        <p className="text-parch-600 text-xs leading-relaxed border-t border-parch-300 pt-4">
           The R.E.A.L. Method (Regulate the Breath, Explore the Moment, Attune with Empathy, Lean Back
           In) was developed by Daniel J. Ahearn, LMFT, and first published in{' '}
           <em>The Way Back Home</em>, April 1, 2026. © 2026 Daniel J. Ahearn, LMFT.{' '}

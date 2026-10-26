@@ -11,28 +11,28 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-200 py-16 md:py-24">
+      <section className="bg-parch-200 py-16 md:py-24">
         <div className="container-main">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="eyebrow">About</p>
-              <h1 className="text-4xl md:text-5xl font-serif text-cream-900 mb-6 leading-tight">
+              <p className="s-eyebrow">About</p>
+              <h1 className="text-4xl md:text-5xl font-display text-parch-900 mb-6 leading-tight">
                 Daniel J. Ahearn,<br />LMFT
               </h1>
-              <p className="text-cream-700 leading-relaxed mb-4">
+              <p className="text-parch-700 leading-relaxed mb-4">
                 I'm a licensed marriage and family therapist and certified alcohol and drug counselor based in Los Angeles. I'm an IAT-certified clinician; I trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy beginning in 2018.
               </p>
-              <p className="text-cream-700 leading-relaxed mb-4">
+              <p className="text-parch-700 leading-relaxed mb-4">
                 My clinical work centers on attachment repair: helping people change not just how they think about their relationships, but how their nervous systems experience safety and connection.
               </p>
-              <p className="text-cream-700 leading-relaxed mb-8">
+              <p className="text-parch-700 leading-relaxed mb-8">
                 I serve as Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, where I run attachment repair groups and lead clinical training. I also maintain a private practice specializing in men's attachment work, father-teen repair, and families navigating the hardest years.
               </p>
               <a
                 href="https://calendly.com/danieljahearn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary plausible-event-name=Calendly+Click"
+                className="s-btn-primary plausible-event-name=Calendly+Click"
               >
                 Free 15-Min Consult
               </a>
@@ -53,10 +53,10 @@ export default function About() {
       {/* Clinical Philosophy */}
       <section className="section-cream">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">Clinical Philosophy</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-7">How I think about this work</h2>
+          <p className="s-eyebrow">Clinical Philosophy</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-7">How I think about this work</h2>
 
-          <div className="space-y-5 text-cream-700 leading-relaxed">
+          <div className="space-y-5 text-parch-700 leading-relaxed">
             <p>
               Most people I work with aren't broken. They're adapted. What looks like emotional unavailability, withdrawal, chronic conflict, or anxious pursuit is almost always an attachment strategy that once made sense. A child who learned that needing things brought punishment learns not to need things. A child who learned that love was inconsistent learns to stay hypervigilant. Those strategies become personality. They become relationship patterns. They become the thing that wears people out.
             </p>
@@ -73,8 +73,8 @@ export default function About() {
       {/* Training & Credentials */}
       <section className="section-warm">
         <div className="container-main">
-          <p className="eyebrow">Training & Credentials</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-10">Background</h2>
+          <p className="s-eyebrow">Training & Credentials</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-10">Background</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -102,9 +102,9 @@ export default function About() {
                 body: 'Author of The Way Back Home: Healing Attachment Wounds With Your Teen (2026), a clinical guide for families applying IAT principles to adolescent attachment repair.',
               },
             ].map((item) => (
-              <div key={item.title} className="border-l-2 border-cream-400 pl-5">
-                <h3 className="font-serif text-lg text-cream-900 mb-2">{item.title}</h3>
-                <p className="text-cream-700 text-sm leading-relaxed">{item.body}</p>
+              <div key={item.title} className="border-l-2 border-parch-400 pl-5">
+                <h3 className="font-display text-lg text-parch-900 mb-2">{item.title}</h3>
+                <p className="text-parch-700 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -116,20 +116,20 @@ export default function About() {
         <div className="container-main">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="eyebrow">The Method</p>
-              <h2 className="text-3xl font-serif text-cream-900 mb-5">Integrative Attachment Therapy</h2>
-              <p className="text-cream-700 leading-relaxed mb-4">
-                IAT is a structured, research-backed approach to attachment repair created by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott, and now carried forward by IAT. It works by providing corrective emotional experiences, through guided visualization, that the nervous system can internalize as a new foundation for security.
+              <p className="s-eyebrow">The Method</p>
+              <h2 className="text-3xl font-display text-parch-900 mb-5">Integrative Attachment Therapy</h2>
+              <p className="text-parch-700 leading-relaxed mb-4">
+                IAT is a structured approach to attachment repair, grounded in attachment research, created by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott, and now carried forward by IAT. It works by providing corrective emotional experiences, through guided visualization, that the nervous system can internalize as a new foundation for security.
               </p>
-              <p className="text-cream-700 leading-relaxed mb-4">
+              <p className="text-parch-700 leading-relaxed mb-4">
                 The Ideal Parent Figure Protocol is its central tool: a systematic process of moving through developmental stages and building the internalized experience of being seen, soothed, safe, and supported.
               </p>
-              <p className="text-cream-700 leading-relaxed">
+              <p className="text-parch-700 leading-relaxed">
                 Unlike models focused primarily on insight, IAT works at the level of implicit memory: changing not just how you understand your history, but how your body holds it.
               </p>
             </div>
-            <div className="bg-cream-900 rounded-lg p-10 text-cream-200">
-              <p className="eyebrow text-cream-500">The Three Pillars</p>
+            <div className="bg-parch-900 rounded-lg p-10 text-parch-200">
+              <p className="s-eyebrow text-parch-500">The Three Pillars</p>
               <div className="space-y-5 mt-3">
                 {[
                   { num: '01', title: 'Collaboration', body: 'Before the deeper work begins, therapist and client build a genuinely collaborative relationship: shared agenda, transparent rationale, the client’s voice shaping the work. The collaborative stance is itself the relational foundation.' },
@@ -137,10 +137,10 @@ export default function About() {
                   { num: '03', title: 'Ideal Parent Figure Imagery', body: 'Systematic guided visualization through developmental stages, rewiring early attachment wounds and building the internalized experience of secure attachment from the inside out.' },
                 ].map((p) => (
                   <div key={p.num} className="flex gap-4">
-                    <span className="font-serif text-cream-600 text-sm mt-1 shrink-0">{p.num}</span>
+                    <span className="font-display text-parch-600 text-sm mt-1 shrink-0">{p.num}</span>
                     <div>
-                      <p className="font-medium text-cream-100 text-sm mb-1">{p.title}</p>
-                      <p className="text-cream-400 text-sm leading-relaxed">{p.body}</p>
+                      <p className="font-medium text-parch-100 text-sm mb-1">{p.title}</p>
+                      <p className="text-parch-400 text-sm leading-relaxed">{p.body}</p>
                     </div>
                   </div>
                 ))}
