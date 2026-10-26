@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 export default function AttachmentTherapyLosAngeles() {
   return (
     <>
-      <section className="bg-cream-800 py-16 md:py-24">
+      <section className="bg-parch-800 py-16 md:py-24">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow text-cream-400">Los Angeles</p>
-          <h1 className="text-4xl md:text-5xl font-serif text-cream-100 leading-tight mb-6">
+          <p className="s-eyebrow text-parch-400">Los Angeles</p>
+          <h1 className="text-4xl md:text-5xl font-display text-parch-100 leading-tight mb-6">
             Attachment-Based Therapy<br />in Los Angeles
           </h1>
-          <p className="text-cream-300 text-lg leading-relaxed">
+          <p className="text-parch-300 text-lg leading-relaxed">
             Private practice with an IAT-certified attachment therapist trained directly with Dr. Daniel P. Brown and Dr. David Elliott. Specializing in adult attachment work, men's relational patterns, and parent-teen repair.
           </p>
         </div>
@@ -23,15 +23,15 @@ export default function AttachmentTherapyLosAngeles() {
 
       <section className="section-cream">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">The Practice</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">What I offer</h2>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="s-eyebrow">The Practice</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-6">What I offer</h2>
+          <p className="text-parch-700 leading-relaxed mb-5">
             I am a licensed marriage and family therapist (LMFT) in Los Angeles and an IAT-certified clinician, trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy (IAT). My practice is small and focused. I work with adults and parents who are dealing with attachment-based relational patterns that haven't shifted through other approaches, and I bring the full IAT framework to that work.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="text-parch-700 leading-relaxed mb-5">
             Los Angeles has no shortage of therapists who describe themselves as attachment-based or attachment-informed. What is rare is clinical training at the level the IAT model requires: direct, supervised immersion in the Three Pillars framework and the Ideal Parent Figure protocol, assessed and certified by the developers themselves. That training is what I bring to the work.
           </p>
-          <p className="text-cream-700 leading-relaxed">
+          <p className="text-parch-700 leading-relaxed">
             I see clients in person in Los Angeles and via telehealth for clients across California.
           </p>
         </div>
@@ -39,8 +39,8 @@ export default function AttachmentTherapyLosAngeles() {
 
       <section className="section-warm">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">Areas of Focus</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-8">Who I work with</h2>
+          <p className="s-eyebrow">Areas of Focus</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-8">Who I work with</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -57,8 +57,8 @@ export default function AttachmentTherapyLosAngeles() {
               },
             ].map((item) => (
               <div key={item.title}>
-                <h3 className="text-lg font-serif text-cream-900 mb-3">{item.title}</h3>
-                <p className="text-cream-700 text-sm leading-relaxed">{item.body}</p>
+                <h3 className="text-lg font-display text-parch-900 mb-3">{item.title}</h3>
+                <p className="text-parch-700 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -67,37 +67,37 @@ export default function AttachmentTherapyLosAngeles() {
 
       <section className="section-cream">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">The Approach</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-6">What makes IAT different</h2>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="s-eyebrow">The Approach</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-6">What makes IAT different</h2>
+          <p className="text-parch-700 leading-relaxed mb-5">
             Most therapists in Los Angeles, and most good ones, work at the level of narrative, insight, and conscious understanding. They help clients make sense of their history, identify patterns, develop new ways of thinking about themselves and their relationships. This matters. It is genuinely helpful.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="text-parch-700 leading-relaxed mb-5">
             Attachment patterns, however, are not primarily stored in narrative memory. They are stored in implicit memory: the procedural, body-based, relational knowing that forms before language and operates beneath awareness. You can understand a pattern completely and still not be able to change it, because understanding and pattern live in different systems.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-5">
+          <p className="text-parch-700 leading-relaxed mb-5">
             IAT works at the level where the pattern actually lives. Through the Ideal Parent Figure protocol and the full Three Pillars framework, it creates conditions for new experiences in the attachment system: experiences that, consolidated over time, genuinely change the internal working model. The result is not just better insight but a different felt sense of relationship: less vigilance, more ease, a changed expectation of what's possible between people.
           </p>
-          <p className="text-cream-700 leading-relaxed">
+          <p className="text-parch-700 leading-relaxed">
             This is what I offer in Los Angeles, and what distinguishes IAT-certified work from attachment-informed therapy more broadly.
           </p>
         </div>
       </section>
 
-      <section className="bg-cream-800 py-14">
+      <section className="bg-parch-800 py-14">
         <div className="container-main max-w-2xl text-center">
-          <p className="eyebrow text-cream-400">Get in Touch</p>
-          <h2 className="text-2xl font-serif text-cream-100 mb-4">Start a conversation</h2>
-          <p className="text-cream-400 leading-relaxed mb-7">
+          <p className="s-eyebrow text-parch-400">Get in Touch</p>
+          <h2 className="text-2xl font-display text-parch-100 mb-4">Start a conversation</h2>
+          <p className="text-parch-400 leading-relaxed mb-7">
             I maintain a small private practice and see a limited number of clients. If you're in Los Angeles or California and looking for attachment-based therapy at the IAT level, I'm glad to hear from you.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Free 15-Min Consult</a>
-            <Link href="/contact" className="btn-ghost !border-cream-600 !text-cream-300 hover:!bg-cream-700">Get in Touch</Link>
+            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="s-btn-primary">Free 15-Min Consult</a>
+            <Link href="/contact" className="s-btn-ghost !border-parch-600 !text-parch-300 hover:!bg-parch-700">Get in Touch</Link>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
-            <Link href="/iat-certified-therapist" className="text-cream-400 hover:text-cream-200 transition-colors">About My Training →</Link>
-            <Link href="/services" className="text-cream-400 hover:text-cream-200 transition-colors">All Services →</Link>
+            <Link href="/iat-certified-therapist" className="text-parch-400 hover:text-parch-200 transition-colors">About My Training →</Link>
+            <Link href="/services" className="text-parch-400 hover:text-parch-200 transition-colors">All Services →</Link>
           </div>
         </div>
       </section>

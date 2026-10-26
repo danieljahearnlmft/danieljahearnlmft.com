@@ -31,13 +31,13 @@ export default function Writing() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-200 py-20 md:py-24">
+      <section className="bg-parch-200 py-20 md:py-24">
         <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow">Writing</p>
-          <h1 className="text-4xl md:text-5xl font-serif font-medium text-cream-900 leading-tight mb-5 text-balance">
+          <p className="s-eyebrow">Writing</p>
+          <h1 className="text-4xl md:text-5xl font-display font-medium text-parch-900 leading-tight mb-5 text-balance">
             Essays on attachment, honesty, and parenting teens
           </h1>
-          <p className="text-cream-700 text-lg leading-relaxed max-w-xl mx-auto">
+          <p className="text-parch-700 text-lg leading-relaxed max-w-xl mx-auto">
             Published writing on the questions I keep returning to in the therapy room, and at home.
           </p>
         </div>
@@ -46,8 +46,8 @@ export default function Writing() {
       {/* Articles */}
       <section className="section-cream">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">Featured in <em>Lion&rsquo;s Roar</em></p>
-          <h2 className="text-2xl md:text-3xl font-serif text-cream-900 mb-10">Selected essays</h2>
+          <p className="s-eyebrow">Featured in <em>Lion&rsquo;s Roar</em></p>
+          <h2 className="text-2xl md:text-3xl font-display text-parch-900 mb-10">Selected essays</h2>
           <div className="flex flex-col gap-8">
             {articles.map((a) => (
               <a
@@ -55,14 +55,14 @@ export default function Writing() {
                 href={a.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block border-b border-cream-300 pb-8 last:border-b-0"
+                className="group block border-b border-parch-300 pb-8 last:border-b-0"
               >
-                <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">{a.outlet}</p>
-                <h3 className="font-serif text-xl md:text-2xl text-cream-900 group-hover:text-cream-700 transition-colors mb-3">
+                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">{a.outlet}</p>
+                <h3 className="font-display text-xl md:text-2xl text-parch-900 group-hover:text-parch-700 transition-colors mb-3">
                   {a.title}
                 </h3>
-                <p className="text-cream-700 text-base leading-relaxed mb-3">{a.dek}</p>
-                <span className="text-sm text-cream-500 group-hover:text-cream-700 transition-colors">
+                <p className="text-parch-700 text-base leading-relaxed mb-3">{a.dek}</p>
+                <span className="text-sm text-parch-500 group-hover:text-parch-700 transition-colors">
                   Read on Lion&rsquo;s Roar &rarr;
                 </span>
               </a>
@@ -74,16 +74,16 @@ export default function Writing() {
       {/* Substack */}
       <section className="section-warm">
         <div className="container-main max-w-2xl text-center">
-          <p className="eyebrow">Newsletter</p>
-          <h2 className="text-2xl md:text-3xl font-serif text-cream-900 mb-5">Notes on the work, in your inbox</h2>
-          <p className="text-cream-700 leading-relaxed mb-7">
+          <p className="s-eyebrow">Newsletter</p>
+          <h2 className="text-2xl md:text-3xl font-display text-parch-900 mb-5">Notes on the work, in your inbox</h2>
+          <p className="text-parch-700 leading-relaxed mb-7">
             I write on attachment and parenting teens. Come read.
           </p>
           <a
             href="https://danieljahearnlmft.substack.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="s-btn-primary"
           >
             Read on Substack
           </a>
@@ -91,15 +91,15 @@ export default function Writing() {
       </section>
 
       {/* Book CTA */}
-      <section className="bg-cream-200 py-16">
+      <section className="bg-parch-200 py-16">
         <div className="container-main max-w-xl text-center">
-          <p className="eyebrow">The Book</p>
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">The Way Back Home</h2>
-          <p className="text-cream-600 text-sm italic mb-4">Healing Attachment Wounds With Your Teen</p>
-          <p className="text-cream-700 mb-7">
-            A practical guide for parents navigating the hardest years of the parent&ndash;child relationship.
+          <p className="s-eyebrow">The Book</p>
+          <h2 className="text-2xl font-display text-parch-900 mb-4">The Way Back Home</h2>
+          <p className="text-parch-600 text-sm italic mb-4">Healing Attachment Wounds With Your Teen</p>
+          <p className="text-parch-700 mb-7">
+            A practical guide for parents navigating the hardest years of the parent-child relationship.
           </p>
-          <Link href="/the-way-back-home" className="btn-primary">Learn More</Link>
+          <Link href="/the-way-back-home" className="s-btn-primary">Learn More</Link>
         </div>
       </section>
     </>

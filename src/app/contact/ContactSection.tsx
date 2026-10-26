@@ -14,88 +14,88 @@ export default function ContactSection() {
   }, [])
 
   return (
-    <section className="bg-cream-200 py-16 md:py-24">
+    <section className="bg-parch-200 py-16 md:py-24">
       <div className="container-main max-w-4xl">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h1 className="text-4xl font-serif text-cream-900 mb-5">Get in touch</h1>
-            <p className="text-cream-700 leading-relaxed mb-8">
+            <p className="s-eyebrow">Contact</p>
+            <h1 className="text-4xl font-display text-parch-900 mb-5">Get in touch</h1>
+            <p className="text-parch-700 leading-relaxed mb-8">
               The best starting point for therapy clients is a free 15-minute phone consultation. For speaking, consulting, press, or clinician inquiries, the form to the right is the right channel.
             </p>
 
             <div className="space-y-5 mb-10">
               <div>
-                <p className="text-xs uppercase tracking-widest text-cream-500 mb-1.5">Schedule a Consult</p>
+                <p className="text-xs uppercase tracking-widest text-parch-500 mb-1.5">Schedule a Consult</p>
                 <a
                   href="https://calendly.com/danieljahearn/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="s-btn-primary"
                 >
                   Book Free 15-Min Call
                 </a>
               </div>
 
               <div className="pt-2">
-                <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Phone</p>
-                <p className="text-cream-700 text-sm">
-                  <a href="tel:+12132901146" className="hover:text-cream-900 transition-colors">213-290-1146</a>
+                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Phone</p>
+                <p className="text-parch-700 text-sm">
+                  <a href="tel:+12132901146" className="hover:text-parch-900 transition-colors">213-290-1146</a>
                 </p>
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Location</p>
-                <p className="text-cream-700 text-sm">Los Angeles, CA</p>
-                <p className="text-cream-600 text-sm">Telehealth throughout California</p>
-                <p className="text-cream-600 text-sm">Walk-and-talk available in LA</p>
+                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Location</p>
+                <p className="text-parch-700 text-sm">Los Angeles, CA</p>
+                <p className="text-parch-600 text-sm">Telehealth throughout California</p>
+                <p className="text-parch-600 text-sm">Walk-and-talk available in LA</p>
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Social</p>
+                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Social</p>
                 <div className="flex gap-4">
-                  <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">Substack</a>
-                  <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">Instagram</a>
-                  <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-cream-600 text-sm hover:text-cream-900 transition-colors">LinkedIn</a>
+                  <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">Substack</a>
+                  <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">Instagram</a>
+                  <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">LinkedIn</a>
                 </div>
               </div>
             </div>
 
-            <div className="border-t border-cream-300 pt-7">
-              <p className="text-xs uppercase tracking-widest text-cream-500 mb-3">Rates</p>
-              <div className="space-y-1.5 text-sm text-cream-700">
-                <p>Individual therapy: $250&ndash;$350 per session</p>
-                <p>Family / couples: $350&ndash;$450 per session</p>
+            <div className="border-t border-parch-300 pt-7">
+              <p className="text-xs uppercase tracking-widest text-parch-500 mb-3">Rates</p>
+              <div className="space-y-1.5 text-sm text-parch-700">
+                <p>Individual therapy: $250 to $350 per session</p>
+                <p>Family / couples: $350 to $450 per session</p>
                 <p>Parent support groups: $60 per session</p>
               </div>
-              <p className="text-cream-500 text-xs mt-3">Fee is set together in our consult. Out-of-network provider. Superbills available for reimbursement.</p>
+              <p className="text-parch-500 text-xs mt-3">Fee is set together in our consult. Out-of-network provider. Superbills available for reimbursement.</p>
             </div>
           </div>
 
           {/* Form column */}
-          <div className="bg-cream-50 border border-cream-300 rounded-lg p-8">
+          <div className="bg-parch-50 border border-parch-300 rounded-lg p-8">
             {success ? (
               <div>
-                <p className="eyebrow">Message Received</p>
-                <h2 className="font-serif text-2xl text-cream-900 mb-4">Thank you for reaching out.</h2>
-                <p className="text-cream-700 leading-relaxed mb-6">
-                  I'll be in touch within 1–2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
+                <p className="s-eyebrow">Message Received</p>
+                <h2 className="font-display text-2xl text-parch-900 mb-4">Thank you for reaching out.</h2>
+                <p className="text-parch-700 leading-relaxed mb-6">
+                  I'll be in touch within 1-2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
                     href="https://calendly.com/danieljahearn/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary"
+                    className="s-btn-primary"
                   >
                     Book a Consult
                   </a>
-                  <Link href="/" className="btn-ghost">Back to Home</Link>
+                  <Link href="/" className="s-btn-ghost">Back to Home</Link>
                 </div>
               </div>
             ) : (
               <>
-                <p className="font-serif text-xl text-cream-900 mb-4">Send a message</p>
+                <p className="font-display text-xl text-parch-900 mb-4">Send a message</p>
 
                 <p className="form-disclaimer">
                   Use this form for general inquiries only: speaking, consulting, questions about the book, or referrals. Please do not share clinical or health information here. To inquire about therapy, please use the application forms on the <Link href="/services">Services page</Link>.
@@ -119,34 +119,34 @@ export default function ContactSection() {
                   </p>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-cream-600 mb-1.5" htmlFor="contact-name">Name</label>
+                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-name">Name</label>
                     <input
                       type="text"
                       id="contact-name"
                       name="name"
                       required
-                      className="w-full border border-cream-300 bg-white rounded px-3 py-2.5 text-sm text-cream-900 focus:outline-none focus:border-cream-500"
+                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-cream-600 mb-1.5" htmlFor="contact-email">Email</label>
+                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-email">Email</label>
                     <input
                       type="email"
                       id="contact-email"
                       name="email"
                       required
-                      className="w-full border border-cream-300 bg-white rounded px-3 py-2.5 text-sm text-cream-900 focus:outline-none focus:border-cream-500"
+                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-cream-600 mb-1.5" htmlFor="contact-subject">What brings you here?</label>
+                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-subject">What brings you here?</label>
                     <select
                       id="contact-subject"
                       name="subject"
                       required
-                      className="w-full border border-cream-300 bg-white rounded px-3 py-2.5 text-sm text-cream-900 focus:outline-none focus:border-cream-500"
+                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
                     >
                       <option value="">Select one</option>
                       <option value="speaking">Speaking / consulting inquiry</option>
@@ -158,19 +158,19 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-widest text-cream-600 mb-1.5" htmlFor="contact-message">Message</label>
+                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-message">Message</label>
                     <textarea
                       id="contact-message"
                       name="message"
                       rows={6}
                       required
-                      className="w-full border border-cream-300 bg-white rounded px-3 py-2.5 text-sm text-cream-900 focus:outline-none focus:border-cream-500 resize-none"
+                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500 resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full btn-primary text-center justify-center"
+                    className="w-full s-btn-primary text-center justify-center"
                   >
                     Send Message
                   </button>
