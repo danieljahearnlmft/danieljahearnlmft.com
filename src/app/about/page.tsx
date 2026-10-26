@@ -28,7 +28,7 @@ export default function About() {
         aside={
           <div style={{ flex: '0 1 420px', minWidth: 260, width: '100%', maxWidth: 420, margin: '0 auto', position: 'relative' }}>
             <div className="arch">
-              <Image src="/images/daniel-headshot.jpg" alt="Daniel J. Ahearn, LMFT" width={880} height={1100} priority style={{ objectPosition: '50% 30%' }} />
+              <Image src="/images/home/portrait.jpg" alt="Daniel J. Ahearn, LMFT" width={880} height={1100} priority />
             </div>
           </div>
         }
