@@ -22,6 +22,27 @@
   to = "/visualization"
   status = 301
 
+# Merged into /attachment-therapy-adults (October 2026)
+[[redirects]]
+  from = "/healing-attachment-wounds"
+  to = "/attachment-therapy-adults/#healing-attachment-wounds"
+  status = 301
+
+[[redirects]]
+  from = "/healing-attachment-wounds/*"
+  to = "/attachment-therapy-adults/#healing-attachment-wounds"
+  status = 301
+
+[[redirects]]
+  from = "/earned-secure-attachment"
+  to = "/attachment-therapy-adults/#earned-secure-attachment"
+  status = 301
+
+[[redirects]]
+  from = "/earned-secure-attachment/*"
+  to = "/attachment-therapy-adults/#earned-secure-attachment"
+  status = 301
+
 # Men's groups are paused. Temporary redirect so old links land on therapy and fees.
 [[redirects]]
   from = "/mens-work"

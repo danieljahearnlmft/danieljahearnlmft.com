@@ -21,9 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/integrative-attachment-therapy',           priority: 0.7, changeFrequency: 'monthly' },
     { path: '/ideal-parent-figure-protocol',             priority: 0.7, changeFrequency: 'monthly' },
     { path: '/iat-certified-therapist',                  priority: 0.7, changeFrequency: 'monthly' },
-    { path: '/earned-secure-attachment',                 priority: 0.7, changeFrequency: 'monthly' },
     { path: '/attachment-therapy-adults',                priority: 0.7, changeFrequency: 'monthly' },
-    { path: '/healing-attachment-wounds',                priority: 0.7, changeFrequency: 'monthly' },
     { path: '/attachment-styles',                        priority: 0.7, changeFrequency: 'monthly' },
     { path: '/attachment-based-therapy-los-angeles',     priority: 0.7, changeFrequency: 'monthly' },
   ]

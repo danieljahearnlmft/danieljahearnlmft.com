@@ -73,16 +73,16 @@ export default function AttachmentStyles() {
 
           <h2>Styles can change</h2>
           <p>
-            Because these patterns live in implicit memory, insight alone rarely shifts them. The <Link href="/ideal-parent-figure-protocol">Ideal Parent Figure protocol</Link> works at that level, and the research on <Link href="/earned-secure-attachment">earned secure attachment</Link> shows that adults can and do move toward security.
+            Because these patterns live in implicit memory, insight alone rarely shifts them. The <Link href="/ideal-parent-figure-protocol">Ideal Parent Figure protocol</Link> works at that level, and the research on <Link href="/attachment-therapy-adults/#earned-secure-attachment">earned secure attachment</Link> shows that adults can and do move toward security.
           </p>
         </div>
       </Section>
 
       <RelatedLinks
         items={[
-          { href: '/earned-secure-attachment', t: 'Earned secure attachment', d: 'What the research shows is possible' },
+          { href: '/attachment-therapy-adults', t: 'Attachment therapy for adults', d: 'Healing old wounds and earning security' },
           { href: '/ideal-parent-figure-protocol', t: 'The Ideal Parent Figure protocol', d: 'How the core intervention works' },
-          { href: '/attachment-therapy-adults', t: 'Attachment therapy for adults', d: 'Who this work is for' },
+          { href: '/services', t: 'Therapy and fees', d: 'Individual, couples and family work' },
         ]}
       />
 
