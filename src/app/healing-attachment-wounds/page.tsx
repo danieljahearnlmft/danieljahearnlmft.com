@@ -1,96 +1,65 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMeta } from '@/lib/site'
+import { Closing, Hero, Page, RelatedLinks, Section } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Healing Attachment Wounds: Daniel J. Ahearn, LMFT',
-  description: 'What attachment wounds are, how they show up in adult life, and the clinical path to lasting repair, from an IAT-certified therapist.',
-}
+export const metadata = pageMeta(
+  '/healing-attachment-wounds',
+  'Healing Attachment Wounds',
+  'What attachment wounds are, how they show up in adult relationships, and what healing them actually requires, from an IAT-certified therapist.',
+)
 
 export default function HealingAttachmentWounds() {
   return (
-    <>
-      <section className="bg-parch-800 py-16 md:py-24">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow text-parch-400">Clinical Focus</p>
-          <h1 className="text-4xl md:text-5xl font-display text-parch-100 leading-tight mb-6">
-            Healing Attachment Wounds
-          </h1>
-          <p className="text-parch-300 text-lg leading-relaxed">
-            Attachment wounds are not dramatic injuries. They are absences: the repeated experience of not being met in ways that mattered. Understanding them is the first step. Healing them requires something different.
-          </p>
-        </div>
-      </section>
+    <Page>
+      <Hero
+        eyebrow="Clinical focus"
+        title="Healing Attachment Wounds"
+        sub="Attachment wounds are not dramatic injuries. They are absences: the repeated experience of not being met in ways that mattered."
+      />
 
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">What Attachment Wounds Are</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">The nature of the wound</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            The word "wound" implies something that happened: a discrete event, a moment of harm. Attachment wounds are more often the accumulation of what didn't happen: the attunement that was absent, the soothing that never came, the delight that was replaced by distraction or demand, the safe base that turned out not to be safe. They form not in single moments but in patterns: in the repetition of relational experiences that taught the developing child what relationship is, what they can expect from it, and what they are worth within it.
+      <Section width="narrow">
+        <div className="prose">
+          <h2>The nature of the wound</h2>
+          <p>
+            The word “wound” implies something that happened: a discrete event, a moment of harm. Attachment wounds are more often the accumulation of what didn’t happen: the attunement that was absent, the soothing that never came, the delight replaced by distraction or demand, the safe base that turned out not to be safe. They form in patterns, in the repetition of relational experiences that taught a developing child what relationship is and what they are worth within it.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            These teachings don't arrive as explicit beliefs. They are deposited in implicit memory: in the body's expectation of what happens when someone gets close, in the automatic reading of another person's face, in the reflexive strategies for managing the fear of losing connection or the threat of being overwhelmed by it. By the time a child reaches adulthood, these patterns are simply how relationship works. They are not experienced as defenses or adaptations. They are experienced as reality.
+          <p>
+            These teachings don’t arrive as explicit beliefs. They live in the body’s expectation of what happens when someone gets close, in the automatic reading of another person’s face, in the reflexive strategies for managing the fear of losing connection. By adulthood they are not experienced as defenses. They are experienced as reality.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            This is the particular difficulty of attachment wounds: they don't feel like wounds. They feel like the truth.
+          <p className="lede" style={{ margin: '1.4em 0' }}>
+            This is the particular difficulty of attachment wounds: they don’t feel like wounds. They feel like the truth.
           </p>
-        </div>
-      </section>
 
-      <section className="section-warm">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">How They Show Up</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">The adult signature</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Attachment wounds don't announce themselves in adulthood. They show up in the texture of relationships: in the quality of what it feels like to be close to someone, in the patterns that recur regardless of who the other person is.
+          <h2>The adult signature</h2>
+          <p>
+            Attachment wounds show up in the texture of relationships, in patterns that recur regardless of who the other person is.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            For people with anxious attachment wounds, the signature is often hyperactivation: a persistent monitoring of the other person's emotional state, a difficulty tolerating uncertainty about the relationship's stability, a need for reassurance that never quite lands because the underlying belief, that they are not reliably loved, is not actually touched by the reassurance. The anxiety is not about this relationship. It is about all relationship, as it was encoded in the body long ago.
+          <p>
+            With anxious wounds, the signature is often hyperactivation: persistent monitoring of the other person’s state, difficulty tolerating uncertainty, a need for reassurance that never quite lands. With avoidant wounds, it is deactivation: reflexive self-sufficiency and a quiet withdrawal once closeness reaches a certain threshold. Disorganized wounds, often formed with caregivers who were themselves a source of fear, produce the simultaneous pull toward and flight from closeness. Each is described in depth on the <Link href="/attachment-styles">attachment styles</Link> page.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            For those with avoidant wounds, the signature is often deactivation: a reflexive self-sufficiency, a difficulty letting others matter too much, a subtle withdrawal from intimacy that begins when closeness reaches a certain threshold. The strategy was adaptive: if depending on caregivers was dangerous or humiliating, the safest move was to stop depending. It worked then. It keeps working, automatically, in every relationship since.
-          </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Disorganized attachment wounds, often formed in the context of caregivers who were themselves the source of fear, produce a more complex picture: the simultaneous pull toward and flight from closeness, the collapse of strategy under stress, the relational patterns that seem contradictory because they reflect the impossible double bind of needing the person you are afraid of.
-          </p>
-          <p className="text-parch-700 leading-relaxed">
+          <p>
             In each case, the wound is not a memory that can be processed and released. It is a structure: an organization of the attachment system that shapes every relationship until something changes it.
           </p>
-        </div>
-      </section>
 
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">The Path to Healing</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">What healing actually requires</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Healing attachment wounds requires more than understanding them. The structural change that needs to happen, the reorganization of the attachment system, the development of new implicit memories of security, doesn't happen through insight. It happens through experience: the repeated, felt sense of what secure attachment would have felt like, which the brain then consolidates into new internal representations.
+          <h2>What healing actually requires</h2>
+          <p>
+            Healing attachment wounds requires more than understanding them. The change happens through experience: the repeated, felt sense of what secure attachment would have felt like, which the brain then consolidates. That is what the <Link href="/ideal-parent-figure-protocol">Ideal Parent Figure protocol</Link>, at the center of <Link href="/integrative-attachment-therapy">Integrative Attachment Therapy</Link>, is designed to provide.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            This is the insight at the heart of the Integrative Attachment Therapy framework I use. The Ideal Parent Figure protocol doesn't ask clients to revisit painful memories or analyze their childhood. It guides them through structured imaginal experiences of receiving exactly what the attachment system needed: safety, attunement, soothing, delight, and support for exploration. Those experiences become real in the body and begin to change how relationship feels from the inside.
-          </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            This is not positive thinking. The process engages the attachment system directly, including the resistance, grief, and disbelief that are often part of what surfaces when the system begins to open. Healing attachment wounds is not comfortable work. It is real work, at the right level, with the specific goal of changing not just how a person understands their history but how they feel in relationship: what they expect, what they allow themselves to need, and what feels possible.
-          </p>
-          <p className="text-parch-700 leading-relaxed">
-            That change is available to adults. It is what the clinical literature on earned secure attachment confirms. And it is what the IAT framework is specifically designed to produce.
+          <p>
+            This is not positive thinking. The process engages the attachment system directly, including the resistance, grief and disbelief that often surface when it begins to open. It is real work, at the right level, with the goal of changing not just how a person understands their history but how they feel in relationship: what they expect, what they allow themselves to need, and what feels possible.
           </p>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-parch-800 py-14">
-        <div className="container-main max-w-2xl text-center">
-          <p className="s-eyebrow text-parch-400">The Book</p>
-          <h2 className="text-2xl font-display text-parch-100 mb-4">The Way Back Home</h2>
-          <p className="text-parch-400 leading-relaxed mb-7">
-            My book <em>The Way Back Home: Healing Attachment Wounds With Your Teen</em> applies this framework specifically to parents navigating the adolescent years, where attachment wounds in the parent surface with particular force and particular consequence.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/the-way-back-home" className="s-btn-primary">About the Book</Link>
-            <Link href="/contact" className="s-btn-ghost !border-parch-600 !text-parch-300 hover:!bg-parch-700">Work With Me →</Link>
-          </div>
-        </div>
-      </section>
-    </>
+      <RelatedLinks
+        items={[
+          { href: '/earned-secure-attachment', t: 'Earned secure attachment', d: 'What the research shows is possible' },
+          { href: '/attachment-styles', t: 'Attachment styles in adults', d: 'The four patterns in depth' },
+          { href: '/the-way-back-home', t: 'The Way Back Home', d: 'The book, for parents of teenagers' },
+        ]}
+      />
+
+      <Closing />
+    </Page>
   )
 }

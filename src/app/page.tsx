@@ -1,24 +1,14 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import AudioPlayer from '@/components/AudioPlayer'
-import './home.css'
+import { AMAZON_URL, APP_URL, OFFERS, pageMeta } from '@/lib/site'
+import { Arrow, Closing, ConsultButton, ConsultLink, ELLIOTT_QUOTE, OfferCard, Page, Quote } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Daniel J. Ahearn, LMFT: Attachment Therapist in Los Angeles',
-  description:
-    'IAT-certified attachment therapist in Los Angeles. Author of The Way Back Home. Attachment repair for men, fathers, parents, teens and families, trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
-}
-
-const CONSULT = 'https://calendly.com/danieljahearn/30min'
-
-function Arrow({ size = 18, color = 'currentColor' }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M4 12h16M14 6l6 6-6 6" />
-    </svg>
-  )
-}
+export const metadata = pageMeta(
+  '/',
+  'Daniel J. Ahearn, LMFT: Attachment Therapist in Los Angeles',
+  'IAT-certified attachment therapist based in Los Angeles, online across California. Author of The Way Back Home. Attachment repair for adults, couples, parents and families.',
+)
 
 const tiles = [
   { label: 'I’m activated', color: '#D8765A' },
@@ -43,7 +33,7 @@ const essays = [
 
 export default function Home() {
   return (
-    <div className="wbh">
+    <Page>
       {/* Hero */}
       <section className="row hero on-dark">
         <div style={{ flex: '1 1 480px', maxWidth: 720, minWidth: 0 }}>
@@ -51,7 +41,7 @@ export default function Home() {
           <h1>Most people aren’t broken. They’re adapted.</h1>
           <p className="sub">Attachment repair for men, fathers, parents and families, with a therapist trained directly by the developers of the Ideal Parent Figure protocol.</p>
           <div style={{ marginTop: 40 }}>
-            <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer">Free 15-minute consult</a>
+            <ConsultButton />
           </div>
         </div>
         <div style={{ flex: '0 1 440px', minWidth: 260, width: '100%', maxWidth: 440, margin: '0 auto' }}>
@@ -69,17 +59,7 @@ export default function Home() {
         <span>Over a decade in clinical practice</span>
       </section>
 
-      {/* Quote */}
-      <section style={{ padding: '104px 5% 96px', textAlign: 'center' }}>
-        <figure style={{ margin: '0 auto', maxWidth: 900 }}>
-          <blockquote className="serif" style={{ margin: 0, fontStyle: 'italic', fontSize: 'clamp(28px,3.6vw,44px)', lineHeight: 1.25 }}>
-            “Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use.”
-          </blockquote>
-          <figcaption style={{ marginTop: 28, fontSize: 14, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--gold-d)' }}>
-            Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy
-          </figcaption>
-        </figure>
-      </section>
+      <Quote {...ELLIOTT_QUOTE} />
 
       {/* Three doors */}
       <section style={{ padding: '0 5% 120px' }}>
@@ -91,7 +71,7 @@ export default function Home() {
               <div className="tag" style={{ color: 'var(--gold-d)' }}>For adults</div>
               <h3>Men, fathers, couples and families</h3>
               <p style={{ margin: 0, color: 'var(--ink2)', flex: 1 }}>One-on-one work with the Ideal Parent Figure protocol for people carrying old attachment patterns into their relationships and their parenting.</p>
-              <a className="lnk plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f1)' }}>Start with a free consult <Arrow /></a>
+              <ConsultLink color="var(--f1)" />
             </article>
             <article className="door dark">
               <div className="tag" style={{ color: 'var(--gold)' }}>For parents</div>
@@ -118,11 +98,11 @@ export default function Home() {
             <p className="eyebrow gold" style={{ marginBottom: 20 }}>For parents of teens</p>
             <h2 className="h2i" style={{ fontSize: 'clamp(38px,4.8vw,64px)', lineHeight: 1.06 }}>Where are you right now?</h2>
             <p style={{ margin: '28px 0 0', color: 'var(--sage)', maxWidth: 460 }}>The hardest moments with a teenager are small and specific. The daily practice meets you inside them, in about the time it takes to breathe three times.</p>
-            <a className="btn btn-gold plausible-event-name=App+Open" href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" style={{ marginTop: 36 }}>Open the free app</a>
+            <a className="btn btn-gold plausible-event-name=App+Open" href={APP_URL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 36 }}>Open the free app</a>
           </div>
           <div style={{ flex: '1 1 400px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
             {tiles.map((t) => (
-              <a key={t.label} className="tile plausible-event-name=App+Open" href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">
+              <a key={t.label} className="tile plausible-event-name=App+Open" href={APP_URL} target="_blank" rel="noopener noreferrer">
                 <span className="dot" aria-hidden="true" style={{ background: t.color }} />
                 <span style={{ flex: 1 }}>{t.label}</span>
                 <Arrow size={20} color="#C9A96A" />
@@ -185,7 +165,7 @@ export default function Home() {
             </div>
             <p style={{ margin: '28px 0 0', color: 'var(--sage)' }}>A practical guide for parents navigating the hardest years of the parent-child relationship. If your teenager is pulling away, shutting down or pushing you out, this book explains why, and what to do about it.</p>
             <div className="row" style={{ gap: 14, marginTop: 36 }}>
-              <a className="btn btn-gold plausible-event-name=Book+Amazon" href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb" target="_blank" rel="noopener noreferrer">Get the book</a>
+              <a className="btn btn-gold plausible-event-name=Book+Amazon" href={AMAZON_URL} target="_blank" rel="noopener noreferrer">Get the book</a>
               <Link className="btn btn-line-l" href="/the-way-back-home">Learn more</Link>
             </div>
           </div>
@@ -211,33 +191,19 @@ export default function Home() {
             <h2 className="h2" style={{ fontSize: 'clamp(34px,4vw,50px)', lineHeight: 1.1 }}>Do this work alongside other parents.</h2>
             <p style={{ margin: '20px 0 0', color: 'var(--ink2)', maxWidth: 520 }}>National, Zoom-based groups for parents of teens. Attachment-informed, practical and capped at 12, with R.E.A.L. practiced on the ruptures parents are living that week.</p>
           </div>
-          <div style={{ flex: '1 1 380px', minWidth: 0, background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 20, padding: 36 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, fontSize: 17 }}>
-              <div className="fee"><span style={{ color: 'var(--mute)' }}>Parent groups</span><span style={{ fontWeight: 500 }}>$60 per session</span></div>
-              <div className="fee"><span style={{ color: 'var(--mute)' }}>Schedule</span><span style={{ fontWeight: 500 }}>Mondays, 5pm PT</span></div>
-            </div>
-            <div className="row" style={{ gap: 14, marginTop: 28 }}>
-              <Link className="btn btn-dark" href="/parent-support-groups">Join a group</Link>
-              <Link className="btn btn-line-d" href="/services">See individual and couples rates</Link>
-            </div>
-          </div>
+          <OfferCard
+            offer={OFFERS.groups}
+            cta={
+              <div className="btns" style={{ marginTop: 26 }}>
+                <Link className="btn btn-dark" href="/parent-support-groups">Join a group</Link>
+                <Link className="btn btn-line-d" href="/services">Therapy and fees</Link>
+              </div>
+            }
+          />
         </div>
       </section>
 
-      {/* Closing */}
-      <section className="on-dark" style={{ background: 'var(--f1)', padding: '140px 5%', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <Image className="bgimg" src="/images/home/sunset.jpg" alt="" fill sizes="100vw" style={{ objectPosition: '50% 70%' }} />
-        <div className="veil" aria-hidden="true" style={{ background: 'rgba(20,32,22,.62)' }} />
-        <div style={{ maxWidth: 760, margin: '0 auto', position: 'relative' }}>
-          <h2 className="h2i" style={{ fontSize: 'clamp(40px,5.4vw,72px)', lineHeight: 1.05 }}>Begin where you are.</h2>
-          <p style={{ margin: '28px auto 0', color: 'var(--sage)', maxWidth: 520 }}>A free 15-minute consultation to talk through what you’re looking for and whether we’re a good fit.</p>
-          <div className="row" style={{ gap: 16, justifyContent: 'center', marginTop: 40 }}>
-            <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer" style={{ padding: '16px 32px' }}>Schedule a consult</a>
-            <a className="btn btn-line-l plausible-event-name=Substack+Click" href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" style={{ padding: '16px 32px' }}>Read on Substack</a>
-          </div>
-          <p style={{ margin: '36px auto 0', fontSize: 15, color: 'var(--sage2)' }}>A reflection on Tuesdays and a shorter note midweek, on attachment and parenting teens.</p>
-        </div>
-      </section>
-    </div>
+      <Closing />
+    </Page>
   )
 }

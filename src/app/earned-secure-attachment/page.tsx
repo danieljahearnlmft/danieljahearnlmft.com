@@ -1,94 +1,67 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMeta } from '@/lib/site'
+import { Closing, Hero, Page, RelatedLinks, Section } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Earned Secure Attachment: Daniel J. Ahearn, LMFT',
-  description: 'What earned secure attachment is, what the research shows about developing it as an adult, and the clinical path to get there.',
-}
+export const metadata = pageMeta(
+  '/earned-secure-attachment',
+  'Earned Secure Attachment',
+  'What earned secure attachment is, what the research shows about developing it as an adult, and what it looks like in relationships and parenting.',
+)
 
 export default function EarnedSecureAttachment() {
   return (
-    <>
-      <section className="bg-parch-800 py-16 md:py-24">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow text-parch-400">Clinical Concept</p>
-          <h1 className="text-4xl md:text-5xl font-display text-parch-100 leading-tight mb-6">
-            Earned Secure Attachment
-          </h1>
-          <p className="text-parch-300 text-lg leading-relaxed">
-            Secure attachment is not only for people who had it from the beginning. Adults can develop genuine security, not as a performance or a coping strategy, but as a real reorganization of the attachment system. This is what the research calls earned secure attachment, and it changes everything.
-          </p>
-        </div>
-      </section>
+    <Page>
+      <Hero
+        eyebrow="Clinical concept"
+        title="Earned Secure Attachment"
+        sub="Secure attachment is not only for people who had it from the beginning. Adults can develop genuine security, not as a performance or a coping strategy, but as a real reorganization of the attachment system."
+      />
 
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">What the Research Shows</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">Security is not fixed at birth</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            One of the most important findings in attachment research is that attachment classifications are not permanent. The Adult Attachment Interview (AAI), developed by Mary Main and colleagues, classifies adults not by what happened to them in childhood but by the coherence and integration of their narrative about it. What researchers found, and what has been replicated consistently, is that some adults who had clearly difficult, disrupting, or inadequate early caregiving nonetheless present as secure on the AAI. Their narrative is coherent. Their relationship with their history is integrated. They function, in relationship, with the flexibility and availability characteristic of secure attachment.
+      <Section width="narrow">
+        <div className="prose">
+          <h2>Security is not fixed at birth</h2>
+          <p>
+            One of the most important findings in attachment research is that attachment classifications are not permanent. The Adult Attachment Interview (AAI), developed by Mary Main and colleagues, classifies adults not by what happened to them in childhood but by the coherence and integration of their narrative about it. Some adults who had clearly difficult or inadequate early caregiving nonetheless present as secure on the AAI. Their narrative is coherent. Their relationship with their history is integrated.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Main and her colleagues called this earned secure attachment. It describes adults who moved from insecure to secure, not because their history changed, but because something in their processing of that history, and their relationship to themselves and others, reorganized. The change is real, measurable, and consequential: adults with earned secure attachment parent like securely attached adults, not like insecurely attached ones.
+          <p>
+            Main and her colleagues called this earned secure attachment. It describes adults who moved from insecure to secure, not because their history changed, but because their processing of that history, and their relationship to themselves and others, reorganized. The change is real and consequential: adults with earned secure attachment parent like securely attached adults, not like insecurely attached ones.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            The research on what produces this shift identifies several pathways: sustained therapeutic relationships, significant attachment figures in adulthood (partners, mentors), and, most efficiently, clinical work specifically designed to build the internal experience of secure attachment that was absent in childhood. This last pathway is what the Integrative Attachment Therapy framework is built for.
+          <p>
+            The research identifies several pathways to this shift: sustained therapeutic relationships, significant attachment figures in adulthood such as partners and mentors, and clinical work designed specifically to build the internal experience of security that was absent in childhood. That last pathway is what <Link href="/integrative-attachment-therapy">Integrative Attachment Therapy</Link> is built for.
           </p>
-        </div>
-      </section>
 
-      <section className="section-warm">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">What It Looks Like</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">The experience of moving toward security</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Earned secure attachment does not look like the absence of difficulty. Adults who have developed earned security still have a history, still carry the marks of what was inadequate or absent. What changes is the relationship to that history, and, more importantly, the felt sense of relationship in the present.
+          <h2>What it looks like</h2>
+          <p>
+            Earned secure attachment does not look like the absence of difficulty. Adults who have developed it still have a history. What changes is the relationship to that history and, more importantly, the felt sense of relationship in the present.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            People moving toward earned security often describe a gradual shift in what closeness feels like: less vigilance, more ease. A reduced need to monitor the other person's emotional state for signs of impending abandonment or criticism. A growing capacity to receive care without immediately deflecting it or becoming suspicious of it. A different felt sense of their own worth: not a belief arrived at through positive self-talk, but a bodily experience, quiet and increasingly reliable, that they are someone worth being close to.
+          <p>
+            People moving toward earned security often describe a gradual shift in what closeness feels like: less vigilance, more ease. Less need to monitor the other person for signs of abandonment or criticism. A growing capacity to receive care without deflecting it. A different sense of their own worth: not a belief arrived at through positive self-talk, but a bodily experience, quiet and increasingly reliable, that they are someone worth being close to.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            In parenting, the shift is particularly visible. A parent who is moving toward earned security has access to a wider range of responses to their child's distress, need, or difficulty. They are less likely to be hijacked by their own unprocessed material when their child activates it. The five conditions of secure caregiving, safety, attunement, soothing, delight, and support for exploration, become more available because they are less blocked by the parent's own unmet attachment needs.
-          </p>
-        </div>
-      </section>
 
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">The Clinical Path</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">How the work produces change</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            The Integrative Attachment Therapy framework I use is, at its core, a method for producing earned secure attachment. The Ideal Parent Figure protocol creates conditions for new implicit memories of security: the felt sense of being safely held, accurately seen, soothed when distressed, delighted in, and supported toward one's own life. Repeated over the course of treatment, these experiences begin to genuinely reorganize the internal working model.
+          <h3>In parenting</h3>
+          <p>
+            In parenting, the shift is particularly visible. A parent moving toward earned security has a wider range of responses to their child’s distress, need or difficulty, and is less likely to be hijacked by their own unprocessed material when their child activates it. Safety, attunement, soothing, delight and support for exploration become more available because they are less blocked by the parent’s own unmet needs.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            The process is not linear. Resistance arises: the old strategies assert themselves, the disbelief that this is real or deserved, the grief of beginning to feel what was missed. These are not setbacks. They are the work. They reveal exactly what needs to shift and give the therapist precise information about where to direct the next phase of the intervention.
-          </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            What the model offers that many other approaches do not is a clear theory of change operating at the right level: not the level of conscious understanding but the level of felt sense and implicit memory, where attachment patterns actually live. The goal is not earned insight. It is earned security: a genuine, measurable, lasting reorganization of the attachment system.
-          </p>
-          <p className="text-parch-700 leading-relaxed">
-            That is what I work toward with every adult client I see, and it is available, regardless of history, regardless of how many years the pattern has run.
-          </p>
-        </div>
-      </section>
 
-      <section className="bg-parch-800 py-14">
-        <div className="container-main max-w-2xl text-center">
-          <p className="s-eyebrow text-parch-400">Work With Me</p>
-          <h2 className="text-2xl font-display text-parch-100 mb-4">Begin the work toward security</h2>
-          <p className="text-parch-400 leading-relaxed mb-7">
-            I'm an IAT-certified clinician trained directly with Dr. Daniel P. Brown and Dr. David Elliott. I work with adults whose attachment patterns have not shifted through other approaches, and I bring the full Integrative Attachment Therapy framework to that work. Los Angeles and telehealth across California.
+          <h2>How the work gets there</h2>
+          <p>
+            Insight alone rarely produces this shift, because attachment patterns live in felt sense and implicit memory rather than in conscious understanding. The <Link href="/ideal-parent-figure-protocol">Ideal Parent Figure protocol</Link> works at that level.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="s-btn-primary">Free 15-Min Consult</a>
-            <Link href="/contact" className="s-btn-ghost !border-parch-600 !text-parch-300 hover:!bg-parch-700">Get in Touch</Link>
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm">
-            <Link href="/ideal-parent-figure-protocol" className="text-parch-400 hover:text-parch-200 transition-colors">The IPF Protocol →</Link>
-            <Link href="/the-way-back-home" className="text-parch-400 hover:text-parch-200 transition-colors">About the book →</Link>
-          </div>
+          <p>
+            The process is not linear. Old strategies reassert themselves; disbelief and grief surface as the system begins to open. These are not setbacks. They are the work, and they show precisely where it needs to go next. The goal is not earned insight. It is earned security, available regardless of history and regardless of how many years the pattern has run.
+          </p>
         </div>
-      </section>
-    </>
+      </Section>
+
+      <RelatedLinks
+        items={[
+          { href: '/ideal-parent-figure-protocol', t: 'The Ideal Parent Figure protocol', d: 'How the core intervention works' },
+          { href: '/attachment-styles', t: 'Attachment styles in adults', d: 'The four patterns and how each shows up' },
+          { href: '/attachment-therapy-adults', t: 'Attachment therapy for adults', d: 'Who this work is for' },
+        ]}
+      />
+
+      <Closing />
+    </Page>
   )
 }

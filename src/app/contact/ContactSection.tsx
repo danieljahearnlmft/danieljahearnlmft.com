@@ -2,115 +2,91 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { EMAIL, OFFERS, PHONE, PHONE_HREF, SOCIAL, WHERE } from '@/lib/site'
+import { ConsultButton, Page } from '@/components/site/ui'
+
+const fees = [OFFERS.individual, OFFERS.couples, OFFERS.family, OFFERS.groups]
 
 export default function ContactSection() {
   const [success, setSuccess] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      setSuccess(params.get('success') === 'true')
-    }
+    setSuccess(new URLSearchParams(window.location.search).get('success') === 'true')
   }, [])
 
   return (
-    <section className="bg-parch-200 py-16 md:py-24">
-      <div className="container-main max-w-4xl">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="s-eyebrow">Contact</p>
-            <h1 className="text-4xl font-display text-parch-900 mb-5">Get in touch</h1>
-            <p className="text-parch-700 leading-relaxed mb-8">
-              The best starting point for therapy clients is a free 15-minute phone consultation. For speaking, consulting, press, or clinician inquiries, the form to the right is the right channel.
-            </p>
+    <Page>
+      <section className="phero on-dark" style={{ paddingBottom: 96 }}>
+        <div className="wrap">
+          <p className="eyebrow gold" style={{ marginBottom: 24 }}>Contact</p>
+          <h1>Get in touch.</h1>
+          <p className="sub">For therapy, the best first step is a free 15-minute call. For anything else, write to me below.</p>
+          <div className="btns"><ConsultButton /></div>
+        </div>
+      </section>
 
-            <div className="space-y-5 mb-10">
+      <section className="sec">
+        <div className="wrap cols">
+          <div style={{ flex: '1 1 340px' }}>
+            <p className="eyebrow">Reach me</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 22, fontSize: 17, color: 'var(--ink2)' }}>
               <div>
-                <p className="text-xs uppercase tracking-widest text-parch-500 mb-1.5">Schedule a Consult</p>
-                <a
-                  href="https://calendly.com/danieljahearn/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="s-btn-primary"
-                >
-                  Book Free 15-Min Call
-                </a>
+                <p style={{ color: 'var(--mute)', fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase' }}>Phone</p>
+                <a href={PHONE_HREF} style={{ color: 'var(--ink)', fontSize: 20 }}>{PHONE}</a>
               </div>
-
-              <div className="pt-2">
-                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Phone</p>
-                <p className="text-parch-700 text-sm">
-                  <a href="tel:+12132901146" className="hover:text-parch-900 transition-colors">213-290-1146</a>
+              <div>
+                <p style={{ color: 'var(--mute)', fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase' }}>Email</p>
+                <a href={`mailto:${EMAIL}`} style={{ color: 'var(--ink)', fontSize: 20 }}>{EMAIL}</a>
+              </div>
+              <div>
+                <p style={{ color: 'var(--mute)', fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase' }}>Where</p>
+                <p>Based in Los Angeles<br />{WHERE}</p>
+              </div>
+              <div>
+                <p style={{ color: 'var(--mute)', fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase' }}>Elsewhere</p>
+                <p style={{ display: 'flex', gap: 18, flexWrap: 'wrap' }}>
+                  <a href={SOCIAL.substack} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>Substack</a>
+                  <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>Instagram</a>
+                  <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>LinkedIn</a>
                 </p>
-              </div>
-
-              <div>
-                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Location</p>
-                <p className="text-parch-700 text-sm">Los Angeles, CA</p>
-                <p className="text-parch-600 text-sm">Telehealth throughout California</p>
-                <p className="text-parch-600 text-sm">Walk-and-talk available in LA</p>
-              </div>
-
-              <div>
-                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">Social</p>
-                <div className="flex gap-4">
-                  <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">Substack</a>
-                  <a href="https://www.instagram.com/danieljahearnlmft" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">Instagram</a>
-                  <a href="https://www.linkedin.com/in/daahearn/" target="_blank" rel="noopener noreferrer" className="text-parch-600 text-sm hover:text-parch-900 transition-colors">LinkedIn</a>
-                </div>
               </div>
             </div>
 
-            <div className="border-t border-parch-300 pt-7">
-              <p className="text-xs uppercase tracking-widest text-parch-500 mb-3">Rates</p>
-              <div className="space-y-1.5 text-sm text-parch-700">
-                <p>Individual therapy: $250 to $350 per session</p>
-                <p>Family / couples: $350 to $450 per session</p>
-                <p>Parent support groups: $60 per session</p>
+            <div style={{ marginTop: 44, paddingTop: 28, borderTop: '1px solid var(--line)' }}>
+              <p className="eyebrow">Fees</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12, fontSize: 17 }}>
+                {fees.map((o) => (
+                  <div key={o.name} className="fee">
+                    <span style={{ color: 'var(--mute)' }}>{o.name}</span>
+                    <span style={{ fontWeight: 500 }}>{o.fee}</span>
+                  </div>
+                ))}
               </div>
-              <p className="text-parch-500 text-xs mt-3">Fee is set together in our consult. Out-of-network provider. Superbills available for reimbursement.</p>
+              <p style={{ marginTop: 14, fontSize: 14, color: 'var(--mute)' }}>
+                Therapy fees are on a sliding scale, set together in the consult. Out-of-network; superbills available. <Link href="/services" style={{ textDecoration: 'underline' }}>Details</Link>
+              </p>
             </div>
           </div>
 
-          {/* Form column */}
-          <div className="bg-parch-50 border border-parch-300 rounded-lg p-8">
+          <div className="card" style={{ flex: '1 1 440px' }}>
             {success ? (
               <div>
-                <p className="s-eyebrow">Message Received</p>
-                <h2 className="font-display text-2xl text-parch-900 mb-4">Thank you for reaching out.</h2>
-                <p className="text-parch-700 leading-relaxed mb-6">
-                  I'll be in touch within 1-2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href="https://calendly.com/danieljahearn/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="s-btn-primary"
-                  >
-                    Book a Consult
-                  </a>
-                  <Link href="/" className="s-btn-ghost">Back to Home</Link>
+                <p className="eyebrow">Message received</p>
+                <h2 style={{ fontWeight: 400, fontSize: 36, lineHeight: 1.1 }}>Thank you for reaching out.</h2>
+                <p style={{ marginTop: 16, color: 'var(--ink2)' }}>I’ll be in touch within 1 to 2 business days. If you’d like to move faster, book a free call directly.</p>
+                <div className="btns" style={{ marginTop: 28 }}>
+                  <ConsultButton tone="dark" />
                 </div>
               </div>
             ) : (
               <>
-                <p className="font-display text-xl text-parch-900 mb-4">Send a message</p>
-
-                <p className="form-disclaimer">
-                  Use this form for general inquiries only: speaking, consulting, questions about the book, or referrals. Please do not share clinical or health information here. To inquire about therapy, please use the application forms on the <Link href="/services">Services page</Link>.
+                <h2 style={{ fontWeight: 400, fontSize: 36, lineHeight: 1.1, marginBottom: 20 }}>Send a message</h2>
+                <p className="notice" style={{ marginBottom: 28 }}>
+                  For speaking, consulting, press, questions about the book, or referrals. Please don’t share clinical or health information here. If you’re looking for therapy, book the free 15-minute call instead.
                 </p>
 
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  action="/contact/?success=true"
-                  className="space-y-5"
-                >
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?success=true" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                   <input type="hidden" name="form-name" value="contact" />
-
                   <p className="hidden-field" aria-hidden="true">
                     <label>
                       Don&apos;t fill this out if you&apos;re human:
@@ -118,68 +94,36 @@ export default function ContactSection() {
                     </label>
                   </p>
 
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-name">Name</label>
-                    <input
-                      type="text"
-                      id="contact-name"
-                      name="name"
-                      required
-                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
-                    />
+                  <div className="field">
+                    <label htmlFor="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" autoComplete="name" required />
                   </div>
-
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-email">Email</label>
-                    <input
-                      type="email"
-                      id="contact-email"
-                      name="email"
-                      required
-                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
-                    />
+                  <div className="field">
+                    <label htmlFor="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" autoComplete="email" required />
                   </div>
-
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-subject">What brings you here?</label>
-                    <select
-                      id="contact-subject"
-                      name="subject"
-                      required
-                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500"
-                    >
+                  <div className="field">
+                    <label htmlFor="contact-subject">What brings you here?</label>
+                    <select id="contact-subject" name="subject" required>
                       <option value="">Select one</option>
-                      <option value="speaking">Speaking / consulting inquiry</option>
-                      <option value="book">Question about the book</option>
-                      <option value="press">Press / media</option>
+                      <option value="speaking">Speaking or consulting</option>
+                      <option value="book">A question about the book</option>
+                      <option value="press">Press or media</option>
                       <option value="clinician">Clinician referral or training</option>
-                      <option value="other">Other</option>
+                      <option value="other">Something else</option>
                     </select>
                   </div>
-
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-parch-600 mb-1.5" htmlFor="contact-message">Message</label>
-                    <textarea
-                      id="contact-message"
-                      name="message"
-                      rows={6}
-                      required
-                      className="w-full border border-parch-300 bg-white rounded px-3 py-2.5 text-sm text-parch-900 focus:outline-none focus:border-parch-500 resize-none"
-                    />
+                  <div className="field">
+                    <label htmlFor="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows={6} required style={{ resize: 'vertical' }} />
                   </div>
-
-                  <button
-                    type="submit"
-                    className="w-full s-btn-primary text-center justify-center"
-                  >
-                    Send Message
-                  </button>
+                  <button type="submit" className="btn btn-dark" style={{ border: 0, cursor: 'pointer', fontFamily: 'inherit' }}>Send message</button>
                 </form>
               </>
             )}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Page>
   )
 }
