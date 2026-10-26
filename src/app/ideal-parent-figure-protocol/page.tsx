@@ -83,7 +83,7 @@ export default function IdealParentFigureProtocol() {
       <RelatedLinks
         items={[
           { href: '/integrative-attachment-therapy', t: 'Integrative Attachment Therapy', d: 'The Three Pillars framework' },
-          { href: '/earned-secure-attachment', t: 'Earned secure attachment', d: 'What the research shows is possible' },
+          { href: '/attachment-therapy-adults', t: 'Attachment therapy for adults', d: 'Healing old wounds and earning security' },
           { href: '/services', t: 'Therapy and fees', d: 'Individual, couples and family work' },
         ]}
       />

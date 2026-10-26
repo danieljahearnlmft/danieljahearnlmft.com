@@ -22,8 +22,6 @@ const TOPICS = [
   { href: '/iat-certified-therapist', label: 'IAT-certified therapist' },
   { href: '/attachment-styles', label: 'Attachment styles' },
   { href: '/attachment-therapy-adults', label: 'Attachment therapy for adults' },
-  { href: '/healing-attachment-wounds', label: 'Healing attachment wounds' },
-  { href: '/earned-secure-attachment', label: 'Earned secure attachment' },
   { href: '/parent-support-groups/#real-method', label: 'The R.E.A.L. Method' },
 ]
 
