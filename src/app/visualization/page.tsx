@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
+import { AMAZON_URL, APP_URL, EMAIL, SUBSTACK_URL } from '@/lib/site'
+import { Page, Section, Video } from '@/components/site/ui'
 
 export const metadata: Metadata = {
-  title: 'Guided Visualizations for Parents of Teens · The Way Back Home',
+  title: { absolute: 'Guided Visualizations for Parents of Teens · The Way Back Home' },
   description:
     'A series of guided visualizations rooted in attachment theory and the Five Conditions of Secure Attachment: Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent for your teen. About twenty minutes each.',
   keywords: [
@@ -56,10 +59,6 @@ const series: Item[] = [
 const NUM = ['One', 'Two', 'Three', 'Four', 'Five', 'Six']
 const live = series.filter((v) => v.youtubeId)
 
-const btnGold =
-  'inline-flex items-center justify-center w-full rounded bg-[#c9a14e] px-6 py-3 ' +
-  'text-sm font-medium text-parch-50 hover:bg-[#b88a38] transition-colors'
-
 // VideoObject structured data for the live chapters (helps Google index them as videos)
 const videoLd = {
   '@context': 'https://schema.org',
@@ -79,224 +78,116 @@ const videoLd = {
 
 export default function Visualization() {
   return (
-    <>
+    <Page>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }} />
 
-      {/* Hero */}
-      <section className="relative">
-        <img
-          src="/images/visualization-hero.jpg"
-          alt="A tree whose canopy and roots form a pair of breathing lungs, lit from within."
-          className="h-[58vh] min-h-[400px] w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/60" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-parch-100/85 mb-4">
-            The Five Conditions of Secure Attachment
-          </p>
-          <h1 className="font-display font-bold text-4xl md:text-6xl text-parch-50 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-            The Way Back Home
-          </h1>
-          <p className="font-display italic text-xl md:text-2xl text-parch-100 mt-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-            Guided Visualizations
-          </p>
+      <section className="phero on-dark" style={{ textAlign: 'center', padding: '160px 5% 150px' }}>
+        <Image className="bgimg" src="/images/visualization-hero.jpg" alt="A tree whose canopy and roots form a pair of breathing lungs, lit from within." fill priority sizes="100vw" />
+        <div className="veil" aria-hidden="true" style={{ background: 'linear-gradient(rgba(20,32,22,.45), rgba(20,32,22,.7))' }} />
+        <div className="wrap-n" style={{ position: 'relative' }}>
+          <p className="eyebrow gold" style={{ marginBottom: 24 }}>The five conditions of secure attachment</p>
+          <h1 style={{ margin: '0 auto' }}>Guided visualizations</h1>
+          <p className="sub" style={{ margin: '24px auto 0' }}>From <em>The Way Back Home</em>, by Daniel J. Ahearn, LMFT</p>
         </div>
       </section>
 
-      {/* Intro: copy left, actions right */}
-      <section className="section-cream">
-        <div className="container-main max-w-[900px]">
-          <div className="grid gap-10 md:grid-cols-[1fr_12rem] md:gap-14 md:items-start">
-            <div>
-              <div className="space-y-4 text-parch-700 text-lg leading-relaxed">
-                <p>
-                  A series of guided visualizations rooted in attachment theory and the Five
-                  Conditions of Secure Attachment. Each one corresponds to a foundational condition:
-                  Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal
-                  Parent for your teen.
-                </p>
-                <p>
-                  Settle into about twenty minutes of breath-work and contemplative practice. Used in
-                  clinical work and in home meditation. Begin with Safety; the rest build from there.
-                </p>
-              </div>
-              <div className="mt-8 text-sm leading-relaxed text-[#6a5a4a]">
-                <p className="font-display text-base text-parch-900">Daniel J. Ahearn, LMFT</p>
-                <p>Attachment &amp; Family Therapy</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3 md:pt-1">
-              <a className={btnGold} href="https://www.amazon.com/dp/B0GLF2JH8T" target="_blank" rel="noopener noreferrer">The Book</a>
-              <a className={btnGold} href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">The App</a>
-              <a className={btnGold} href="https://danieljahearnlmft.com">Clinical Site</a>
-            </div>
+      <Section width="mid">
+        <div className="cols" style={{ alignItems: 'flex-start' }}>
+          <div className="prose" style={{ flex: '1 1 460px' }}>
+            <p className="lede">
+              A series of guided visualizations rooted in attachment theory. Each one corresponds to a foundational condition: Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent for your teen.
+            </p>
+            <p>
+              Settle into about twenty minutes of breath-work and contemplative practice. Used in clinical work and in home meditation. Begin with Safety; the rest build from there.
+            </p>
+          </div>
+          <div style={{ flex: '0 1 240px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <a className="btn btn-dark" href={AMAZON_URL} target="_blank" rel="noopener noreferrer">The book</a>
+            <a className="btn btn-line-d" href={APP_URL} target="_blank" rel="noopener noreferrer">The app</a>
+            <Link className="btn btn-line-d" href="/">Therapy with Daniel</Link>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Now available: one player per live chapter */}
-      {live.map((v) => {
-        const chapter = NUM[series.indexOf(v)]
-        return (
-          <section key={v.slug} id={v.slug} className="section-warm">
-            <div className="container-main max-w-[860px]">
-              <p className="s-eyebrow">Now Available · Chapter {chapter}</p>
-              <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-2">{v.title}</h2>
-              {v.blurb && (
-                <p className="text-parch-700 leading-relaxed mb-7 max-w-2xl">
-                  {v.blurb} Best with headphones, somewhere you won&rsquo;t be interrupted.
-                </p>
+      {live.map((v, i) => (
+        <Section key={v.slug} id={v.slug} tone={i % 2 === 0 ? 'cream2' : 'cream'} width="mid" eyebrow={`Chapter ${NUM[series.indexOf(v)]}`} title={v.title}>
+          {v.blurb && (
+            <p style={{ color: 'var(--ink2)', maxWidth: 640, marginTop: -24, marginBottom: 28 }}>
+              {v.blurb} Best with headphones, somewhere you won’t be interrupted.
+            </p>
+          )}
+          <Video id={v.youtubeId as string} title={`${v.title}: Guided Visualization | The Way Back Home`} />
+          {v.audio && (
+            <a href={v.audio} download style={{ display: 'inline-block', marginTop: 18, fontSize: 16, textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>
+              Download the audio for offline listening
+            </a>
+          )}
+        </Section>
+      ))}
+
+      <Section tone="dark" width="narrow" eyebrow="The series" title="Six visualizations">
+        <ol style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+          {series.map((v, i) => (
+            <li key={v.slug} style={{ display: 'flex', alignItems: 'baseline', gap: 20, borderTop: '1px solid var(--edge)', padding: '18px 0' }}>
+              <span className="serif" style={{ fontStyle: 'italic', fontSize: 22, color: 'var(--gold)', width: 28, flex: 'none' }}>{String(i + 1).padStart(2, '0')}</span>
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span className="serif" style={{ display: 'block', fontSize: 26, color: 'var(--cream)' }}>{v.title}</span>
+                <span style={{ display: 'block', fontSize: 16, color: 'var(--sage)' }}>{v.note}</span>
+              </span>
+              {v.youtubeId ? (
+                <a href={`#${v.slug}`} style={{ fontSize: 12, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>Watch</a>
+              ) : (
+                <span style={{ fontSize: 12, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--sage2)' }}>Coming soon</span>
               )}
-              <div className="overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black">
-                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                  <iframe
-                    className="absolute inset-0 h-full w-full border-0"
-                    src={`https://www.youtube.com/embed/${v.youtubeId}`}
-                    title={`${v.title}: Guided Visualization | The Way Back Home`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-              {v.audio && (
-                <p className="mt-4 text-sm text-parch-600">
-                  <a
-                    href={v.audio}
-                    download
-                    className="underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors"
-                  >
-                    Download the audio for offline listening
-                  </a>
-                </p>
-              )}
-            </div>
-          </section>
-        )
-      })}
+            </li>
+          ))}
+        </ol>
+      </Section>
 
-      {/* The series: slim editorial index */}
-      <section className="section-cream">
-        <div className="container-main max-w-[780px]">
-          <p className="s-eyebrow">The Series</p>
-          <h2 className="font-display text-3xl text-parch-900 mb-3">Six visualizations</h2>
-          <p className="text-parch-700 leading-relaxed mb-8 max-w-2xl">
-            Released in order. New chapters arrive in the weeks ahead.
-          </p>
-
-          <ol className="border-b border-[#e5d9c9]">
-            {series.map((v, i) => (
-              <li key={v.slug} className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5">
-                <span className="font-display text-parch-400 text-lg w-7 shrink-0">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="flex-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="font-display text-xl text-parch-900">{v.title}</h3>
-                    {v.youtubeId ? (
-                      <a href={`#${v.slug}`} className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors">
-                        Watch
-                      </a>
-                    ) : (
-                      <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">Coming soon</span>
-                    )}
-                  </div>
-                  <p className="text-parch-600 text-sm mt-1">{v.note}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* What this practice is */}
-      <section className="section-warm">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">What This Practice Is</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">The five conditions</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
+      <Section width="narrow" eyebrow="What this practice is" title="The five conditions">
+        <div className="prose">
+          <p>
             These visualizations follow the five conditions of secure attachment as set out in the Integrative Attachment Therapy model developed by Daniel P. Brown and David Elliott. The conditions are not techniques. They describe what a person needs to have received, reliably and often enough, for a secure self to form. Most of us received some of them unevenly, from people doing their best with what they had. The practice is to give the nervous system repeated experiences of them now, in a context safe enough to receive.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            <strong className="font-display font-normal text-parch-900">Safety</strong> does not mean comfort. It does not mean agreement. It does not mean preventing distress. It means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing. Not the idea of safety, but the body&rsquo;s recognition that, in this moment, nothing needs to be guarded against.
+          <p>
+            <strong>Safety</strong> does not mean comfort, agreement, or preventing distress. It means having enough internal steadiness to remain present: without escalating, without withdrawing, and without collapsing. Not the idea of safety, but the body’s recognition that, in this moment, nothing needs to be guarded against.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            <strong className="font-display font-normal text-parch-900">Attunement</strong> is letting your teen&rsquo;s inner state actually register in you, and letting them feel that it landed. <strong className="font-display font-normal text-parch-900">Soothing</strong> is a regulated nervous system settling an activated one, without fixing, rushing, or explaining it away. Both ask something of your own state before they ask anything of your teen.
+          <p>
+            <strong>Attunement</strong> is letting your teen’s inner state actually register in you, and letting them feel that it landed. <strong>Soothing</strong> is a regulated nervous system settling an activated one, without fixing, rushing, or explaining it away. Both ask something of your own state before they ask anything of your teen.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            <strong className="font-display font-normal text-parch-900">Expressed delight</strong> is being genuinely glad that someone exists. Not for what they achieve, not for how they perform. When it is missing, a self tends to form around performance instead of essence, which is why so many capable teens check every box and still feel see-through.
+          <p>
+            <strong>Expressed delight</strong> is being genuinely glad that someone exists. Not for what they achieve, not for how they perform. When it is missing, a self tends to form around performance instead of essence, which is why so many capable teens check every box and still feel see-through.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            <strong className="font-display font-normal text-parch-900">Exploration</strong> is the half people forget. Security is not closeness alone. A teen who feels held is a teen who can leave the room, take the risk, and come back. The secure base exists so that it can be ventured from.
+          <p>
+            <strong>Exploration</strong> is the half people forget. Security is not closeness alone. A teen who feels held is a teen who can leave the room, take the risk, and come back. The secure base exists so that it can be ventured from.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            The sixth visualization, the <strong className="font-display font-normal text-parch-900">ideal parent</strong>, gathers the five into a single practice. Not the parent you were told to be, but the steady presence your own nervous system recognizes: the secure base your teen comes home to.
+          <p>
+            The sixth visualization, the <strong>ideal parent</strong>, gathers the five into a single practice. Not the parent you were told to be, but the steady presence your own nervous system recognizes: the secure base your teen comes home to.
           </p>
-          <p className="text-parch-700 leading-relaxed">
-            Begin with Safety and work in order; each one builds on the ones before it. If any of them ever feels activating or overwhelming, return to Safety. Safety is always the foundation.
-          </p>
-        </div>
-      </section>
 
-      {/* How to practice */}
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">How to Practice</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-6">A few notes</h2>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            You don&rsquo;t have to do it perfectly. Notice what happens, including resistance. Resistance is not a sign you&rsquo;re doing it wrong; it&rsquo;s information about the structure of the pattern you&rsquo;re working with. The work is what arises, whatever it is.
+          <h2>How to practice</h2>
+          <p>
+            Begin with Safety and work in order; each one builds on the ones before it. You don’t have to do it perfectly. Notice what happens, including resistance. Resistance is not a sign you’re doing it wrong; it’s information about the pattern you’re working with.
           </p>
-          <p className="text-parch-700 leading-relaxed mb-5">
-            Returning to the practice regularly is more useful than any single sitting. Daily for two weeks is a good place to start. Notice what shifts in your body and in your relationships. Real change begins there.
-          </p>
-          <p className="text-parch-700 leading-relaxed">
-            This is offered as a gentle practice, not a performance. If at any point it feels activating, confusing, or overwhelming, pause. Come back when you&rsquo;re ready.
+          <p>
+            Returning regularly matters more than any single sitting. Daily for two weeks is a good place to start. This is a gentle practice, not a performance. If any of it ever feels activating or overwhelming, pause, and return to Safety. Safety is always the foundation.
           </p>
         </div>
-      </section>
+      </Section>
 
-      {/* Substack subscribe */}
-      <section className="section-warm">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">Stay In Touch</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-3">Read me on Substack</h2>
-          <p className="text-parch-700 leading-relaxed mb-7 max-w-xl">
-            Field notes on attachment, adolescence, and the body. The same work that runs through the book and through this practice, kept short.
-          </p>
-          <iframe
-            src="https://danieljahearnlmft.substack.com/embed"
-            width="480"
-            height="320"
-            style={{ border: '1px solid #EEE', background: 'white', maxWidth: '100%' }}
-            scrolling="no"
-            title="Subscribe to Daniel J. Ahearn's Substack"
-          />
+      <Section tone="cream2" width="narrow" tight eyebrow="Stay in touch">
+        <p style={{ color: 'var(--ink2)' }}>
+          Field notes on attachment, adolescence, and the body, on Substack. The same work that runs through the book and this practice, kept short.
+        </p>
+        <div className="btns" style={{ marginTop: 24 }}>
+          <a className="btn btn-dark plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">Read on Substack</a>
         </div>
-      </section>
-
-      {/* Contact line */}
-      <section className="py-12 md:py-16">
-        <div className="container-main max-w-3xl">
-          <p className="text-parch-700 text-base text-center">
-            For questions about the practice or to reach out about clinical work,{' '}
-            <Link href="/contact" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              write me here
-            </Link>
-            {' '}or email{' '}
-            <a href="mailto:daniel@danieljahearnlmft.com" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              daniel@danieljahearnlmft.com
-            </a>
-            .
-          </p>
-          <p className="text-parch-600 text-sm text-center mt-8">
-            <Link href="/" className="underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              Daniel J. Ahearn, LMFT
-            </Link>
-            <span className="text-parch-500"> &middot; therapy in Los Angeles</span>
-          </p>
-        </div>
-      </section>
-    </>
+        <p style={{ marginTop: 32, fontSize: 16, color: 'var(--mute)' }}>
+          Questions about the practice or clinical work: <Link href="/contact" style={{ textDecoration: 'underline' }}>write to me</Link> or email <a href={`mailto:${EMAIL}`} style={{ textDecoration: 'underline' }}>{EMAIL}</a>.
+          <br />
+          <Link href="/" style={{ textDecoration: 'underline' }}>Daniel J. Ahearn, LMFT</Link> · attachment therapy, based in Los Angeles
+        </p>
+      </Section>
+    </Page>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ConsultButton, Page } from '@/components/site/ui'
 
 export const metadata: Metadata = {
   title: 'Message Sent',
@@ -8,20 +9,18 @@ export const metadata: Metadata = {
 
 export default function ContactSuccess() {
   return (
-    <section className="bg-parch-200 py-32">
-      <div className="container-main max-w-xl text-center">
-        <p className="s-eyebrow">Message Received</p>
-        <h1 className="text-3xl font-display text-parch-900 mb-5">Thank you for reaching out.</h1>
-        <p className="text-parch-700 leading-relaxed mb-8">
-          I'll be in touch within 1-2 business days. If you'd like to move faster, feel free to book a free 15-minute call directly.
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="s-btn-primary">
-            Book a Consult
-          </a>
-          <Link href="/" className="s-btn-ghost">Back to Home</Link>
+    <Page>
+      <section className="phero on-dark" style={{ textAlign: 'center', padding: '152px 5%' }}>
+        <div className="wrap-n">
+          <p className="eyebrow gold" style={{ marginBottom: 24 }}>Message received</p>
+          <h1 style={{ margin: '0 auto' }}>Thank you for reaching out.</h1>
+          <p className="sub" style={{ margin: '28px auto 0' }}>I’ll be in touch within 1 to 2 business days. If you’d like to move faster, book a free call directly.</p>
+          <div className="btns" style={{ justifyContent: 'center' }}>
+            <ConsultButton />
+            <Link className="btn btn-line-l" href="/">Back to home</Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Page>
   )
 }

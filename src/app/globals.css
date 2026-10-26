@@ -19,6 +19,7 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
+/* Legacy components, still used by Pathwork */
 @layer components {
   .btn-primary {
     @apply bg-cream-500 text-white px-5 py-3 rounded text-sm font-medium hover:bg-cream-600 transition-colors inline-block;
@@ -29,20 +30,8 @@ h1, h2, h3, h4 {
   .eyebrow {
     @apply text-xs tracking-widest uppercase text-cream-500 mb-4;
   }
-  .section-cream {
-    @apply bg-parch-100 py-16 md:py-24;
-  }
-  .section-warm {
-    @apply bg-parch-200 py-16 md:py-24;
-  }
-  .section-dark {
-    @apply bg-parch-900 py-14;
-  }
   .container-main {
     @apply max-w-6xl mx-auto px-6;
-  }
-  .divider-accent {
-    @apply border-t-2 border-parch-400 pt-7;
   }
 }
 
@@ -84,33 +73,4 @@ h1, h2, h3, h4 {
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.form-disclaimer {
-  background: #faf7f2;
-  border-left: 3px solid #a07850;
-  padding: 0.75rem 1rem;
-  font-size: 0.85rem;
-  color: #4d3520;
-  line-height: 1.55;
-  margin-bottom: 1.5rem;
-  border-radius: 2px;
-}
-
-.form-disclaimer a {
-  color: #6b5035;
-  text-decoration: underline;
-}
-
-/* ── Site-wide (non-Pathwork) design: forest, cream, gold ── */
-@layer components {
-  .s-btn-primary {
-    @apply bg-parch-900 text-parch-100 px-6 py-3 rounded-full text-sm font-medium hover:brightness-125 transition inline-block;
-  }
-  .s-btn-ghost {
-    @apply border border-parch-900 text-parch-900 px-6 py-3 rounded-full text-sm font-medium hover:bg-parch-200 transition-colors inline-block;
-  }
-  .s-eyebrow {
-    @apply text-xs tracking-[0.2em] uppercase text-parch-500 mb-4;
-  }
 }

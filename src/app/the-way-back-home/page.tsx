@@ -1,258 +1,147 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AMAZON_URL, APP_URL, AUDIBLE_URL, GUIDE_URL, SITE_URL, pageMeta } from '@/lib/site'
+import { Arrow, Closing, ELLIOTT_QUOTE, Hero, List, Page, Quote, Section } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'The Way Back Home',
-  description: 'The new book by Daniel J. Ahearn, LMFT: a practical guide for parents healing attachment wounds and rebuilding connection with their teen.',
-  openGraph: {
-    images: [{ url: '/images/book-cover.jpg', alt: 'The Way Back Home: book cover' }],
+export const metadata = pageMeta(
+  '/the-way-back-home',
+  'The Way Back Home: Healing Attachment Wounds With Your Teen',
+  'The book by Daniel J. Ahearn, LMFT: a practical guide for parents healing attachment wounds and rebuilding connection with their teen. Paperback, Kindle, Audible.',
+  {
+    title: { absolute: 'The Way Back Home: Healing Attachment Wounds With Your Teen' },
+    openGraph: { images: [{ url: '/images/book-cover.jpg', alt: 'The Way Back Home book cover' }] },
+    twitter: { card: 'summary_large_image', images: ['/images/book-cover.jpg'] },
   },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/images/book-cover.jpg'],
-  },
+)
+
+const conditions = [
+  { name: 'Safety', body: 'Building the secure foundation.' },
+  { name: 'Attunement', body: 'Connection over correction.' },
+  { name: 'Soothing', body: 'Regulating before solving.' },
+  { name: 'Expressed delight', body: 'The engine of self-esteem.' },
+  { name: 'Exploration', body: 'Boundaries that strengthen bonds.' },
+]
+
+const bookLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: 'The Way Back Home: Healing Attachment Wounds With Your Teen',
+  author: { '@id': `${SITE_URL}/#daniel` },
+  datePublished: '2026-04-01',
+  image: `${SITE_URL}/images/book-cover.jpg`,
+  bookFormat: ['https://schema.org/Paperback', 'https://schema.org/EBook', 'https://schema.org/AudiobookFormat'],
+  url: `${SITE_URL}/the-way-back-home/`,
+  sameAs: [AMAZON_URL, AUDIBLE_URL],
 }
 
 export default function Book() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-parch-200 py-16 md:py-24">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
-            <div>
-              <p className="s-eyebrow">Now Available</p>
-              <h1 className="text-4xl md:text-5xl font-display text-parch-900 leading-tight mb-3">
-                The Way Back Home
-              </h1>
-              <p className="font-display italic text-parch-600 text-lg mb-6">
-                Healing Attachment Wounds With Your Teen
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                If your teenager is shutting down, pulling away, or in constant conflict, this book explains the attachment science behind it, and what you can actually do about it.
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-8">
-                Written for parents who are doing everything right and still feel miles away from their kid. Grounded in the same IAT framework at the center of my clinical practice.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <a
-                  href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="s-btn-primary plausible-event-name=Book+Amazon"
-                >
-                  Buy on Amazon
-                </a>
-                <a
-                  href="https://www.audible.com/pd/The-Way-Back-Home-Audiobook/B0H12DWQFP"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="s-btn-ghost plausible-event-name=Audible+Click"
-                >
-                  Listen on Audible
-                </a>
-                <a
-                  href="/why-your-teen-is-pushing-you-away.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="s-btn-ghost plausible-event-name=Guide+Download"
-                >
-                  Download the Free Guide
-                </a>
-              </div>
-              <p className="text-parch-500 text-xs">Available in paperback · Kindle · Audiobook</p>
-            </div>
-            <div className="flex justify-center md:justify-end">
-              <a
-                href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/images/book-cover.jpg"
-                  alt="The Way Back Home by Daniel J. Ahearn"
-                  width={380}
-                  height={540}
-                  className="rounded shadow-lg hover:opacity-90 transition-opacity"
-                  priority
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <Page>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookLd) }} />
 
-      {/* Endorsement */}
-      <section className="bg-parch-800 py-12">
-        <div className="container-main max-w-3xl text-center">
-          <p className="font-display italic text-parch-200 text-xl leading-relaxed mb-5">
-            "Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use."
-          </p>
-          <p className="text-parch-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
-        </div>
-      </section>
-
-      {/* Who it's for */}
-      <section className="section-cream">
-        <div className="container-main max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <p className="s-eyebrow">Who This Book Is For</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-6">You might recognize yourself here</h2>
-              <ul className="space-y-3">
-                {[
-                  `Your teenager has pulled away and you don't know why`,
-                  'Every conversation turns into a conflict',
-                  `You're grieving the relationship you used to have`,
-                  `You've tried therapy, boundaries, consequences. Nothing sticks`,
-                  'You suspect your own history is part of the problem',
-                  'You want to repair things before they get worse',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm leading-relaxed">
-                    <span className="text-parch-400 mt-0.5">·</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="s-eyebrow">What You'll Get</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-6">What the book covers</h2>
-              <ul className="space-y-3">
-                {[
-                  'The attachment science behind adolescent withdrawal and conflict',
-                  'How your own attachment history shows up in parenting',
-                  'The Ideal Parent Figure framework adapted for families',
-                  'Practical repair strategies for ruptures, shutdown, and distance',
-                  'How to stay present when activated, without performing calm',
-                  'A framework for rebuilding earned security with your teen',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm leading-relaxed">
-                    <span className="text-parch-400 mt-0.5">·</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Five Conditions framework */}
-      <section className="bg-parch-100 py-16 md:py-20 border-t border-parch-300">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">The Framework of the Book</p>
-          <h2 className="text-3xl md:text-4xl font-display text-parch-900 leading-tight mb-4">
-            The Five Conditions of Secure Attachment
-          </h2>
-          <p className="text-parch-700 leading-relaxed mb-10">
-            The book is built around the Five Conditions of Secure Attachment: the core relational experiences that allow security to develop. Drawn from the work of Dr. Daniel P. Brown and Dr. David Elliott, applied here specifically to parenting teenagers.
-          </p>
-          <div className="grid md:grid-cols-2 gap-x-10 gap-y-6">
-            {[
-              { name: 'Safety', body: 'Building the secure foundation.' },
-              { name: 'Attunement', body: 'Connection over correction.' },
-              { name: 'Soothing', body: 'Regulating before solving.' },
-              { name: 'Expressed Delight', body: 'The engine of self-esteem.' },
-              { name: 'Exploration', body: 'Boundaries that strengthen bonds.' },
-            ].map((c) => (
-              <div key={c.name} className="border-l-2 border-parch-400 pl-5">
-                <h3 className="font-display text-lg text-parch-900 mb-1">{c.name}</h3>
-                <p className="text-parch-700 text-sm leading-relaxed">{c.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* R.E.A.L. Method inside the book */}
-      <section className="section-warm border-t border-parch-300">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">The Repair Method</p>
-          <h2 className="text-3xl md:text-4xl font-display text-parch-900 leading-tight mb-5">
-            Inside the book: the R.E.A.L. Method
-          </h2>
-          <p className="text-parch-700 leading-relaxed mb-7">
-            Chapter 7 introduces R.E.A.L., a four-step framework for rupture and repair: Regulate the Breath, Explore the Moment, Attune with Empathy, Lean Back In. Parents practice it in the support groups and in the free daily app; men practice it in the Men&rsquo;s Attachment Repair Groups.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/parent-support-groups/#real-method" className="s-btn-primary">
-              R.E.A.L. for Parents
-            </Link>
-            <Link href="/mens-work/#real-for-men" className="s-btn-ghost">
-              R.E.A.L. for Men
-            </Link>
-            <a
-              href="https://waybackhome.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="s-btn-ghost plausible-event-name=App+Open"
-            >
-              Practice in the App
+      <Hero
+        eyebrow="Now on Audible · Paperback · Kindle"
+        title="The Way Back Home"
+        sub={
+          <>
+            <span className="serif" style={{ display: 'block', fontStyle: 'italic', fontSize: 'clamp(24px,2.6vw,30px)', color: 'var(--gold-l)', marginBottom: 20 }}>Healing Attachment Wounds With Your Teen</span>
+            If your teenager is shutting down, pulling away, or in constant conflict, this book explains the attachment science behind it, and what you can actually do about it.
+          </>
+        }
+        aside={
+          <div style={{ flex: '0 1 340px', minWidth: 220, maxWidth: 340, margin: '0 auto', position: 'relative' }}>
+            <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer" className="plausible-event-name=Book+Amazon">
+              <Image src="/images/book-cover.jpg" alt="The Way Back Home by Daniel J. Ahearn" width={680} height={1005} priority style={{ width: '100%', height: 'auto', borderRadius: 6, boxShadow: '0 24px 60px rgba(0,0,0,.45)' }} />
             </a>
           </div>
-        </div>
-      </section>
+        }
+      >
+        <a className="btn btn-gold plausible-event-name=Book+Amazon" href={AMAZON_URL} target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+        <a className="btn btn-line-l plausible-event-name=Audible+Click" href={AUDIBLE_URL} target="_blank" rel="noopener noreferrer">Listen on Audible</a>
+      </Hero>
 
-      {/* About the author */}
-      <section className="section-warm">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">About the Author</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-5">Written from clinical practice</h2>
-          <p className="text-parch-700 leading-relaxed mb-4">
-            Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. He is Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, and maintains a private practice specializing in men's attachment work, father-teen repair, and family systems.
-          </p>
-          <p className="text-parch-700 leading-relaxed mb-7">
-            He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework. The Way Back Home distills over a decade of clinical work with teenagers and their parents into a framework any family can use.
-          </p>
-          <Link href="/about" className="text-parch-500 text-sm font-medium hover:text-parch-700 transition-colors">
-            Read more about Daniel →
-          </Link>
-        </div>
-      </section>
+      <Quote {...ELLIOTT_QUOTE} />
 
-      {/* Companion App */}
-      <section className="bg-parch-900 py-14">
-        <div className="container-main max-w-3xl text-center">
-          <p className="s-eyebrow text-parch-500">Companion App</p>
-          <h2 className="text-2xl font-display text-parch-100 mb-4">The Way Back Home App</h2>
-          <p className="text-parch-400 leading-relaxed mb-7">
-            A progressive web app companion to the book with guided visualizations, reflection prompts, and tools to support your practice between sessions. Available now at waybackhome.app.
-          </p>
-          <a
-            href="https://waybackhome.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="s-btn-primary !bg-parch-500 hover:!bg-parch-400 plausible-event-name=App+Open"
-          >
-            Open the App
-          </a>
+      <Section tone="cream2" width="mid">
+        <div className="cols">
+          <div>
+            <p className="eyebrow">Who it’s for</p>
+            <h2 className="h2" style={{ fontSize: 'clamp(30px,3.2vw,40px)', marginBottom: 24 }}>You might recognize yourself here</h2>
+            <List
+              items={[
+                'Your teenager has pulled away and you don’t know why',
+                'Every conversation turns into a conflict',
+                'You’re grieving the relationship you used to have',
+                'You’ve tried boundaries and consequences, and nothing sticks',
+                'You suspect your own history is part of the picture',
+              ]}
+            />
+          </div>
+          <div>
+            <p className="eyebrow">What’s inside</p>
+            <h2 className="h2" style={{ fontSize: 'clamp(30px,3.2vw,40px)', marginBottom: 24 }}>What the book covers</h2>
+            <List
+              items={[
+                'The attachment science behind adolescent withdrawal and conflict',
+                'How your own attachment history shows up in your parenting',
+                'The Ideal Parent Figure framework, adapted for families',
+                'Practical repair for ruptures, shutdown, and distance',
+                'Staying present when you’re activated, without performing calm',
+              ]}
+            />
+          </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Lead magnet */}
-      <section className="bg-parch-200 py-14">
-        <div className="container-main max-w-xl text-center">
-          <p className="s-eyebrow">Free Resource</p>
-          <h2 className="text-2xl font-display text-parch-900 mb-4">
-            Why Your Teen Is Pushing You Away
-          </h2>
-          <p className="text-parch-700 mb-7">
-            A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal, drawn directly from the book.
-          </p>
-          <a
-            href="/why-your-teen-is-pushing-you-away.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="s-btn-primary plausible-event-name=Guide+Download"
-          >
-            Download the Free Guide
-          </a>
+      <Section
+        eyebrow="The framework"
+        title="The five conditions of secure attachment"
+        intro="The book is built around the core relational experiences that allow security to develop, drawn from the work of Dr. Daniel P. Brown and Dr. David Elliott and applied to parenting teenagers."
+      >
+        <div className="row" style={{ gap: 16 }}>
+          {conditions.map((c, i) => (
+            <div key={c.name} className="card" style={{ flex: '1 1 200px', minWidth: 0, padding: 28 }}>
+              <p className="serif" style={{ fontStyle: 'italic', fontSize: 44, lineHeight: 1, color: 'var(--gold)' }}>{i + 1}</p>
+              <h3 style={{ fontSize: 26, marginTop: 14 }}>{c.name}</h3>
+              <p style={{ marginTop: 6, color: 'var(--ink2)', fontSize: 16 }}>{c.body}</p>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </Section>
+
+      <Section tone="dark" width="mid" eyebrow="Inside the book" title="The R.E.A.L. Method">
+        <p style={{ color: 'var(--sage)', maxWidth: 640, marginTop: -24 }}>
+          Chapter 7 introduces R.E.A.L., a four-step way back after a rupture: Regulate the breath, Explore the moment, Attune with empathy, Lean back in. Parents practice it in the support groups and every day in the free app.
+        </p>
+        <div className="btns" style={{ marginTop: 36 }}>
+          <a className="btn btn-gold plausible-event-name=App+Open" href={APP_URL} target="_blank" rel="noopener noreferrer">Open the free app</a>
+          <Link className="btn btn-line-l" href="/parent-support-groups/#real-method">R.E.A.L. in the parent groups</Link>
+        </div>
+      </Section>
+
+      <Section width="mid">
+        <div className="cols" style={{ alignItems: 'center' }}>
+          <div>
+            <p className="eyebrow">Free guide</p>
+            <h2 className="h2" style={{ fontSize: 'clamp(30px,3.2vw,40px)' }}>Why your teen is pushing you away</h2>
+            <p style={{ marginTop: 16, color: 'var(--ink2)' }}>A short introduction to the framework and what drives adolescent withdrawal, drawn directly from the book.</p>
+            <a className="btn btn-dark plausible-event-name=Guide+Download" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" download style={{ marginTop: 28 }}>Download the free guide</a>
+          </div>
+          <div className="prose">
+            <p className="eyebrow">About the author</p>
+            <p>
+              Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist and Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles. The book distills over a decade of clinical work with teenagers and their parents into a framework any family can use.
+            </p>
+            <Link className="lnk" href="/about" style={{ color: 'var(--f1)', textDecoration: 'none' }}>More about Daniel <Arrow /></Link>
+          </div>
+        </div>
+      </Section>
+
+      <Closing
+        title="Bring it into your family."
+        text="If you’d like support putting the book into practice, start with a free 15-minute call."
+        secondary={{ href: '/parent-support-groups', label: 'Parent support groups' }}
+      />
+    </Page>
   )
 }

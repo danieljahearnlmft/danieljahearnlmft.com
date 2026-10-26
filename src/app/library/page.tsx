@@ -1,217 +1,64 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import { SUBSTACK_URL, pageMeta } from '@/lib/site'
+import { Arrow, Closing, Hero, Page, Section, Video } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Library · Daniel J. Ahearn, LMFT',
-  description:
-    'A working library of videos and guided visualizations on attachment, adolescence, and clinical practice. For clinicians and for parents.',
-  alternates: { canonical: 'https://danieljahearnlmft.com/library' },
-  openGraph: {
-    type: 'website',
-    url: 'https://danieljahearnlmft.com/library',
-    title: 'Library · Daniel J. Ahearn, LMFT',
-    description:
-      'Videos and guided visualizations on attachment, adolescence, and clinical practice.',
-  },
-}
+export const metadata = pageMeta(
+  '/library',
+  'Library',
+  'Videos and guided visualizations on attachment, adolescence, and clinical practice, for clinicians and for parents.',
+)
 
-type Video = { title: string; slug: string; youtubeId: string | null; note?: string; aspect?: '16/9' | '9/16' }
-
-const clinicianVideos: Video[] = [
-  {
-    title: 'Your Teenager Comes Home at 1:15 AM. What Do You Do?',
-    slug: 'teen-comes-home-115am',
-    youtubeId: 'aSk3KdEKhCQ',
-  },
+const talks = [
+  { title: 'Your teenager comes home at 1:15 AM. What do you do?', slug: 'teen-comes-home-115am', id: 'aSk3KdEKhCQ' },
   {
     title: 'The Nine Breaths of Purification',
     slug: 'nine-breaths',
-    youtubeId: 'W_HtN9BgwaI',
-    aspect: '9/16',
+    id: 'W_HtN9BgwaI',
+    tall: true,
     note: 'A Bön practice for releasing anger, attachment, and the certainty we mistake for knowing.',
   },
 ]
 
-const visualizations: Video[] = [
-  { title: 'Safety',           slug: 'safety',           youtubeId: 'GGmNdJrYr5E', note: 'Enough steadiness to stay present.' },
-  { title: 'Attunement',       slug: 'attunement',       youtubeId: 'hu401h0m9fE', note: 'Being seen and felt accurately.' },
-  { title: 'Soothing',         slug: 'soothing',         youtubeId: 'lDwGqByPRSY', note: 'Calming an activated nervous system.' },
-  { title: 'Expressed Delight',slug: 'expressed-delight',youtubeId: '9YD4R-fpRR8', note: 'Being met with warmth and delight.' },
-  { title: 'Exploration',      slug: 'exploration',      youtubeId: null,           note: 'A secure base to venture from.' },
-  { title: 'Ideal Parent',     slug: 'ideal-parent',     youtubeId: null,           note: 'Becoming the secure base your teen comes home to.' },
-]
-
-function VideoEmbed({ id, title, aspect = '16/9' }: { id: string; title: string; aspect?: '16/9' | '9/16' }) {
-  const paddingBottom = aspect === '9/16' ? '177.78%' : '56.25%'
-  const wrapperClass = aspect === '9/16' ? 'mx-auto max-w-[400px]' : 'w-full'
-  return (
-    <div className={`overflow-hidden rounded-xl border border-[#e5d9c9] shadow-[0_8px_30px_rgba(45,31,14,0.10)] bg-black ${wrapperClass}`}>
-      <div className="relative w-full" style={{ paddingBottom }}>
-        <iframe
-          className="absolute inset-0 h-full w-full border-0"
-          src={`https://www.youtube.com/embed/${id}`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  )
-}
-
 export default function Library() {
-  const liveVis = visualizations.filter((v) => v.youtubeId)
-
   return (
-    <>
-      {/* Header */}
-      <section className="section-cream pt-16 md:pt-20">
-        <div className="container-main max-w-[860px]">
-          <p className="s-eyebrow">Library</p>
-          <h1 className="font-display text-4xl md:text-5xl text-parch-900 leading-tight mb-6">
-            A working library.
-          </h1>
-          <p className="text-parch-700 text-lg leading-relaxed max-w-2xl mb-8">
-            Videos and guided visualizations on attachment, adolescence, and clinical practice.
-            A page you can link to, come back to, or send to a colleague.
-          </p>
-          <p className="text-parch-700 leading-relaxed max-w-2xl">
-            I add one of these every two weeks. If you want them in your inbox as they land,
-            subscribe below.
-          </p>
-        </div>
-      </section>
+    <Page>
+      <Hero
+        eyebrow="Library"
+        title="A working library."
+        sub="Videos and guided practices on attachment, adolescence, and clinical work. A page to come back to, or send to a colleague. A new one arrives every two weeks."
+      >
+        <a className="btn btn-gold plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">Get new ones on Substack</a>
+      </Hero>
 
-      {/* Substack subscribe */}
-      <section className="section-warm">
-        <div className="container-main max-w-[860px]">
-          <iframe
-            src="https://danieljahearnlmft.substack.com/embed"
-            width="480"
-            height="320"
-            style={{ border: '1px solid #EEE', background: 'white', maxWidth: '100%' }}
-            scrolling="no"
-            title="Subscribe to Daniel J. Ahearn's Substack"
-          />
-        </div>
-      </section>
-
-      {/* For Clinicians */}
-      <section id="for-clinicians" className="section-cream">
-        <div className="container-main max-w-[860px]">
-          <p className="s-eyebrow">For Clinicians</p>
-          <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-3">
-            Case-based teaching from the room.
-          </h2>
-          <p className="text-parch-700 leading-relaxed max-w-2xl mb-10">
-            Short pieces on what actually happens in the work with adolescents and their families.
-            Written for clinicians, useful to anyone who parents.
-          </p>
-
-          <div className="space-y-14">
-            {clinicianVideos.map((v) => (
-              <div key={v.slug} id={v.slug}>
-                <h3 className="font-display text-xl md:text-2xl text-parch-900 mb-1">{v.title}</h3>
-                {v.note && <p className="text-parch-600 text-sm mb-4">{v.note}</p>}
-                {v.youtubeId && <VideoEmbed id={v.youtubeId} title={v.title} aspect={v.aspect} />}
+      <Section id="for-clinicians" width="mid" eyebrow="For clinicians" title="Case-based teaching from the room." intro="Short pieces on what actually happens in the work with adolescents and their families. Made for clinicians, useful to anyone who parents.">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 64 }}>
+          {talks.map((v) => (
+            <div key={v.slug} id={v.slug} style={{ scrollMarginTop: 80 }}>
+              <h3 style={{ fontWeight: 500, fontSize: 30, lineHeight: 1.15 }}>{v.title}</h3>
+              {v.note && <p style={{ marginTop: 6, color: 'var(--mute)', fontSize: 17 }}>{v.note}</p>}
+              <div style={{ marginTop: 20 }}>
+                <Video id={v.id} title={v.title} tall={v.tall} />
               </div>
-            ))}
-          </div>
-
-          <p className="text-parch-600 text-sm mt-10 italic">
-            More arriving every two weeks.
-          </p>
+            </div>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Guided Visualizations */}
-      <section id="guided-visualizations" className="section-warm">
-        <div className="container-main max-w-[860px]">
-          <p className="s-eyebrow">Guided Visualizations</p>
-          <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-3">
-            The Five Conditions of Secure Attachment.
-          </h2>
-          <p className="text-parch-700 leading-relaxed max-w-2xl mb-10">
-            A series of guided visualizations rooted in attachment theory: Safety, Attunement,
-            Soothing, Expressed Delight, Exploration, and being the Ideal Parent. About twenty
-            minutes each. Best with headphones. Begin with Safety; the rest build from there.
-          </p>
+      <Section id="guided-visualizations" tone="dark" width="mid" eyebrow="Guided visualizations" title="The five conditions of secure attachment.">
+        <p style={{ color: 'var(--sage)', maxWidth: 640, marginTop: -24 }}>
+          A series of guided visualizations, about twenty minutes each: Safety, Attunement, Soothing, Expressed Delight, Exploration, and being the Ideal Parent. Best with headphones. Begin with Safety.
+        </p>
+        <Link className="btn btn-gold" href="/visualization" style={{ marginTop: 36 }}>Listen to the series</Link>
+      </Section>
 
-          <div className="space-y-14">
-            {liveVis.map((v) => (
-              <div key={v.slug} id={v.slug}>
-                <h3 className="font-display text-xl md:text-2xl text-parch-900 mb-1">{v.title}</h3>
-                {v.note && <p className="text-parch-600 text-sm mb-4">{v.note}</p>}
-                <VideoEmbed id={v.youtubeId as string} title={`${v.title}: Guided Visualization`} />
-              </div>
-            ))}
-          </div>
+      <Section width="narrow" tight>
+        <p style={{ color: 'var(--ink2)' }}>
+          If this is the work you want more of, the <Link href="/parent-support-groups" style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>parent support groups</Link> meet weekly on Zoom, and <Link href="/services" style={{ textDecoration: 'underline', textDecorationColor: 'var(--gold)' }}>individual, couples and family therapy</Link> is available online across California. Both grow out of the same framework as these videos.
+        </p>
+        <Link className="lnk" href="/contact" style={{ marginTop: 20, color: 'var(--f1)' }}>Get in touch <Arrow /></Link>
+      </Section>
 
-          {/* Full index */}
-          <div className="mt-14">
-            <p className="s-eyebrow">The Series</p>
-            <ol className="border-b border-[#e5d9c9] mt-4">
-              {visualizations.map((v, i) => (
-                <li key={v.slug} className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5">
-                  <span className="font-display text-parch-400 text-lg w-7 shrink-0">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div className="flex-1">
-                    <div className="flex items-baseline justify-between gap-4">
-                      <h4 className="font-display text-xl text-parch-900">{v.title}</h4>
-                      {v.youtubeId ? (
-                        <a href={`#${v.slug}`} className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors">
-                          Watch
-                        </a>
-                      ) : (
-                        <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">Coming soon</span>
-                      )}
-                    </div>
-                    {v.note && <p className="text-parch-600 text-sm mt-1">{v.note}</p>}
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Closing paragraph: group + intensives */}
-      <section className="section-cream">
-        <div className="container-main max-w-[780px]">
-          <p className="text-parch-700 leading-relaxed">
-            If this is the work you want to do more of, there are two ways in.{' '}
-            <Link href="/parent-support-groups" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              The Parent Support Group
-            </Link>{' '}
-            is a national Zoom-based psychoeducation group for parents of teens, eight weeks, capped
-            at twelve.{' '}
-            <Link href="/consulting" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              Intensives
-            </Link>{' '}
-            are single-day deep dives for individuals, couples, and clinical teams. Both grow
-            out of the same framework you'll find in these videos.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section className="py-12 md:py-16">
-        <div className="container-main max-w-3xl">
-          <p className="text-parch-700 text-base text-center">
-            For questions or to reach out about clinical work,{' '}
-            <Link href="/contact" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              write me here
-            </Link>
-            {' '}or email{' '}
-            <a href="mailto:daniel@danieljahearnlmft.com" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
-              daniel@danieljahearnlmft.com
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-    </>
+      <Closing />
+    </Page>
   )
 }

@@ -1,155 +1,80 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { pageMeta } from '@/lib/site'
+import { Arrow, Closing, ConsultButton, ELLIOTT_QUOTE, Hero, Page, Quote, Section } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist in Los Angeles, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. Working with men, fathers, teens, and families.',
-}
+export const metadata = pageMeta(
+  '/about',
+  'About Daniel',
+  'Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist based in Los Angeles, trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
+)
+
+const background = [
+  { t: 'Integrative Attachment Therapy', d: 'Trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars framework beginning in 2018. IAT-certified clinician.' },
+  { t: 'Licensure', d: 'Licensed Marriage and Family Therapist in California. Also holds CADC certification.' },
+  { t: 'Clinical hypnosis', d: 'Trained in clinical hypnosis, which informs the guided visualization at the core of the Ideal Parent Figure protocol.' },
+  { t: 'Adolescent treatment', d: 'Over a decade in adolescent residential treatment, currently as Director of Culture at Ascend Healthcare in Los Angeles.' },
+  { t: 'Bön contemplative practice', d: 'More than two decades in the Tibetan Bön tradition, which shapes how I understand mind, attention, and the conditions for change.' },
+  { t: 'Author', d: 'The Way Back Home: Healing Attachment Wounds With Your Teen (2026), which brings IAT principles to parents of adolescents.' },
+]
 
 export default function About() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-parch-200 py-16 md:py-24">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="s-eyebrow">About</p>
-              <h1 className="text-4xl md:text-5xl font-display text-parch-900 mb-6 leading-tight">
-                Daniel J. Ahearn,<br />LMFT
-              </h1>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                I'm a licensed marriage and family therapist and certified alcohol and drug counselor based in Los Angeles. I'm an IAT-certified clinician; I trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy beginning in 2018.
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                My clinical work centers on attachment repair: helping people change not just how they think about their relationships, but how their nervous systems experience safety and connection.
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-8">
-                I serve as Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, where I run attachment repair groups and lead clinical training. I also maintain a private practice specializing in men's attachment work, father-teen repair, and families navigating the hardest years.
-              </p>
-              <a
-                href="https://calendly.com/danieljahearn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="s-btn-primary plausible-event-name=Calendly+Click"
-              >
-                Free 15-Min Consult
-              </a>
-            </div>
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-md">
-              <Image
-                src="/images/daniel-speaking-1.webp"
-                alt="Daniel J. Ahearn, LMFT"
-                fill
-                className="object-cover object-center"
-                priority
-              />
+    <Page>
+      <Hero
+        eyebrow="About"
+        title="Daniel J. Ahearn, LMFT"
+        sub="Licensed marriage and family therapist and IAT-certified attachment therapist. Based in Los Angeles, seeing clients online across California."
+        aside={
+          <div style={{ flex: '0 1 420px', minWidth: 260, width: '100%', maxWidth: 420, margin: '0 auto', position: 'relative' }}>
+            <div className="arch">
+              <Image src="/images/daniel-headshot.jpg" alt="Daniel J. Ahearn, LMFT" width={880} height={1100} priority style={{ objectPosition: '50% 30%' }} />
             </div>
           </div>
+        }
+      >
+        <ConsultButton />
+      </Hero>
+
+      <Section width="narrow">
+        <div className="prose">
+          <p className="lede">
+            My clinical work centers on attachment repair: helping people change not just how they think about their relationships, but how their nervous systems experience safety and connection.
+          </p>
+          <p>
+            I’m a licensed marriage and family therapist and certified alcohol and drug counselor. I trained directly with Dr. Daniel P. Brown and Dr. David Elliott in Integrative Attachment Therapy beginning in 2018. I serve as Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, where I run attachment repair groups and lead clinical training. My private practice focuses on men’s attachment work, father-teen repair, and families navigating the hardest years.
+          </p>
+
+          <h2>How I think about this work</h2>
+          <p>
+            Most people I work with aren’t broken. They’re adapted. What looks like emotional unavailability, withdrawal, chronic conflict, or anxious pursuit is almost always an attachment strategy that once made sense. A child who learned that needing things brought punishment learns not to need things. A child who learned that love was inconsistent learns to stay hypervigilant. Those strategies become personality. They become relationship patterns. They become the thing that wears people out.
+          </p>
+          <p>
+            The work isn’t to override those patterns through willpower or insight. It’s to give the nervous system something it never had: a felt experience of safety, attunement, and genuine care, repeated over time until a new foundation forms. That’s what the <Link href="/ideal-parent-figure-protocol">Ideal Parent Figure protocol</Link> does, and what <Link href="/integrative-attachment-therapy">Integrative Attachment Therapy</Link> is built around.
+          </p>
+          <p>
+            I’m particularly drawn to father-teen repair because it’s underrepresented clinically and deeply consequential. Paternal attachment shapes adolescent identity, risk tolerance, emotional regulation, and the templates teens carry into their own adult relationships. A father who does this work doesn’t just change himself. He changes a family system.
+          </p>
         </div>
-      </section>
+      </Section>
 
-      {/* Clinical Philosophy */}
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">Clinical Philosophy</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-7">How I think about this work</h2>
+      <Quote {...ELLIOTT_QUOTE} image="/images/home/sunrise-band.jpg" imagePosition="50% 55%" />
 
-          <div className="space-y-5 text-parch-700 leading-relaxed">
-            <p>
-              Most people I work with aren't broken. They're adapted. What looks like emotional unavailability, withdrawal, chronic conflict, or anxious pursuit is almost always an attachment strategy that once made sense. A child who learned that needing things brought punishment learns not to need things. A child who learned that love was inconsistent learns to stay hypervigilant. Those strategies become personality. They become relationship patterns. They become the thing that wears people out.
-            </p>
-            <p>
-              The work isn't to override those patterns through willpower or insight. It's to provide the nervous system with something it never had: a felt experience of safety, attunement, and genuine care, and to do that repeatedly, over time, until a new foundation forms. That's what the Ideal Parent Figure Protocol does. That's what Integrative Attachment Therapy is built around.
-            </p>
-            <p>
-              I'm particularly drawn to father-teen attachment repair because it's underrepresented clinically and deeply consequential. The research is clear: paternal attachment shapes adolescent identity, risk tolerance, emotional regulation, and the templates teens carry into their own adult relationships. A father who does this work doesn't just change himself. He changes a family system.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Training & Credentials */}
-      <section className="section-warm">
-        <div className="container-main">
-          <p className="s-eyebrow">Training & Credentials</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-10">Background</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: 'Integrative Attachment Therapy (IAT)',
-                body: 'Trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework since 2018. IAT-certified clinician.',
-              },
-              {
-                title: 'Licensure & Certification',
-                body: 'Licensed Marriage and Family Therapist (LMFT), licensed in California. Also holds CADC certification.',
-              },
-              {
-                title: 'Clinical Hypnosis',
-                body: 'Trained in clinical hypnosis, which informs the guided visualization and state-based work at the core of the Ideal Parent Figure Protocol.',
-              },
-              {
-                title: 'Adolescent Residential Treatment',
-                body: 'Over a decade working in adolescent residential treatment settings, including current work as Director of Culture at Ascend Healthcare in Los Angeles.',
-              },
-              {
-                title: 'Bön Buddhist Contemplative Practice',
-                body: 'A contemplative practice rooted in the Tibetan Bön tradition for over two decades, which informs an understanding of mind, attention, and the conditions for change.',
-              },
-              {
-                title: 'Author',
-                body: 'Author of The Way Back Home: Healing Attachment Wounds With Your Teen (2026), a clinical guide for families applying IAT principles to adolescent attachment repair.',
-              },
-            ].map((item) => (
-              <div key={item.title} className="border-l-2 border-parch-400 pl-5">
-                <h3 className="font-display text-lg text-parch-900 mb-2">{item.title}</h3>
-                <p className="text-parch-700 text-sm leading-relaxed">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IAT section */}
-      <section className="section-cream">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="s-eyebrow">The Method</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-5">Integrative Attachment Therapy</h2>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                IAT is a structured approach to attachment repair, grounded in attachment research, created by Dr. Daniel P. Brown (Harvard Medical School) and Dr. David Elliott, and now carried forward by IAT. It works by providing corrective emotional experiences, through guided visualization, that the nervous system can internalize as a new foundation for security.
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                The Ideal Parent Figure Protocol is its central tool: a systematic process of moving through developmental stages and building the internalized experience of being seen, soothed, safe, and supported.
-              </p>
-              <p className="text-parch-700 leading-relaxed">
-                Unlike models focused primarily on insight, IAT works at the level of implicit memory: changing not just how you understand your history, but how your body holds it.
-              </p>
+      <Section tone="cream2" eyebrow="Training and background" title="Background">
+        <div className="row" style={{ gap: 20 }}>
+          {background.map((b) => (
+            <div key={b.t} className="card" style={{ flex: '1 1 320px', minWidth: 0 }}>
+              <h3 style={{ fontSize: 26 }}>{b.t}</h3>
+              <p style={{ marginTop: 10, color: 'var(--ink2)', fontSize: 17 }}>{b.d}</p>
             </div>
-            <div className="bg-parch-900 rounded-lg p-10 text-parch-200">
-              <p className="s-eyebrow text-parch-500">The Three Pillars</p>
-              <div className="space-y-5 mt-3">
-                {[
-                  { num: '01', title: 'Collaboration', body: 'Before the deeper work begins, therapist and client build a genuinely collaborative relationship: shared agenda, transparent rationale, the client’s voice shaping the work. The collaborative stance is itself the relational foundation.' },
-                  { num: '02', title: 'Metacognition', body: 'Developing the capacity to notice your own attachment and relational patterns as patterns: thoughts as thoughts, feelings as feelings, expectations as expectations.' },
-                  { num: '03', title: 'Ideal Parent Figure Imagery', body: 'Systematic guided visualization through developmental stages, rewiring early attachment wounds and building the internalized experience of secure attachment from the inside out.' },
-                ].map((p) => (
-                  <div key={p.num} className="flex gap-4">
-                    <span className="font-display text-parch-600 text-sm mt-1 shrink-0">{p.num}</span>
-                    <div>
-                      <p className="font-medium text-parch-100 text-sm mb-1">{p.title}</p>
-                      <p className="text-parch-400 text-sm leading-relaxed">{p.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+        <Link className="lnk" href="/iat-certified-therapist" style={{ marginTop: 36, color: 'var(--f1)' }}>
+          What IAT certification involves <Arrow />
+        </Link>
+      </Section>
 
-    </>
+      <Closing />
+    </Page>
   )
 }

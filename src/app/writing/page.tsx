@@ -1,107 +1,59 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import { SUBSTACK_URL, pageMeta } from '@/lib/site'
+import { Arrow, Closing, Hero, Page, Section } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Writing: Daniel J. Ahearn, LMFT',
-  description: 'Essays and articles by Daniel J. Ahearn, LMFT on attachment, honesty, and parenting teens, published in Lion’s Roar and on Substack.',
-}
+export const metadata = pageMeta(
+  '/writing',
+  'Writing',
+  'Essays by Daniel J. Ahearn, LMFT on attachment, honesty, and parenting teens, published in Lion’s Roar and on Substack.',
+)
 
 const articles = [
   {
     title: 'Parenting Teens with Presence',
-    outlet: 'Lion’s Roar',
-    dek: 'Five ways to support and connect with your teenage children, written for parents navigating the years when the relationship feels most fragile.',
+    dek: 'Five ways to support and connect with your teenage children, for the years when the relationship feels most fragile.',
     href: 'https://www.lionsroar.com/parenting-teens-with-presence/',
   },
   {
     title: 'How to Be Honest With Yourself',
-    outlet: 'Lion’s Roar',
     dek: 'False positivity erodes truth and intimacy. A path toward the kind of honesty that makes real closeness possible.',
     href: 'https://www.lionsroar.com/when-resilience-becomes-repression/',
   },
   {
-    title: 'Let the “Nine Breaths of Purification” Clear Your Mind and Open Your Heart',
-    outlet: 'Lion’s Roar',
-    dek: 'A short Bön practice: a way to clear what weighs us down, to reconnect with the body, and to remember that every breath offers a chance to begin again.',
+    title: 'The Nine Breaths of Purification',
+    dek: 'A short Bön practice to clear what weighs us down, reconnect with the body, and remember that every breath is a chance to begin again.',
     href: 'https://www.lionsroar.com/let-the-nine-breaths-of-purification-clear-your-mind-and-open-your-heart/',
   },
 ]
 
 export default function Writing() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-parch-200 py-20 md:py-24">
-        <div className="container-main max-w-3xl text-center">
-          <p className="s-eyebrow">Writing</p>
-          <h1 className="text-4xl md:text-5xl font-display font-medium text-parch-900 leading-tight mb-5 text-balance">
-            Essays on attachment, honesty, and parenting teens
-          </h1>
-          <p className="text-parch-700 text-lg leading-relaxed max-w-xl mx-auto">
-            Published writing on the questions I keep returning to in the therapy room, and at home.
-          </p>
-        </div>
-      </section>
+    <Page>
+      <Hero
+        eyebrow="Writing"
+        title="Essays on attachment, honesty, and parenting teens."
+        sub="Published writing on the questions I keep returning to in the therapy room, and at home."
+      />
 
-      {/* Articles */}
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">Featured in <em>Lion&rsquo;s Roar</em></p>
-          <h2 className="text-2xl md:text-3xl font-display text-parch-900 mb-10">Selected essays</h2>
-          <div className="flex flex-col gap-8">
-            {articles.map((a) => (
-              <a
-                key={a.href}
-                href={a.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block border-b border-parch-300 pb-8 last:border-b-0"
-              >
-                <p className="text-xs uppercase tracking-widest text-parch-500 mb-2">{a.outlet}</p>
-                <h3 className="font-display text-xl md:text-2xl text-parch-900 group-hover:text-parch-700 transition-colors mb-3">
-                  {a.title}
-                </h3>
-                <p className="text-parch-700 text-base leading-relaxed mb-3">{a.dek}</p>
-                <span className="text-sm text-parch-500 group-hover:text-parch-700 transition-colors">
-                  Read on Lion&rsquo;s Roar &rarr;
-                </span>
-              </a>
-            ))}
-          </div>
+      <Section width="mid" eyebrow="Featured in Lion’s Roar" title="Selected essays">
+        <div>
+          {articles.map((a) => (
+            <a key={a.href} className="essay" href={a.href} target="_blank" rel="noopener noreferrer">
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span className="et">{a.title}</span>
+                <span className="ed">{a.dek}</span>
+              </span>
+              <Arrow size={20} color="#6B5320" />
+            </a>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Substack */}
-      <section className="section-warm">
-        <div className="container-main max-w-2xl text-center">
-          <p className="s-eyebrow">Newsletter</p>
-          <h2 className="text-2xl md:text-3xl font-display text-parch-900 mb-5">Notes on the work, in your inbox</h2>
-          <p className="text-parch-700 leading-relaxed mb-7">
-            I write on attachment and parenting teens. Come read.
-          </p>
-          <a
-            href="https://danieljahearnlmft.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="s-btn-primary"
-          >
-            Read on Substack
-          </a>
-        </div>
-      </section>
+      <Section tone="cream2" width="narrow" eyebrow="Substack" title="Notes on the work, in your inbox.">
+        <p style={{ color: 'var(--ink2)', marginTop: -16 }}>A reflection on Tuesdays and a shorter note midweek, on attachment and parenting teens.</p>
+        <a className="btn btn-dark plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 28 }}>Read on Substack</a>
+      </Section>
 
-      {/* Book CTA */}
-      <section className="bg-parch-200 py-16">
-        <div className="container-main max-w-xl text-center">
-          <p className="s-eyebrow">The Book</p>
-          <h2 className="text-2xl font-display text-parch-900 mb-4">The Way Back Home</h2>
-          <p className="text-parch-600 text-sm italic mb-4">Healing Attachment Wounds With Your Teen</p>
-          <p className="text-parch-700 mb-7">
-            A practical guide for parents navigating the hardest years of the parent-child relationship.
-          </p>
-          <Link href="/the-way-back-home" className="s-btn-primary">Learn More</Link>
-        </div>
-      </section>
-    </>
+      <Closing secondary={{ href: '/the-way-back-home', label: 'The book' }} />
+    </Page>
   )
 }

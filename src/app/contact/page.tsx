@@ -1,10 +1,11 @@
-import type { Metadata } from 'next'
+import { pageMeta } from '@/lib/site'
 import ContactSection from './ContactSection'
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with Daniel J. Ahearn, LMFT for speaking, consulting, press, and clinician inquiries. Los Angeles based, telehealth across CA.',
-}
+export const metadata = pageMeta(
+  '/contact',
+  'Contact',
+  'Book a free 15-minute consult for therapy, or get in touch about speaking, consulting, press, or referrals. Based in Los Angeles, online across California.',
+)
 
 export default function Contact() {
   return <ContactSection />

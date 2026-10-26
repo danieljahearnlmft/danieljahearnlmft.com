@@ -2,141 +2,128 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useRef, useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { APP_URL, CONSULT_LABEL, CONSULT_URL, SUBSTACK_URL } from '@/lib/site'
 
-type MenuKey = 'work' | 'twbh' | null
+type Item = { href: string; label: string }
+type Group = { key: string; label: string; items: Item[] }
+
+const GROUPS: Group[] = [
+  {
+    key: 'work',
+    label: 'Work With Me',
+    items: [
+      { href: '/services', label: 'Therapy and fees' },
+      { href: '/parent-support-groups', label: 'Parent support groups' },
+      { href: '/consulting', label: 'Organizations and speaking' },
+    ],
+  },
+  {
+    key: 'twbh',
+    label: 'The Way Back Home',
+    items: [
+      { href: '/the-way-back-home', label: 'The book' },
+      { href: APP_URL, label: 'The daily practice app' },
+      { href: '/library', label: 'Library' },
+      { href: '/writing', label: 'Writing' },
+      { href: SUBSTACK_URL, label: 'Substack' },
+    ],
+  },
+]
+
+function NavLink({ item, className, onClick }: { item: Item; className?: string; onClick?: () => void }) {
+  if (item.href.startsWith('/')) {
+    return <Link href={item.href} className={className} onClick={onClick}>{item.label}</Link>
+  }
+  return <a href={item.href} className={className} onClick={onClick} target="_blank" rel="noopener noreferrer">{item.label}</a>
+}
+
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true" style={{ transform: open ? 'rotate(180deg)' : undefined, transition: 'transform .15s' }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  )
+}
 
 export default function Nav() {
   const pathname = usePathname()
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [openMenu, setOpenMenu] = useState<MenuKey>(null)
-  const workRef = useRef<HTMLDivElement>(null)
-  const twbhRef = useRef<HTMLDivElement>(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [open, setOpen] = useState<string | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      const target = e.target as Node
-      const inWork = workRef.current?.contains(target)
-      const inTwbh = twbhRef.current?.contains(target)
-      if (!inWork && !inTwbh) setOpenMenu(null)
+    function onDown(e: MouseEvent) {
+      if (!ref.current?.contains(e.target as Node)) setOpen(null)
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setOpen(null)
+    }
+    document.addEventListener('mousedown', onDown)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      document.removeEventListener('keydown', onKey)
+    }
   }, [])
 
-  if (pathname?.startsWith('/pathwork')) return null
-  if (pathname?.startsWith('/visualization')) return null
+  useEffect(() => {
+    setOpen(null)
+    setMobileOpen(false)
+  }, [pathname])
 
-  const close = () => setOpenMenu(null)
+  if (pathname?.startsWith('/pathwork') || pathname?.startsWith('/visualization')) return null
+
+  const consult = (
+    <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT_URL} target="_blank" rel="noopener noreferrer">
+      {CONSULT_LABEL}
+    </a>
+  )
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#1C2B1E] border-b border-[#2E4232]">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-display italic text-xl text-[#F4F0EA] hover:text-white transition-colors">
-          Daniel J. Ahearn, LMFT
-        </Link>
+    <nav className="wbh snav" aria-label="Main">
+      <div className="bar">
+        <Link href="/" className="brand">Daniel J. Ahearn, LMFT</Link>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-7">
-          <Link href="/about" className="text-sm text-[#D8DFD3] hover:text-white transition-colors">About</Link>
-
-          {/* Work With Me */}
-          <div className="relative" ref={workRef}>
-            <button
-              className="text-sm text-[#D8DFD3] hover:text-white transition-colors flex items-center gap-1"
-              onClick={() => setOpenMenu(openMenu === 'work' ? null : 'work')}
-              aria-expanded={openMenu === 'work'}
-            >
-              Work With Me
-              <svg className={`w-3 h-3 transition-transform ${openMenu === 'work' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {openMenu === 'work' && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-[#24372A] border border-[#3A5440] rounded-lg shadow-lg py-2">
-                <Link href="/services" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Individual, Couples & Family
-                </Link>
-                <Link href="/parent-support-groups" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Parent Support Groups
-                </Link>
-                <Link href="/mens-work" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Men's Attachment Repair Groups
-                </Link>
-                <div className="border-t border-[#3A5440] my-1" />
-                <Link href="/consulting" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Organizations & Teams
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* The Way Back Home */}
-          <div className="relative" ref={twbhRef}>
-            <button
-              className="text-sm text-[#D8DFD3] hover:text-white transition-colors flex items-center gap-1"
-              onClick={() => setOpenMenu(openMenu === 'twbh' ? null : 'twbh')}
-              aria-expanded={openMenu === 'twbh'}
-            >
-              The Way Back Home
-              <svg className={`w-3 h-3 transition-transform ${openMenu === 'twbh' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {openMenu === 'twbh' && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-[#24372A] border border-[#3A5440] rounded-lg shadow-lg py-2">
-                <Link href="/the-way-back-home" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  The Book
-                </Link>
-                <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Practice (app)
-                </a>
-                <Link href="/library" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Library
-                </Link>
-                <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="block px-4 py-2.5 text-sm text-[#F4F0EA] hover:bg-[#2E4232] transition-colors" onClick={close}>
-                  Substack
-                </a>
-              </div>
-            )}
-          </div>
-
-          <Link href="/contact" className="text-sm text-[#D8DFD3] hover:text-white transition-colors">Contact</Link>
+        <div className="links-d" ref={ref}>
+          <Link href="/about" className="nl">About</Link>
+          {GROUPS.map((g) => (
+            <div key={g.key} style={{ position: 'relative' }}>
+              <button className="nl" onClick={() => setOpen(open === g.key ? null : g.key)} aria-expanded={open === g.key}>
+                {g.label} <Chevron open={open === g.key} />
+              </button>
+              {open === g.key && (
+                <div className="menu">
+                  {g.items.map((i) => <NavLink key={i.href} item={i} onClick={() => setOpen(null)} />)}
+                </div>
+              )}
+            </div>
+          ))}
+          <Link href="/contact" className="nl">Contact</Link>
+          {consult}
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-[#F4F0EA] p-1"
-          onClick={() => setMenuOpen(v => !v)}
-          aria-label="Toggle menu"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {menuOpen
-              ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            }
+        <button className="burger" onClick={() => setMobileOpen((v) => !v)} aria-label="Menu" aria-expanded={mobileOpen}>
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            {mobileOpen
+              ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M6 18L18 6M6 6l12 12" />
+              : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 7h16M4 12h16M4 17h16" />}
           </svg>
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-[#2E4232] bg-[#1C2B1E] px-6 py-5 flex flex-col gap-4">
-          <Link href="/about" className="text-sm text-[#F4F0EA]" onClick={() => setMenuOpen(false)}>About</Link>
-
-          <div className="text-xs uppercase tracking-widest text-[#C9A96A] mt-1">Work With Me</div>
-          <Link href="/services" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Individual, Couples & Family</Link>
-          <Link href="/parent-support-groups" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Parent Support Groups</Link>
-          <Link href="/mens-work" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Men's Attachment Repair Groups</Link>
-          <Link href="/consulting" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Organizations & Teams</Link>
-
-          <div className="text-xs uppercase tracking-widest text-[#C9A96A] mt-1">The Way Back Home</div>
-          <Link href="/the-way-back-home" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>The Book</Link>
-          <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Practice (app)</a>
-          <Link href="/library" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Library</Link>
-          <a href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F4F0EA] pl-2" onClick={() => setMenuOpen(false)}>Substack</a>
-
-          <Link href="/contact" className="text-sm text-[#F4F0EA]" onClick={() => setMenuOpen(false)}>Contact</Link>
+      {mobileOpen && (
+        <div className="mob">
+          <Link href="/about">About</Link>
+          {GROUPS.map((g) => (
+            <div key={g.key} style={{ display: 'contents' }}>
+              <p className="k">{g.label}</p>
+              {g.items.map((i) => <NavLink key={i.href} item={i} />)}
+            </div>
+          ))}
+          <p className="k">Get in touch</p>
+          <Link href="/contact">Contact</Link>
+          {consult}
         </div>
       )}
     </nav>

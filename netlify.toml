@@ -22,6 +22,17 @@
   to = "/visualization"
   status = 301
 
+# Men's groups are paused. Temporary redirect so old links land on therapy and fees.
+[[redirects]]
+  from = "/mens-work"
+  to = "/services/"
+  status = 302
+
+[[redirects]]
+  from = "/mens-work/*"
+  to = "/services/"
+  status = 302
+
 [[redirects]]
   from = "/*"
   to = "/404/index.html"

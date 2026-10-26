@@ -1,310 +1,183 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import { GUIDE_URL, OFFERS, pageMeta } from '@/lib/site'
+import { Arrow, Closing, ConsultButton, Facts, Hero, List, OfferCard, Page, Quote, RelatedLinks } from '@/components/site/ui'
 
-export const metadata: Metadata = {
-  title: 'Individual, Couples & Family Therapy',
-  description: 'IAT-based individual therapy, couples attachment repair, and family & teen work with Daniel J. Ahearn, LMFT in Los Angeles. Telehealth throughout California.',
+export const metadata = pageMeta(
+  '/services',
+  'Therapy and Fees',
+  'Attachment-based individual, couples, and family therapy with an IAT-certified therapist. Online across California. Fees, format, and common questions.',
+)
+
+const faqs = [
+  {
+    q: 'What does attachment repair actually mean?',
+    a: 'Attachment repair changes how your nervous system experiences safety and connection, not only how you think about it. Using Integrative Attachment Therapy and the Ideal Parent Figure protocol, we build the felt experience of secure attachment: I’m safe, I’m valued, I belong. That shifts the automatic patterns in your relationships, your parenting, and how you regulate.',
+  },
+  {
+    q: 'What if my teen doesn’t want therapy?',
+    a: 'Teens often come in skeptical. I use mentalization and visualization to build insight while engaging parents, so repair happens in the family system and not only with the teen. Resistance is normal and workable.',
+  },
+  {
+    q: 'How long does therapy take?',
+    a: 'Most individual clients work with me for 6 to 12 months, some longer. Couples and family work typically runs 3 to 6 months, depending on goals.',
+  },
+  {
+    q: 'Do you take insurance?',
+    a: 'I’m an out-of-network provider. I provide superbills if you’d like to seek reimbursement from your insurance company.',
+  },
+  {
+    q: 'Where do sessions happen?',
+    a: 'Online, over secure HIPAA-compliant video, for clients anywhere in California. I’m based in Los Angeles.',
+  },
+  {
+    q: 'What’s the cancellation policy?',
+    a: '24 hours’ notice is required for all appointments.',
+  },
+]
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 }
 
 export default function Services() {
   return (
-    <>
-      {/* Hero */}
-      <section className="relative h-[60vh] min-h-[480px] overflow-hidden">
-        <Image
-          src="/images/services-hero.jpg"
-          alt="Individual, Couples & Family Therapy"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-parch-900/60" />
-        <div className="absolute inset-0 flex items-end pb-14 md:pb-20">
-          <div className="container-main">
-            <p className="text-xs uppercase tracking-widest text-parch-300 mb-4">Services</p>
-            <h1 className="text-4xl md:text-5xl font-display text-parch-50 leading-tight max-w-2xl mb-5">
-              Individual, Couples<br />& Family Therapy
-            </h1>
-            <p className="text-parch-300 text-base leading-relaxed max-w-xl mb-8">
-              All work is grounded in Integrative Attachment Therapy and the Ideal Parent Figure Protocol, tailored to your specific attachment history, current struggles, and relational goals.
+    <Page>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+
+      <Hero
+        eyebrow="Therapy and fees"
+        title="Individual, couples and family therapy."
+        sub="Attachment repair grounded in Integrative Attachment Therapy and the Ideal Parent Figure protocol, shaped to your history and what you want to change."
+        image="/images/services-hero.jpg"
+        imagePosition="50% 45%"
+      >
+        <ConsultButton />
+      </Hero>
+
+      <Facts
+        items={[
+          { k: 'Where', v: 'Online, across California' },
+          { k: 'Sessions', v: '50 minutes' },
+          { k: 'Fees', v: 'Sliding scale' },
+          { k: 'Insurance', v: 'Out-of-network, superbills' },
+        ]}
+      />
+
+      <section id="individual" className="sec" style={{ scrollMarginTop: 80 }}>
+        <div className="wrap svc">
+          <div className="body">
+            <p className="eyebrow">Individual</p>
+            <h2>Individual attachment therapy</h2>
+            <p className="intro" style={{ fontSize: 20 }}>
+              One-on-one work using the Three Pillars method, including the Ideal Parent Figure protocol, for people carrying old attachment patterns into their relationships and their parenting.
             </p>
-            <a
-              href="https://calendly.com/danieljahearn/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="s-btn-primary"
-            >
-              Free 15-Min Consult
+            <h3>Who this is for</h3>
+            <List
+              items={[
+                'Anyone with an insecure attachment pattern: dismissive, anxious, or disorganized',
+                'People healing from developmental trauma or neglect',
+                'Those who want more privacy or customization than a group offers',
+                'Anyone working through a specific relational pattern or wound',
+              ]}
+            />
+            <h3>What we do</h3>
+            <List
+              items={[
+                'A thorough attachment assessment',
+                'Systematic work through developmental stages with the IPF protocol',
+                'Linking that work to what’s happening in your relationships now',
+                'Nervous system regulation and somatic work',
+                'Differentiating from family-of-origin patterns',
+              ]}
+            />
+          </div>
+          <OfferCard offer={{ ...OFFERS.individual, format: [...OFFERS.individual.format, 'A 3 to 6 month commitment to start'] }} />
+        </div>
+      </section>
+
+      <section id="family" className="sec t-cream2" style={{ scrollMarginTop: 80 }}>
+        <div className="wrap svc">
+          <div className="body">
+            <p className="eyebrow">Family</p>
+            <h2>Family and teen attachment repair</h2>
+            <p className="intro" style={{ fontSize: 20 }}>
+              For families where a teenager is shutting down, struggling with identity, or stuck in conflict. The work addresses the attachment wounds underneath anxiety, withdrawal, or acting out, in both the teen and the parents. Healing happens in relationship, not only in the teen.
+            </p>
+            <h3>Who this is for</h3>
+            <List
+              items={[
+                'Parents of teens (13 to 19) facing emotional dysregulation',
+                'Families navigating a major transition or crisis',
+                'Parents who want to understand their teen’s attachment needs',
+                'Families healing from trauma or disruption',
+                'Families from Ascend Healthcare seeking continuity of care',
+              ]}
+            />
+            <a className="lnk plausible-event-name=Guide+Download" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" download style={{ marginTop: 28, color: 'var(--f1)' }}>
+              Free guide: Why your teen is pushing you away <Arrow />
             </a>
           </div>
+          <OfferCard offer={OFFERS.family} />
         </div>
       </section>
 
-      {/* Individual */}
-      <section id="individual" className="section-cream scroll-mt-20">
-        <div className="container-main max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-2">
-              <p className="s-eyebrow">01</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-5">Individual IAT Therapy</h2>
-              <p className="text-parch-600 italic mb-5">Deep, personalized attachment repair</p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                One-on-one work using the Three Pillars method including the Ideal Parent Figure Protocol, tailored to your specific attachment history, current struggles, and relational goals.
-              </p>
-              <h3 className="font-display text-lg text-parch-900 mt-7 mb-4">Who this is for</h3>
-              <ul className="space-y-2 mb-6">
-                {[
-                  'Anyone with insecure attachment (dismissive, anxious, disorganized)',
-                  'People healing from developmental trauma or neglect',
-                  'Those who need more privacy or customization than group offers',
-                  'Clients working through specific relational patterns or wounds',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm">
-                    <span className="text-parch-400 shrink-0">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-              <h3 className="font-display text-lg text-parch-900 mb-4">What we do</h3>
-              <ul className="space-y-2 mb-7">
-                {[
-                  'Comprehensive attachment assessment',
-                  'Systematic work through developmental stages using IPF',
-                  'Integration with current relationship challenges',
-                  'Nervous system regulation and somatic work',
-                  'Differentiation from family of origin patterns',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm">
-                    <span className="text-parch-400 shrink-0">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://calendly.com/danieljahearn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="s-btn-primary plausible-event-name=Calendly+Click"
-              >
-                Free 15-Min Consult
-              </a>
-            </div>
-            <div className="bg-parch-900 rounded-lg p-7 text-parch-200 self-start">
-              <p className="text-xs uppercase tracking-widest text-parch-500 mb-4">Format</p>
-              <div className="space-y-3 text-sm text-parch-400">
-                <p>50-minute sessions</p>
-                <p>Weekly or bi-weekly (weekly recommended)</p>
-                <p>Minimum 3-6 month commitment</p>
-                <p>Telehealth throughout California</p>
-              </div>
-              <div className="border-t border-parch-700 mt-6 pt-5">
-                <p className="text-parch-100 font-medium text-base">$250 to $350 / session</p>
-                <p className="text-parch-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
-              </div>
-            </div>
+      <section id="couples" className="sec" style={{ scrollMarginTop: 80 }}>
+        <div className="wrap svc">
+          <div className="body">
+            <p className="eyebrow">Couples</p>
+            <h2>Couples attachment repair</h2>
+            <p className="intro" style={{ fontSize: 20 }}>
+              The same IAT methodology, applied to how attachment patterns drive conflict, distance, and breakdown between partners. This is clinical attachment work, not general couples counseling.
+            </p>
+            <h3>Who this is for</h3>
+            <List
+              items={[
+                'Couples living with chronic distance or shutdown',
+                'Partners navigating betrayal, an affair, or broken trust',
+                'Couples where one partner pursues and the other withdraws',
+                'Partners who want to repair before considering separation',
+              ]}
+            />
           </div>
+          <OfferCard offer={OFFERS.couples} />
         </div>
       </section>
 
-      {/* Family & Teen */}
-      <section id="family" className="section-warm scroll-mt-20">
-        <div className="container-main max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-2">
-              <p className="s-eyebrow">02</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-5">Family & Teen Attachment Repair</h2>
-              <p className="text-parch-600 italic mb-5">Parent-teen attachment healing through family systems work</p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                I help families where adolescents are shutting down emotionally, struggling with identity, or stuck in conflict patterns. This work addresses the attachment wounds underneath behaviors like anxiety, withdrawal, or acting out.
-              </p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                Through my weekly attachment repair groups at Ascend Healthcare and a decade of adolescent residential treatment, I've developed a family systems approach that addresses attachment wounds in both teens and parents. Healing happens in relationship, not just in the teen.
-              </p>
-              <h3 className="font-display text-lg text-parch-900 mt-6 mb-4">Who this is for</h3>
-              <ul className="space-y-2 mb-7">
-                {[
-                  'Parents of teens (13-19) experiencing emotional dysregulation',
-                  'Families navigating major transitions or crises',
-                  'Parents wanting to understand their teen\'s attachment needs',
-                  'Families healing from trauma or systemic disruption',
-                  'Parents from Ascend Healthcare seeking continuity of care',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm">
-                    <span className="text-parch-400 shrink-0">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://calendly.com/danieljahearn/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="s-btn-primary plausible-event-name=Calendly+Click"
-                >
-                  Free 15-Min Consult
-                </a>
-                <a
-                  href="/why-your-teen-is-pushing-you-away.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="s-btn-ghost plausible-event-name=Guide+Download"
-                >
-                  Download the Free Guide
-                </a>
-              </div>
-            </div>
-            <div className="bg-parch-900 rounded-lg p-7 text-parch-200 self-start">
-              <p className="text-xs uppercase tracking-widest text-parch-500 mb-4">Format</p>
-              <div className="space-y-3 text-sm text-parch-400">
-                <p>50-minute sessions</p>
-                <p>Weekly initially, adjusted based on progress</p>
-                <p>Telehealth throughout California</p>
-                <p>Walk-and-talk available in LA</p>
-              </div>
-              <div className="border-t border-parch-700 mt-6 pt-5">
-                <p className="text-parch-100 font-medium text-base">$350 to $450 / session</p>
-                <p className="text-parch-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
-              </div>
-            </div>
+      <Quote
+        text="Security stops being something you perform and starts being something you feel."
+        by=""
+        image="/images/services-2.jpg"
+        imagePosition="50% 40%"
+      />
+
+      <section className="sec">
+        <div className="wrap-n">
+          <div className="sec-head">
+            <p className="eyebrow">Questions</p>
+            <h2 className="h2">Common questions</h2>
           </div>
-        </div>
-      </section>
-
-      {/* Couples */}
-      <section id="couples" className="section-cream scroll-mt-20">
-        <div className="container-main max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-2">
-              <p className="s-eyebrow">03</p>
-              <h2 className="text-3xl font-display text-parch-900 mb-5">Couples Attachment Repair</h2>
-              <p className="text-parch-600 italic mb-5">Relational repair for couples experiencing disconnection or crisis</p>
-              <p className="text-parch-700 leading-relaxed mb-4">
-                Using the same IAT methodology from individual and group work, I help couples understand how attachment patterns drive conflict, distance, and breakdown. This is clinical attachment work, not general couples counseling.
-              </p>
-              <h3 className="font-display text-lg text-parch-900 mt-6 mb-4">Who this is for</h3>
-              <ul className="space-y-2 mb-7">
-                {[
-                  'Couples experiencing chronic distance or shutdown',
-                  'Partners navigating betrayal, affairs, or broken trust',
-                  'Couples where one partner avoids and one pursues',
-                  'Partners wanting to repair before considering separation',
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 text-parch-700 text-sm">
-                    <span className="text-parch-400 shrink-0">·</span>{item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://calendly.com/danieljahearn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="s-btn-primary plausible-event-name=Calendly+Click"
-              >
-                Free 15-Min Consult
-              </a>
-            </div>
-            <div className="bg-parch-900 rounded-lg p-7 text-parch-200 self-start">
-              <p className="text-xs uppercase tracking-widest text-parch-500 mb-4">Format</p>
-              <div className="space-y-3 text-sm text-parch-400">
-                <p>50-minute sessions</p>
-                <p>Weekly or bi-weekly</p>
-                <p>Telehealth throughout California</p>
-              </div>
-              <div className="border-t border-parch-700 mt-6 pt-5">
-                <p className="text-parch-100 font-medium text-base">$350 to $450 / session</p>
-                <p className="text-parch-500 text-xs mt-1">Sliding scale, set together in our consult · Out-of-network · Superbills available</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services image break */}
-      <div className="relative h-64 md:h-80 overflow-hidden">
-        <Image
-          src="/images/services-2.jpg"
-          alt=""
-          fill
-          className="object-cover object-center"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-parch-900/50" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p className="font-display italic text-parch-100 text-2xl md:text-3xl text-center px-6 max-w-xl">
-            Security stops being something you perform<br />and starts being something you feel.
-          </p>
-        </div>
-      </div>
-
-      {/* FAQ */}
-      <section className="section-cream">
-        <div className="container-main max-w-3xl">
-          <p className="s-eyebrow">FAQ</p>
-          <h2 className="text-3xl font-display text-parch-900 mb-10">Common questions</h2>
-          <div className="space-y-8">
-            {[
-              {
-                q: 'What does attachment repair actually mean?',
-                a: 'Attachment repair changes how your nervous system experiences safety and connection, not just intellectually, but at a body level. Using IAT and the IPF Protocol, we build the internalized experience of secure attachment: "I\'m safe. I\'m valued. I belong." This shifts automatic patterns in relationships, parenting, and emotional regulation.',
-              },
-              {
-                q: 'What if my teen doesn\'t want therapy?',
-                a: 'Teens often come in skeptical. I use tools like mentalization and visualization to build insight while engaging parents so repair happens in the family system, not just with the teen. Resistance is normal and workable.',
-              },
-              {
-                q: 'How long does therapy take?',
-                a: 'Individual therapy: most clients work with me for 6-12 months, with some continuing longer. Couples/family: 3-6 months typically, depending on goals. Men\'s groups: 16-week commitment minimum; many continue afterward.',
-              },
-              {
-                q: 'Do you take insurance?',
-                a: 'I work as an out-of-network provider. I provide superbills for clients who wish to seek reimbursement from their insurance company.',
-              },
-              {
-                q: 'Where are you located? Do you offer telehealth?',
-                a: 'I\'m based in Los Angeles and see clients via HIPAA-compliant telehealth throughout California. Walk-and-talk sessions available in LA.',
-              },
-              {
-                q: 'What\'s the cancellation policy?',
-                a: '24 hours notice required for all appointments.',
-              },
-            ].map((faq) => (
-              <div key={faq.q} className="border-l-2 border-parch-300 pl-6">
-                <h3 className="font-display text-lg text-parch-900 mb-2">{faq.q}</h3>
-                <p className="text-parch-700 text-sm leading-relaxed">{faq.a}</p>
-              </div>
+          <div className="faq">
+            {faqs.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Framework links */}
-      <section className="section-cream">
-        <div className="container-main max-w-4xl">
-          <p className="s-eyebrow">The Framework</p>
-          <h2 className="text-2xl font-display text-parch-900 mb-3">Go deeper into the approach</h2>
-          <p className="text-parch-600 text-sm mb-8 leading-relaxed max-w-xl">
-            All work in this practice is grounded in Integrative Attachment Therapy. If you want to understand the model before reaching out, these pages go into depth.
-          </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { href: '/integrative-attachment-therapy', label: 'Integrative Attachment Therapy', desc: 'The Three Pillars framework explained' },
-              { href: '/ideal-parent-figure-protocol', label: 'Ideal Parent Figure Protocol', desc: 'How the core intervention works' },
-              { href: '/earned-secure-attachment', label: 'Earned Secure Attachment', desc: 'What the research shows is possible' },
-              { href: '/iat-certified-therapist', label: 'IAT-Certified Therapist', desc: 'What certification means and why it\'s rare' },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block bg-parch-200 hover:bg-parch-300 transition-colors rounded-lg p-5 group"
-              >
-                <p className="font-display text-parch-900 text-base leading-snug mb-2 group-hover:text-parch-800">{item.label}</p>
-                <p className="text-parch-500 text-xs leading-relaxed">{item.desc}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <RelatedLinks
+        title="Understand the approach"
+        items={[
+          { href: '/integrative-attachment-therapy', t: 'Integrative Attachment Therapy', d: 'The Three Pillars framework' },
+          { href: '/ideal-parent-figure-protocol', t: 'Ideal Parent Figure protocol', d: 'How the core intervention works' },
+          { href: '/iat-certified-therapist', t: 'IAT certification', d: 'What the training involves' },
+        ]}
+      />
 
-    </>
+      <Closing secondary={{ href: '/parent-support-groups', label: 'Parent support groups' }} />
+    </Page>
   )
 }
