@@ -68,17 +68,16 @@ export default function Library() {
       {/* Header */}
       <section className="section-cream pt-16 md:pt-20">
         <div className="container-main max-w-[860px]">
-          <p className="eyebrow">Library</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-cream-900 leading-tight mb-6">
+          <p className="s-eyebrow">Library</p>
+          <h1 className="font-display text-4xl md:text-5xl text-parch-900 leading-tight mb-6">
             A working library.
           </h1>
-          <p className="text-cream-700 text-lg leading-relaxed max-w-2xl mb-8">
+          <p className="text-parch-700 text-lg leading-relaxed max-w-2xl mb-8">
             Videos and guided visualizations on attachment, adolescence, and clinical practice.
             A page you can link to, come back to, or send to a colleague.
           </p>
-          <p className="text-cream-700 leading-relaxed max-w-2xl">
-            I add one of these every two weeks. If you want them in your inbox as they land,
-            subscribe below.
+          <p className="text-parch-700 leading-relaxed max-w-2xl">
+            New ones are added as they're made. For a monthly note with the latest, subscribe below.
           </p>
         </div>
       </section>
@@ -100,11 +99,11 @@ export default function Library() {
       {/* For Clinicians */}
       <section id="for-clinicians" className="section-cream">
         <div className="container-main max-w-[860px]">
-          <p className="eyebrow">For Clinicians</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-3">
+          <p className="s-eyebrow">For Clinicians</p>
+          <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-3">
             Case-based teaching from the room.
           </h2>
-          <p className="text-cream-700 leading-relaxed max-w-2xl mb-10">
+          <p className="text-parch-700 leading-relaxed max-w-2xl mb-10">
             Short pieces on what actually happens in the work with adolescents and their families.
             Written for clinicians, useful to anyone who parents.
           </p>
@@ -112,15 +111,15 @@ export default function Library() {
           <div className="space-y-14">
             {clinicianVideos.map((v) => (
               <div key={v.slug} id={v.slug}>
-                <h3 className="font-serif text-xl md:text-2xl text-cream-900 mb-1">{v.title}</h3>
-                {v.note && <p className="text-cream-600 text-sm mb-4">{v.note}</p>}
+                <h3 className="font-display text-xl md:text-2xl text-parch-900 mb-1">{v.title}</h3>
+                {v.note && <p className="text-parch-600 text-sm mb-4">{v.note}</p>}
                 {v.youtubeId && <VideoEmbed id={v.youtubeId} title={v.title} aspect={v.aspect} />}
               </div>
             ))}
           </div>
 
-          <p className="text-cream-600 text-sm mt-10 italic">
-            More arriving every two weeks.
+          <p className="text-parch-600 text-sm mt-10 italic">
+            More added as they're made.
           </p>
         </div>
       </section>
@@ -128,11 +127,11 @@ export default function Library() {
       {/* Guided Visualizations */}
       <section id="guided-visualizations" className="section-warm">
         <div className="container-main max-w-[860px]">
-          <p className="eyebrow">Guided Visualizations</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-cream-900 mb-3">
+          <p className="s-eyebrow">Guided Visualizations</p>
+          <h2 className="font-display text-3xl md:text-4xl text-parch-900 mb-3">
             The Five Conditions of Secure Attachment.
           </h2>
-          <p className="text-cream-700 leading-relaxed max-w-2xl mb-10">
+          <p className="text-parch-700 leading-relaxed max-w-2xl mb-10">
             A series of guided visualizations rooted in attachment theory: Safety, Attunement,
             Soothing, Expressed Delight, Exploration, and being the Ideal Parent. About twenty
             minutes each. Best with headphones. Begin with Safety; the rest build from there.
@@ -141,25 +140,25 @@ export default function Library() {
           <div className="space-y-14">
             {liveVis.map((v) => (
               <div key={v.slug} id={v.slug}>
-                <h3 className="font-serif text-xl md:text-2xl text-cream-900 mb-1">{v.title}</h3>
-                {v.note && <p className="text-cream-600 text-sm mb-4">{v.note}</p>}
-                <VideoEmbed id={v.youtubeId as string} title={`${v.title} — Guided Visualization`} />
+                <h3 className="font-display text-xl md:text-2xl text-parch-900 mb-1">{v.title}</h3>
+                {v.note && <p className="text-parch-600 text-sm mb-4">{v.note}</p>}
+                <VideoEmbed id={v.youtubeId as string} title={`${v.title}: Guided Visualization`} />
               </div>
             ))}
           </div>
 
           {/* Full index */}
           <div className="mt-14">
-            <p className="eyebrow">The Series</p>
+            <p className="s-eyebrow">The Series</p>
             <ol className="border-b border-[#e5d9c9] mt-4">
               {visualizations.map((v, i) => (
                 <li key={v.slug} className="flex items-baseline gap-4 sm:gap-6 border-t border-[#e5d9c9] py-5">
-                  <span className="font-serif text-cream-400 text-lg w-7 shrink-0">
+                  <span className="font-display text-parch-400 text-lg w-7 shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="flex-1">
                     <div className="flex items-baseline justify-between gap-4">
-                      <h4 className="font-serif text-xl text-cream-900">{v.title}</h4>
+                      <h4 className="font-display text-xl text-parch-900">{v.title}</h4>
                       {v.youtubeId ? (
                         <a href={`#${v.slug}`} className="shrink-0 text-xs uppercase tracking-widest text-[#b88a38] hover:text-[#8a6a2e] transition-colors">
                           Watch
@@ -168,7 +167,7 @@ export default function Library() {
                         <span className="shrink-0 text-xs uppercase tracking-widest text-[#a89878]">Coming soon</span>
                       )}
                     </div>
-                    {v.note && <p className="text-cream-600 text-sm mt-1">{v.note}</p>}
+                    {v.note && <p className="text-parch-600 text-sm mt-1">{v.note}</p>}
                   </div>
                 </li>
               ))}
@@ -177,17 +176,17 @@ export default function Library() {
         </div>
       </section>
 
-      {/* Closing paragraph — group + intensives */}
+      {/* Closing paragraph: group + intensives */}
       <section className="section-cream">
         <div className="container-main max-w-[780px]">
-          <p className="text-cream-700 leading-relaxed">
+          <p className="text-parch-700 leading-relaxed">
             If this is the work you want to do more of, there are two ways in.{' '}
-            <Link href="/parent-support-groups" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <Link href="/parent-support-groups" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               The Parent Support Group
             </Link>{' '}
             is a national Zoom-based psychoeducation group for parents of teens, eight weeks, capped
             at twelve.{' '}
-            <Link href="/consulting" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <Link href="/consulting" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               Intensives
             </Link>{' '}
             are single-day deep dives for individuals, couples, and clinical teams. Both grow
@@ -199,13 +198,13 @@ export default function Library() {
       {/* Contact */}
       <section className="py-12 md:py-16">
         <div className="container-main max-w-3xl">
-          <p className="text-cream-700 text-base text-center">
+          <p className="text-parch-700 text-base text-center">
             For questions or to reach out about clinical work,{' '}
-            <Link href="/contact" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <Link href="/contact" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               write me here
             </Link>
             {' '}or email{' '}
-            <a href="mailto:daniel@danieljahearnlmft.com" className="font-serif text-cream-900 underline decoration-cream-400 underline-offset-4 hover:decoration-cream-700 transition-colors">
+            <a href="mailto:daniel@danieljahearnlmft.com" className="font-display text-parch-900 underline decoration-parch-400 underline-offset-4 hover:decoration-parch-700 transition-colors">
               daniel@danieljahearnlmft.com
             </a>
             .

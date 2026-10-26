@@ -1,0 +1,52 @@
+/* Homepage design: forest, cream and gold (matches waybackhome.app) */
+.wbh{--f1:#1C2B1E;--f2:#24372A;--f3:#142016;--cream:#F4F0EA;--cream2:#EAE4DA;--card:#FBF9F5;--gold:#C9A96A;--gold-d:#6B5320;--gold-l:#D8C48F;--ink:#1F2620;--ink2:#46503F;--mute:#566057;--line:#D9D1C3;--sage:#C3CDBE;--sage2:#B7C3B3;
+ background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.6}
+.wbh a{text-decoration:none;color:inherit}
+.wbh h1,.wbh h2,.wbh h3{font-family:'Cormorant Garamond',Georgia,serif;margin:0}
+.wbh .serif{font-family:'Cormorant Garamond',Georgia,serif}
+.wbh .eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);margin:0 0 16px}
+.wbh .on-dark .eyebrow,.wbh .eyebrow.gold{color:var(--gold)}
+.wbh .btn{display:inline-block;border-radius:999px;font-size:16px;font-weight:500;padding:15px 30px;transition:filter .15s}
+.wbh .btn:hover{filter:brightness(1.1)}
+.wbh .btn-gold{background:var(--gold);color:var(--f1)}
+.wbh .btn-dark{background:var(--f1);color:var(--cream)}
+.wbh .btn-line-l{color:var(--cream);border:1px solid #6F8A73}
+.wbh .btn-line-d{color:var(--f1);border:1px solid var(--f1)}
+.wbh .lnk{display:inline-flex;align-items:center;gap:10px;padding:8px 0;font-weight:500}
+.wbh .lnk:hover{text-decoration:underline}
+.wbh a:focus-visible,.wbh button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wbh .wrap{max-width:1200px;margin:0 auto}
+.wbh .row{display:flex;flex-wrap:wrap}
+.wbh .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wbh .veil{position:absolute;inset:0}
+.wbh .hero{background:var(--f1);padding:56px 5% 104px;gap:56px 64px;align-items:center;justify-content:space-between}
+.wbh .hero h1{font-style:italic;font-weight:400;font-size:clamp(46px,7vw,92px);line-height:1;color:var(--cream);letter-spacing:-.01em}
+.wbh .hero p.sub{margin:32px 0 0;font-size:clamp(18px,2vw,21px);color:var(--sage);max-width:560px}
+.wbh .arch{border:1px solid #4B6650;border-radius:999px 999px 16px 16px;padding:14px}
+.wbh .arch img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:999px 999px 6px 6px}
+.wbh .trust{background:var(--f2);padding:28px 5%;justify-content:center;gap:12px 44px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);text-align:center}
+.wbh .h2{font-weight:400;font-size:clamp(36px,4.6vw,60px);line-height:1.08}
+.wbh .h2i{font-style:italic;font-weight:400;color:var(--cream)}
+.wbh .door{flex:1 1 300px;min-width:0;border-radius:20px;padding:40px 36px;display:flex;flex-direction:column;gap:18px}
+.wbh .door.light{background:var(--card);border:1px solid var(--line)}
+.wbh .door.dark{background:var(--f1);color:var(--cream)}
+.wbh .door h3{font-weight:500;font-size:34px;line-height:1.15}
+.wbh .door .tag{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px}
+.wbh .tile{display:flex;align-items:center;gap:20px;background:var(--f2);border:1px solid #3A5440;border-radius:14px;padding:22px 26px;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;min-height:44px}
+.wbh .tile:hover{border-color:var(--gold)}
+.wbh .dot{width:12px;height:12px;border-radius:50%;flex:none}
+.wbh .step{flex:1 1 230px;min-width:0;border-top:1px solid var(--ink);padding-top:20px}
+.wbh .step .big{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:132px;line-height:.9}
+.wbh .step .n{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:18px}
+.wbh .step h3{font-weight:500;font-size:30px;line-height:1.15;margin:6px 0 12px}
+.wbh .step p{margin:0;color:var(--ink2);font-size:17px}
+.wbh .player{flex:1 1 420px;min-width:0;background:var(--f1);border:1px solid #3A5440;border-radius:24px;padding:32px 36px}
+.wbh .play{flex:none;width:72px;height:72px;border-radius:50%;border:0;padding:0;cursor:pointer;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.wbh input[type=range]{width:100%;accent-color:var(--gold);margin:12px 0 0;cursor:pointer}
+.wbh .essay{display:flex;align-items:center;gap:24px;padding:26px 0;border-top:1px solid #CFC6B5}
+.wbh .essay:last-of-type{border-bottom:1px solid #CFC6B5}
+.wbh .essay:hover .et{text-decoration:underline}
+.wbh .et{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;line-height:1.2}
+.wbh .ed{display:block;color:var(--mute);font-size:16px;margin-top:4px}
+.wbh .fee{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;border-bottom:1px solid #E4DCCD;padding-bottom:14px}
+.wbh footer a:hover{text-decoration:underline}

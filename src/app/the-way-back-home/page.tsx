@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'The Way Back Home',
   description: 'The new book by Daniel J. Ahearn, LMFT: a practical guide for parents healing attachment wounds and rebuilding connection with their teen.',
   openGraph: {
-    images: [{ url: '/images/book-cover.jpg', alt: 'The Way Back Home — book cover' }],
+    images: [{ url: '/images/book-cover.jpg', alt: 'The Way Back Home: book cover' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -18,21 +18,21 @@ export default function Book() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-200 py-16 md:py-24">
+      <section className="bg-parch-200 py-16 md:py-24">
         <div className="container-main">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div>
-              <p className="eyebrow">Now Available</p>
-              <h1 className="text-4xl md:text-5xl font-serif text-cream-900 leading-tight mb-3">
+              <p className="s-eyebrow">Now Available</p>
+              <h1 className="text-4xl md:text-5xl font-display text-parch-900 leading-tight mb-3">
                 The Way Back Home
               </h1>
-              <p className="font-serif italic text-cream-600 text-lg mb-6">
+              <p className="font-display italic text-parch-600 text-lg mb-6">
                 Healing Attachment Wounds With Your Teen
               </p>
-              <p className="text-cream-700 leading-relaxed mb-4">
+              <p className="text-parch-700 leading-relaxed mb-4">
                 If your teenager is shutting down, pulling away, or in constant conflict, this book explains the attachment science behind it, and what you can actually do about it.
               </p>
-              <p className="text-cream-700 leading-relaxed mb-8">
+              <p className="text-parch-700 leading-relaxed mb-8">
                 Written for parents who are doing everything right and still feel miles away from their kid. Grounded in the same IAT framework at the center of my clinical practice.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
@@ -40,7 +40,7 @@ export default function Book() {
                   href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary plausible-event-name=Book+Amazon"
+                  className="s-btn-primary plausible-event-name=Book+Amazon"
                 >
                   Buy on Amazon
                 </a>
@@ -48,21 +48,12 @@ export default function Book() {
                   href="https://www.audible.com/pd/The-Way-Back-Home-Audiobook/B0H12DWQFP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost plausible-event-name=Audible+Click"
+                  className="s-btn-ghost plausible-event-name=Audible+Click"
                 >
                   Listen on Audible
                 </a>
-                <a
-                  href="/why-your-teen-is-pushing-you-away.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="btn-ghost plausible-event-name=Guide+Download"
-                >
-                  Download the Free Guide
-                </a>
               </div>
-              <p className="text-cream-500 text-xs">Available in paperback · Kindle · Audiobook</p>
+              <p className="text-parch-500 text-xs">Available in paperback · Kindle · Audiobook</p>
             </div>
             <div className="flex justify-center md:justify-end">
               <a
@@ -85,12 +76,12 @@ export default function Book() {
       </section>
 
       {/* Endorsement */}
-      <section className="bg-cream-800 py-12">
+      <section className="bg-parch-800 py-12">
         <div className="container-main max-w-3xl text-center">
-          <p className="font-serif italic text-cream-200 text-xl leading-relaxed mb-5">
+          <p className="font-display italic text-parch-200 text-xl leading-relaxed mb-5">
             "Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use."
           </p>
-          <p className="text-cream-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
+          <p className="text-parch-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
         </div>
       </section>
 
@@ -99,8 +90,8 @@ export default function Book() {
         <div className="container-main max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <p className="eyebrow">Who This Book Is For</p>
-              <h2 className="text-3xl font-serif text-cream-900 mb-6">You might recognize yourself here</h2>
+              <p className="s-eyebrow">Who This Book Is For</p>
+              <h2 className="text-3xl font-display text-parch-900 mb-6">You might recognize yourself here</h2>
               <ul className="space-y-3">
                 {[
                   `Your teenager has pulled away and you don't know why`,
@@ -110,16 +101,16 @@ export default function Book() {
                   'You suspect your own history is part of the problem',
                   'You want to repair things before they get worse',
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-cream-700 text-sm leading-relaxed">
-                    <span className="text-cream-400 mt-0.5">·</span>
+                  <li key={item} className="flex gap-3 text-parch-700 text-sm leading-relaxed">
+                    <span className="text-parch-400 mt-0.5">·</span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="eyebrow">What You'll Get</p>
-              <h2 className="text-3xl font-serif text-cream-900 mb-6">What the book covers</h2>
+              <p className="s-eyebrow">What You'll Get</p>
+              <h2 className="text-3xl font-display text-parch-900 mb-6">What the book covers</h2>
               <ul className="space-y-3">
                 {[
                   'The attachment science behind adolescent withdrawal and conflict',
@@ -129,8 +120,8 @@ export default function Book() {
                   'How to stay present when activated, without performing calm',
                   'A framework for rebuilding earned security with your teen',
                 ].map((item) => (
-                  <li key={item} className="flex gap-3 text-cream-700 text-sm leading-relaxed">
-                    <span className="text-cream-400 mt-0.5">·</span>
+                  <li key={item} className="flex gap-3 text-parch-700 text-sm leading-relaxed">
+                    <span className="text-parch-400 mt-0.5">·</span>
                     {item}
                   </li>
                 ))}
@@ -141,13 +132,13 @@ export default function Book() {
       </section>
 
       {/* Five Conditions framework */}
-      <section className="bg-cream-100 py-16 md:py-20 border-t border-cream-300">
+      <section className="bg-parch-100 py-16 md:py-20 border-t border-parch-300">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">The Framework of the Book</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-4">
+          <p className="s-eyebrow">The Framework of the Book</p>
+          <h2 className="text-3xl md:text-4xl font-display text-parch-900 leading-tight mb-4">
             The Five Conditions of Secure Attachment
           </h2>
-          <p className="text-cream-700 leading-relaxed mb-10">
+          <p className="text-parch-700 leading-relaxed mb-10">
             The book is built around the Five Conditions of Secure Attachment: the core relational experiences that allow security to develop. Drawn from the work of Dr. Daniel P. Brown and Dr. David Elliott, applied here specifically to parenting teenagers.
           </p>
           <div className="grid md:grid-cols-2 gap-x-10 gap-y-6">
@@ -158,9 +149,9 @@ export default function Book() {
               { name: 'Expressed Delight', body: 'The engine of self-esteem.' },
               { name: 'Exploration', body: 'Boundaries that strengthen bonds.' },
             ].map((c) => (
-              <div key={c.name} className="border-l-2 border-cream-400 pl-5">
-                <h3 className="font-serif text-lg text-cream-900 mb-1">{c.name}</h3>
-                <p className="text-cream-700 text-sm leading-relaxed">{c.body}</p>
+              <div key={c.name} className="border-l-2 border-parch-400 pl-5">
+                <h3 className="font-display text-lg text-parch-900 mb-1">{c.name}</h3>
+                <p className="text-parch-700 text-sm leading-relaxed">{c.body}</p>
               </div>
             ))}
           </div>
@@ -168,27 +159,27 @@ export default function Book() {
       </section>
 
       {/* R.E.A.L. Method inside the book */}
-      <section className="section-warm border-t border-cream-300">
+      <section className="section-warm border-t border-parch-300">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">The Repair Method</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 leading-tight mb-5">
+          <p className="s-eyebrow">The Repair Method</p>
+          <h2 className="text-3xl md:text-4xl font-display text-parch-900 leading-tight mb-5">
             Inside the book: the R.E.A.L. Method
           </h2>
-          <p className="text-cream-700 leading-relaxed mb-7">
+          <p className="text-parch-700 leading-relaxed mb-7">
             Chapter 7 introduces R.E.A.L., a four-step framework for rupture and repair: Regulate the Breath, Explore the Moment, Attune with Empathy, Lean Back In. Parents practice it in the support groups and in the free daily app; men practice it in the Men&rsquo;s Attachment Repair Groups.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/parent-support-groups/#real-method" className="btn-primary">
+            <Link href="/parent-support-groups/#real-method" className="s-btn-primary">
               R.E.A.L. for Parents
             </Link>
-            <Link href="/mens-work/#real-for-men" className="btn-ghost">
+            <Link href="/mens-work/#real-for-men" className="s-btn-ghost">
               R.E.A.L. for Men
             </Link>
             <a
               href="https://waybackhome.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-ghost plausible-event-name=App+Open"
+              className="s-btn-ghost plausible-event-name=App+Open"
             >
               Practice in the App
             </a>
@@ -199,60 +190,39 @@ export default function Book() {
       {/* About the author */}
       <section className="section-warm">
         <div className="container-main max-w-3xl">
-          <p className="eyebrow">About the Author</p>
-          <h2 className="text-3xl font-serif text-cream-900 mb-5">Written from clinical practice</h2>
-          <p className="text-cream-700 leading-relaxed mb-4">
+          <p className="s-eyebrow">About the Author</p>
+          <h2 className="text-3xl font-display text-parch-900 mb-5">Written from clinical practice</h2>
+          <p className="text-parch-700 leading-relaxed mb-4">
             Daniel J. Ahearn is an LMFT and IAT-certified attachment therapist, trained directly with Dr. Daniel P. Brown and Dr. David Elliott. He is Director of Culture at Ascend Healthcare, a residential treatment program for adolescents in Los Angeles, and maintains a private practice specializing in men's attachment work, father-teen repair, and family systems.
           </p>
-          <p className="text-cream-700 leading-relaxed mb-7">
+          <p className="text-parch-700 leading-relaxed mb-7">
             He trained directly with Dr. Daniel P. Brown and Dr. David Elliott in the Three Pillars / IAT framework. The Way Back Home distills over a decade of clinical work with teenagers and their parents into a framework any family can use.
           </p>
-          <Link href="/about" className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors">
+          <Link href="/about" className="text-parch-500 text-sm font-medium hover:text-parch-700 transition-colors">
             Read more about Daniel →
           </Link>
         </div>
       </section>
 
       {/* Companion App */}
-      <section className="bg-cream-900 py-14">
+      <section className="bg-parch-900 py-14">
         <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow text-cream-500">Companion App</p>
-          <h2 className="text-2xl font-serif text-cream-100 mb-4">The Way Back Home App</h2>
-          <p className="text-cream-400 leading-relaxed mb-7">
+          <p className="s-eyebrow text-parch-500">Companion App</p>
+          <h2 className="text-2xl font-display text-parch-100 mb-4">The Way Back Home App</h2>
+          <p className="text-parch-400 leading-relaxed mb-7">
             A progressive web app companion to the book with guided visualizations, reflection prompts, and tools to support your practice between sessions. Available now at waybackhome.app.
           </p>
           <a
             href="https://waybackhome.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary !bg-cream-500 hover:!bg-cream-400 plausible-event-name=App+Open"
+            className="s-btn-primary !bg-parch-500 hover:!bg-parch-400 plausible-event-name=App+Open"
           >
             Open the App
           </a>
         </div>
       </section>
 
-      {/* Lead magnet */}
-      <section className="bg-cream-200 py-14">
-        <div className="container-main max-w-xl text-center">
-          <p className="eyebrow">Free Resource</p>
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">
-            Why Your Teen Is Pushing You Away
-          </h2>
-          <p className="text-cream-700 mb-7">
-            A free guide that introduces the Integrative Attachment Therapy framework and what's driving adolescent withdrawal, drawn directly from the book.
-          </p>
-          <a
-            href="/why-your-teen-is-pushing-you-away.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="btn-primary plausible-event-name=Guide+Download"
-          >
-            Download the Free Guide
-          </a>
-        </div>
-      </section>
     </>
   )
 }

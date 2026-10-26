@@ -1,259 +1,243 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import AudioPlayer from '@/components/AudioPlayer'
+import './home.css'
 
 export const metadata: Metadata = {
   title: 'Daniel J. Ahearn, LMFT: Attachment Therapist in Los Angeles',
-  description: 'IAT-certified attachment therapist in Los Angeles. Author of The Way Back Home. Working with men, fathers, teens, and families; trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
+  description:
+    'IAT-certified attachment therapist in Los Angeles. Author of The Way Back Home. Attachment repair for men, fathers, parents, teens and families, trained directly with Dr. Daniel P. Brown and Dr. David Elliott.',
 }
+
+const CONSULT = 'https://calendly.com/danieljahearn/30min'
+
+function Arrow({ size = 18, color = 'currentColor' }: { size?: number; color?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M4 12h16M14 6l6 6-6 6" />
+    </svg>
+  )
+}
+
+const tiles = [
+  { label: 'I’m activated', color: '#D8765A' },
+  { label: 'My teen is shut down', color: '#7FA2C9' },
+  { label: 'We had a rupture', color: '#C9A96A' },
+  { label: 'I want to repair', color: '#7DB28A' },
+  { label: 'Things are good', color: '#E9E1CF' },
+]
+
+const steps = [
+  { l: 'R', c: '#3F6E4B', n: 'Step one', t: 'Regulate the breath', d: 'Repair can’t start from a flooded nervous system. Pause first. Your teen’s nervous system is watching yours.' },
+  { l: 'E', c: '#8A6420', n: 'Step two', t: 'Explore the moment', d: 'Before you turn toward them, turn toward yourself. What just got activated in you?' },
+  { l: 'A', c: '#3B5F85', n: 'Step three', t: 'Attune with empathy', d: 'Try to understand what happened for them. You may get it wrong. The try is what matters.' },
+  { l: 'L', c: '#A04A32', n: 'Step four', t: 'Lean back in', d: 'The gesture of return. An apology, a seat beside them, a look that says the relationship is still here.' },
+]
+
+const essays = [
+  { t: 'Parenting Teens with Presence', d: 'Five ways to support and connect with your teenage children.', h: 'https://www.lionsroar.com/parenting-teens-with-presence/' },
+  { t: 'How to Be Honest With Yourself', d: 'False positivity erodes truth and intimacy. A path toward honesty.', h: 'https://www.lionsroar.com/when-resilience-becomes-repression/' },
+  { t: 'The Nine Breaths of Purification', d: 'A short Bön practice to clear the mind and reconnect with the body.', h: 'https://www.lionsroar.com/let-the-nine-breaths-of-purification-clear-your-mind-and-open-your-heart/' },
+]
 
 export default function Home() {
   return (
-    <>
+    <div className="wbh">
       {/* Hero */}
-      <section className="bg-cream-200 py-20 md:py-28">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="eyebrow">IAT-Certified Attachment Therapist</p>
-              <h1 className="text-4xl md:text-5xl font-serif font-medium text-cream-900 leading-tight mb-5 text-balance">
-                The teen years are your most powerful window for repair.
-              </h1>
-              <p className="text-cream-700 text-lg leading-relaxed mb-8 max-w-md">
-                I help fathers and parents repair attachment with their teenagers. The work reaches the wounds beneath the conflict; it&rsquo;s grounded in over a decade of clinical practice in Los Angeles.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="btn-primary plausible-event-name=Calendly+Click">
-                  Free 15-Min Consult
-                </a>
-                <a href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" className="btn-ghost plausible-event-name=App+Open">
-                  Try the Daily Practice
-                </a>
-              </div>
-            </div>
-            <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md">
-              <Image
-                src="/images/daniel-hero.jpg"
-                alt="Daniel J. Ahearn, LMFT"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </div>
+      <section className="row hero on-dark">
+        <div style={{ flex: '1 1 480px', maxWidth: 720, minWidth: 0 }}>
+          <p className="eyebrow gold" style={{ marginBottom: 28 }}>IAT-Certified Attachment Therapist</p>
+          <h1>Most people aren’t broken. They’re adapted.</h1>
+          <p className="sub">Attachment repair for men, fathers, parents and families, with a therapist trained directly by the developers of the Ideal Parent Figure protocol.</p>
+          <div style={{ marginTop: 40 }}>
+            <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer">Free 15-minute consult</a>
+          </div>
+        </div>
+        <div style={{ flex: '0 1 440px', minWidth: 260, width: '100%', maxWidth: 440, margin: '0 auto' }}>
+          <div className="arch">
+            <Image src="/images/home/portrait.jpg" alt="Daniel J. Ahearn, LMFT" width={880} height={1100} priority />
           </div>
         </div>
       </section>
 
-      {/* Credential bar */}
-      <section className="bg-cream-900 py-5">
-        <div className="container-main">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-center">
-            {[
-              'LMFT',
-              'IAT-Certified',
-              'Director of Culture, Ascend Healthcare',
-              '12+ Years Clinical Experience',
-            ].map((cred) => (
-              <span key={cred} className="text-xs uppercase tracking-widest text-cream-400">{cred}</span>
-            ))}
+      {/* Trust bar */}
+      <section className="row trust" aria-label="Credentials">
+        <span>Licensed Marriage &amp; Family Therapist</span>
+        <span>IAT-Certified</span>
+        <span>Trained directly with Dr. Daniel P. Brown and Dr. David Elliott</span>
+        <span>Over a decade in clinical practice</span>
+      </section>
+
+      {/* Quote */}
+      <section style={{ padding: '104px 5% 96px', textAlign: 'center' }}>
+        <figure style={{ margin: '0 auto', maxWidth: 900 }}>
+          <blockquote className="serif" style={{ margin: 0, fontStyle: 'italic', fontSize: 'clamp(28px,3.6vw,44px)', lineHeight: 1.25 }}>
+            “Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use.”
+          </blockquote>
+          <figcaption style={{ marginTop: 28, fontSize: 14, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--gold-d)' }}>
+            Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy
+          </figcaption>
+        </figure>
+      </section>
+
+      {/* Three doors */}
+      <section style={{ padding: '0 5% 120px' }}>
+        <div className="wrap">
+          <p className="eyebrow">Who I work with</p>
+          <h2 className="h2" style={{ marginBottom: 56, maxWidth: 760 }}>Attachment repair, at any age.</h2>
+          <div className="row" style={{ gap: 24 }}>
+            <article className="door light">
+              <div className="tag" style={{ color: 'var(--gold-d)' }}>For adults</div>
+              <h3>Men, fathers, couples and families</h3>
+              <p style={{ margin: 0, color: 'var(--ink2)', flex: 1 }}>One-on-one work with the Ideal Parent Figure protocol for people carrying old attachment patterns into their relationships and their parenting.</p>
+              <a className="lnk plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f1)' }}>Start with a free consult <Arrow /></a>
+            </article>
+            <article className="door dark">
+              <div className="tag" style={{ color: 'var(--gold)' }}>For parents</div>
+              <h3>Parents of teenagers</h3>
+              <p style={{ margin: 0, color: 'var(--sage)', flex: 1 }}>The book, a free daily practice and weekly groups, all built on the five conditions of secure attachment and the R.E.A.L. repair method.</p>
+              <a className="lnk" href="#parents" style={{ color: 'var(--gold)' }}>Explore the parent path <Arrow /></a>
+            </article>
+            <article className="door light">
+              <div className="tag" style={{ color: 'var(--gold-d)' }}>For organizations</div>
+              <h3>Treatment programs and clinical teams</h3>
+              <p style={{ margin: 0, color: 'var(--ink2)', flex: 1 }}>Consulting on attachment-informed culture, staff retention and therapeutic programming, drawn from a decade inside residential adolescent treatment.</p>
+              <Link className="lnk" href="/consulting" style={{ color: 'var(--f1)' }}>Organizations and teams <Arrow /></Link>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* Intro copy */}
-      <section className="section-cream">
-        <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow">The Work</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-6">Most people I work with aren't broken. They're adapted.</h2>
-          <p className="text-cream-700 text-base leading-relaxed mb-4">
-            What looks like emotional unavailability, withdrawal, or conflict is almost always an attachment strategy that once made sense. The goal isn't to fix what's wrong with you. It's to repair the foundation underneath: so that security stops being something you perform and starts being something you feel.
-          </p>
-          <p className="text-cream-600 text-sm leading-relaxed">
-            I work using Integrative Attachment Therapy (IAT) and the Ideal Parent Figure Protocol: a research-backed method developed by Dr. Daniel P. Brown and Dr. David Elliott, and now carried forward through IAT. I trained directly with Drs. Brown and Elliott and bring the full Three Pillars framework to private practice.
-          </p>
-        </div>
-      </section>
-
-      {/* Services grid */}
-      <section className="section-warm">
-        <div className="container-main">
-          <p className="eyebrow text-center">Ways to Work Together</p>
-          <h2 className="text-3xl font-serif text-cream-900 text-center mb-12">Find the right fit</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
-              <div>
-                <h3 className="font-serif text-xl text-cream-900 mb-3">Individual Therapy for Men &amp; Fathers</h3>
-                <p className="text-cream-700 text-sm leading-relaxed">
-                  One-on-one IAT work for men carrying old attachment patterns into their relationships and their parenting. The Three Pillars method, tailored to your history and what you want to change.
-                </p>
-              </div>
-              <a href="https://calendly.com/danieljahearn/30min" target="_blank" rel="noopener noreferrer" className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors plausible-event-name=Calendly+Click">
-                Start with a free 15-min consult &rarr;
-              </a>
-            </div>
-            <div className="bg-cream-50 border border-cream-300 rounded-lg p-7 flex flex-col justify-between gap-5">
-              <div>
-                <h3 className="font-serif text-xl text-cream-900 mb-3">Parent Support Groups</h3>
-                <p className="text-cream-700 text-sm leading-relaxed">
-                  National, Zoom-based groups for parents of teens. Attachment-informed, practical, capped at 12. $60 per session.
-                </p>
-              </div>
-              <Link href="/parent-support-groups" className="text-cream-500 text-sm font-medium hover:text-cream-700 transition-colors">
-                Join a group &rarr;
-              </Link>
-            </div>
+      {/* Where are you right now */}
+      <section id="parents" className="on-dark" style={{ background: 'var(--f1)', padding: '112px 5%', position: 'relative', overflow: 'hidden' }}>
+        <Image className="bgimg" src="/images/home/oaks.jpg" alt="" fill sizes="100vw" style={{ objectPosition: '50% 40%' }} />
+        <div className="veil" aria-hidden="true" style={{ background: 'rgba(20,32,22,.8)' }} />
+        <div className="wrap row" style={{ gap: '56px 80px', alignItems: 'flex-start', position: 'relative' }}>
+          <div style={{ flex: '1 1 380px', minWidth: 0 }}>
+            <p className="eyebrow gold" style={{ marginBottom: 20 }}>For parents of teens</p>
+            <h2 className="h2i" style={{ fontSize: 'clamp(38px,4.8vw,64px)', lineHeight: 1.06 }}>Where are you right now?</h2>
+            <p style={{ margin: '28px 0 0', color: 'var(--sage)', maxWidth: 460 }}>The hardest moments with a teenager are small and specific. The daily practice meets you inside them, in about the time it takes to breathe three times.</p>
+            <a className="btn btn-gold plausible-event-name=App+Open" href="https://waybackhome.app" target="_blank" rel="noopener noreferrer" style={{ marginTop: 36 }}>Open the free app</a>
           </div>
-          <p className="text-center mt-8 text-cream-600 text-sm">
-            Every group is built on{' '}
-            <Link href="/parent-support-groups/#real-method" className="underline decoration-cream-300 underline-offset-4 hover:text-cream-900 hover:decoration-cream-700 transition-colors">
-              R.E.A.L.
-            </Link>
-            , the repair method from The Way Back Home.
-          </p>
-          <p className="text-center mt-3 text-cream-600 text-sm">
-            Couples and family work also available.{' '}
-            <Link href="/services" className="underline decoration-cream-300 underline-offset-4 hover:text-cream-900 hover:decoration-cream-700 transition-colors">
-              See all services &rarr;
-            </Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Companion app */}
-      <section className="bg-cream-800 py-16 md:py-20">
-        <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow text-cream-400">Daily Practice</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-cream-100 mb-5">waybackhome.app</h2>
-          <p className="text-cream-300 leading-relaxed mb-7 max-w-xl mx-auto">
-            A free daily practice for parents of teens. The five conditions of secure attachment, distilled into a short morning ritual. Use it on its own or alongside the book.
-          </p>
-          <a
-            href="https://waybackhome.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary !bg-cream-500 hover:!bg-cream-400 plausible-event-name=App+Open"
-          >
-            Open the App
-          </a>
-        </div>
-      </section>
-
-      {/* Book section */}
-      <section className="section-cream">
-        <div className="container-main">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative max-w-xs mx-auto md:mx-0">
-              <Image
-                src="/images/book-cover.jpg"
-                alt="The Way Back Home: Healing Attachment Wounds With Your Teen"
-                width={380}
-                height={540}
-                className="rounded shadow-md"
-              />
-            </div>
-            <div>
-              <p className="eyebrow">Now on Audible &middot; Paperback &middot; Kindle</p>
-              <h2 className="text-3xl md:text-4xl font-serif text-cream-900 mb-4">
-                The Way Back Home
-              </h2>
-              <p className="text-cream-600 text-sm italic mb-5">Healing Attachment Wounds With Your Teen</p>
-              <p className="text-cream-700 leading-relaxed mb-4">
-                A practical guide for parents navigating the hardest years of the parent-child relationship, grounded in the same IAT framework at the center of my clinical practice.
-              </p>
-              <p className="text-cream-700 leading-relaxed mb-7">
-                If your teenager is pulling away, shutting down, or pushing you out, this book explains why, and what to do about it.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary plausible-event-name=Book+Amazon"
-                >
-                  Buy on Amazon
-                </a>
-                <Link href="/the-way-back-home" className="btn-ghost">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured writing: Lion's Roar */}
-      <section className="bg-cream-100 py-16">
-        <div className="container-main max-w-4xl">
-          <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-            <div>
-              <p className="eyebrow">Featured in <em>Lion&rsquo;s Roar</em></p>
-              <h2 className="text-2xl md:text-3xl font-serif text-cream-900">Selected essays</h2>
-            </div>
-            <Link href="/writing" className="text-sm text-cream-600 hover:text-cream-900 transition-colors">
-              All writing &rarr;
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Parenting Teens with Presence',
-                dek: 'Five ways to support and connect with your teenage children.',
-                href: 'https://www.lionsroar.com/parenting-teens-with-presence/',
-              },
-              {
-                title: 'How to Be Honest With Yourself',
-                dek: 'False positivity erodes truth and intimacy. A path toward honesty.',
-                href: 'https://www.lionsroar.com/when-resilience-becomes-repression/',
-              },
-              {
-                title: 'The Nine Breaths of Purification',
-                dek: 'A short Bön practice to clear the mind and reconnect with the body.',
-                href: 'https://www.lionsroar.com/let-the-nine-breaths-of-purification-clear-your-mind-and-open-your-heart/',
-              },
-            ].map((a) => (
-              <a
-                key={a.href}
-                href={a.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-cream-50 border border-cream-300 rounded-lg p-6 flex flex-col justify-between gap-4 hover:border-cream-500 transition-colors"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-cream-500 mb-2">Lion&rsquo;s Roar</p>
-                  <h3 className="font-serif text-lg text-cream-900 mb-2 leading-snug">{a.title}</h3>
-                  <p className="text-cream-700 text-sm leading-relaxed">{a.dek}</p>
-                </div>
-                <span className="text-cream-500 text-sm font-medium group-hover:text-cream-700 transition-colors">
-                  Read essay &rarr;
-                </span>
+          <div style={{ flex: '1 1 400px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {tiles.map((t) => (
+              <a key={t.label} className="tile plausible-event-name=App+Open" href="https://waybackhome.app" target="_blank" rel="noopener noreferrer">
+                <span className="dot" aria-hidden="true" style={{ background: t.color }} />
+                <span style={{ flex: 1 }}>{t.label}</span>
+                <Arrow size={20} color="#C9A96A" />
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Endorsement */}
-      <section className="bg-cream-800 py-14">
-        <div className="container-main max-w-3xl text-center">
-          <p className="font-serif italic text-cream-200 text-xl md:text-2xl leading-relaxed mb-6">
-            "Daniel Ahearn has done something rare. He has translated a sophisticated clinical model into language that parents can actually use."
-          </p>
-          <p className="text-cream-400 text-sm">Dr. David Elliott, PhD · Co-developer, Integrative Attachment Therapy</p>
+      {/* R.E.A.L. */}
+      <section style={{ padding: '120px 5% 112px' }}>
+        <div className="wrap">
+          <p className="eyebrow">The R.E.A.L. Method</p>
+          <h2 className="h2" style={{ maxWidth: 820 }}>A four-step way back after a rupture.</h2>
+          <p style={{ margin: '24px 0 64px', color: 'var(--ink2)', maxWidth: 640 }}>Ruptures are inevitable. What builds secure attachment is what happens next. R.E.A.L. is the repair pattern at the center of my parent groups, and it anchors my work with men and couples too.</p>
+          <div className="row" style={{ gap: '48px 32px' }}>
+            {steps.map((s) => (
+              <div key={s.l} className="step">
+                <div className="big" style={{ color: s.c }}>{s.l}</div>
+                <div className="n">{s.n}</div>
+                <h3>{s.t}</h3>
+                <p>{s.d}</p>
+              </div>
+            ))}
+          </div>
+          <a className="lnk" href="https://waybackhome.app/real/" target="_blank" rel="noopener noreferrer" style={{ marginTop: 56, color: 'var(--f1)' }}>Read the full method <Arrow /></a>
         </div>
       </section>
 
-      {/* Consulting CTA */}
-      <section className="section-warm">
-        <div className="container-main max-w-3xl text-center">
-          <p className="eyebrow">Organizational Consulting</p>
-          <h2 className="text-2xl font-serif text-cream-900 mb-4">Working with treatment organizations and clinical teams</h2>
-          <p className="text-cream-700 leading-relaxed mb-7">
-            I consult with residential treatment programs and clinical teams on attachment-informed culture, staff retention, and therapeutic programming. Drawing on my role as Director of Culture at Ascend Healthcare and a decade in adolescent residential treatment.
-          </p>
-          <Link href="/consulting" className="btn-primary">Organizations & Teams</Link>
+      {/* Hear a practice */}
+      <section id="practice" className="on-dark" style={{ background: 'var(--f2)', padding: '104px 5%', position: 'relative', overflow: 'hidden' }}>
+        <Image className="bgimg" src="/images/home/sunrise-band.jpg" alt="" fill sizes="100vw" style={{ objectPosition: '50% 55%' }} />
+        <div className="veil" aria-hidden="true" style={{ background: 'rgba(28,43,30,.78)' }} />
+        <div className="wrap row" style={{ maxWidth: 1100, gap: '48px 72px', alignItems: 'center', position: 'relative' }}>
+          <div style={{ flex: '1 1 360px', minWidth: 0 }}>
+            <p className="eyebrow gold" style={{ marginBottom: 20 }}>Hear a practice</p>
+            <h2 className="h2i" style={{ fontSize: 'clamp(34px,4.2vw,54px)', lineHeight: 1.1 }}>Most of what I teach is meant to be heard.</h2>
+            <p style={{ margin: '24px 0 0', color: 'var(--sage)', maxWidth: 480 }}>Guided visualizations are the heart of this work. Take two minutes with one before you decide anything else.</p>
+          </div>
+          <div className="player">
+            <AudioPlayer src="/audio/attunement.m4a" kicker="Condition two" title="Attunement" blurb="Being truly seen, without being fixed, corrected or redirected" />
+            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid #3A5440' }}>
+              <a className="lnk" href="https://youtu.be/6NzGp6f4Uz0" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-l)', fontSize: 16, fontWeight: 400 }}>Listen to a conversation with me <Arrow /></a>
+            </div>
+          </div>
         </div>
       </section>
 
-    </>
+      {/* Book + essays */}
+      <section style={{ padding: '120px 5%' }}>
+        <div className="wrap row" style={{ gap: '64px 72px', alignItems: 'flex-start' }}>
+          <div className="on-dark" style={{ flex: '1 1 420px', minWidth: 0, background: 'var(--f1)', borderRadius: 24, padding: '56px 48px', color: 'var(--cream)' }}>
+            <p style={{ margin: 0, fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)' }}>Now on Audible · Paperback · Kindle</p>
+            <div className="row" style={{ gap: 32, alignItems: 'flex-start', marginTop: 24 }}>
+              <Image src="/images/book-cover.jpg" alt="The Way Back Home: Healing Attachment Wounds With Your Teen" width={380} height={540} style={{ width: 150, height: 'auto', borderRadius: 6, boxShadow: '0 12px 32px rgba(0,0,0,.4)', flex: 'none' }} />
+              <div style={{ flex: '1 1 220px', minWidth: 0 }}>
+                <h2 style={{ fontWeight: 400, fontSize: 'clamp(40px,4.4vw,60px)', lineHeight: 1.02 }}>The Way Back Home</h2>
+                <div className="serif" style={{ fontStyle: 'italic', fontSize: 24, color: 'var(--gold-l)', marginTop: 8 }}>Healing Attachment Wounds With Your Teen</div>
+              </div>
+            </div>
+            <p style={{ margin: '28px 0 0', color: 'var(--sage)' }}>A practical guide for parents navigating the hardest years of the parent-child relationship. If your teenager is pulling away, shutting down or pushing you out, this book explains why, and what to do about it.</p>
+            <div className="row" style={{ gap: 14, marginTop: 36 }}>
+              <a className="btn btn-gold plausible-event-name=Book+Amazon" href="https://www.amazon.com/Way-Back-Home-Healing-Attachment-ebook/dp/B0GLF2JH8T?ref_=ast_author_mpb" target="_blank" rel="noopener noreferrer">Get the book</a>
+              <Link className="btn btn-line-l" href="/the-way-back-home">Learn more</Link>
+            </div>
+          </div>
+          <div style={{ flex: '1 1 420px', minWidth: 0 }}>
+            <p className="eyebrow">Featured in <i>Lion’s Roar</i></p>
+            <h2 className="h2" style={{ fontSize: 'clamp(34px,4vw,48px)', lineHeight: 1.1, marginBottom: 32 }}>Selected essays</h2>
+            {essays.map((e) => (
+              <a key={e.h} className="essay" href={e.h} target="_blank" rel="noopener noreferrer">
+                <span style={{ flex: 1, minWidth: 0 }}><span className="et">{e.t}</span><span className="ed">{e.d}</span></span>
+                <Arrow size={20} color="#6B5320" />
+              </a>
+            ))}
+            <Link className="lnk" href="/writing" style={{ marginTop: 28, color: 'var(--f1)' }}>All writing <Arrow /></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Groups */}
+      <section style={{ background: 'var(--cream2)', padding: '96px 5%' }}>
+        <div className="wrap row" style={{ gap: '48px 64px', alignItems: 'flex-start' }}>
+          <div style={{ flex: '1 1 420px', minWidth: 0 }}>
+            <p className="eyebrow">Parent support groups</p>
+            <h2 className="h2" style={{ fontSize: 'clamp(34px,4vw,50px)', lineHeight: 1.1 }}>Do this work alongside other parents.</h2>
+            <p style={{ margin: '20px 0 0', color: 'var(--ink2)', maxWidth: 520 }}>National, Zoom-based groups for parents of teens. Attachment-informed, practical and capped at 12, with R.E.A.L. practiced on the ruptures parents are living that week.</p>
+          </div>
+          <div style={{ flex: '1 1 380px', minWidth: 0, background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 20, padding: 36 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, fontSize: 17 }}>
+              <div className="fee"><span style={{ color: 'var(--mute)' }}>Parent groups</span><span style={{ fontWeight: 500 }}>$60 per session</span></div>
+              <div className="fee"><span style={{ color: 'var(--mute)' }}>Schedule</span><span style={{ fontWeight: 500 }}>Mondays, 5pm PT</span></div>
+            </div>
+            <div className="row" style={{ gap: 14, marginTop: 28 }}>
+              <Link className="btn btn-dark" href="/parent-support-groups">Join a group</Link>
+              <Link className="btn btn-line-d" href="/services">See individual and couples rates</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing */}
+      <section className="on-dark" style={{ background: 'var(--f1)', padding: '140px 5%', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <Image className="bgimg" src="/images/home/sunset.jpg" alt="" fill sizes="100vw" style={{ objectPosition: '50% 70%' }} />
+        <div className="veil" aria-hidden="true" style={{ background: 'rgba(20,32,22,.62)' }} />
+        <div style={{ maxWidth: 760, margin: '0 auto', position: 'relative' }}>
+          <h2 className="h2i" style={{ fontSize: 'clamp(40px,5.4vw,72px)', lineHeight: 1.05 }}>Begin where you are.</h2>
+          <p style={{ margin: '28px auto 0', color: 'var(--sage)', maxWidth: 520 }}>A free 15-minute consultation to talk through what you’re looking for and whether we’re a good fit.</p>
+          <div className="row" style={{ gap: 16, justifyContent: 'center', marginTop: 40 }}>
+            <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT} target="_blank" rel="noopener noreferrer" style={{ padding: '16px 32px' }}>Schedule a consult</a>
+            <a className="btn btn-line-l plausible-event-name=Substack+Click" href="https://danieljahearnlmft.substack.com" target="_blank" rel="noopener noreferrer" style={{ padding: '16px 32px' }}>Read on Substack</a>
+          </div>
+          <p style={{ margin: '36px auto 0', fontSize: 15, color: 'var(--sage2)' }}>One email a month: a note on attachment research and what I'm seeing in the clinical work with teens and parents.</p>
+        </div>
+      </section>
+    </div>
   )
 }
