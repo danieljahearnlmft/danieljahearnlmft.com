@@ -70,6 +70,13 @@ export default function Consulting() {
                 'Bringing family systems work into residential programs',
               ]}
             />
+            <h3>Recent training</h3>
+            <List
+              items={[
+                'Delivered CEU training in integrative attachment therapy for licensed clinicians.',
+                'Facilitates an ongoing parent and teen series at Ascend Healthcare, grounded in The Way Back Home.',
+              ]}
+            />
             <a className="btn btn-dark plausible-event-name=Inquiry+TeamTraining" href={mail('Consult with your team')} style={{ marginTop: 36, textDecoration: 'none' }}>Talk about your team</a>
           </div>
           <Formats items={['Single-day intensive', 'Multi-session series (4 to 8 weeks)', 'Ongoing leadership consultation', 'Grand rounds or clinical in-service', 'Virtual or on-site']} />
@@ -98,6 +105,13 @@ export default function Consulting() {
                 'Building secure teams: attachment principles for staff culture, retention, and burnout',
                 'Teen mental health and the family system',
                 'Men, fathers and attachment: the underrepresented territory at the heart of family repair',
+              ]}
+            />
+            <h3>Recent speaking</h3>
+            <List
+              items={[
+                'Led a session for LAUSD educators on adult regulation and its role in student mental health.',
+                'Presented on meditation technologies and nervous system regulation at a national mental health conference.',
               ]}
             />
             <a className="btn btn-dark plausible-event-name=Inquiry+Speaking" href={mail('Speaking / media inquiry')} style={{ marginTop: 36, textDecoration: 'none' }}>Speaking inquiries</a>
