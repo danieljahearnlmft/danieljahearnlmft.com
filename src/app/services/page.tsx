@@ -1,4 +1,4 @@
-import { GUIDE_URL, OFFERS, pageMeta } from '@/lib/site'
+import { OFFERS, pageMeta } from '@/lib/site'
 import { Arrow, Closing, ConsultButton, Facts, Hero, List, OfferCard, Page, Quote, RelatedLinks } from '@/components/site/ui'
 
 export const metadata = pageMeta(
@@ -114,9 +114,6 @@ export default function Services() {
                 'Families from Ascend Healthcare seeking continuity of care',
               ]}
             />
-            <a className="lnk plausible-event-name=Guide+Download" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" download style={{ marginTop: 28, color: 'var(--f1)' }}>
-              Free guide: Why your teen is pushing you away <Arrow />
-            </a>
           </div>
           <OfferCard offer={OFFERS.family} />
         </div>

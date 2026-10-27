@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { AMAZON_URL, APP_URL, AUDIBLE_URL, GUIDE_URL, SITE_URL, pageMeta } from '@/lib/site'
+import { AMAZON_URL, APP_URL, AUDIBLE_URL, SITE_URL, pageMeta } from '@/lib/site'
 import { Arrow, Closing, ELLIOTT_QUOTE, Hero, List, Page, Quote, Section } from '@/components/site/ui'
 
 export const metadata = pageMeta(
@@ -121,12 +121,6 @@ export default function Book() {
 
       <Section width="mid">
         <div className="cols" style={{ alignItems: 'center' }}>
-          <div>
-            <p className="eyebrow">Free guide</p>
-            <h2 className="h2" style={{ fontSize: 'clamp(30px,3.2vw,40px)' }}>Why your teen is pushing you away</h2>
-            <p style={{ marginTop: 16, color: 'var(--ink2)' }}>A short introduction to the framework and what drives adolescent withdrawal, drawn directly from the book.</p>
-            <a className="btn btn-dark plausible-event-name=Guide+Download" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" download style={{ marginTop: 28 }}>Download the free guide</a>
-          </div>
           <div className="prose">
             <p className="eyebrow">About the author</p>
             <p>

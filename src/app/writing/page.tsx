@@ -49,8 +49,8 @@ export default function Writing() {
       </Section>
 
       <Section tone="cream2" width="narrow" eyebrow="Substack" title="Notes on the work, in your inbox.">
-        <p style={{ color: 'var(--ink2)', marginTop: -16 }}>A reflection on Tuesdays and a shorter note midweek, on attachment and parenting teens.</p>
-        <a className="btn btn-dark plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 28 }}>Read on Substack</a>
+        <p style={{ color: 'var(--ink2)', marginTop: -16 }}>One email a month: a note on attachment research and what I'm seeing in the clinical work with teens and parents.</p>
+        <a className="btn btn-dark plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 28 }}>Subscribe on Substack</a>
       </Section>
 
       <Closing secondary={{ href: '/the-way-back-home', label: 'The book' }} />

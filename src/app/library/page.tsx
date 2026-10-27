@@ -25,7 +25,7 @@ export default function Library() {
       <Hero
         eyebrow="Library"
         title="A working library."
-        sub="Videos and guided practices on attachment, adolescence, and clinical work. A page to come back to, or send to a colleague. A new one arrives every two weeks."
+        sub="Videos and guided practices on attachment, adolescence, and clinical work. A page to come back to, or send to a colleague. New ones are added as they're made."
       >
         <a className="btn btn-gold plausible-event-name=Substack+Click" href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">Get new ones on Substack</a>
       </Hero>
