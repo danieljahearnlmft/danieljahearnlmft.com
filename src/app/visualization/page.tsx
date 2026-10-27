@@ -52,7 +52,11 @@ const series: Item[] = [
     blurb: 'Not praise for what your teen achieves, but the felt sense that their existence is welcomed. The condition most often underestimated, and the one that decides whether a self forms around performance or around essence.',
     youtubeId: '9YD4R-fpRR8', uploadDate: '2026-08-21', minutes: 20,
   },
-  { title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.', youtubeId: null },
+  {
+    title: 'Exploration', slug: 'exploration', note: 'A secure base to venture from.',
+    blurb: 'Not holding your teen back, not pushing them away. A presence steady enough that they can leave, and present enough that they can return. The half of security people forget: the secure base exists so that it can be ventured from.',
+    youtubeId: 'ZKc6QHkPqCU', uploadDate: '2026-10-27', minutes: 16,
+  },
   { title: 'Ideal Parent', slug: 'ideal-parent', note: 'Becoming the secure base your teen comes home to.', youtubeId: null },
 ]
 
