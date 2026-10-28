@@ -72,7 +72,7 @@ export default function Nav() {
     setMobileOpen(false)
   }, [pathname])
 
-  if (pathname?.startsWith('/pathwork') || pathname?.startsWith('/visualization')) return null
+  if (pathname?.startsWith('/pathwork') || pathname?.startsWith('/visualization') || pathname?.startsWith('/card')) return null
 
   const consult = (
     <a className="btn btn-gold plausible-event-name=Calendly+Click" href={CONSULT_URL} target="_blank" rel="noopener noreferrer">
