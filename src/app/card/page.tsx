@@ -10,7 +10,7 @@ const ROLE = 'Psychotherapist · Attachment Specialist · Author'
 
 export const metadata = pageMeta('/card', 'Digital card', `${ROLE}. Los Angeles, California.`, {
   robots: { index: false, follow: false },
-  openGraph: { images: [{ url: '/images/daniel-headshot.jpg', alt: 'Daniel J. Ahearn, LMFT' }] },
+  openGraph: { images: [{ url: '/images/card/headshot.jpg', alt: 'Daniel J. Ahearn, LMFT' }] },
 })
 
 const AUDIOBOOK_MAILTO =
@@ -38,12 +38,12 @@ export default async function CardPage() {
       <div className="dc-page">
         <article className="dc" aria-labelledby="dc-name">
           <div className="dc-banner">
-            <Image src="/images/home/sunset.jpg" alt="" fill sizes="(max-width: 480px) 100vw, 440px" priority style={{ objectFit: 'cover', objectPosition: '50% 78%' }} />
+            <Image src="/images/card/banner.jpg" alt="" fill sizes="(max-width: 480px) 100vw, 440px" priority style={{ objectFit: 'cover', objectPosition: '50% 50%' }} />
           </div>
 
           <div className="dc-body">
             <div className="dc-photo">
-              <Image src="/images/daniel-headshot.jpg" alt="Daniel J. Ahearn" width={240} height={240} priority />
+              <Image src="/images/card/headshot.jpg" alt="Daniel J. Ahearn" width={758} height={900} priority />
             </div>
 
             <h1 id="dc-name">Daniel J. Ahearn, LMFT</h1>
