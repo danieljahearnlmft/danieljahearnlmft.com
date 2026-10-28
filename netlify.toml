@@ -58,3 +58,10 @@
   from = "/*"
   to = "/404/index.html"
   status = 404
+
+# Digital card contact file: open as a contact on phones, download on desktop.
+[[headers]]
+  for = "/card/*.vcf"
+  [headers.values]
+    Content-Type = "text/vcard; charset=utf-8"
+    Content-Disposition = "attachment; filename=\"Daniel-J-Ahearn-LMFT.vcf\""

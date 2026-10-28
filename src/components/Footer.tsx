@@ -27,7 +27,7 @@ const TOPICS = [
 
 export default function Footer() {
   const pathname = usePathname()
-  if (pathname?.startsWith('/pathwork') || pathname?.startsWith('/visualization')) return null
+  if (pathname?.startsWith('/pathwork') || pathname?.startsWith('/visualization') || pathname?.startsWith('/card')) return null
 
   return (
     <footer className="wbh sfoot">
