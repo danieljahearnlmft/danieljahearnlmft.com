@@ -2,15 +2,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import QRCode from 'qrcode'
 import { Arrow, Page } from '@/components/site/ui'
-import { APP_URL, EMAIL, LICENSE, SITE_URL, pageMeta } from '@/lib/site'
+import { APP_URL, EMAIL, LICENSE, NAME, SITE_URL, pageMeta } from '@/lib/site'
 import ShareButton from './ShareButton'
 
 const CARD_URL = `${SITE_URL}/card/`
 const ROLE = 'Psychotherapist · Attachment Specialist · Author'
 
-export const metadata = pageMeta('/card', 'Digital card', `${ROLE}. Los Angeles, California.`, {
+// Link previews (iMessage, email, social) show share.jpg: the card's banner, headshot and name at 1200x630.
+const SHARE_IMAGE = { url: '/images/card/share.jpg', width: 1200, height: 630, alt: NAME }
+
+export const metadata = pageMeta('/card', NAME, `${ROLE}. Los Angeles, California.`, {
+  title: { absolute: NAME },
   robots: { index: false, follow: false },
-  openGraph: { images: [{ url: '/images/card/headshot.jpg', alt: 'Daniel J. Ahearn, LMFT' }] },
+  openGraph: { images: [SHARE_IMAGE] },
+  twitter: { card: 'summary_large_image', title: NAME, description: `${ROLE}. Los Angeles, California.`, images: [SHARE_IMAGE.url] },
 })
 
 const AUDIOBOOK_MAILTO =
